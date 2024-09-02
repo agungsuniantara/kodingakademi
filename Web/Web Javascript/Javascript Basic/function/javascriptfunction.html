@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <script>
+        function pertambahanAngka(a, b) {
+          var angka1 = Number(a);
+          var angka2 = Number(b);
+          var hasil = angka1 + angka2;
+          document.getElementById("hasil").innerHTML = hasil;
+        }
+      </script>
+
+      <h2>angka 1</h2>
+      <input type="text" id="angka1" />
+      <h2>angka 2</h2>
+      <input type="text" id="angka2" />
+
+      <button
+        onclick="pertambahanAngka(document.getElementById('angka1').value, document.getElementById('angka2').value)"
+      >
+        Jumlahkan
+      </button>
+
+      <p id="hasil"></p>
+    </body>
+  </body>
+</html>

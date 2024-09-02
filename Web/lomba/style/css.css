@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.body-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh 2vh;
+    border-bottom: 0.3px solid rgba(128, 128, 128, 0.462);
+    height: 12vh;
+    font-size: 2.5vh;
+}
+
+.navbar-kiri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Geologica', sans-serif;
+}
+
+.navbar-kiri img{
+    width: 7vh;
+    height: 5vh;
+    margin-right: 5vh;
+}
+
+.navbar-kiri ul{
+    list-style: none;
+}
+
+.navbar-kiri li{
+    display:inline-block;
+    margin: 0vh 1vh;
+    padding: 1vh 1vh 1vh 1vh;
+}
+
+.sub-men{
+    display: none;
+}
+
+.navbar-kiri li:hover{
+    cursor: pointer;
+}
+
+.navbar-kiri li:hover .sub-men{
+    display: block;
+    position: absolute;
+    background-color:aliceblue;
+    margin: 1.1vh;
+    margin-left: -1vh;
+    text-align: left;
+}
+
+.navbar-kiri li:hover .sub-men ul{
+    display: grid;
+    margin-top: 1vh;
+    width: 24vh;
+}   
+
+.navbar-kiri li:hover .sub-men li:hover{
+    text-decoration:underline;
+}
+
+.fa-chevron-right{
+    float: right;
+    margin-top: 1.3vh;
+}
+
+.sub-men-feature{
+    display: none;
+}
+
+.sub-men li:hover .sub-men-feature{
+    display: block;
+    position: absolute;
+    margin-left: 20vh;
+    margin-top: -5vh;
+    width: 19vh;
+    text-align: center;
+}
+
+.sub-men li:hover .sub-men-feature ul{
+    width: 20vh;
+    background-color: aliceblue;
+}
+
+.navbar-kanan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-kanan ul{
+    list-style: none;
+}
+
+.navbar-kanan li{
+    display:inline-block;
+    margin: 0 2vh;
+}
+
+input[type=text]{
+    width: 30vh;
+    height: 3vh;
+    background-color: rgba(128, 128, 128, 0.128);
+    padding: 1vh;
+}
+
+.icon{
+    position: absolute;
+    margin-left: 28vh;
+    margin-top: 1vh;
+}
+
+/* konten */
+
+.konten-wrapper{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3vh 2vh;
+}
+
+.konten-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 2vh;
+}
+  
+.konten-header{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.konten-header img{
+    width: 100%;
+    height: 74.5vh;
+}
+  
+.konten-item:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.konten-item img{
+    width: 100%;
+    height: 45vh;
+}
+
+.konten-item-tulisan{
+    width: auto;
+    height: auto;
+    padding: 2vh;
+    font-size: 1.5vh;
+}
+  
+@media only screen and (max-width: 140vh) {
+    .body-wrapper{
+        flex-direction:row;
+        height: auto;
+    }
+
+    /* navbar */
+
+    .navbar{
+        flex-direction: column;
+        height:auto;
+        width: 11vh;
+        margin: 0vh 0vh;
+        text-align: center;
+        border-right: 0.3px solid rgba(128, 128, 128, 0.462);
+        font-size: 2vh;
+        justify-content:flex-start;
+    }
+
+    .navbar-kiri img{
+        width: 4vh;
+        height: 4vh;
+        margin: 2vh 1vh 3vh 1vh;
+    }
+    .navbar-kiri{
+        flex-direction: column;
+        font-size: 1.4vh;
+    }
+    .navbar-kiri li{
+        margin: 1vh 1vh 0vh 1vh;
+    }    
+    .navbar-kiri li:hover .sub-men ul{
+        width: 18vh;
+    }   
+    .fa-chevron-right{
+        margin-top: 0.8vh;
+    }
+    .sub-men li:hover .sub-men-feature{
+        margin-left: 15vh;
+        margin-top: -4.5vh;
+        width: 13vh;
+        z-index: 99;
+    }
+    .sub-men li:hover .sub-men-feature ul{
+        width: 13vh;
+    }
+
+    .navbar-kanan-search{
+        margin: 1vh 1vh 2vh 1vh;
+    }
+
+    input[type=text]{
+        width: 8vh;
+        height: 3vh;
+        font-size: 1.5vh;
+    }
+    
+    .icon{
+        margin-left: 7vh;
+        margin-top: 1.2vh;
+        z-index: -1;
+    }
+
+    /* konten */
+
+    .konten-grid {
+        grid-template-columns: auto;
+    }
+      
+    .konten-header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .konten-header img{
+        width: 100%;
+        height: 20vh;
+    }
+    .konten-item img{
+        width: 100%;
+        height: 20vh;
+    }
+  }

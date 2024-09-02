@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MixItUp Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mix category-a" data-order="1">test</div>
+      <div class="mix category-b" data-order="2">test</div>
+      <div class="mix category-b category-c" data-order="3">test</div>
+      <div class="mix category-a category-d" data-order="4">test</div>
+    </div>
+
+    <script src="node_modules\mixitup\dist\mixitup.min.js"></script>
+
+    <script>
+      var mixer = mixitup(containerEl, {
+        selectors: {
+          target: ".blog-item",
+        },
+        animation: {
+          duration: 300,
+        },
+      });
+    </script>
+  </body>
+</html>

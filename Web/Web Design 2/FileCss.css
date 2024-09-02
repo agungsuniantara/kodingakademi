@@ -1,0 +1,30 @@
+h1{
+    color: red;
+    background-color: aqua;
+}
+#mainPar{
+    color: green;
+}
+.veg{
+    color: green;
+}
+.meat{
+    color: brown;
+}
+body{
+    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+    background-color: #cccccc;
+    background-repeat: repeat;
+}
+
+p.example1{
+    border: 1px solid;
+    border-bottom-color: green;
+    border-top-color: red;
+    border-left-color: black;
+    border-right-color: blue;
+}
+p.example2{
+    border: 1px solid;
+    border-color: green;
+}

@@ -1,0 +1,139 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  border: none;
+  font-family: "open-sans", sans-serif;
+}
+
+.main-content {
+  margin-top: 30px;
+  background-image: url(/itcc2/asset/wize.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.perusahaan2 {
+  display: flex;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  gap: 4vh;
+  align-items: center;
+}
+
+.alfamart {
+  margin-left: 10vh;
+  width: 25vh;
+}
+
+.jiji {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+
+.jiji img {
+  width: 3vh;
+}
+
+.perusahaan2 button {
+  width: 15vh;
+  height: 6vh;
+  background-color: black;
+  color: beige;
+  border-radius: 2vh;
+  margin-left: 90vh;
+}
+
+.perusahaan2 button:hover {
+  background-color: rgb(231, 84, 109);
+  transition: 0.5s;
+}
+
+.book {
+  width: 4vh;
+  margin-left: -3vh;
+  height: 4vh;
+}
+
+.icon {
+  display: flex;
+  margin-left: 37vh;
+  padding-bottom: 2vh;
+  margin-top: -9vh;
+  align-items: center;
+}
+
+.icon p {
+  align-items: center;
+  margin-left: 1vh;
+}
+
+.icon img {
+  margin-left: 2vh;
+  width: 3vh;
+}
+
+.deskripsi p {
+  margin-left: 30vh;
+}
+
+.deskripsi {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.deskripsi1 p {
+  padding-top: 3vh;
+  margin-left: 30vh;
+}
+
+.deskripsi1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.deskripsi2 {
+  padding-top: 3vh;
+  margin-left: 30vh;
+}
+
+.deskripsi2 h3 {
+  padding-bottom: 1vh;
+}
+
+.deskripsi3 {
+  padding-top: 3vh;
+  display: flex;
+  gap: 60vh;
+  margin-left: 30vh;
+}
+.deskripsi3 h3 {
+  padding-bottom: 1vh;
+}
+.footer1 {
+  margin-top: 2vh;
+  border-top: 4px dotted black;
+}
+.deskripsi4 {
+  padding-top: 3vh;
+  display: flex;
+  gap: 25vh;
+  margin-left: 30vh;
+}
+.deskripsi4 h3 {
+  padding-bottom: 1vh;
+}
+.deskripsi5 {
+  padding-top: 3vh;
+  display: flex;
+  gap: 37vh;
+  margin-left: 30vh;
+}
+.deskripsi5 h3 {
+  padding-bottom: 1vh;
+}
+.desk4 ul {
+  list-style-type: none;
+}

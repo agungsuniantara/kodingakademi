@@ -1,0 +1,102 @@
+*{
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px 10px 4px 10px;
+}
+
+.wrapper{
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.483);
+    border-radius: 5px;
+}
+
+.add-employee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.06);
+    padding: 0 10px 0 10px;
+    height: auto;
+}
+
+.search-employee {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-table{
+    padding: 15px;
+    overflow: scroll;
+    height: 300px;
+}
+
+.employee, .employee > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type=submit]{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.add{
+    background-color: rgba(0, 0, 255, 0.708);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.add:hover{
+    background-color: rgb(0, 0, 255);
+}
+
+.edit{
+    background-color:rgba(0, 128, 0, 0.828);
+    color: white;
+    border-radius: 5px;
+}
+
+.edit:hover{
+    background-color:green;
+}
+
+.delete{
+    background-color:rgba(255, 0, 0, 0.769);
+    color: white;
+    border-radius: 5px;
+}
+
+.delete:hover{
+    background-color:rgb(255, 0, 0);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.251);
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.06);}

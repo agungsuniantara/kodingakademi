@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(246, 246, 246);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(82, 82, 82, 0.906);
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem 5%;
+}
+
+.navbar img {
+    width: 10rem;
+    height: 3rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li{
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+.navbar a {
+    color: white;
+}
+
+.home{
+    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(246, 246, 246, 1)),url(background.jpg);
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-konten{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.597);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.home-konten img{
+    width: 20rem;
+    height: 15rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home-konten p{
+    width: 20rem;
+    text-align: center;
+}
+
+.event{
+    padding: 10rem 5%;
+}
+
+.event-baris{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 5%;
+    flex-wrap: wrap;
+}
+
+.event-baris a{
+    color: black;
+}
+
+.event-baris-konten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.819);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+}
+
+.event-baris-konten img{
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+}
+
+.event-baris-konten p{
+    width: 15rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(82, 82, 82, 0.906);
+    color: white;
+    top: 1;
+    bottom: 1;
+    right: 0;
+    left: 0;
+    padding: 1rem 5%;
+}
+
+.footer img{
+    width: 10rem;
+    height: 3rem;
+}
+
+.footer-konten{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-konten ul{
+    list-style: none;
+}
+
+.footer-konten li{
+    display: inline-block;
+    margin: 0.5rem 1rem;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Price Range Filter Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <label for="min-price-slider">Minimum Price:</label>
+    <input
+      type="range"
+      id="min-price-slider"
+      name="min-price-slider"
+      min="0"
+      max="1000"
+      step="10"
+    />
+    $<span id="min-price-value">0</span>
+    <br />
+
+    <label for="max-price-slider">Maximum Price:</label>
+    <input
+      type="range"
+      id="max-price-slider"
+      name="max-price-slider"
+      min="0"
+      max="1000"
+      step="10"
+    />
+    $<span id="max-price-value">1000</span>
+
+    <p>Products within selected price range:</p>
+
+    <ul id="product-list">
+      <li>
+        <div class="barang">
+          <img src="SEPATU.jpg" alt="" />
+        </div>
+        Product 1 - $300
+      </li>
+      <li>
+        <div class="barang">
+          <img src="SEPATU.jpg" alt="" />
+        </div>
+        Product 2 - $500
+      </li>
+      <li>
+        <div class="barang">
+          <img src="SEPATU.jpg" alt="" />
+        </div>
+        Product 3 - $800
+      </li>
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>

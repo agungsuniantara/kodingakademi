@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    right: 0;
+    left: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(86, 83, 79, 0.9);
+    z-index: 99;
+}
+
+.navbar-logo img{
+    width: 150px;
+    height: 40px;
+}
+
+.navbar .navbar-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navbar-list li{
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.navbar .navbar-list ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+}
+
+.parent-img{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(238, 238, 238, 1)), url('asian.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.deskripsi{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.523);
+    padding: 16px 32px 16px;
+    border-radius: 32px;
+}
+
+.deskripsi img{
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+.deskripsi p{
+    width: 300px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+}
+
+.parent-event{
+    color: rgb(0, 0, 0);
+    padding: 80px 5%;
+}
+
+.parent-event h2{
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.baris-konten{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.konten{
+    margin: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.konten a{
+    color: rgb(0, 0, 0);
+}
+
+.konten img{
+    width: 15rem;
+    height: 15rem;
+}
+
+.baris-konten p{
+    text-align: center;
+    width: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.konten h3{
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 1rem 5%;
+    position: absolute;
+    top: 1;
+    right: 0;
+    left: 0;
+    bottom: 1;
+    background-color: rgba(86, 83, 79, 0.9);
+    color: white;
+    font-size: small;
+}
+
+.footer img{
+    width: 150px;
+    height: 40px;
+}
+
+.footer .footer-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-list li{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.footer .footer-list li i{
+    margin-right: 0.5rem;
+}

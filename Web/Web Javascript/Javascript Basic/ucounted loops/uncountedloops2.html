@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assloop</title>
+</head>
+<body>
+<script>
+    var kalimat = prompt('Code: Nama motor pertama anda:..?');
+    var count = 0;
+
+    while(kalimat != "agung"){
+        if(kalimat != "agung"){
+            var kalimat = prompt("masih kesempatan 2 kali");
+            count += 1;
+            if(kalimat != "agung"){
+                var kalimat = prompt("masih kesempatan 1 kali");
+                count += 1;
+            }
+            if(kalimat != "agung"){
+                alert("silahkan ke point coffe");
+                count += 1;
+            }
+        }
+        if (count == 3){
+            break;
+        }
+    }
+    if(kalimat == "agung"){
+        alert("jawaban benar");
+    }
+    else{
+        alert("silahkan ulangi lagi");
+    }
+    
+</script>
+</body>
+</html>

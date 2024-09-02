@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  </head>
+  <body>
+    <script>
+      function dark() {
+        var body = document.querySelector("body");
+        var tulisan = document.querySelectorAll(
+          ".wrap-iso, .footer, .kategori-1, .kategori-2, .kategori-3, .kategori-4, .kategori-5"
+        );
+
+        body.style.backgroundColor = "black";
+
+        tulisan.forEach(function (element) {
+          element.style.color = "white";
+        });
+      }
+
+      function white() {
+        var body = document.querySelector("body");
+        var tulisan = document.querySelectorAll(
+          ".wrap-iso, .footer, .kategori-1, .kategori-2, .kategori-3, .kategori-4, .kategori-5"
+        );
+
+        body.style.backgroundColor = "white";
+
+        tulisan.forEach(function (element) {
+          element.style.color = "black";
+        });
+      }
+    </script>
+    <nav class="navbar">
+      <img
+        src="cfef5ce601689564e0a39b4773f20815-removebg-preview.png"
+        width="25px"
+        height="25px"
+        style="margin-right: 20px"
+      />
+      <ul>
+        <li>Store</li>
+        <li>Mac</li>
+        <li>Ipad</li>
+        <li>Iphone</li>
+        <li>Watch</li>
+        <li>Airpods</li>
+        <li>TV & Home</li>
+        <li>Entertainment</li>
+        <li>Accessories</li>
+        <li>Suport</li>
+        <li><button onclick="dark()">Dark Mode</button></li>
+        <li><button onclick="white()">Light Mode</button></li>
+      </ul>
+      <img
+        src="search.png"
+        width="25px"
+        height="25px"
+        style="margin-right: 20px"
+      />
+      <img
+        src="pngtree-outline-bag-icon-symbol-isolated-png-image_5045525-removebg-preview.png"
+        width="32px"
+        height="32px"
+      />
+    </nav>
+    <main class="konten">
+      <div class="posisi">
+        <swiper-container class="mySwiper" navigation="true">
+          <swiper-slide>
+            <img src="Screen Shot 2023-06-02 at 17.23.49.png" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="iphone 14.png" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="save on mac.png" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="trade in.png" />
+          </swiper-slide>
+        </swiper-container>
+      </div>
+      <div class="posisi">
+        <div class="wrapper">
+          <swiper-container
+            class="mySwiper"
+            scrollbar="true"
+            direction="vertical"
+          >
+            <swiper-slide>
+              <img src="apple1.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="apple2.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="apple3.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="apple4.png" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+      <div class="posisi">
+        <div class="wrapper">
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-type="fraction"
+          >
+            <swiper-slide>
+              <img src="book1.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="fitness1.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="music1.png" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="music2.png" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+
+      <h1 style="text-align: center" class="wrap-iso">PRODUCT</h1>
+
+      <div class="filter">
+        <button data-filter="*" class="active">SEMUA</button>
+        <button data-filter=".kategori-1">IPHONE 14</button>
+        <button data-filter=".kategori-2">IPHONE 13</button>
+        <button data-filter=".kategori-3">IPHONE 12</button>
+        <button data-filter=".kategori-4">IPHONE 11</button>
+        <button data-filter=".kategori-5">IPHONE 10</button>
+      </div>
+
+      <div class="wrap-iso">
+        <div class="grid">
+          <div class="grid-item kategori-1">
+            <div class="product">
+              <img src="iphone 144.png" alt="produk 1" />
+              <h3>Iphone 14 Pro</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-2">
+            <div class="product">
+              <img
+                src="iphone_13_pro_alpine_green_1_4-removebg-preview.png"
+                alt="produk 2"
+              />
+              <h3>Iphone 13 Pro</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-3">
+            <div class="product">
+              <img
+                src="iphone_12_pro_pacific_blue_1-removebg-preview.png"
+                alt="produk 3"
+              />
+              <h3>Iphone 12 Pro</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-4">
+            <div class="product">
+              <img
+                src="pic_iphone11promax_Green1_051219221230_ll.jpg-removebg-preview.png"
+                alt="produk 4"
+              />
+              <h3>Iphone 11 Pro</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-5">
+            <div class="product">
+              <img src="iphonex.png" />
+              <h3>Iphone 10</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-1">
+            <div class="product">
+              <img src="14.png" />
+              <h3>Iphone 14</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-1">
+            <div class="product">
+              <img src="14.png" />
+              <h3>Iphone 14</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-2">
+            <div class="product">
+              <img src="13.png" />
+              <h3>Iphone 13</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-3">
+            <div class="product">
+              <img src="12.png" />
+              <h3>Iphone 12</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-4">
+            <div class="product">
+              <img src="11.png" />
+              <h3>Iphone 11</h3>
+            </div>
+          </div>
+
+          <div class="grid-item kategori-5">
+            <div class="product">
+              <img src="iphonexr.png" />
+              <h3>Iphone 10</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <b>Shop And Learn</b><br /><br />
+          <p>Store</p>
+          <br />
+          <p>Mac</p>
+          <br />
+          <p>iPad</p>
+          <br />
+          <p>Iphone</p>
+          <br />
+          <p>Watch</p>
+          <br />
+          <p>AirPods</p>
+          <br />
+          <p>TV & Home</p>
+          <br />
+          <p>AirTag</p>
+          <br />
+          <p>Accessories</p>
+          <br />
+          <p>Gift Card</p>
+          <br /><br />
+          <b>Apple Wallet</b><br /><br />
+          <p>Wallet</p>
+          <br />
+          <p>Apple Card</p>
+          <br />
+          <p>Apple Pay</p>
+          <br />
+          <p>Apple Cash</p>
+        </div>
+        <div class="footer-content">
+          <b>Account</b><br /><br />
+          <p>Manage Your Apple ID</p>
+          <br />
+          <p>Apple Store Account</p>
+          <br />
+          <p>iCloud.com</p>
+          <br /><br />
+          <b>Eintertainment</b><br /><br />
+          <p>Apple One</p>
+          <br />
+          <p>Apple TV+</p>
+          <br />
+          <p>Apple Music</p>
+          <br />
+          <p>Apple Arcade</p>
+          <br />
+          <p>Apple fitness+</p>
+          <br />
+          <p>Apple News+</p>
+          <br />
+          <p>Apple Podcast</p>
+          <br />
+          <p>Apple Books</p>
+          <br />
+          <p>App Store</p>
+          <br />
+        </div>
+        <div class="footer-content">
+          <b>Apple Store</b><br /><br />
+          <p>Find a Store</p>
+          <br />
+          <p>Genius Bar</p>
+          <br />
+          <p>Today at Apple</p>
+          <br />
+          <p>Apple Camp</p>
+          <br />
+          <p>Apple Store App</p>
+          <br />
+          <p>Certified Refurbished</p>
+          <br />
+          <p>Apple Trade In</p>
+          <br />
+          <p>Financing</p>
+          <br />
+          <p>Carrier Deals at Apple</p>
+          <br />
+          <p>Order Status</p>
+          <br />
+          <p>Shopping Help</p>
+        </div>
+        <div class="footer-content">
+          <b>For Business</b><br /><br />
+          <p>Apple and Business</p>
+          <br />
+          <p>Shop for Business</p>
+          <br /><br />
+          <b>For Education</b><br /><br />
+          <p>Apple and Education</p>
+          <br />
+          <p>Shop for K-12</p>
+          <br />
+          <p>Shop for Collage</p>
+          <br /><br />
+          <b>For Healtcare</b><br /><br />
+          <p>Apple in Healthcare</p>
+          <br />
+          <p>Helthcare on Apple Watch</p>
+          <br />
+          <p>Health Record on iPhone</p>
+          <br /><br />
+          <b>For Goverment</b><br /><br />
+          <p>Shop or Goverment</p>
+          <br />
+          <p>Shop for Veterans and Military</p>
+        </div>
+        <div class="footer-content">
+          <b>Apple Values</b><br /><br />
+          <p>Accesbility</p>
+          <br />
+          <p>Education</p>
+          <br />
+          <p>Environment</p>
+          <br />
+          <p>Inclusion and Diversity</p>
+          <br />
+          <p>Privacy</p>
+          <br />
+          <p>Racial Equality and Justice</p>
+          <br />
+          <p>Supplier Responsibility</p>
+          <br /><br />
+          <b>About Apple</b><br /><br />
+          <p>Newsroom</p>
+          <br />
+          <p>Apple leadrship</p>
+          <br />
+          <p>Career Opportunities</p>
+          <br />
+          <p>Investors</p>
+          <br />
+          <p>Ethics & compliance</p>
+          <br />
+          <p>Event</p>
+          <br />
+          <p>Contact Apple</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var grid = document.querySelector(".grid");
+        var filterButtons = document.querySelectorAll(".filter button");
+
+        var iso = new Isotope(grid, {});
+
+        // Handler untuk filter button
+        filterButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var filterValue = button.getAttribute("data-filter");
+            iso.arrange({ filter: filterValue });
+
+            //Mengatur teks aktif pada filter button yang sedang dipilih
+            filterButtons.forEach(function (btn) {
+              btn.classList.remove("active");
+            });
+            button.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

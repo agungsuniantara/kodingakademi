@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6de0e9f01b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="joel.js"></script>
+    <title>Candy Shop</title>
+  </head>
+  <style>
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    img {
+      height: 50px;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f7b2b7;
+      padding: 10px;
+      color: white;
+      font-family: "Trebuchet MS";
+      font-weight: 600;
+    }
+    .navlist {
+      font-family: "Trebuchet MS";
+      line-height: 50px;
+    }
+    .dropdown {
+      position: relative;
+      width: min-content;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffc2cd;
+      color: #ff084a;
+      font-family: Trebuchet MS;
+      width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .button:active {
+      color: #f7b2b7;
+    }
+
+    .main {
+      background-color: #fc3468;
+      font-family: Trebuchet MS;
+      height: 100%;
+      display: block;
+      width: 40%;
+    }
+    #ExploreUs {
+      background-color: #ff084a;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 5px;
+    }
+    #lollypopimage {
+      width: 60%;
+      height: 100%;
+      background-image: url(pink-swirl-lollipop-png-clip-art-image-5a3beb5e6bed88.7392188515138763184421.jpg);
+      background-size: cover;
+    }
+    @media only screen and (max-width: 600px) {
+      #officeimage {
+        width: 100%;
+      }
+      .main {
+        width: 100%;
+      }
+    }
+
+    #whatweserve {
+      font-size: 75px;
+      color: white;
+      text-align: center;
+      font-weight: 800;
+      margin: 10px 0;
+      padding: 0 0 0 400px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 10px;
+      height: 50px;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .quantity {
+      border: none;
+      background-color: #ff93ac;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 1; /* Firefox */
+    }
+    .confirm {
+      border-radius: 10px;
+      color: white;
+      background-color: #ff6289;
+      border: none;
+      padding: 10px 20px;
+    }
+    .confirm:hover {
+      cursor: pointer;
+    }
+  </style>
+  <body style="margin: 0%">
+    <div class="navbar">
+      <a style="width: 350px"><img src="lollypop.png" /></a>
+      <a class="navlist">Home</a>
+      <a class="navlist">Product</a>
+      <a class="navlist">About</a>
+      <div class="dropdown">
+        <span>Others</span>
+        <div class="dropdown-content">
+          <p>Events</p>
+          <p>Partner</p>
+          <p>Promo</p>
+        </div>
+      </div>
+      <a style="width: 100px" class="navlist">Login</a>
+      <button class="toggleButton">Dark mode</button>
+    </div>
+
+    <div class="mainjs" style="display: flex; height: 80vh">
+      <div class="main">
+        <div
+          class="mainjs"
+          style="
+            margin: 150px 10px 0 0;
+            display: block;
+            background-color: #fc3468;
+          "
+        >
+          <p
+            style="
+              font-size: small;
+              font-weight: bolder;
+              font-family: 'Roboto', sans-serif;
+              color: #ffc2cd;
+              margin: 0 0;
+            "
+          >
+            WE ARE NEW BUT DOING GREAT
+          </p>
+          <p style="font-size: xxx-large; font-weight: 800; margin: 10px 0">
+            We give the power back to the user
+          </p>
+          <p style="padding-bottom: 20px">
+            Content marketing is nothing but offering users placeholder. <br />
+            It is not just aout traffic minion customers.
+          </p>
+          <a class="exploreus" id="ExploreUs">Explore Us</a>
+        </div>
+      </div>
+      <div id="lollypopimage"></div>
+    </div>
+    <div class="whatweserve">
+      <p class="whatweserve" id="whatweserve">WHAT WE SERVE!</p>
+    </div>
+    <div class="table">
+      <table class="table">
+        <thead class="table">
+          <tr class="table" style="background-color: #ff6289">
+            <td>Items</td>
+            <td>Quantity</td>
+            <td style="text-align: center">
+              Price per Unit <br />
+              $
+            </td>
+            <td style="text-align: center">Buy</td>
+          </tr>
+          <tr class="table" style="background-color: #ff93ac">
+            <td>Hard Candy</td>
+            <td>
+              <input
+                type="number"
+                class="quantity"
+                placeholder="Insert Number"
+              />
+            </td>
+            <td style="text-align: center">1.00</td>
+            <td style="text-align: center">
+              <input type="submit" value="Confirm" class="confirm" />
+            </td>
+          </tr>
+          <tr class="table" style="background-color: #ff93ac">
+            <td>Lollypops</td>
+            <td>
+              <input
+                type="number"
+                class="quantity"
+                placeholder="Insert Number"
+              />
+            </td>
+            <td style="text-align: center">0.50</td>
+            <td style="text-align: center">
+              <input type="submit" value="Confirm" class="confirm" />
+            </td>
+          </tr>
+          <tr class="table" style="background-color: #ff93ac">
+            <td>Bubblegum</td>
+            <td>
+              <input
+                type="number"
+                class="quantity"
+                placeholder="Insert Number"
+              />
+            </td>
+            <td style="text-align: center">0.10</td>
+            <td style="text-align: center">
+              <input type="submit" value="Confirm" class="confirm" />
+            </td>
+          </tr>
+          <tr class="table" style="background-color: #ff93ac">
+            <td>Jellybeans</td>
+            <td>
+              <input
+                type="number"
+                class="quantity"
+                placeholder="Insert Number"
+              />
+            </td>
+            <td style="text-align: center">0.25</td>
+            <td style="text-align: center">
+              <input type="submit" value="Confirm" class="confirm" />
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div style="display: flex; background-color: #fc3468" class="footer">
+      <div style="display: block; background-color: #fc3468" class="footer">
+        <p style="font-size: 20px">SIGN UP NOW!</p>
+        <p>Make ordering our goods fast and easy.</p>
+        <p>Candy yourselves up.</p>
+        <div class="contact">
+          <input
+            style="border: transparent; height: 30px"
+            type="text "
+            ;
+            placeholder="Enter your email"
+            class="contact"
+          />
+          <button
+            style="
+              background-color: #fc3468;
+              border: transparent;
+              color: white;
+              height: 30px;
+            "
+            class="footer"
+          >
+            Subscribe
+          </button>
+        </div>
+        <p>Trusted by over 50,000+ customers</p>
+      </div>
+      <div class="contact">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: #fc3468;
+          "
+          class="footer"
+        >
+          <div
+            style="display: flex; width: 20%; background-color: #fc3468"
+            class="footer"
+          >
+            <div style="background-color: #fc3468" class="footer">
+              <i
+                style="
+                  color: #ff084a;
+                  font-size: 30px;
+                  line-height: 70px;
+                  vertical-align: middle;
+                "
+                class="fa-solid fa-pencil"
+              ></i>
+            </div>
+            <div
+              style="background-color: #fc3468; display: block"
+              class="footer"
+            >
+              <h5>Call Us Today</h5>
+              <p>+62087860575271</p>
+            </div>
+          </div>
+          <div
+            style="display: flex; width: 20%; background-color: #fc3468"
+            class="footer"
+          >
+            <div style="background-color: #fc3468" class="footer">
+              <i
+                style="
+                  color: #ff084a;
+                  font-size: 30px;
+                  line-height: 70px;
+                  vertical-align: middle;
+                "
+                class="fa-regular fa-map"
+              ></i>
+            </div>
+            <div
+              style="background-color: #fc3468; display: block"
+              class="footer"
+            >
+              <h5>WhatsApp Us Now!</h5>
+              <p>+62087860575271</p>
+            </div>
+          </div>
+          <div
+            style="display: flex; width: 20%; background-color: #fc3468"
+            class="footer"
+          >
+            <div style="background-color: #fc3468" class="footer">
+              <i
+                style="
+                  color: #ff084a;
+                  font-size: 30px;
+                  line-height: 70px;
+                  vertical-align: middle;
+                "
+                class="fa-solid fa-laptop-file"
+              ></i>
+            </div>
+            <div
+              style="background-color: #fc3468; display: block"
+              class="footer"
+            >
+              <h5>Email Us Anytime</h5>
+              <p>handalagarcia021@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

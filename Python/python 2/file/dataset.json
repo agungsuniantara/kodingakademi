@@ -1,0 +1,849 @@
+{
+  "intents": [
+    {
+      "tag": "alam",
+      "patterns": [
+        "Carikan saya tempat wisata alam",
+        "Carikan saya tempat wisata alam selain pantai",
+        "Rekomendasikan destinasi alam di Bali",
+        "Wisata alam terkenal di Bali",
+        "Wisata outdoor selain pantai di Bali",
+        "Apa saja wisata alam yang ada di Bali",
+        "Apa saja wisata alam selain pantai di Bali"
+      ],
+      "responses": [
+        "Berikan jenis wisata alam yang ingin kamu kunjungi untuk hasil yang lebih spesifik\\nPilihan :\\n - Danau\\n - Kebun (Agrowisata)\\n - Sawah\\n - Fauna"
+      ],
+      "context": "kategori_alam",
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "alam_danau",
+      "patterns": [
+        "Apakah di Bali ada danau yang bagus",
+        "Rekomendasikan wisata alam danau",
+        "Wisata alam air",
+        "Dimana ada wisata danau di Bali",
+        "Wisata danau",
+        "Carikan saya wisata alam perairan"
+      ],
+      "responses": [
+        "- Danau Batur (Kintamani, Bangli), HTM : Rp 15.000",
+        "- Danau Beratan (Bedugul, Tabanan), HTM : Rp 30.000",
+        "- Danau Yeh Malet (Manggis, Karangasem), HTM : Rp 0",
+        "- Danau Buyan (Sukasada, Buleleng), HTM : Rp 10.000",
+        "- Danau Tamblingan (Banjar, Buleleng), HTM : Rp 10.000"
+      ],
+      "context": "kategori_alam",
+      "kota": [
+        "bangli",
+        "tabanan",
+        "karangasem",
+        "buleleng",
+        "buleleng"
+      ],
+      "harga": [
+        15000,
+        30000,
+        0,
+        10000,
+        10000
+      ]
+    },
+    {
+      "tag": "alam_fauna",
+      "patterns": [
+        "Apa saja destinasi wisata fauna di Bali",
+        "Kebun Binatang di Bali",
+        "Wisata kebun binatang",
+        "Rekomendasi kebun binatang di Bali",
+        "Tempat binatang",
+        "Penangkaran hewan di Bali",
+        "Carikan kebun binatang",
+        "Rekomendasi wisata margasatwa",
+        "Wisata pecinta hewan",
+        "Carikan saya tempat penangkaran hewan",
+        "Taman wisata margasatwa",
+        "Tempat wisata binatang"
+      ],
+      "responses": [
+        "- Bali Zoo (Gianyar), HTM : Rp 75.000",
+        "- Bali Safari & Marine Park (Gianyar), HTM : Rp 135.000",
+        "- Kemenuh Butterfly Park (Gianyar), HTM : Rp 100.000",
+        "- Bali Butterfly Park (Tabanan), HTM : Rp 45.000",
+        "- Balitopia Butterfly park (Gianyar), HTM : Rp 75.000",
+        "- Mandala Wisata Wenara Wana [Monkey Forest] (Gianyar), HTM : Rp 60.000",
+        "- Sangeh Monkey Forest (Badung), HTM : Rp 15.000",
+        "- Bali Bird Park (Gianyar), HTM : Rp 140.000",
+        "- Mason Elephant Park (Gianyar), HTM : Rp 135.000",
+        "- Penangkaran Penyu Tanjung Benoa (Badung), HTM : Rp 10.000",
+        "- Pusat Konservasi dan Edukasi Penyu (Denpasar), HTM : Rp 0",
+        "- Bali sea Turtle Society (Badung), HTM : Rp 0",
+        "- Bali Exotic marine Park (Denpasar), HTM : Rp 150.000 - 990.000"
+      ],
+      "context": "kategori_alam",
+      "kota": [
+        "gianyar",
+        "gianyar",
+        "gianyar",
+        "tabanan",
+        "gianyar",
+        "gianyar",
+        "badung",
+        "gianyar",
+        "gianyar",
+        "badung",
+        "denpasar",
+        "badung",
+        "denpasar"
+      ],
+      "harga": [
+        75000,
+        135000,
+        100000,
+        45000,
+        75000,
+        60000,
+        15000,
+        140000,
+        135000,
+        10000,
+        0,
+        0,
+        150000
+      ]
+    },
+    {
+      "tag": "alam_kebun",
+      "patterns": [
+        "Apakah ada destinasi wisata kebun di Bali",
+        "Rekomendasi wisata perkebunan",
+        "Rekomendasikan tempat agrowisata",
+        "Tempat perkebunan di Bali",
+        "Agrowisata di Bali",
+        "Kebun buah atau sayur di Bali",
+        "Tempat bermain di alam",
+        "Carikan saya agrowisata di Bali",
+        "Tempat sejuk untuk liburan",
+        "Liburan sambil mengenal alam",
+        "Tempat wisata yang sejuk atau dingin di Bali",
+        "Wisata edukasi tanaman tumbuhan",
+        "Tempat wisata di Bali yang asri",
+        "Budidaya tanaman sayur buah"
+      ],
+      "responses": [
+        "- The Sila's Agrotourism (Baturiti, Tabanan), HTM : Rp 10.000",
+        "- Bagus Agro Pelaga (Pelaga, Badung), HTM : Rp 30.000",
+        "- Alas Harum Agrotourism (Tegallalang, Gianyar), HTM : Rp 50.000",
+        "- Bali Strawberry Farm & Restaurant (Baturiti, Tabanan), HTM : Rp 0",
+        "- Kumulilir (Tegallalang, Gianyar), HTM : Rp 50.000",
+        "- Agrowisata Abian Salak (Sibetan, Karangasem), HTM : Rp 75.000",
+        "- Hatten Wines (Buleleng), HTM : Rp 50.000",
+        "- Bali Pulina (Tegallalang, Gianyar), HTM : Rp 100.000",
+        "- Alam Sari Agrotourism (Sukawati, Gianyar), HTM : Rp 0",
+        "- Basanta Agro Organik (Tegallalang, Gianyar), HTM : Rp 0",
+        "- Agrowisata Buah Naga (Mengwi, Badung), HTM : Rp 0",
+        "- Agrowisata Jeruk Desa Catur (Kintamani, Bangli), HTM : Rp 0",
+        "- Kebun Raya Bedugul (Tabanan), HTM : Rp 20.000"
+      ],
+      "context": "kategori_alam",
+      "kota": [
+        "tabanan",
+        "badung",
+        "gianyar",
+        "tabanan",
+        "gianyar",
+        "karangasem",
+        "buleleng",
+        "gianyar",
+        "gianyar",
+        "gianyar",
+        "badung",
+        "bangli",
+        "tabanan"
+      ],
+      "harga": [
+        10000,
+        30000,
+        50000,
+        0,
+        50000,
+        75000,
+        50000,
+        100000,
+        0,
+        0,
+        0,
+        0,
+        20000
+      ]
+    },
+    {
+      "tag": "alam_sawah",
+      "patterns": [
+        "Apa saja wisata persawahan di Bali",
+        "Sawah apa saja yang biasa dijadikan wisata",
+        "Rekomendasi destinasi wisata persawahan",
+        "Sawah terasering di Bali",
+        "Carikan saya wisata sawah di Bali",
+        "Area persawahan yang populer",
+        "Hamparan persawahan indah",
+        "sawah terasering yang terkenal"
+      ],
+      "responses": [
+        "- Sawah Terasering Tegalalang (Gianyar), HTM : Rp 10.000",
+        "- Sawah Terasering Jatiluwih (Tabanan), HTM : Rp 15.000",
+        "- Sawah Terasering Busungbiu (Buleleng), HTM : Rp 5000",
+        "- Persawahan Antosari (Tabanan), HTM : Rp 0",
+        "- Persawahan Pupuan (Tabanan), HTM : Rp 0",
+        "- Persawahan Nyambu (Tabanan), HTM : Rp 400.000",
+        "- Persawahan Gunung Salak (Tabanan), HTM : Rp 0",
+        "- Sawah Terasering Soka (Tabanan), HTM : Rp 0",
+        "- Subak Uma Desa (Badung), HTM : Rp 0"
+      ],
+      "context": "kategori_alam",
+      "kota": [
+        "gianyar",
+        "tabanan",
+        "buleleng",
+        "tabanan",
+        "tabanan",
+        "tabanan",
+        "tabanan",
+        "tabanan",
+        "badung"
+      ],
+      "harga": [
+        10000,
+        15000,
+        5000,
+        0,
+        0,
+        400000,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "tag": "budaya",
+      "patterns": [
+        "Rekomendasi wisata budaya Bali",
+        "Carikan saya tempat wisata budaya",
+        "Apa saja tempat budaya yang ada di Bali",
+        "Destinasi wisata budaya Bali",
+        "Tempat wisata mengenai budaya di Bali",
+        "Tempat wisata untuk mengenal budaya Bali",
+        "Tempat untuk melihat kebudayaan Bali",
+        "Tempat budaya apa saja yang ada di Bali",
+        "Mengenal budaya di Bali"
+      ],
+      "responses": [
+        "Berikan jenis wisata budaya yang ingin kamu kunjungi untuk hasil yang lebih spesifik\\nPilihan :\\n - Desa\\n - Pura"
+      ],
+      "context": "kategori_budaya",
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "budaya_desa",
+      "patterns": [
+        "Rekomendasi desa wisata di Bali",
+        "Carikan desa wisata di Bali",
+        "Desa wisata yang terkenal di Bali",
+        "Rekomendasi desa budaya",
+        "Carikan saya desa budaya",
+        "Desa budaya di Bali",
+        "Rekomendasi desa adat di Bali",
+        "Carikan desa adat di Bali",
+        "Desa adat yang ada di Bali",
+        "Desa yang biasanya dijadikan destinasi wisata",
+        "Desa indah yang dapat dikunjungi di Bali"
+      ],
+      "responses": [
+        "- Desa Panglipuran (Bangli), HTM : Rp 25.000",
+        "- Desa Tigawasa (Karangasem), HTM : Rp 0",
+        "- Desa Cempaga (Buleleng), HTM : Rp 0",
+        "- Desa Tenganan (Karangasem), HTM : Rp 10.000",
+        "- Desa Sidatapa (Buleleng), HTM : Rp 0",
+        "- Desa Sidemen (Karangasem), HTM : Rp 0",
+        "- Desa Kertalangu (Denpasar), HTM : Rp 10.000",
+        "- Desa Trunyan (Bangli), HTM : Rp 0",
+        "- Desa Ubud (Gianyar), HTM : Rp 0",
+        "- Desa Pinggan (Bangli), HTM : Rp 0",
+        "- Desa Batubulan (Gianyar), HTM : Rp 0",
+        "- Desa Celuk (Gianyar), HTM : Rp 0"
+      ],
+      "context": "kategori_budaya",
+      "kota": [
+        "bangli",
+        "karangasem",
+        "buleleng",
+        "karangasem",
+        "buleleng",
+        "karangasem",
+        "denpasar",
+        "bangli",
+        "gianyar",
+        "bangli",
+        "gianyar",
+        "gianyar"
+      ],
+      "harga": [
+        25000,
+        0,
+        0,
+        10000,
+        0,
+        0,
+        10000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "tag": "budaya_pura",
+      "patterns": [
+        "Rekomendaasikan saya wisata budaya pura",
+        "Rekomendasi pura yang jadi tempat wisata",
+        "Carikan saya tempat wisata pura",
+        "Tempat wisata budaya pura",
+        "Destinasi wisata pura di Bali",
+        "Pura yang terkenal untuk wisata",
+        "Pura yang pemandangannya bagus",
+        "Wisata religi umat hindu",
+        "Tempat ibadah umat hindu yang dapat dikunjungi",
+        "Destinasi wisata budaya ke tempat ibadah hindu",
+        "Pura dengan pemandangan indah"
+      ],
+      "responses": [
+        "- Pura Tanah Lot (Tabanan), HTM : Rp 20.000",
+        "- Pura Besakih (Karangasem), HTM : Rp 30.000",
+        "- Pura Tirta Empul Tampak Siring (Gianyar), HTM : Rp 30.000",
+        "- Pura Luhur Uluwatu (Badung), HTM : Rp 30.000",
+        "- Pura Ulun Danu (Tabanan), HTM : Rp 30.000",
+        "- Pura Taman Ayun (Badung), HTM : Rp 15.000",
+        "- Pura Taman Saraswati (Gianyar), HTM : Rp 0",
+        "- Pura Gunung Lebah (Gianyar), HTM : Rp 0",
+        "- Pura Goa Lawah (Klungkung), HTM : Rp 20.000",
+        "- Pura Gunung Kawi (Gianyar), HTM : Rp 30.000",
+        "- Pura Lempuyang (Karangasem), HTM : Rp 50.000"
+      ],
+      "context": "kategori_budaya",
+      "kota": [
+        "tabanan",
+        "karangasem",
+        "gianyar",
+        "badung",
+        "tabanan",
+        "badung",
+        "gianyar",
+        "gianyar",
+        "klungkung",
+        "gianyar",
+        "karangasem"
+      ],
+      "harga": [
+        20000,
+        30000,
+        30000,
+        30000,
+        30000,
+        15000,
+        0,
+        0,
+        20000,
+        30000,
+        50000
+      ]
+    },
+    {
+      "tag": "pantai",
+      "patterns": [
+        "rekomendasikan pantai di Bali",
+        "Carikan saya pantai terkenal",
+        "Apa saja pantai di Bali?",
+        "Pantai terkenal di Bali",
+        "Pantai populer",
+        "Pantai yang indah"
+      ],
+      "responses": [
+        "Berikan jenis pantai yang ingin kamu kunjungi untuk hasil yang lebih spesifik\\nPilihan :\\n - Sunset\\n - Sunrise\\n - Family friendly"
+      ],
+      "context": "kategori_pantai",
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "pantai_family",
+      "patterns": [
+        "rekomendasikan pantai di Bali yang ramah anak",
+        "rekomendasikan pantai di Bali yang family friendly",
+        "Carikan saya pantai terkenal yang cocok untuk keluarga",
+        "Carikan saya pantai terkenal yang family friendly",
+        "Apa saja pantai di Bali yang ramah anak",
+        "Apa saja pantai di Bali yang cocok untuk keluarga",
+        "Pantai terkenal yang ramah anak",
+        "Pantai terkenal yang cocok untuk keluarga",
+        "Pantai yang ramah anak",
+        "Pantai yang family friendly"
+      ],
+      "responses": [
+        "- Pantai Mengiat (Badung), HTM : Rp 0",
+        "- Pantai Geger (Badung), HTM : Rp Rp 5000",
+        "- Pantai Tanjung Benoa (Badung), HTM : Rp 0",
+        "- Pantai Sawangan (Badung), HTM : Rp 0",
+        "- Pantai Pandawa (Badung), HTM : Rp 8000",
+        "- Pantai Melasti (Badung), HTM : Rp 8000",
+        "- Pantai Duyung Sanur (Denpasar), HTM : Rp 0"
+      ],
+      "context": "kategori_pantai",
+      "kota": [
+        "badung",
+        "badung",
+        "badung",
+        "badung",
+        "badung",
+        "badung",
+        "denpasar"
+      ],
+      "harga": [
+        0,
+        5000,
+        0,
+        0,
+        8000,
+        8000,
+        0
+      ]
+    },
+    {
+      "tag": "pantai_sunrise",
+      "patterns": [
+        "rekomendasikan pantai untuk melihat sunrise",
+        "Carikan saya pantai terkenal untuk melihat sunrise",
+        "Apa saja pantai di Bali yang dapat untuk melihat sunrise",
+        "Pantai terkenal di Bali untuk melihat sunrise",
+        "Pantai terkenal untuk sunrise",
+        "Pantai populer untuk sunrise",
+        "rekomendasikan pantai untuk melihat matahari terbit",
+        "Carikan saya pantai terkenal untuk melihat matahari terbit",
+        "Apa saja pantai di Bali yang dapat untuk melihat matahari terbit",
+        "Pantai terkenal di Bali untuk melihat matahari terbit",
+        "Pantai terkenal untuk matahari terbit",
+        "Pantai populer untuk matahari terbit"
+      ],
+      "responses": [
+        "- Pantai Lovina (Buleleng), HTM : Rp 0",
+        "- Pantai Matahari Terbit (Denpasar), HTM : Rp 0",
+        "- Pantai Padang Bai (Karangasem), HTM : Rp 5000",
+        "- Pantai Candidasa (Karangasem), HTM : Rp 0",
+        "- Pantai Nusa Dua (Badung), HTM : Rp 0",
+        "- Pantai Tanjung Benoa (Badung), HTM : Rp 0",
+        "- Pantai Padang Galak (Denpasar), HTM : Rp 0",
+        "- Pantai Sanur (Denpasar), HTM : Rp 0",
+        "- Pantai Purnama (Gianyar), HTM : Rp 0",
+        "- Pantai Lebih (Gianyar), HTM : Rp 2000",
+        "- Pantai Karangsewu (Jembrana), HTM : Rp 0",
+        "- Pantai Goa Lawah (Klungkung), HTM : Rp 0"
+      ],
+      "context": "kategori_pantai",
+      "kota": [
+        "buleleng",
+        "denpasar",
+        "karangasem",
+        "karangasem",
+        "badung",
+        "badung",
+        "denpasar",
+        "denpasar",
+        "gianyar",
+        "gianyar",
+        "jembrana",
+        "klungkung"
+      ],
+      "harga": [
+        0,
+        0,
+        5000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2000,
+        0,
+        0
+      ]
+    },
+    {
+      "tag": "pantai_sunset",
+      "patterns": [
+        "rekomendasikan pantai untuk melihat sunset",
+        "Carikan saya pantai terkenal untuk melihat sunset",
+        "Apa saja pantai di Bali yang dapat untuk melihat sunset",
+        "Pantai terkenal di Bali untuk melihat sunset",
+        "Pantai terkenal untuk sunset",
+        "Pantai populer untuk sunset",
+        "rekomendasikan pantai untuk melihat matahari terbenam",
+        "Carikan saya pantai terkenal untuk melihat matahari terbenam",
+        "Apa saja pantai di Bali yang dapat untuk melihat matahari terbenam",
+        "Pantai terkenal di Bali untuk melihat matahari terbenam",
+        "Pantai terkenal untuk matahari terbenam",
+        "Pantai populer untuk matahari terbenam"
+      ],
+      "responses": [
+        "- Pantai Kuta (Badung); HTM : Rp 0",
+        "- Pantai Kelan (Badung); HTM : Rp 0",
+        "- Pantai Jimbaran (Badung), HTM : Rp 0",
+        "- Pantai Penimbangan (Buleleng), HTM : Rp 0",
+        "- Pantai Balangan (Badung), HTM : Rp 0",
+        "- Pantai Masceti (Gianyar), HTM : Rp 0",
+        "- Pantai Siyut (Gianyar), HTM : Rp 0",
+        "- Pantai Baluk Rening (Jembrana), HTM : Rp 0",
+        "- Pantai Perancak (Jembrana), HTM : Rp 0",
+        "- Pantai Candidasa (Karangasem), HTM : Rp 0",
+        "- Pantai Watu Klotok (Klungkung), HTM : Rp 5000",
+        "- Pantai Batu Tumpeng (Klungkung), HTM : Rp 0",
+        "- Pantai Tanah Lot (Tabanan), HTM : Rp 20.000",
+        "- Pantai Kedungu (Tabanan), HTM : Rp 0"
+      ],
+      "context": "kategori_pantai",
+      "kota": [
+        "badung",
+        "badung",
+        "badung",
+        "buleleng",
+        "badung",
+        "gianyar",
+        "gianyar",
+        "jembrana",
+        "jembrana",
+        "karangasem",
+        "klungkung",
+        "klungkung",
+        "tabanan",
+        "tabanan"
+      ],
+      "harga": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5000,
+        0,
+        20000,
+        0
+      ]
+    },
+    {
+      "tag": "salah",
+      "patterns": [
+        "ha?",
+        "nggak paham",
+        "maksudnya?",
+        "nggak jelas",
+        "masa sih"
+      ],
+      "responses": [
+        "Maaf; saya tidak mengerti maksud Anda. Coba untuk pertanyaan lain atau perbaiki penulisan Anda."
+      ],
+      "context": null,
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "sapaan",
+      "patterns": [
+        "Hai",
+        "Halo",
+        "hallo",
+        "Selamat Pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "pagi",
+        "siang",
+        "sore",
+        "malam"
+      ],
+      "responses": [
+        "Hai",
+        "Halo",
+        "Selamat Datang",
+        "Senang bertemu Anda",
+        "Ada yang bisa dibantu?",
+        "Sedang butuh bantuan?"
+      ],
+      "context": null,
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "sejarah",
+      "patterns": [
+        "Rekomendasi wisata sejarah di Bali",
+        "Rekomendasikan saya tempat bersejarah untuk dikunjungi",
+        "Carikan tempat wisata sejarah di Bali",
+        "Tempat bersejarah",
+        "Destinasi wisata sejarah",
+        "Rekomendasi monumen bersejarah",
+        "Monumen sejarah di Bali",
+        "Wisata dengan nilai sejarah",
+        "Carikan monumen yang ada di Bali"
+      ],
+      "responses": [
+        "- Monumen Bajra Sandhi (Denpasar), HTM : Rp 25.000",
+        "- Monumen Mumbul (Badung), HTM : Rp 0",
+        "- Monumen Nusa Mara (Jembrana), HTM : Rp 0",
+        "- Monumen Puputan Badung, HTM : Rp 0",
+        "- Monumen Puputan Klungkung, HTM : Rp 0",
+        "- Monumen Operasi Lintas Laut Jawa (Jembrana), HTM : Rp 0",
+        "- Monumen Margarana (Tabanan), HTM : Rp 0",
+        "- Monumen Tri Yudha Sakti (Buleleng), HTM : Rp 0",
+        "- Monumen Tanah Aron (Karangasem), HTM : Rp 0",
+        "- Monumen Perjuangan Kapten TNI Anak Agung Gede Anom Mudita (Bangli), HTM : Rp 0",
+        "- Tirta Gangga (Karangasem), HTM : Rp 25.000",
+        "- Istana Taman Air Ujung (Karangasem), HTM : Rp 10.000",
+        "- Kertha Gosa (Klungkung), HTM : Rp 25.000",
+        "- Goa Gajah (Gianyar), HTM : Rp 30.000",
+        "- Garuda Wisnu Kencana [GWK] (Badung), HTM : Rp 115.000"
+      ],
+      "context": null,
+      "kota": [
+        "denpasar",
+        "badung",
+        "jembrana",
+        "badung",
+        "klungkung",
+        "jembrana",
+        "tabanan",
+        "buleleng",
+        "karangasem",
+        "bangli",
+        "karangasem",
+        "karangasem",
+        "klungkung",
+        "gianyar",
+        "badung"
+      ],
+      "harga": [
+        25000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25000,
+        10000,
+        25000,
+        30000,
+        115000
+      ]
+    },
+    {
+      "tag": "selesai",
+      "patterns": [
+        "Selamat Tinggal",
+        "Sampai bertemu lagi",
+        "Dadah",
+        "dadaa"
+      ],
+      "responses": [
+        "Selamat tinggal",
+        "Sampai bertemu lagi"
+      ],
+      "context": null,
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "seni",
+      "patterns": [
+        "Rekomendasikan saya tempat kesenian di Bali",
+        "Rekomendasi wisata mengenai seni",
+        "Carikan saya tempat wisata yang berhubungan dengan kesenian Bali",
+        "Tempat seni di Bali",
+        "Wisata kesenian ",
+        "Destinasi wisata mengenai kesenian Bali",
+        "Dimana saya dapat mengenal kesenian Bali",
+        "Dimana daya dapat melihat seni tradisional Bali",
+        "Apa saja tempat wisata tentang seni yang ada di Bali",
+        "Karya seni Bali",
+        "Apakah di Bali ada tempat untuk melihat kesenian",
+        "Tempat untuk melihat kesenian"
+      ],
+      "responses": [
+        "Berikan jenis wisata mengenai kesenian yang ingin kamu kunjungi untuk hasil yang lebih spesifik\\nPilihan :\\n - Museum atau Galeri Seni\\n - Pasar Seni"
+      ],
+      "context": "kategori_seni",
+      "kota": [],
+      "harga": []
+    },
+    {
+      "tag": "seni_museum",
+      "patterns": [
+        "Rekomendasikan saya museum seni di Bali",
+        "Rekomendasi galeri seni",
+        "Carikan saya galeri seni di Bali",
+        "Carikan museum seni",
+        "Wisata museum seni di Bali",
+        "Tempat wisata museum",
+        "Pameran seni di Bali",
+        "Galeri seni yang ada di Bali",
+        "Apa saja museum yang ada di Bali",
+        "Tempat kumpulan lukisan",
+        "Museum yang terkenal",
+        "Galeri lukisan paling diminati",
+        "Museum yang berisi karya seni lukis",
+        "Pameran lukisan di Bali",
+        "Tempat melihat karya seni Bali",
+        "Tempat karya seni lokal masyarakat Bali",
+        "Museum pelukis Bali"
+      ],
+      "responses": [
+        "- Museum Puri Lukisan (Gianyar), HTM : Rp 85.000",
+        "- Museum Pasifika (Badung), HTM : Rp 50.000",
+        "- Museum Gedong Kirtya (Buleleng), HTM : Rp 0",
+        "- Museum Gunarsa (Klungkung), HTM : Rp 25.000",
+        "- Museum Runa (Gianyar), HTM : Rp 0",
+        "- Museum Subak (Tabanan), HTM : Rp 10.000",
+        "- Rumah Topeng dan Wayang Setia Darma (Gianyar), HTM : Rp 0",
+        "- Neka Art Museum (Gianyar), HTM : Rp 100.000",
+        "- Museum Rudana (Gianyar), HTM : Rp 20.000",
+        "- Bali Museum (Denpasar), HTM : Rp 5000",
+        "- Nyaman Gallery (Badung), HTM : Rp 50.000",
+        "- Semar Kuning Artist Cooperative (Gianyar), HTM : Rp 0",
+        "- Purpa Fine Art Gallery (Badung), HTM : Rp 0",
+        "- Galeri Zen 1 (Badung), HTM : Rp 0",
+        "- Nyoman Jendra Artist Painting Gallery (Gianyar), HTM : Rp 0",
+        "- The Blanco Museum (Gianyar), HTM : Rp 55.000",
+        "- Agung Rai Fine Art Gallery (Gianyar), HTM : Rp 100.000",
+        "- Santrian Art Gallery (Denpasar), HTM : Rp 0"
+      ],
+      "context": "kategori_seni",
+      "kota": [
+        "gianyar",
+        "badung",
+        "buleleng",
+        "klungkung",
+        "gianyar",
+        "tabanan",
+        "gianyar",
+        "gianyar",
+        "gianyar",
+        "denpasar",
+        "badung",
+        "gianyar",
+        "badung",
+        "badung",
+        "gianyar",
+        "gianyar",
+        "gianyar",
+        "denpasar"
+      ],
+      "harga": [
+        85000,
+        50000,
+        0,
+        25000,
+        0,
+        10000,
+        0,
+        100000,
+        20000,
+        5000,
+        50000,
+        0,
+        0,
+        0,
+        0,
+        55000,
+        100000,
+        0
+      ]
+    },
+    {
+      "tag": "seni_pasar",
+      "patterns": [
+        "Rekomendasikan saya pasar seni di Bali",
+        "Rekomendasi pasar yang menjual barang seni",
+        "Carikan tempat yang menjual karya seni",
+        "Dimana tempat yang menjual karya seni lokal",
+        "Pasar yang menjual kesenian",
+        "Pasar lokal yang menjual kesenian Bali",
+        "Pasar tradisional yang menjual seni khas Bali",
+        "Tempat jualan kesenian Bali",
+        "Pasar seni",
+        "Pasar yang menjual kerajinan lokal",
+        "Membeli kerajinan khas Bali di pasar mana",
+        "Pasar kerajinan Bali"
+      ],
+      "responses": [
+        "- Pasar Seni Kumbasari (Denpasar)",
+        "- Pasar Seni Ubud (Gianyar)",
+        "- Pasar Seni Sukawati (Gianyar)",
+        "- Pasar Seni Klungkung",
+        "- Pasar Seni Guwang (Gianyar)",
+        "- Pasar Seni Kuta (Badung)",
+        "- Pasar Seni Mertanadi (Badung)"
+      ],
+      "context": "kategori_seni",
+      "kota": [
+        "denpasar",
+        "gianyar",
+        "gianyar",
+        "klungkung",
+        "gianyar",
+        "badung",
+        "badung"
+      ],
+      "harga": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "tag": "terimakasih",
+      "patterns": [
+        "Terima kasih",
+        "Makasih",
+        "Trims",
+        "Jawaban yang bagus",
+        "Sangat membantu",
+        "Terima kasih jawabannya",
+        "Makasih jawabannya",
+        "Saran yang bagus",
+        "Terima kasih sarannya",
+        "Makasih sarannya"
+      ],
+      "responses": [
+        "Terima kasih",
+        "Senang dapat membantu"
+      ],
+      "context": null,
+      "kota": [],
+      "harga": []
+    }
+  ]
+}

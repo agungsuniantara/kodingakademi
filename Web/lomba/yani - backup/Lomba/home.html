@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--header section starts-->
+
+    <header class="header">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+        <a href="home.html" class="logo"
+          ><img src="images/logo.png" alt=""
+        /></a>
+        <div class="right_wrapper">
+          <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="contact.html">contact us</a>
+          </nav>
+          <a href="register.html" class="btn-register" style="margin-top: 0"
+            ><i class="fas fa-pencil-alt fa-lg"></i> Register</a
+          >
+          <a href="login.html" class="btn-masuk" style="margin-top: 0">
+            <div class="btn-masuk-login">
+              <p>Login</p>
+              <i class="fas fa-sign-in-alt"></i></div
+          ></a>
+        </div>
+      </section>
+    </header>
+
+    <!--header section ends-->
+
+    <!--home section starts-->
+
+    <div class="home-container">
+      <section class="job-filter">
+        <form action="" method="post">
+          <div class="flex">
+            <div class="box">
+              <div class="dropdown-container">
+                <div class="dropdown">
+                  <input
+                    type="text"
+                    readonly
+                    name="specialist"
+                    placeholder="Job specialist"
+                    maxlength="5"
+                    class="output"
+                    id="jobspecialist"
+                  />
+                  <div class="lists">
+                    <p
+                      class="items"
+                      onclick="selectSpecialist('Web developer')"
+                    >
+                      Web developer
+                    </p>
+                    <p class="items" onclick="selectSpecialist('Designer')">
+                      Designer
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="dropdown-container">
+                <div class="dropdown">
+                  <input
+                    type="text"
+                    readonly
+                    name="specialist"
+                    placeholder="Job company"
+                    maxlength="5"
+                    class="output"
+                    id="jobscompany"
+                  />
+                  <div class="lists">
+                    <p class="items" onclick="selectCompany('Google')">
+                      Google
+                    </p>
+                    <p class="items" onclick="selectCompany('Facebook')">
+                      Facebook
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="dropdown-container">
+                <div class="dropdown">
+                  <input
+                    type="text"
+                    readonly
+                    name="date"
+                    placeholder="Job location"
+                    maxlength="5"
+                    class="output"
+                    id="jobLocationInput"
+                  />
+                  <div class="lists">
+                    <p class="items" onclick="selectLocation('Denpasar')">
+                      Denpasar
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn-search">
+              <div class="btn-masuk-login">
+                <p>Search</p>
+                <i class="fas fa-search"></i></div
+            ></a>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!--home section ends-->
+
+    <!--catergory section starts-->
+    <section class="category">
+      <h1 class="heading">categories</h1>
+
+      <div class="box-container">
+        <a href="#" class="box">
+          <i class="fas fa-code"></i>
+          <div>
+            <h3>all job</h3>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <i class="fas fa-code"></i>
+          <div>
+            <h3>designer</h3>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <i class="fas fa-code"></i>
+          <div>
+            <h3>teacher</h3>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <i class="fas fa-code"></i>
+          <div>
+            <h3>marketing</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!--catergory section ends-->
+
+    <!--job section starts-->
+    <section class="jobs-container">
+      <h1 class="heading">list jobs</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="company">
+            <img src="images/icon-1.PNG" alt="" />
+            <div>
+              <h3>IT infosys co.</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">senior web development</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Denpasar</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_job.html" class="btn">view details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--job section ends-->
+
+    <section class="jobs-info">
+      <div class="info-header">
+        <h1>
+          Dapatkan Kandidat <br />
+          dengan potensi terbaik
+        </h1>
+        <p>
+          Kami membantu perusahaan anda mencari talenta terbaik. Posting
+          lowongan kerja dengan mudah untuk terhubung dengan ribuan Job Seeker
+          yang sedang memanti. Gunakan layanan dan fitur jobseeker untuuk
+          mempermudah proses recruitment.
+        </p>
+      </div>
+      <div class="info-button">
+        <button>Contact Us</button>
+      </div>
+    </section>
+
+    <!--footer section starts-->
+
+    <footer class="footer">
+      <section class="footer-info">
+        <button>
+          <i class="fab fa-whatsapp fa-lg" style="color: #ffffff"></i> Customer
+          Care
+        </button>
+        <div class="info-number">
+          <div class="data">
+            <h3>83</h3>
+            <p>Lowongan Aktif</p>
+          </div>
+          <div class="data">
+            <h3>167</h3>
+            <p>Job Seeker</p>
+          </div>
+          <div class="data">
+            <h3>125</h3>
+            <p>Freelancers</p>
+          </div>
+          <div class="data">
+            <h3>167</h3>
+            <p>Perusahaan</p>
+          </div>
+        </div>
+      </section>
+      <div class="credit">
+        <section class="grid">
+          <div class="box">
+            <img src="images/logo.png" alt="" />
+            <p>Jalan blahbatuh kaje kangin</p>
+            <p>Denpasar, Bali, Indonesia</p>
+          </div>
+          <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+          </div>
+          <div class="box">
+            <h3>quick links</h3>
+            <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i>about us</a>
+            <a href="contact.html"
+              ><i class="fas fa-angle-right"></i>contact us</a
+            >
+            <a href="contact.html"><i class="fas fa-angle-right"></i>account</a>
+          </div>
+          <div class="box">
+            <h3>download apps</h3>
+            <a href="#"><i class="fab fa-google-play fa-lg"></i>Google Play</a>
+          </div>
+        </section>
+        &copy; copyright by <span>......</span>
+      </div>
+    </footer>
+    <!--footer section ends-->
+
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

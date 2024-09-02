@@ -1,0 +1,36 @@
+class terdiri dari :
+- atribut
+- konstruktor
+- method
+
+inheritance terdiri dari :
+- class parent
+- class child extend parent (konstruktor super)
+
+encapsulation terdiri dari : 
+- atribut memiliki akses private
+- memberikan metode publik (getters dan setters) untuk mengakses dan memanipulasi atribut tersebut.
+- Getters adalah metode yang digunakan untuk mengambil atau mengakses nilai dari atribut kelas.
+- Setters adalah metode yang digunakan untuk mengatur atau memperbarui nilai atribut kelas.
+
+Access Modifiers (Kata Kunci Akses) : 
+- Access Modifiers adalah kata kunci yang digunakan untuk mengontrol tingkat akses ke atribut dan metode dalam suatu kelas.
+- Ada empat jenis Access Modifiers dalam Java: public, private, protected, dan default (tidak ada kata kunci akses).
+- Access Modifiers menentukan seberapa "terbuka" atau "tertutup" atribut atau metode tersebut terhadap kelas-kelas lain.
+
+Polymorphism :
+- Polymorphism adalah konsep dalam pemrograman berorientasi objek di mana objek dapat memiliki banyak bentuk. Ini memungkinkan kelas yang berbeda untuk memiliki metode dengan nama yang sama, tetapi perilaku yang berbeda.
+- overriding (@Override) Overriding terjadi ketika subclass mengimplementasikan ulang (mengganti) metode yang sudah didefinisikan di superclass dengan perilaku yang berbeda.
+- overloading () Overloading terjadi ketika dua atau lebih metode dalam kelas memiliki nama yang sama, tetapi parameter-parameter mereka berbeda (tipe atau jumlah parameter).
+
+Abstraction : 
+- Kelas abstrak adalah kelas yang tidak dapat diinstansiasi, yang berarti tidak dapat membuat objek langsung dari kelas abstrak tersebut.
+- Abstract method (tidak memiliki implementasi)
+- Concrete method (memiliki implementasi)
+- untuk menggunakan method abstract , class harus abstract juga, atribut tidak dapat menggunakan abstract
+- abstrack dapat memiliki variabel instance / atribut.
+
+Interface : 
+- Interface hanya mendefinisikan metode, tetapi tidak memberikan implementasi untuk metode tersebut.
+- interface tidak dapat memiliki atribut dan konstruktor berbeda dengan abstract.
+- method interface secara default berbentuk abstract, jadi tidak perlu deklarasi abstract.

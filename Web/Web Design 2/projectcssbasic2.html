@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Basic 2</title>
+    <link rel="stylesheet" href="projectcssbasic2.css">
+    <style>
+        body{
+    height: 500px;
+    margin: 0;
+    background-color: rgb(53, 92, 10);
+}
+.img{
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.navbar, .navbar2{
+  overflow: hidden;
+  background-color: rgb(53, 92, 10);
+  margin-left: 120px;
+  margin-right: 120px;
+  padding: 15px;
+}
+.navbar a{
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.navbar2 a{
+    color: white;
+    text-decoration: none;
+  }
+.navbar2 a:hover {
+  background-color: none;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(77, 55, 55);
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content{
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    margin-top: 100px;
+    font-size: 20px;
+    margin-left: 120px;
+}
+.body{
+    height: 400px;
+}
+.button{
+    padding: 15px;
+    background-color: rgb(230, 183, 55);
+    border: none;
+}
+.footer{
+    height: 50px;
+    background-color: antiquewhite;
+}
+.gambar{
+    position: relative;
+    width: 400px;
+    height: 480px;
+    bottom: 350px;
+    left: 60%;
+    /* background-image: url(image_project-html-2.jpg); */
+}
+    </style>
+</head>
+<body>
+    <div style="position:sticky;">
+        <!--navbar-->
+        <div class="navbar2" style="margin-bottom: -70px;">
+            <a href="#home" style="float: left; padding: 0px; margin-top: 0px;"><img src="kodingakademi.jpg" class="img"> <span style="margin-left: 180px; display: flex; margin-top: -50px;">koding akademi</span></a> 
+        </div>
+        <div class="navbar">
+            <a href="#home" style="background-color: blue;">Login</a>
+            <a href="#home">About Use</a>
+            <a href="#home">Promo</a>
+            <a href="#home">Partner</a>
+            <a href="#news">Event</a>
+      
+            <div class="dropdown">
+                <button class="dropbtn">Course</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    <!--body-->
+    
+
+    <div class="body">
+        <div class="content">
+            <h1 style="color: white;">Unlocking the <br> <span style="color: yellow;">potential</span> of those <br> who advance the <br> world</h1>
+            <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur aperiam vitae perspiciatis? Libero veniam expedita tenetur, </p>
+            <button class="button">Explore us</button>
+        </div>
+        <!-- <div class="gambar">
+
+        </div> -->
+    </div>
+    
+    <!--footer-->
+    <div class="footer">
+
+    </div>
+</body>
+</html>

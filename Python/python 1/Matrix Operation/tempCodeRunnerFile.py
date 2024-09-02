@@ -1,0 +1,1 @@
+print("[",matrix1[x][y] + matrix2[x][y],"]", end='')

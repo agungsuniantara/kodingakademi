@@ -1,0 +1,16 @@
+ul {
+  list-style: none;
+}
+
+li {
+  border: 1px solid black;
+  width: 150px;
+  height: 160px;
+  display: inline-block;
+  text-align: center;
+}
+
+.barang img {
+  width: 150px;
+  height: 130px;
+}

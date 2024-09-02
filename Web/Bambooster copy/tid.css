@@ -1,0 +1,694 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background-color: black;
+
+
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.fixed-button img {
+  width: 6vh;
+  background-color: transparent;
+}
+
+.fixed-button a {
+  background-color: transparent;
+}
+
+
+@keyframes fadeUp {                
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  header h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header p {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+  }
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(Asset/bg\ thailand.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+header h1 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 7vh;
+}
+
+header p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 4vh;
+    background-color: transparent;
+}
+
+.page2 img {
+    width: 40vh;
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.box-page2 {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.box-page2 p {
+    color: rgba(255, 255, 255, 0.632);
+    background-color: transparent;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.3vh;
+}
+
+.page3 {
+  height: 60vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.5vh;
+}
+
+.page3 p {
+  font-size: 5vh;
+  color: white;
+  font-family: Montserrat;
+  background-color: transparent;
+}
+
+.page3 video {
+  width: 95vh;
+  border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 53.5%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 50vh;
+}
+
+
+@media only screen and (max-width: 784px) {
+  header h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header p {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+  }
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(Asset/bg\ thailand.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+header h1 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 6vh;
+}
+
+header p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 3.5vh;
+    background-color: transparent;
+}
+}
+
+@media only screen and (max-width: 784px) {
+  header h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header p {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  header {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+  }
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(Asset/bg\ thailand.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+header h1 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 6vh;
+    margin-left: 2vh;
+}
+
+header p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 3.5vh;
+    background-color: transparent;
+    margin-left: 2vh;
+}
+}
+
+@media only screen and (max-width: 878px) {
+  .page2 img {
+    width: 40vh;
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.box-page2 {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.3vh;
+}
+
+.box-page2 p {
+    color: rgba(255, 255, 255, 0.632);
+    background-color: transparent;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.1vh;
+}
+}
+
+@media only screen and (max-width: 662px) {
+  .page2 img {
+    width: 40vh;
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.box-page2 {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.box-page2 p {
+    color: rgba(255, 255, 255, 0.632);
+    background-color: transparent;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.1vh;
+}
+}
+
+@media only screen and (max-width: 478px) {
+  .page2 img {
+    width: 40vh;
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 75vh;
+}
+
+.box-page2 {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.8vh;
+}
+
+.box-page2 p {
+    color: rgba(255, 255, 255, 0.632);
+    background-color: transparent;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.1vh;
+}
+}
+
+@media only screen and (max-width: 884px) {
+  .page3 {
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5vh;
+}
+
+.page3 p {
+    font-size: 5vh;
+    color: white;
+    font-family: Montserrat;
+    background-color: transparent;
+}
+
+.page3 video {
+    width: 75vh;
+    border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 53.5%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 40vh;
+}
+
+}
+
+@media only screen and (max-width: 628px) {
+  .page3 {
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5vh;
+}
+
+.page3 p {
+    font-size: 5vh;
+    color: white;
+    font-family: Montserrat;
+    background-color: transparent;
+}
+
+.page3 video {
+    width: 65vh;
+    border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 80%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 35vh;
+}
+
+}
+
+
+@media only screen and (max-width: 520px) {
+  .page3 {
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5vh;
+}
+
+.page3 p {
+    font-size: 5vh;
+    color: white;
+    font-family: Montserrat;
+    background-color: transparent;
+}
+
+.page3 video {
+    width: 55vh;
+    border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 80%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 30vh;
+}
+
+}
+
+
+@media only screen and (max-width: 461px) {
+  .page2 {
+
+  }
+
+  .page3 {
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5vh;
+}
+
+.page3 p {
+    font-size: 4vh;
+    color: white;
+    font-family: Montserrat;
+    background-color: transparent;
+}
+
+.page3 video {
+    width: 45vh;
+    border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 80%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 30vh;
+}
+
+}
+
+@media only screen and (max-width: 364px) {
+  .page2 {
+
+  }
+
+  .page3 {
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5.5vh;
+}
+
+.page3 p {
+    font-size: 4vh;
+    color: white;
+    font-family: Montserrat;
+    background-color: transparent;
+}
+
+.page3 video {
+    width: 35vh;
+    border-radius: 2vh;
+}
+
+.page4 {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4 hr {
+    width: 80%;
+}
+
+
+.page5 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.page5 p {
+  color: white;
+  font-family: Montserrat;
+  font-size: 3vh;
+}
+
+.page5 img {
+  width: 30vh;
+}
+
+}
+
+@media only screen and (max-width: 412px) and (max-height:915px) {
+  .page3 video {
+    width: 40vh;
+  }
+}
+
+@media only screen and (max-width: 430px) and (max-height:932px) {
+  .page3 video {
+    width: 40vh;
+  }
+}

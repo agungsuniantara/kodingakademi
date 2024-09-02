@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var elemen = document.createElement("p");
+        elemen.textContent = "Belajar Javascript";
+        document.body.append(elemen);
+    </script>
+
+<ul id="mylist">
+    <li>Teh</li>
+    <li>Air</li>
+</ul>
+<script>
+    var child = document.createElement("LI");
+    var childnode = document.createTextNode("Kopi");
+    child.appendChild(childnode);
+    var elemen = document.getElementById("mylist");
+    elemen.appendChild(child);
+</script>
+
+<ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+<p>Click the button to remove the first item from the list.</p>
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  var list = document.getElementById("myList");
+  list.removeChild(list.childNodes[0]);
+}
+</script>
+</body>
+</html>

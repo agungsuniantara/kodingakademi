@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 4vh;
+    padding: 3vh 0;
+    border-bottom: 0.1vh solid rgba(0, 0, 0, 0.264);
+}
+.navbar-gambar img{
+    width: 20vh;
+    height: 5vh;
+}
+
+.navbar-tengah ul{
+    list-style: none;
+}
+
+.navbar-tengah li{
+    display: inline-block;
+    margin: 0 3vh;
+}
+
+.navbar-tengah a{
+    text-decoration: none;
+}
+
+.navbar-kanan ul{
+    list-style: none;
+}
+
+.navbar-kanan li{
+    display: inline-block;
+    padding: 0 1vh;
+}
+

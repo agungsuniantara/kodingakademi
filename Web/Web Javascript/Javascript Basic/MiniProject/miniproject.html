@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var skor = 0; //skor = 2
+        var kalimat = prompt("kalimat yang ditampung adalah : ");
+        if(kalimat == "agung"){
+            alert("jamaban benar");
+            skor += 1; // skor = 0 + 1
+        }
+        else{
+            alert("jawaban salah");
+        }
+        var kalimat2 = prompt("kalimat 2 yang ditampung adalah : ");
+        if(kalimat2 == "kamu"){
+            alert("jamaban benar");
+            skor += 1;
+        }
+        else{
+            alert("jawaban salah");
+        }
+        var kalimat3 = prompt("kalimat 3 yang ditampung adalah : ");
+        if(kalimat3 == "saya"){
+            alert("jamaban benar");
+            skor += 1; // skor = 1 + 1
+        }
+        else{
+            alert("jawaban salah");
+        }
+        alert("kamu berhasil menjawab semua pertanyaan, skor kamu adalah = " + skor);
+    </script>
+</body>
+</html>

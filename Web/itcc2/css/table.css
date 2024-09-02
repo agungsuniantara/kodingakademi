@@ -1,0 +1,42 @@
+table {
+  width: 30%;
+  padding-bottom: 20vh;
+}
+
+td {
+  border: 1px solid black;
+  height: 0vh;
+
+  padding: 0;
+  margin: 0;
+}
+
+.favorit h3 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+
+.favorit {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.td1 {
+  display: flex;
+  text-align: start;
+  align-items: center;
+}
+
+.td1 a {
+  padding-right: 30vh;
+}
+
+.td1 img {
+  width: 5vh;
+  padding: 1vh;
+}

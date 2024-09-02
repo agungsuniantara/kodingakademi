@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Price Range Slider Example</title>
+  </head>
+  <body>
+    <label for="price-slider">Price Range:</label>
+    <input
+      type="range"
+      id="price-slider"
+      name="price-slider"
+      min="0"
+      max="1000"
+      step="10"
+    />
+    <p>Selected Price: $<span id="price-value">500</span></p>
+
+
+    <script>
+      const priceSlider = document.getElementById("price-slider");
+      const priceValue = document.getElementById("price-value");
+
+
+      priceSlider.addEventListener("input", function () {
+        priceValue.textContent = priceSlider.value;
+      });
+    </script>
+  </body>
+</html>

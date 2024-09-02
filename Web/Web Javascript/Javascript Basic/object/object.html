@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="object.js"></script>
+    <title>Document</title>
+<body>
+    <form>
+        <label>Masukkan panjang : </label>
+        <input type="number" name="angka1" id="angka1" style="margin-left: 10px;"><br><br>
+        <label>Masukkan lebar : </label>
+        <input type="number" name="angka2" id="angka2" style="margin-left: 29px;"><br><br>
+        <button onclick="hitung(document.getElementById('angka1').value, document.getElementById('angka2').value)">tampilkan hasil</button>
+    </form>
+
+    <script>
+        var makan = {
+            makan: function(){
+                document.write("selamat makan");
+            }
+        }
+    </script>
+
+    <script>
+        makan.makan()
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style> 
+    .koding{
+        color: red;
+    }
+    #rudi{
+       font-family: papyrus;
+    }
+
+    .kotak{
+        width: 80px;
+        height: 80px;
+        border: 1px solid;
+        text-align: center;
+    }
+    input{
+        border: 1px solid black;
+        font-size: 17px;
+    }
+    .paragraf{
+       color: red; 
+    }
+        .kotak4{
+            width: 80px;
+            height: 80px;
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write(' <h2> Koding </h2>');
+    </script>
+
+
+    <div class="koding"> Point coffee </div><br>
+    <div id="rudi"> Rudi</div><br>
+<script>
+    var element = document.getElementById('rudi');
+    element.style.color = 'red';
+    var element = document.getElementsByClass('koding');
+</script>
+
+
+<div class="kotak"> Kolom </div><br>
+<div class="kotak"> Ikan</div><br>
+<div class="kotak"> Gurami</div>
+<script>
+    var box = document.querySelector('.kotak');
+    box.style.backgroundColor = 'red';
+</script><br>
+ 
+
+<label for="name"> Name : </label>
+<input type="text" name="name">
+<script>
+var element = document.getElementsByName('name');
+element[0].style.backgroundColor = 'gold';
+</script>
+
+
+<p class="paragraf"> Rudi belajar Webprograming di koding </p>
+<p class="paragraf"> Rudi belajar Webprograming di koding </p>
+<p class="paragraf"> Rudi belajar Webprograming di koding </p>
+<script>
+    var array_el = document.getElementsByClassName('paragraf');
+    array_el[0].style.color = 'blue';
+    array_el[1].style.color = 'orange';
+    array_el[2].style.color = 'green';
+</script>
+
+
+    <p>An unordered list:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3>coba</h3>
+    <h3>coba</h3>
+    <script>
+        var tag_name = document.getElementsByTagName("li");
+        tag_name[0].style.backgroundColor = "red";
+        tag_name[1].style.backgroundColor = "yellow";
+        tag_name[2].style.backgroundColor = "green";
+
+        var coba = document.getElementsByTagName("h3");
+        coba[0].style.backgroundColor = "red";
+        coba[1].style.backgroundColor = "yellow";
+    </script>
+
+
+    <div class="kotak4">Kotak 1</div>
+    <div class="kotak4">Kotak 2</div>
+    <div class="kotak4">Kotak 3</div>
+    <script>
+        var elemen_kotak = document.querySelectorAll('.kotak4');
+        for(i=0; i<3; i++){
+            elemen_kotak[i].style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

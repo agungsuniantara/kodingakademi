@@ -1,0 +1,105 @@
+.lowongan-terbaik {
+  display: flex;
+  background-color: rgb(180, 183, 185);
+  padding: 5vh;
+  flex-direction: column;
+  gap: 3vh;
+  text-align: center;
+  align-items: center;
+}
+
+.gambar-terbaik {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+}
+
+.gambar-terbaik img {
+  width: 45vh;
+  height: 60vh;
+  border-radius: 3vh;
+}
+
+.terbaik1 {
+  display: flex;
+
+  flex-direction: column;
+  width: 40vh;
+
+  gap: 2vh;
+}
+
+.terbaik2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2vh;
+  width: 40vh;
+}
+
+.bali1 {
+  margin: auto;
+}
+
+.bali1 b {
+  font-size: 10vh;
+  color: #ffff;
+  margin-left: -45vh;
+  margin-top: 100vh;
+}
+
+.jakarta {
+  margin: auto;
+}
+
+.jakarta b {
+  font-size: 7vh;
+
+  color: #ffff;
+  margin-left: -45vh;
+}
+
+.jogja {
+  margin: auto;
+}
+
+.jogja b {
+  font-size: 7vh;
+  color: #ffff;
+  margin-left: -45vh;
+}
+
+.malang {
+  position: absolute;
+}
+
+.malang b {
+  font-size: 5vh;
+  color: #ffffff;
+  margin-left: 9vh;
+}
+
+.bali1 b:hover {
+  color: rgb(151, 140, 140);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.jakarta b:hover {
+  color: rgb(151, 140, 140);
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.jogja b:hover {
+  color: rgb(151, 140, 140);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.jogja b:hover {
+  color: rgb(151, 140, 140);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

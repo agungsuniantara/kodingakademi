@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      /**
+       * Disable right-click of mouse, F12 key, and save key combinations on page
+       */
+      document.addEventListener(
+        "contextmenu",
+        function (e) {
+          e.preventDefault();
+        },
+        false
+      );
+      document.addEventListener(
+        "keydown",
+        function (e) {
+          //document.onkeydown = function(e) {
+          // "I" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            disabledEvent(e);
+          }
+          // "J" key
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            disabledEvent(e);
+          }
+          // "S" key + macOS
+          if (
+            e.keyCode == 83 &&
+            (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+          ) {
+            disabledEvent(e);
+          }
+          // "U" key
+          if (e.ctrlKey && e.keyCode == 85) {
+            disabledEvent(e);
+          }
+          // "F12" key
+          if (event.keyCode == 123) {
+            disabledEvent(e);
+          }
+          // "C" key
+          if (e.ctrlKey && event.keyCode == 67) {
+            disabledEvent(e);
+          }
+        },
+        false
+      );
+      function disabledEvent(e) {
+        if (e.stopPropagation) {
+          e.stopPropagation();
+        } else if (window.event) {
+          window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="flex">
+        <div class="right_wrapper">
+          <nav class="navbar">
+            <a href="#profile">profile</a>
+            <a href="#about">about</a>
+            <a href="#education">education</a>
+            <a href="#experience">experience</a>
+          </nav>
+        </div>
+      </section>
+      <a href="login.html" class="btn-dropdown" style="margin-top: 0">
+        <div class="btn-masuk-dropdown">
+          <p>Login</p>
+        </div>
+      </a>
+      <a href="register.html" class="btn-dropdown" style="margin-top: 0">
+        <div class="btn-masuk-dropdown">
+          <p>Register</p>
+        </div>
+      </a>
+      <a href="about.html" class="btn-dropdown" style="margin-top: 0">
+        <div class="btn-masuk-dropdown">
+          <p>about us</p>
+        </div>
+      </a>
+      <a href="contact.html" class="btn-dropdown" style="margin-top: 0">
+        <div class="btn-masuk-dropdown">
+          <p>contact us</p>
+        </div>
+      </a>
+    </header>
+
+    <section class="about fade" id="profile">
+      <img src="images/IMG_2374 (2) (1).jpg" alt="" />
+      <div class="box">
+        <h3>I GST NGR GEDE AGUNG SUNIANTARA</h3>
+        <span class="verified"> Lecturer | Web developer | Data scientist</span>
+        <span class="company">Birthday</span>
+        <p>14 June 1998</p>
+        <span class="company">Age </span>
+        <p>26 years old</p>
+        <span class="company">Phone</span>
+        <p>+62 87861743646</p>
+        <span class="company">Degree</span>
+        <p>Master</p>
+        <span class="company">Email</span>
+        <p>agungsuniantara@gmail.com</p>
+        <span class="company">Github </span>
+        <p>agungsuniantara</p>
+        <span class="company">Instagram</span>
+        <p>agungsuniantaraa</p>
+      </div>
+    </section>
+
+    <section class="about fade" id="about">
+      <div class="box">
+        <h3>ABOUT</h3>
+        <p>
+          Hello! I'm Agung Suniantara, 26 years old from Badung, Bali,
+          Indonesia. I'm a senior IT teacher, bootcamp data analyst mentor, and
+          university lecturer in information systems. I have experience teaching
+          programming languages to both children and adults, as well as creating
+          both static and dynamic websites. Additionally, I have experience
+          analyzing data and presenting results using graphics. I'm proficient
+          in web programming, data analysis, procedural programming, and
+          object-oriented programming. I am also keen on learning new things and
+          further deepening my knowledge of the programming languages I already
+          know.
+        </p>
+      </div>
+    </section>
+
+    <section class="about fade" id="education">
+      <div class="box">
+        <h3>EDUCATION</h3>
+        <div class="about-job">
+          <div class="view-1">
+            <img src="images/stikom.jpeg" alt="" />
+            <div class="display">
+              <h2>STIKOM BALI</h2>
+              <p>
+                <b>Bachelor of Information System | 2016 - 2020</b><br />
+                GPA : 3.57
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-job">
+          <div class="view-1">
+            <img src="images/Logo-unud-baru.png" alt="" />
+            <div class="display">
+              <h2>UNIVERSITAS UDAYANA</h2>
+              <p>
+                <b
+                  >Master of information and computer system management | 2021 -
+                  2023</b
+                >
+                <br />
+                GPA : 3.89
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about fade" id="experience">
+      <div class="box">
+        <h3>EXPERIENCE</h3>
+        <div class="about-job">
+          <div class="view-1">
+            <img src="images/stikom.jpeg" alt="" />
+            <div class="display">
+              <h2>STIKOM BALI</h2>
+              <p>
+                <b>LECTURER ( December 2023 - present )</b><br />
+                - Teach object-oriented programming using Java to college
+                students.<br />- Develop materials, assignments, and quizzes
+                according to the curriculum. <br />- Create learning and
+                assessment reports for each student.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-job">
+          <div class="view-1">
+            <img src="images/kodingakademi.jpg" alt="" />
+            <div class="display">
+              <h2>KODING AKADEMI</h2>
+              <p>
+                <b>SENIOR IT TEACHER ( June 2022 - Present )</b> <br />
+                - Teach web programming using HTML, CSS, Bootstrap, PHP,
+                JavaScript, MySQL, AJAX <br />and XAMPP or MAMP for the web
+                server. <br />
+                - Teach programming languages such as C, C++, Python, and Java.
+                <br />
+                - Create learning reports for each student. <br />
+                - Develop e-learning course materials.
+              </p>
+              <p>
+                <b>MENTOR BOOTCAMP DATA ANALYST ( June 2022 - Present )</b>
+                <br />
+                - Teach data analyst bootcamp using CSV, JSON, and MySQL data.
+                Process data with Python, Pandas, and display graphics with
+                Matplotlib, Seaborn. Also teach data processing and
+                visualization using Tableau.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category fade">
+      <h1 class="heading">Project categories</h1>
+
+      <div class="box-container">
+        <a href="#" class="box box-category">
+          <h3>all project</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>web developer</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>data analyst</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>data scientist</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>java</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>python</h3>
+        </a>
+
+        <a href="#" class="box box-category">
+          <h3>c programming</h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="jobs-container fade" id="job-list">
+      <h1 class="heading">Project list</h1>
+
+      <div class="box-container">
+        <div
+          class="box box-data"
+          data-specialist="engineer"
+          data-company="google"
+          data-location="jakarta"
+        >
+          <div class="company">
+            <img src="images/logo google.png" alt="" />
+            <div>
+              <h3>PT. Google Indonesia</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">
+            Customer Engineer, Google For Education & Chrome Enterprise
+          </h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Jakarta Selatan</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 20 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobgoogle1.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="consultant"
+          data-company="google"
+          data-location="jakarta"
+        >
+          <div class="company">
+            <img src="images/logo google.png" alt="" />
+            <div>
+              <h3>PT. Google Indonesia</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">
+            Customer Solutions Consultant, Public Sector
+          </h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span>Jakarta Selatan</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 24 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobgoogle2.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="sales"
+          data-company="google"
+          data-location="jakarta"
+        >
+          <div class="company">
+            <img src="images/logo google.png" alt="" />
+            <div>
+              <h3>PT. Google Indonesia</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">Sales Specialist, Google Workspace</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> Jakarta Selatan</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 27 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobgoogle3.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="engineer"
+          data-company="facebook"
+          data-location="london"
+        >
+          <div class="company">
+            <img src="images/logo facebook.png" alt="" />
+            <div>
+              <h3>Facebook</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">Network Engineer, Optical Design</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> London, UK</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 28 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobfacebook1.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="marketing"
+          data-company="facebook"
+          data-location="london"
+        >
+          <div class="company">
+            <img src="images/logo facebook.png" alt="" />
+            <div>
+              <h3>Facebook</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">
+            Product Marketing Manager, MetaWorks - Reality Labs
+          </h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> London, UK</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 23 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobfacebook2.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="marketing"
+          data-company="facebook"
+          data-location="london"
+        >
+          <div class="company">
+            <img src="images/logo facebook.png" alt="" />
+            <div>
+              <h3>Facebook</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">Integrated Marketing Manager - Quest DE</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> London, UK</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 29 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobfacebook3.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="designer"
+          data-company="tiktok"
+          data-location="san jose"
+        >
+          <div class="company">
+            <img src="images/logo tiktok.png" alt="" />
+            <div>
+              <h3>Tiktok</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">Senior Product Designer, Platform</h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> San Jose</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 19 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobtiktok1.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="marketing"
+          data-company="tiktok"
+          data-location="ho chi minh"
+        >
+          <div class="company">
+            <img src="images/logo tiktok.png" alt="" />
+            <div>
+              <h3>Tiktok</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">
+            Business Marketing Communications Lead, Vietnam
+          </h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i
+              ><span> Ho Chi Minh City</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 20 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobtiktok2.html" class="btn">view details</a>
+          </div>
+        </div>
+
+        <div
+          class="box box-data"
+          data-specialist="marketing"
+          data-company="tiktok"
+          data-location="san jose"
+        >
+          <div class="company">
+            <img src="images/logo tiktok.png" alt="" />
+            <div>
+              <h3>Tiktok</h3>
+            </div>
+          </div>
+
+          <h3 class="job-title">
+            Product Manager, Content Classification - Trust & Safety
+          </h3>
+          <div class="box-location">
+            <p class="location">
+              <i class="fas fa-map-marker-alt"></i><span> San Jose</span>
+            </p>
+            <p class="location">
+              <i class="far fa-clock"></i><span> 22 Maret 2024</span>
+            </p>
+          </div>
+
+          <div class="flex-btn">
+            <a href="view_jobtiktok3.html" class="btn">view details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer fade">
+      <section class="footer-info">
+        <button>
+          <i class="fab fa-whatsapp fa-lg" style="color: #ffffff"></i> Customer
+          Care
+        </button>
+        <div class="info-number">
+          <div class="data">
+            <h3>83</h3>
+            <p>Lowongan Aktif</p>
+          </div>
+          <div class="data">
+            <h3>167</h3>
+            <p>Job Seeker</p>
+          </div>
+          <div class="data">
+            <h3>125</h3>
+            <p>Freelancers</p>
+          </div>
+          <div class="data">
+            <h3>167</h3>
+            <p>Perusahaan</p>
+          </div>
+        </div>
+      </section>
+      <div class="credit">
+        <section class="grid">
+          <div class="box footer-img">
+            <img src="images/logo.png" alt="" />
+            <p>Jalan Melati No. 07</p>
+            <p>Denpasar, Bali, Indonesia</p>
+          </div>
+          <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+          </div>
+          <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i>home</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i>about us</a>
+            <a href="contact.html"
+              ><i class="fas fa-angle-right"></i>contact us</a
+            >
+            <a href="register.html"
+              ><i class="fas fa-angle-right"></i>register</a
+            >
+            <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+          </div>
+          <div class="box">
+            <h3>download apps</h3>
+            <a href="#"><i class="fab fa-google-play fa-lg"></i>Google Play</a>
+          </div>
+        </section>
+        &copy; copyright by <span>SERLOK 2024</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

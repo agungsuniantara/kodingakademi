@@ -1,0 +1,102 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 5em 1em;
+    text-align: center;
+}
+
+.intro, .places-container, .news-container, .social-media {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.places-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.place {
+    margin: 1em;
+    border: 1px solid #ddd;
+    padding: 1em;
+    max-width: 300px;
+}
+
+#map-container {
+    height: 400px;
+    background: #eee;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 1em;
+}
+
+form button {
+    align-self: flex-end;
+    padding: 0.5em 1em;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode header {
+    background: #555;
+}
+
+.dark-mode nav ul li a {
+    color: #f4f4f4;
+}
+
+.dark-mode .banner {
+    background: url('banner-dark.jpg') no-repeat center center/cover;
+}

@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 5vh;
+    border-bottom: 0.1vh solid rgba(0, 0, 0, 0.21);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    background-color: white;
+}
+
+.navbar-kiri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.navbar-kiri a{
+    color: black;
+}
+
+.navbar-kiri img{
+    width: 10vh;
+}
+
+.navbar-kanan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.navbar-kanan input{
+    background-color: rgba(128, 128, 128, 0.171);
+    width: 25vh;
+    height: 5vh;
+    padding: 0 2vh;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    margin-left: 15vh;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 20vh;
+}
+
+.form-kanan{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+    background-color: aqua;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+@media only screen and (max-width: 1000px){
+    .navbar{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .navbar-kiri, .navbar-kanan{
+        flex-wrap: wrap;
+    }
+
+}
+

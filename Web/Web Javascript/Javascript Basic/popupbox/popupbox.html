@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function verifikasi(a, b) {
+        var nama = a;
+        var password = b;
+
+        if (nama == "joel" && password == "123") {
+          alert("berhasil login !!");
+        } else {
+          alert("gagal login");
+        }
+      }
+    </script>
+
+    username : <input type="text" id="username" /> <br />
+    password : <input type="text" id="password" /><br />
+
+    <button
+      onclick="verifikasi(document.getElementById('username').value, document.getElementById('password').value)"
+    >
+      LOGIN
+    </button>
+  </body>
+</html>

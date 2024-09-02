@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Novell Services Login</h1>
+    <form>
+    <div>
+        Username:<input type="text" required />
+    </div>
+    <div>
+        Password: <input type="text" required />
+    </div>
+    <div>
+        City of Employment: <input type="text" required />
+    </div>
+    <!-- code before -->
+    <div>
+        Web server:
+        <select>
+            <option>--Choose a server--</option>
+        </select>
+    </div>
+    <!-- code after -->
+    <html>
+        <body>
+            <p>Please specify your role:</p>
+            <form>
+                <input type="radio" id="admin" name="fav_language" value="Admin">
+                <label for="admin">Admin</label><br>
+                <input type="radio" id="engineer" name="fav_language" value="Engineer">
+                <label for="engineer">Engineer</label><br>
+                <input type="radio" id="manager" name="fav_language" value="Manager">
+                <label for="manager">Manager</label><br>
+                <input type="radio" id="guest" name="fav_language" value="Guest">
+                <label for="guest">Guest</label> 
+            </form>
+            <!-- add new code -->
+<div>
+    <p>Single Sign-on to the following:</p>
+    <form>
+        <input type="checkbox" /> Mail <br>
+        <input type="checkbox" /> Payroll <br>
+        <input type="checkbox" /> Self-sevice
+    </form>
+</div>
+<!-- end new code -->
+<div>
+            <input type="submit" value="Login" />
+            <input type="submit" value="Reset" />
+</div>
+        </body>
+    </html>
+  
+   

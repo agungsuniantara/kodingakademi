@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = 0; i < 8; i++){
+             document.write("<p>Ini adalah perulangan ke-" + i + "</p>");
+        }
+   </script>
+    <script>
+        var buah = ["Semangka", "Apel", "Jeruk", "Mangga"];
+        for(i in buah){
+             document.write(i+". "+ buah[i] + "<br/>");
+        }
+   </script>
+   <script>
+        var hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+        hari.forEach((hari) => {
+        document.write("<p>" + hari + "</p>");
+    });
+    </script>
+    <script>
+        document.write("Ini adalah kalimat yang berulang! ".repeat(20));
+   </script>
+</body>
+</html>

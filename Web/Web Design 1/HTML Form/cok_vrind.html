@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-image: url(gambar.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .form{
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        margin: auto;
+        padding: 1px 15px 0 10px;
+    }
+    input[type=text]{
+        outline: none;
+        width: 100%;
+        margin-top: 10px;
+        border: none;
+        border-bottom: 2px solid red;
+        padding: 0 0 5px 0;
+        margin-bottom: 20px;
+    }
+
+    .button{
+        padding: 10px 50px 10px 50px;
+        margin-left: 180px;
+        color: white;
+        background-color: red;
+        border: none;
+        margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div class="form">
+        <h1 style="margin-left: 180px;">Contact Us</h1>
+        <label style="font-size: larger;">Nama : </label> <br>
+        <input type="text" placeholder="Masukan nama">
+        <label style="font-size: larger;">Email : </label> <br>
+        <input type="text" placeholder="Masukan email">
+        <label style="font-size: larger;">Password : </label> <br>
+        <input type="text" placeholder="Masukan password">
+        <button class="button">Submit</button>
+    </div>
+  </body>
+</html>

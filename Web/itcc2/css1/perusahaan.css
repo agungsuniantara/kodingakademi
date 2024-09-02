@@ -1,0 +1,41 @@
+.perusahaan {
+  padding-top: 25vh;
+}
+.perusahaan h3{
+  margin-left: 3vh;
+  background-color: rgb(208, 211, 211);
+  width: 38vh;
+  padding: 2vh;
+
+  border-radius: 2vh;
+}
+.perusahaan  :hover{
+transition: all 0.2s ;
+  background-color: rgb(201, 197, 197);
+  width: 38vh;
+  padding: 3vh;
+
+ 
+}
+
+
+.perusahaan1{
+    display: flex;
+    align-items: center;
+ background-image: linear-gradient(to right, #6b6768 , #7ea4be);
+   border-radius: 2vh;
+   padding: 3vh;
+
+}
+.perusahaan1 img {
+width: 35vh;
+padding-right: 3vh;
+}
+.perusahaan-text {
+    color: beige;
+}
+.utama{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}

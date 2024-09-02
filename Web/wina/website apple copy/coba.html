@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-container {
+        width: 50%;
+        height: 80%;
+        background-color: beige;
+      }
+
+      swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- swiper default -->
+    <div class="wrapper">
+      <swiper-container class="mySwiper">
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- swiper navigation -->
+    <div class="wrapper">
+      <swiper-container class="mySwiper" navigation="true">
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- swiper pagination -->
+    <div class="wrapper">
+      <swiper-container class="mySwiper" pagination="true">
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- swiper pagination dynamic -->
+    <div class="wrapper">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-dynamic-bullets="true"
+      >
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- swiper pagination progressbar -->
+    <div class="wrapper">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-type="progressbar"
+      >
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- swiper pagination fraction -->
+    <div class="wrapper">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-type="fraction"
+      >
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="wrapper">
+      <swiper-container
+        class="mySwiper"
+        scrollbar-hide="true"
+        direction="vertical"
+      >
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="wrapper">
+      <swiper-container
+        class="mySwiper"
+        direction="vertical"
+        pagination="true"
+        pagination-clickable="true"
+      >
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="wrapper">
+      <swiper-container class="mySwiper" scrollbar="true">
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="wrapper">
+      <swiper-container class="mySwiper" scrollbar="true" direction="vertical">
+        <swiper-slide>
+          <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

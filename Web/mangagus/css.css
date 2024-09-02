@@ -1,0 +1,43 @@
+*{
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.reset{
+    background-color: #537188;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+.kotak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    height: 60vh;
+    background-color: #537188;
+    flex-direction: column;
+}
+
+input[type=submit]{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+input[type=text], input[type=password]{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+

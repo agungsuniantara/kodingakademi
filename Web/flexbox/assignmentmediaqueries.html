@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-gallery > li {
+  flex-basis: 350px; /* width: 350px; */
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- heading text -->
+        <ul class="image-gallery"<li>
+            <img src="https://source.unsplash.com/VWcPlbHglYc/640x416" alt="" />
+            <div class="overlay"><span>Image title</span></div>
+          </li>
+          <!-- other items here -->
+        </ul>
+      </div>
+</body>
+</html>

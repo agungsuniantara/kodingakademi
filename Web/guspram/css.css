@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.navbar-tengah{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-tengah ul{
+    list-style: none;
+}
+
+.navbar-tengah li{
+    display: inline-block;
+    margin: 3vh;
+}
+
+.icon{
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hover Effect</title>
+    <style>
+      .underline-effect {
+        position: relative;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        overflow: hidden; /* Tambahkan overflow: hidden agar garis tidak muncul di luar elemen */
+      }
+
+      .underline-effect::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: transparent;
+        transform: translateX(-100%); /* Menggeser ke kiri di luar layar */
+        transition: all 0.3s ease;
+      }
+
+      .underline-effect:hover::after {
+        background-color: #000; /* Ganti dengan warna yang diinginkan */
+        transform: translateX(0); /* Mengembalikan ke posisi awal */
+      }
+
+      .underline-effect:hover {
+        color: #000; /* Ganti dengan warna yang diinginkan */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="underline-effect">Hover me</div>
+  </body>
+</html>

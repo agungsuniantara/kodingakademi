@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: antiquewhite;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    width: 100px;
+    position: absolute;
+    display: none;
+}
+
+.navbar a:hover + .dropdown{
+    display: block;
+}
+
+.dropdown:hover{
+    display: block;
+}

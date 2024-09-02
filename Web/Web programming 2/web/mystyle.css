@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.rightContent {
+  float: left;
+  padding: 20px;
+  width: 90%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.vertical-menu {
+  float: left;
+  width: 10%;
+  background: #ffff;
+}
+
+.vertical-menu a {
+  background-color: #ffff;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04aa6d;
+  color: white;
+}

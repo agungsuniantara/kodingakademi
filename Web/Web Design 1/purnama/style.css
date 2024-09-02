@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.inner-main-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  background-color: antiquewhite;
+}
+
+.inner-main-nav ul li {
+  list-style: none;
+}
+
+.inner-main-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.inner-main-nav a:hover {
+  border-bottom: 1px solid black;
+}
+
+.wrapper {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.gambar {
+  width: 500px;
+  height: 300px;
+}
+
+.gambar > img {
+  width: inherit;
+  height: inherit;
+}
+
+.deskripsi {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
+  width: inherit;
+  height: 282px;
+  margin-top: -305px;
+  position: absolute;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

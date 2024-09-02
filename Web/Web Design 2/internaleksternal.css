@@ -1,0 +1,9 @@
+.tampilan{
+    background-color: red;
+    width: 250px;
+    height: 70px;
+}
+.tampilan:has(h2){
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,29 @@
+.wrapper{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+.item{
+    background-color: beige;
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item img{
+    width: 30vh;
+    height: 20vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wrapper{
+        flex-direction: column;
+        gap: 5vh;
+    }
+}

@@ -1,0 +1,22 @@
+.header{
+    background-image: url(gambar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 3vh 3vh;
+}
+
+.header-konten{
+    color: white;
+}

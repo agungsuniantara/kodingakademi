@@ -1,0 +1,129 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.footer1 {
+  display: flex;
+  gap: 5vh;
+
+  background-image: url();
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.tulisan1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tulisan1 h3 {
+  margin-top: 7vh;
+  color: blue;
+}
+
+.tulisan2 ul li a {
+  font-size: 2vh;
+
+  color: rgb(146, 146, 150);
+}
+
+.tulisan1 img {
+  width: 40vh;
+  padding: 3vh;
+  height: 35vh;
+}
+
+.fotohp {
+  width: 35vh;
+  height: 35vh;
+  margin-left: 17vh;
+}
+
+.footer1 h4 {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.footer1 ul {
+  list-style: none;
+
+  color: black;
+}
+
+.footer1 a {
+  color: black;
+}
+
+.footer2 {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  padding: 5vh 0 13vh 0;
+}
+
+.isi {
+  display: flex;
+  align-items: center;
+}
+
+.isi1 a {
+  margin-right: 61vh;
+  margin-top: 5vh;
+}
+
+.isi2 {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.isi2 a {
+  color: black;
+}
+
+.isi2 img {
+  width: 5vh;
+  margin-right: 1vh;
+  margin-left: 2vh;
+  height: 5vh;
+}
+
+.isi2 a {
+  align-items: center;
+}
+.contact {
+  float: right;
+  position: fixed;
+
+  bottom: 0;
+  right: 0;
+  margin: 3vh;
+  z-index: 99;
+}
+
+.contact a {
+  display: flex;
+  color: black;
+  font-weight: bold;
+  align-items: center;
+  padding: 2vh;
+  border-radius: 5vh;
+  background-color: rgb(92, 255, 42);
+}
+.contact :hover {
+  border-radius: 5vh;
+  background-color: rgb(89, 146, 71);
+  color: rgb(192, 192, 192);
+  transition: all 0.2s;
+}
+.contact img {
+  width: 4vh;
+  padding-right: 1vh;
+}
+.contact button {
+  background-color: rgba(240, 248, 255, 0);
+}

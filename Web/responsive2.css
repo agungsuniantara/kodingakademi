@@ -1,0 +1,46 @@
+body{
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20vh;
+    overflow: hidden;
+}
+
+.navbar-kiri{
+    display: flex;
+    gap: 5vh;
+}
+
+.navbar-tengah{
+    display: flex;
+    gap: 5vh;
+}
+
+.navbar-kanan{
+    display: flex;
+    gap: 5vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbar{
+        flex-direction: column;
+        padding: 0 0vh;
+    }
+
+    .navbar-kiri{
+        flex-wrap: wrap;
+    }
+    
+    .navbar-tengah{
+        flex-wrap: wrap;
+    }
+    
+    .navbar-kanan{
+        flex-wrap: wrap;
+    }
+}

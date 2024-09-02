@@ -1,0 +1,20 @@
+.kotak {
+  background-color: antiquewhite;
+  font-size: 30px;
+}
+
+/* tab */
+@media only screen and (max-width: 1024px) {
+  .kotak {
+    background-color: blue;
+    font-size: 20px;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 450px) {
+  .kotak {
+    background-color: aqua;
+    font-size: 10px;
+  }
+}

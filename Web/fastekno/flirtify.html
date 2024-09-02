@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/fitrify.js"></script>
+    <link rel="stylesheet" href="css/filtrify.css" />
+  </head>
+  <body>
+    <div id="placeHolder"></div>
+
+    <ul id="container">
+      <li
+        data-genre="Drama, Sci-Fi, Thriller"
+        data-main-actors="Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos"
+        data-director="Ridley Scott"
+      >
+        ... Blade Runner ...
+      </li>
+      <li
+        data-genre="Action, Crime, Drama, Thriller"
+        data-main-actors="Christian Bale, Michael Caine, Ken Watanabe, Liam Neeson"
+        data-director="Christopher Nolan"
+      >
+        ... Batman Begins ...
+      </li>
+      <li
+        data-genre="Drama"
+        data-main-actors="Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n"
+        data-director="Paul Thomas Anderson"
+      >
+        ... Boogie Nights ...
+      </li>
+      <li
+        data-genre="Action, Adventure"
+        data-main-actors="Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott"
+        data-director="Steven Spielberg"
+      >
+        ... Indiana Jones and the Last Crusade ...
+      </li>
+      <li
+        data-genre="Crime, Mystery, Thriller"
+        data-main-actors="Harvey Keitel, Tim Roth, Michael Madsen, Chris Penn"
+        data-director="Quentin Tarantino"
+      >
+        ... Reservoir Dogs ...
+      </li>
+      ...
+    </ul>
+    <script>
+      (function () {
+        $.filtrify("container", "placeHolder");
+      });
+    </script>
+  </body>
+</html>

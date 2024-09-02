@@ -1,0 +1,23 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "phpmyadmin",
+      "database": "kantor",
+      "username": "root",
+      "password": ""
+    }
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\suniantara\\Downloads\\MySqlJdbcDriver\\mysql-connector-j-8.3.0.jar",
+    "d:\\xampp\\htdocs\\project\\kodingakademi\\materi\\MySqlJdbcDriver\\mysql-connector-j-8.3.0.jar"
+  ]
+}

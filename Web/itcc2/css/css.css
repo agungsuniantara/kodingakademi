@@ -1,0 +1,276 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  border: none;
+
+  font-family: "open-sans", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  height: 100px;
+}
+
+.wrapper-navbar {
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.navbar-1 {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vh 1vh 0vh 1vh;
+}
+
+.navbar1-kiri {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gambarlogo {
+  height: 12vh;
+  padding: 1vh;
+  width: 15vh;
+}
+
+.navbar1-kiri ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar1-kiri li a {
+  display: inline-block;
+  margin-left: 2vh;
+  color: rgb(0, 0, 0);
+}
+
+.navbar1-kanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar1-kanan img {
+  margin: 2vh;
+  height: 5vh;
+  width: 5vh;
+}
+
+.navbar1-kanan ul {
+  list-style: none;
+}
+
+.navbar1-kanan li {
+  display: inline-block;
+  margin-right: 3vh;
+  color: #000;
+}
+.navbar1-kanan a {
+  color: #000;
+}
+
+.navbar1-kanan button {
+  padding: 2vh 4vh;
+  background-color: rgb(214, 157, 216);
+  color: white;
+  border-radius: 1vh;
+}
+
+.navbar1-kanan button:hover {
+  background-color: rgb(98, 68, 105);
+  transition: 0.5s;
+}
+
+.navbar-2 {
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar2-tengah {
+  display: flex;
+  padding: 1vh 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar2-tengah h3 {
+  margin-right: 3vh;
+  color: white;
+}
+
+.navbar2-tengah button {
+  width: 20vh;
+  height: 6vh;
+}
+
+.input1 {
+  border-top-left-radius: 1vh;
+  outline-color: rgb(0, 0, 0);
+  border-bottom-left-radius: 1vh;
+  padding-left: 2vh;
+  width: 60vh;
+  height: 6vh;
+}
+
+.input2 {
+  height: 6vh;
+  width: 40vh;
+  padding-left: 5vh;
+  outline-color: rgb(0, 0, 0);
+}
+
+.img1 {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  margin-left: 59vh;
+  margin-top: -15px;
+}
+
+.img2 {
+  position: absolute;
+  width: 4vh;
+  height: 4vh;
+  margin-left: 14vh;
+  margin-top: -15px;
+}
+
+.navbar2-tengah a {
+  position: absolute;
+}
+
+.navbar2-tengah button {
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
+  padding: 2vh 5vh;
+  cursor: pointer;
+}
+
+.konten-iklan {
+  margin-top: 130px;
+  width: 100%;
+}
+
+.konten-iklan img {
+  width: 100%;
+  height: 100%;
+}
+
+.atas {
+  padding: 4vh 0 1vh 4vh;
+}
+
+.atas ul {
+  text-align: center;
+  justify-items: center;
+  display: flex;
+  gap: 6vh;
+  list-style-type: none;
+}
+
+.atas li a {
+  color: rgb(104, 93, 93);
+  font-weight: bold;
+}
+
+.atas li a:hover {
+  color: rgb(37, 33, 33);
+  font-weight: 600;
+  border-bottom: 2px solid rgb(121, 121, 121);
+  padding-bottom: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.content {
+  padding: 3vh;
+  display: flex;
+  margin: 0vh 5vh 0vh 0vh;
+}
+
+.content2 {
+  padding: 3vh;
+  display: flex;
+
+  margin: 0vh 5vh 0vh 0vh;
+}
+
+.content3 {
+  padding: 3vh;
+  display: flex;
+  margin: 0vh 5vh 0vh 0vh;
+}
+
+.usaha1 {
+  background-color: rgb(255, 255, 255);
+  margin: 0vh 0vh 0vh 7vh;
+  border: 2px solid #b1b1b1;
+  border-radius: 2vh;
+}
+
+.usaha1 a {
+  padding-top: 10vh;
+  margin-bottom: 10vh;
+  color: black;
+  margin-left: 2vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.usaha1 img {
+  height: 20vh;
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 1vh;
+}
+
+.usaha1 p {
+  margin-left: 10vh;
+  padding-top: 1vh;
+}
+
+.readmore {
+  margin-top: -1vh;
+  margin-left: 12vh;
+}
+
+.readmore a {
+  font-size: 17px;
+  font-family: rub;
+}
+
+.lock img {
+  margin-left: 2vh;
+}
+
+h5 {
+  padding-bottom: 1vh;
+  margin-left: 2vh;
+}
+
+.lock {
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+}
+
+.lock img {
+  height: 3vh;
+  width: 3vh;
+  margin-right: vh;
+}
+
+@media only screen and (max-width: 900px){
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            background-image: url("Elegant_Background-3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .parent{
+            margin: auto;
+            top: 30%;
+            height: 350px;
+            width: 500px;
+            position: relative;
+            box-shadow: 0px 0px 40px #383737;
+        }
+       
+        .child1{
+            display: flex;
+            justify-content: center;
+            background-image: url("blank-page.png");
+            height: 150px;
+            width: 500px;
+            background-color: blue;
+            color: white;
+        }
+        .child2{
+            height: 200px;
+            width: 500px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+        }
+        .icon1 {
+            padding-left: 25px;
+            padding-right: 100px;
+            background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+            background-size: 20px;
+            border-radius: 20px;
+            background-color: white;
+            margin-top: 30px;
+            height: 30px;
+        }
+        .icon2{
+            padding-left: 25px;
+            padding-right: 100px;
+            background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+            background-size: 20px;
+            border-radius: 20px;
+            background-color: white;
+            margin-top: 10px;
+            height: 30px;
+        }
+        .submit{
+            margin-top: 10px;
+            width: 100%;
+            background-color: blue;
+            border-radius: 20px;
+            height: 40px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="gambar"></div>
+    
+    <div class="parent">
+        <div class="child1">
+            <h1>SIGN IN</h1>
+        </div>
+        <div class="child2">
+            <form>
+                <input type="text" class="icon1" placeholder="Username"><br>
+                <input type="password" class="icon2" placeholder="Password"><br>
+                <button class="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
