@@ -1,16 +1,16 @@
 plugins {
-    id 'java'
+    id("java")
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:30.1-jre'
-    testImplementation 'junit:junit:4.13.2'
+    implementation("com.google.guava:guava:30.1-jre")
+    testImplementation("junit:junit:4.13.2")
 }
 
-test {
+tasks.test {
     useJUnitPlatform()
 }
