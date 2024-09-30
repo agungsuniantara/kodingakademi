@@ -1,4 +1,4 @@
-data = open("file/angka.txt", "r+")
+data = open("angka.txt", "r+")
 teks = data.read()
 
 data_baru = teks.split()

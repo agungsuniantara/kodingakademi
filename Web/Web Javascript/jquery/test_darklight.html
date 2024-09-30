@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            background-color: antiquewhite;
+            height: 200px;
+        }
+        .nav1{
+            background-color:azure;
+            height: 50px;
+        }
+        .nav2{
+            background-color:aquamarine;
+            height: 50px;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .dark-nav{
+            background-color: blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav1"></div>
+        <div class="nav2">
+            <button id="darkModeToggle">Dark mode</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#darkModeToggle").click(function() {
+                $("body").toggleClass("dark-mode");
+                $(".navbar").toggleClass("dark-nav");
+                $(".nav1").toggleClass("dark-nav");
+                $(".nav2").toggleClass("dark-nav");
+            });
+        });
+    </script>
+</body>
+</html>

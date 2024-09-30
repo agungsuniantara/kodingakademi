@@ -9,9 +9,11 @@ int main(){
     char* ptr2 = balance;
 
     for (int i = 0; i < 7; i++){
-        if (i == 6){
-            ptr1[i] = balance[0];
-            ptr2[0] = balance[i];
+        if (i == 5){
+            char first = balance[0];
+            char last = balance[i];
+            ptr1[i] = first;
+            ptr2[0] = last;
         }
     }
 
