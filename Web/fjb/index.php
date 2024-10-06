@@ -1,15 +1,5 @@
 <?php
-require 'config.php';
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
-
-$sql = "SELECT posts.*, users.username FROM posts JOIN users ON posts.user_id = users.id ORDER BY posts.created_at DESC";
-$query = mysqli_query($conn, $sql);
-$fetch = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    require 'php/php_index.php';
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +19,7 @@ $fetch = mysqli_fetch_all($query, MYSQLI_ASSOC);
             <nav>
                 <ul>
                     <li><a href="create_post.php">Create Post</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
                 </ul>
             </nav>
         </div>

@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $(".gambar").hover(function(){
-            $(this).css("background-image", "url('logo.jpg')");
-        });
-    });
-    </script>
     <style>
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            gap: 100px;
+        }
+        .wrapper-p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
         .gambar{
             background-image: url("gambar.png");
             width: 200px;
@@ -23,6 +30,28 @@
     </style>
 </head>
 <body>
-    <div class="gambar"></div>
+    <div class="wrapper">
+        <button class="button">Button 1</button>
+        <div class="gambar"></div>
+        <div class="gambar"></div>
+    </div>
+    <div class="wrapper-p">
+        <p style="color: green;">ini paragraf 1</p>
+        <p class="p2">ini paragraf 2</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".gambar").hover(function(){
+                $(this).css("background-image", "url('logo.jpg')");
+            });
+            $(".p2").hover(function(){
+                $(this).css("color", "blue");
+            });
+            $(".button").click(function(){
+                alert("Tombol 1 diklik");
+            })
+        });
+    </script>
 </body>
 </html>

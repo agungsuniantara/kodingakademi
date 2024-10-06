@@ -2,7 +2,7 @@
 
 This code is provided solely for the personal and private use of students taking
 CSC108 at the University of Toronto Mississauga. Copying for purposes other than this use is
-expressly prohibited. All forms of distribution of this code, whether as given 
+expressly prohibited. All forms of distribution of this code, whether as given
 or with any changes, are expressly prohibited.
 
 All of the files in this directory and all subdirectories are:
@@ -24,15 +24,21 @@ MIDDLE = 'middle'
 
 
 def get_flyer_info(ticket: str) -> str:
-    """Return the flyer number of the flyer for this ticket, if present. 
-    Otherwise, return the empty string.
-    
-    >>> get_flyer_info('20230915YYZYEG12F')
+    """
+    return the flyer number of the flyer for this ticket, if present
+    Otherwise return the empty string.
+    >>> get_flyer_info("20230915YYZYEG12F")
     ''
     >>> get_flyer_info('20230915YYZYEG12F1236')
     '1236'
     """
+
+    if len(ticket) > FLYER:
+        return ticket[FLYER:]
+    return ''
     # Write the body of the function here
 
-
 # Write the rest of your Assignment 1 functions here
+if __name__ == "_main_":
+    import doctest
+    doctest.testmod()

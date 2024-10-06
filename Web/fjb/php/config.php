@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'forum_jual_beli';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 if (!$conn) {
