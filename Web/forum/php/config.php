@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db = 'forum_jual_beli';
+$db = 'forum';
 $user = 'root';
 $pass = 'root';
 
