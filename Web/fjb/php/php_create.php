@@ -12,7 +12,8 @@
         $content = $_POST['content'];
         $user_id = $_SESSION['user_id'];
     
-        $sql = "INSERT INTO posts (user_id, title, content) VALUES ('$user_id', '$title', '$content')";
+        $sql = "INSERT INTO posts (user_id, title, content) 
+                VALUES ('$user_id', '$title', '$content')";
         $query = mysqli_query($conn, $sql);
     
         if ($query) {
@@ -21,4 +22,3 @@
             header("Location: create_post.php");
         }
     }
-?>

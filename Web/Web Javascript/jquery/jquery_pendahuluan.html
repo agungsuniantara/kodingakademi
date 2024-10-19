@@ -26,6 +26,10 @@
             height: 200px;
             background-position: center;
             background-size: cover;
+            transition: transform 0.1s ease;
+        }
+        .gambar:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -42,9 +46,14 @@
 
     <script>
         $(document).ready(function(){
-            $(".gambar").hover(function(){
-                $(this).css("background-image", "url('logo.jpg')");
-            });
+            $(".gambar").hover(
+                function(){
+                    $(this).css("background-image", "url('logo.jpg')");
+                },
+                function(){
+                    $(this).css("background-image", "url('gambar.png')");
+                }
+            );
             $(".p2").hover(function(){
                 $(this).css("color", "blue");
             });

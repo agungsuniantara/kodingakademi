@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daylight</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#tambahDaftar").click(function()
+            {
+                var nilaiInput = $(".masukan").val();
+                $("<li class='isiDaftar'><button class='triggerDaftar' style='background-color: white; outline: none; border: none;'>"+nilaiInput+"</button></li>").appendTo(".daftarIsi");
+            });
+
+            $(document).on("click", ".triggerDaftar", function() {
+                var $listItem = $(this).closest(".isiDaftar");
+                if ($listItem.find("#remove").length === 0) {
+                    $("<button id='remove'>Remove</button>").appendTo($listItem);
+                }
+            });
+
+            $(document).on("click", "#remove", function() {
+                $(this).closest(".isiDaftar").remove();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    
+    <ol class="daftarIsi">
+
+    </ol>
+
+    <form>
+        <input class="masukan" type="text" placeholder="Enter things">
+    </form>
+
+    <button id="tambahDaftar">Tambahkan</button>
+</body>
+</html>

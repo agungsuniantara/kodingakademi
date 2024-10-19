@@ -1,7 +1,7 @@
 data = open("angka.txt", "r+")
 teks = data.read()
 
-data_baru = teks.split()
+data_baru = teks.split() # list
 
 angka_genap = []
 angka_ganjil = []

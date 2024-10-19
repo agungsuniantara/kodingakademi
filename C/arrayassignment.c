@@ -5,8 +5,8 @@ int main(){
 
     printf("panjang array : ");
     scanf("%d", &panjang);
-    int array[panjang];
 
+    int array[panjang];
 
     for(int i = 0; i < panjang; i++){
         printf("elemen array : ");
@@ -21,8 +21,5 @@ int main(){
 
     printf("jumlah penambahan array = %d \n", tambah);
     average = tambah / panjang;
-    printf("jumlah average adalah = %d", average);
-
-
-
+    printf("jumlah average adalah = %d \n", average);
 }

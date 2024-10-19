@@ -1,0 +1,3 @@
+id,event_vendor_id,amount,due_date,type,owner,notes,status,created_at,updated_at,invoice,is_sending
+34f8521a-a421-42ea-abaa-c95ca43c8eb5,bf18651f-89df-493d-88e8-13c34dee37a3,75395000.0,2024-09-28 05:00:00,Transfer Bank,Custom,Payment ke 6,UNPAID,2024-08-19 07:59:12.981,2024-09-02 17:33:26.399,,0
+a87d0fd4-8827-4560-9e03-0e7071eff772,f5884b09-93ce-49eb-af5d-62a8df820648,222.0,2024-09-30 04:00:00,Transfer Bank,Client Direct Payment,,UNPAID,2024-09-04 09:41:26.976,2024-09-04 09:43:38.345,,1

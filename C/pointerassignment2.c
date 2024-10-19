@@ -1,27 +1,24 @@
 #include <stdio.h>
 
-const int MAX = 3;
+double getAverage(int *arr, int size);
+
 int main ()
 {
     int var[] = {10, 100, 200};
-    int i, *ptr[MAX];
-    int tambah = 0;
-    int average;
+    double average;
 
-    for ( i = 0; i < MAX; i++)
-    {
-        ptr[i] = &var[i];
-        // ptr menyimpan setiap alamat var index i
-    }
-
-    for ( i = 0; i < MAX; i++)
-    {
-        tambah = tambah + *ptr[i];
-        // ptr mengakses alamat var index i yang sudah dihubungkan sebelumnya
-    }
-
-    average = tambah / MAX;
-    printf("hasil average = %d", average);
+    average = getAverage(var, 3);
+    printf("Hasil average = %lf\n", average);
 
     return 0;
+}
+
+double getAverage(int *arr, int size) {
+    double tambah = 0;
+    
+    for (int i = 0; i < size; i++) {
+        tambah += *(arr + i);  // *(arr + i) adalah cara lain untuk menulis arr[i]
+    }
+
+    return tambah / size;
 }
