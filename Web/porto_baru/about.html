@@ -5,14 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-
-    <!-- custom css file link -->
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      /**
-       * Disable right-click of mouse, F12 key, and save key combinations on page
-       */
       document.addEventListener(
         "contextmenu",
         function (e) {
@@ -23,31 +18,24 @@
       document.addEventListener(
         "keydown",
         function (e) {
-          //document.onkeydown = function(e) {
-          // "I" key
           if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
             disabledEvent(e);
           }
-          // "J" key
           if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
             disabledEvent(e);
           }
-          // "S" key + macOS
           if (
             e.keyCode == 83 &&
             (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
           ) {
             disabledEvent(e);
           }
-          // "U" key
           if (e.ctrlKey && e.keyCode == 85) {
             disabledEvent(e);
           }
-          // "F12" key
           if (event.keyCode == 123) {
             disabledEvent(e);
           }
-          // "C" key
           if (e.ctrlKey && event.keyCode == 67) {
             disabledEvent(e);
           }
@@ -74,29 +62,10 @@
             <a href="#about">about</a>
             <a href="#education">education</a>
             <a href="#experience">experience</a>
+            <a href="#skill">skill</a>
           </nav>
         </div>
       </section>
-      <a href="login.html" class="btn-dropdown" style="margin-top: 0">
-        <div class="btn-masuk-dropdown">
-          <p>Login</p>
-        </div>
-      </a>
-      <a href="register.html" class="btn-dropdown" style="margin-top: 0">
-        <div class="btn-masuk-dropdown">
-          <p>Register</p>
-        </div>
-      </a>
-      <a href="about.html" class="btn-dropdown" style="margin-top: 0">
-        <div class="btn-masuk-dropdown">
-          <p>about us</p>
-        </div>
-      </a>
-      <a href="contact.html" class="btn-dropdown" style="margin-top: 0">
-        <div class="btn-masuk-dropdown">
-          <p>contact us</p>
-        </div>
-      </a>
     </header>
 
     <section class="about fade" id="profile">
@@ -113,9 +82,7 @@
         <span class="company">Degree</span>
         <p>Master</p>
         <span class="company">Email</span>
-        <p>agung_suniantara@stikom-bali.ac.id</p>
-        <span class="company">Instagram</span>
-        <p>agungsuniantaraa</p>
+        <p>agungsuniantara@gmail.com <br> agung_suniantara@stikom-bali.ac.id</p>
       </div>
     </section>
 
@@ -123,7 +90,7 @@
       <div class="box">
         <h3>ABOUT</h3>
         <p>
-          Hello! I'm Agung Suniantara, 26 year old from Badung, Bali, Indonesia. I'm a senior IT teacher,  bootcamp data analyst mentor, and university lecturer in information systems. I have experience teaching programming languages to both children and adults, as well as creating both static and dynamic websites. Additionally, I have experience analyzing data and presenting results using graphics. I'm proficient in web programming, data analysis, data science, procedural programming, and object-oriented programming. I am also keen on learning new things and further deepening my knowledge of the programming languages I already know.
+          Hello! I'm Agung Suniantara, 26 year old from Badung, Bali, Indonesia. I'm a senior IT teacher,  bootcamp data analyst mentor, and university lecturer in information systems. I have experience teaching programming languages to both children and adults, as well as creating both static and dynamic websites. Additionally, I have experience analyzing data and presenting results using graphics. I'm proficient in web programming, data analyst, data science, procedural programming, and object-oriented programming. I am also keen on learning new things and further deepening my knowledge of the programming languages I already know.
         </p>
       </div>
     </section>
@@ -135,7 +102,7 @@
           <div class="view-1">
             <img src="images/stikom.jpeg" alt="" />
             <div class="display">
-              <h2>STIKOM BALI</h2>
+              <h2>Institute Technology and Business STIKOM Bali</h2>
               <p>
                 <b>Bachelor of Information System | 2016 - 2020</b><br />
                 GPA : 3.57
@@ -147,7 +114,7 @@
           <div class="view-1">
             <img src="images/Logo-unud-baru.png" alt="" />
             <div class="display">
-              <h2>UNIVERSITAS UDAYANA</h2>
+              <h2>Udayana University</h2>
               <p>
                 <b
                   >Master of information and computer system management | 2021 -
@@ -163,10 +130,10 @@
           <div class="view-1">
             <img src="images/undiknas.jpg" alt="" />
             <div class="display">
-              <h2>UNIVERSITAS PENDIDIKAN NASIONAL</h2>
+              <h2>Undiknas University</h2>
               <p>
                 <b
-                  >Engineering | 2023 - 2024</b>
+                  >Engineering profession | 2023 - 2024</b>
                 <br />
                 GPA : 4.00
               </p>
@@ -183,13 +150,12 @@
           <div class="view-1">
             <img src="images/stikom.jpeg" alt="" />
             <div class="display">
-              <h2>STIKOM BALI</h2>
+              <h2>Institute Technology and Business STIKOM Bali</h2>
               <p>
-                <b>LECTURER ( December 2023 - present )</b><br />
-                - Teach object-oriented programming using Java to college
-                students.<br />- Develop materials, assignments, and quizzes
-                according to the curriculum. <br />- Create learning and
-                assessment reports for each student.
+                <b>Lecturer ( December 2023 - present )</b><br />
+                - Teach algorithms and data structures, MySQL, object-oriented programming using Java to college students. 
+                <br> - Develop materials, assignments, and quizzes according to the curriculum. 
+                <br> - Create learning and assessment reports for each student.
               </p>
             </div>
           </div>
@@ -198,9 +164,9 @@
           <div class="view-1">
             <img src="images/kodingakademi.jpg" alt="" />
             <div class="display">
-              <h2>KODING AKADEMI</h2>
+              <h2>Koding Akademi</h2>
               <p>
-                <b>SENIOR IT TEACHER ( June 2022 - Present )</b> <br />
+                <b>Senior IT Teacher ( June 2022 - Present )</b> <br />
                 - Teach web programming using HTML, CSS, Bootstrap, PHP,
                 JavaScript, MySQL, AJAX <br />and XAMPP or MAMP for the web
                 server. <br />
@@ -210,7 +176,7 @@
                 - Develop e-learning course materials.
               </p>
               <p>
-                <b>MENTOR BOOTCAMP DATA ANALYST ( June 2022 - Present )</b>
+                <b>Mentor Bootcamp Data Analyst ( June 2022 - Present )</b>
                 <br />
                 - Teach data analyst bootcamp using CSV, JSON, and MySQL data.
                 Process data with Python, Pandas, and display graphics with
@@ -220,22 +186,38 @@
             </div>
           </div>
         </div>
-        <div class="about-job">
+        <!-- <div class="about-job">
           <div class="view-1">
             <img src="images/usericon.png" alt="" />
             <div class="display">
-              <h2>MENTOR PRIVATE</h2>
+              <h2>Mentor Private</h2>
               <p>
-                <b>LECTURER ( January 2024 - present )</b><br />
+                <b>Lecturer ( January 2024 - present )</b><br />
                 - Develop and deliver educational materials for university courses CSC108, CSC148, and CSC165 using Python. <br />
               </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="about fade" id="skill">
+      <div class="box">
+        <h3>SKILL</h3>
+        <div class="about-job">
+          <div class="view-1">
+            <div class="display">
+              <p>1. Proficient in Microsoft Office (Word, Excel, PowerPoint) and Google Workspace (Google Sheets, Google Docs).</p>
+              <p>2. Skilled in programming languages such as HTML, CSS, PHP, JavaScript, Python, MySQL, C, C++, and Java.</p>
+              <p>3. Experienced in using Tableau for data processing and visualization.</p>
+              <p>4. Fluent speaking and writing in english.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="category fade">
+    <!-- <section class="category fade">
       <h1 class="heading">Project categories</h1>
 
       <div class="box-container">
@@ -536,69 +518,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <footer class="footer fade">
-      <section class="footer-info">
-        <button>
-          <i class="fab fa-whatsapp fa-lg" style="color: #ffffff"></i> Customer
-          Care
-        </button>
-        <div class="info-number">
-          <div class="data">
-            <h3>83</h3>
-            <p>Lowongan Aktif</p>
-          </div>
-          <div class="data">
-            <h3>167</h3>
-            <p>Job Seeker</p>
-          </div>
-          <div class="data">
-            <h3>125</h3>
-            <p>Freelancers</p>
-          </div>
-          <div class="data">
-            <h3>167</h3>
-            <p>Perusahaan</p>
-          </div>
-        </div>
-      </section>
-      <div class="credit">
-        <section class="grid">
-          <div class="box footer-img">
-            <img src="images/logo.png" alt="" />
-            <p>Jalan Melati No. 07</p>
-            <p>Denpasar, Bali, Indonesia</p>
-          </div>
-          <div class="box">
-            <h3>follow us</h3>
-            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
-            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
-            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
-          </div>
-          <div class="box">
-            <h3>quick links</h3>
-            <a href="index.html"><i class="fas fa-angle-right"></i>home</a>
-            <a href="about.html"><i class="fas fa-angle-right"></i>about us</a>
-            <a href="contact.html"
-              ><i class="fas fa-angle-right"></i>contact us</a
-            >
-            <a href="register.html"
-              ><i class="fas fa-angle-right"></i>register</a
-            >
-            <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
-          </div>
-          <div class="box">
-            <h3>download apps</h3>
-            <a href="#"><i class="fab fa-google-play fa-lg"></i>Google Play</a>
-          </div>
-        </section>
-        &copy; copyright by <span>SERLOK 2024</span>
-      </div>
-    </footer>
-
+    </section> -->
     <script src="js/script.js"></script>
   </body>
 </html>

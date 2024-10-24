@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UMKM Spotter</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="" class="navbar-brand p-0">
+                    <img src="{{ url_for('static', filename='img/logo-1.png')}}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="/" class="nav-item nav-link">Beranda</a>
+                        <a href="/pemetaan" class="nav-item nav-link active">Pemetaan</a>
+                        <a href="/properti" class="nav-item nav-link">Informasi Properti</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Pemetaan</h4>
+            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                <li class="breadcrumb-item active text-primary">Pemetaan</li>
+            </ol>    
+        </div>
+    </div>
+
+    <div class="container-fluid contact py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-5 text-capitalize text-primary mb-3">Pemetaan</h1>
+                <p class="mb-0">Ketikkan usaha kompetitor yang ingin dicari beserta area dan fasilitas publik disekitarnya. Masukkan bisa lebih dari satu dengan menekan tombol tambah, untuk menghapusnya dapat menekan tombol hapus. Bila masukkan sudah diisi semua dapat menekan tombol analisis.</p>
+            </div>
+            <div class="row g-5">
+                <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-secondary p-5 rounded">
+                        <form id="searchForm">
+                            <div class="row g-4">
+                                <div id="competitors">
+                                    <div><input type="text" class="form-control mb-2" name="competitors" placeholder="Kompetitor"><button type="button" id="addCompetitor" class="btn btn-light btn-sm mb-2">Tambah</button></div>
+                                </div>
+                                <div id="area">
+                                    <div><input type="text" class="form-control mb-2" name="area" placeholder="Area"><button type="button" id="addArea" class="btn btn-light btn-sm mb-2">Tambah</button></div>
+                                </div>
+                                <div id="facilities">
+                                    <div><input type="text" class="form-control mb-2" name="facilities" placeholder="Fasilitas Publik"><button type="button" id="addFacility" class="btn btn-light btn-sm mb-2">Tambah</button></div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="button" id="clearButton" class="btn btn-light flex-grow-1 me-2 py-3">Clear</button>
+                                    <button type="button" id="searchButton" class="btn btn-light flex-grow-1 py-3">Analisis</button>
+                                </div>                                
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+                <div class="col-12 mt-4">
+                    <div class="rounded">
+                        <div id="map" class="rounded w-100" style="height: 400px;"></div>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <div id="viewPropertiesContainer" class="text-center" style="display: none;">
+                        <button id="viewPropertiesButton" class="btn btn-primary">Lihat Properti Terkait</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgLXMmx_qx8EQ3PCIpe69WTkj9JxFZXzU&callback=initMap" async defer></script>
+
+    <script>
+        let map;
+        const competitorColors = [
+            'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/pink-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/magenta-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/cyan-dot.png'
+        ];
+        const competitorColorMap = {};
+        let colorIndex = 0;
+
+        const facilitiesColors = [
+            'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/gray-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/brown-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/navy-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltgreen-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltorange-dot.png'
+        ];
+        const facilitiesColorMap = {};
+        let facilitiesColorIndex = 0;
+        const subAreaMapping = {
+            'serangan': 'denpasar selatan', 'pedungan': 'denpasar selatan', 'sesetan': 'denpasar selatan',
+            'panjer': 'denpasar selatan', 'renon denpasar': 'denpasar selatan', 'sanur': 'denpasar selatan',
+            'sidakarya': 'denpasar selatan', 'pemogan': 'denpasar selatan', 'sanur kaja': 'denpasar selatan',
+            'sanur kauh': 'denpasar selatan', 'kesiman': 'denpasar selatan', 'sumerta': 'denpasar selatan',
+            'kesiman': 'denpasar timur', 'sumerta': 'denpasar timur', 'dangin puri': 'denpasar timur',
+            'penatih': 'denpasar timur', 'dangin puri kelod': 'denpasar timur', 'sumerta kelod': 'denpasar timur',
+            'kesiman petilan': 'denpasar timur', 'kesiman kertalangu': 'denpasar timur', 'sumerta kaja': 'denpasar timur',
+            'sumerta kauh': 'denpasar timur', 'penatih dangin puri': 'denpasar timur', 'dauh puri': 'denpasar barat',
+            'pemecutan': 'denpasar barat', 'padangsambian': 'denpasar barat', 'padangsambian kelod': 'denpasar barat',
+            'dauh puri kauh': 'denpasar barat', 'dauh puri kelod': 'denpasar barat', 'dauh puri kangin': 'denpasar barat',
+            'tegal harum': 'denpasar barat', 'tegal kertha': 'denpasar barat', 'padangsambian kaja': 'denpasar barat',
+            'tonja denpasar': 'denpasar utara', 'ubung': 'denpasar utara', 'peguyangan': 'denpasar utara',
+            'dangin puri kangin': 'denpasar utara', 'dangin puri kauh': 'denpasar utara', 'dangin puri kaja': 'denpasar utara',
+            'pemecutan kaja': 'denpasar utara', 'dauh puri kaja': 'denpasar utara', 'ubung kaja': 'denpasar utara',
+            'peguyangan kaja': 'denpasar utara', 'peguyangan kangin': 'denpasar utara', 
+        };
+        function mapSubArea(area) {
+            return subAreaMapping[area.toLowerCase()] || area;
+        }
+
+        function normalizeCompetitorName(name) {
+            return name.trim().toLowerCase();
+        }
+
+        function normalizeFacilitiesName(name) {
+            return name.trim().toLowerCase();
+        }
+
+        function matchCompetitor(competitorName, inputCompetitors) {
+            const normalizedCompetitorName = normalizeCompetitorName(competitorName);
+            for (let inputCompetitor of inputCompetitors) {
+                if (normalizedCompetitorName.includes(normalizeCompetitorName(inputCompetitor))) {
+                    return normalizeCompetitorName(inputCompetitor);
+                }
+            }
+            return null;
+        }
+
+        function matchFacilities(facilitiesName, inputFacilities) {
+            const normalizedFacilitiesName = normalizeFacilitiesName(facilitiesName);
+            for (let inputFacility of inputFacilities) {
+                if (normalizedFacilitiesName.includes(normalizeFacilitiesName(inputFacility))) {
+                    return normalizeFacilitiesName(inputFacility);
+                }
+            }
+            return null;
+        }
+
+        function getCompetitorColor(name, inputCompetitors) {
+            const matchedCompetitor = matchCompetitor(name, inputCompetitors);
+
+            if (matchedCompetitor) {
+                if (!competitorColorMap[matchedCompetitor]) {
+                    competitorColorMap[matchedCompetitor] = competitorColors[colorIndex % competitorColors.length];
+                    colorIndex++;
+                }
+                return competitorColorMap[matchedCompetitor];
+            } else {
+                competitorColorMap[name] = competitorColors[colorIndex % competitorColors.length];
+                colorIndex++;
+                return competitorColorMap[name];
+            }
+        }
+
+        function getFacilitiesColor(name, inputFacilities) {
+            const matchedFacilities = matchFacilities(name, inputFacilities);
+
+            if (matchedFacilities) {
+                if (!facilitiesColorMap[matchedFacilities]) {
+                    facilitiesColorMap[matchedFacilities] = facilitiesColors[facilitiesColorIndex % facilitiesColors.length];
+                    facilitiesColorIndex++;
+                }
+                return facilitiesColorMap[matchedFacilities];
+            } else {
+                facilitiesColorMap[name] = facilitiesColors[facilitiesColorIndex % facilitiesColors.length];
+                facilitiesColorIndex++;
+                return facilitiesColorMap[name];
+            }
+        }
+
+        function initMap() {
+            const bali = {lat: -8.65, lng: 115.22};
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: bali
+            });
+            document.getElementById('searchButton').addEventListener('click', function() {
+                const competitors = $('#competitors').find('input').map(function() { return this.value; }).get();
+                const areas = $('#area').find('input').map(function() { return this.value; }).get();
+                const facilities = $('#facilities').find('input').map(function() { return this.value; }).get();
+
+                $.ajax({
+                    url: '/search',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({competitors: competitors, area: areas, facilities: facilities}),
+                    success: function(response) {
+                        if (response.error) {
+                            alert(response.error);
+                            return;
+                        }
+
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 10,
+                            center: {lat: -8.65, lng: 115.22}
+                        });
+
+                        response.results.forEach(function(areaResult) {
+                            const areaCenter = {lat: areaResult.area_lat, lng: areaResult.area_lng};
+
+                            const populationMarker = new google.maps.Marker({
+                                position: areaCenter,
+                                map: map,
+                                title: 'Populasi Penduduk'
+                            });
+
+                            const infoWindow = new google.maps.InfoWindow({
+                                content: 'Populasi : ' + areaResult.population
+                            });
+
+                            populationMarker.addListener('click', function() {
+                                infoWindow.open(map, populationMarker);
+                            });
+
+                            areaResult.competitors.forEach(function(competitor) {
+                                const competitorColor = getCompetitorColor(competitor.name, competitors);
+
+                                const competitorMarker = new google.maps.Marker({
+                                    position: {lat: competitor.lat, lng: competitor.lng},
+                                    map: map,
+                                    title: competitor.name,
+                                    icon: competitorColor
+                                });
+
+                                const competitorInfoWindow = new google.maps.InfoWindow({
+                                    content: `<div><strong>${competitor.name}</strong><br>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=${competitor.lat},${competitor.lng}" target="_blank">View on Google Maps</a></div>`
+                                });
+
+                                competitorMarker.addListener('click', function() {
+                                    competitorInfoWindow.open(map, competitorMarker);
+                                });
+                            });
+
+                            areaResult.facilities.forEach(function(facility) {
+                                const facilityColor = getFacilitiesColor(facility.name, facilities);
+
+                                const facilityMarker = new google.maps.Marker({
+                                    position: {lat: facility.lat, lng: facility.lng},
+                                    map: map,
+                                    title: facility.name,
+                                    icon: facilityColor
+                                });
+
+                                const facilityInfoWindow = new google.maps.InfoWindow({
+                                    content: `<div><strong>${facility.name}</strong><br>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=${facility.lat},${facility.lng}" target="_blank">View on Google Maps</a></div>`
+                                });
+
+                                facilityMarker.addListener('click', function() {
+                                    facilityInfoWindow.open(map, facilityMarker);
+                                });
+                            });
+                        });
+
+                        let bounds = new google.maps.LatLngBounds();
+                        response.results.forEach(function(areaResult) {
+                            bounds.extend({lat: areaResult.area_lat, lng: areaResult.area_lng});
+                            areaResult.competitors.forEach(function(competitor) {
+                                bounds.extend({lat: competitor.lat, lng: competitor.lng});
+                            });
+                            areaResult.facilities.forEach(function(facility) {
+                                bounds.extend({lat: facility.lat, lng: facility.lng});
+                            });
+                        });
+                        map.fitBounds(bounds);
+
+                        if (response.ruko.length > 0) {
+                            $('#viewPropertiesContainer').show();
+                            $('#viewPropertiesButton').off('click').on('click', function() {
+                                const mappedAreas = areas.map(mapSubArea);
+                                window.location.href = '/properti?area=' + mappedAreas.join(',');
+                            });
+                        } else {
+                            $('#viewPropertiesContainer').hide();
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+
+            document.getElementById('clearButton').addEventListener('click', function() {
+                $('#competitors').empty().append('<div><input type="text" class="form-control mb-2" name="competitors"><button type="button" id="addCompetitor" class="btn btn-primary btn-sm mb-2">Tambah</button></div>');
+                $('#area').empty().append('<div><input type="text" class="form-control mb-2" name="area"><button type="button" id="addArea" class="btn btn-primary btn-sm mb-2">Tambah</button></div>');
+                $('#facilities').empty().append('<div><input type="text" class="form-control mb-2" name="facilities"><button type="button" id="addFacility" class="btn btn-primary btn-sm mb-2">Tambah</button></div>');
+            });
+            const competitor = getQueryParam('competitor');
+            const area = getQueryParam('area');
+            const facility = getQueryParam('facility');
+
+            if (competitor || area || facility) {
+                if (competitor) {
+                    document.getElementsByName('competitors')[0].value = competitor;
+                }
+                if (area) {
+                    document.getElementsByName('area')[0].value = area;
+                }
+                if (facility) {
+                    document.getElementsByName('facilities')[0].value = facility;
+                }
+                document.getElementById('searchButton').click();
+            }
+        }
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        $(document).ready(function() {
+            $('#addCompetitor').click(function() {
+                $('#competitors').append('<div><input type="text" name="competitors" class="form-control mb-2"><button type="button" class="remove btn btn-light btn-sm mb-2">Hapus</button></div>');
+            });
+
+            $('#addArea').click(function() {
+                $('#area').append('<div><input type="text" name="area" class="form-control mb-2"><button type="button" class="remove btn btn-light btn-sm mb-2">Hapus</button></div>');
+            });
+
+            $('#addFacility').click(function() {
+                $('#facilities').append('<div><input type="text" name="facilities" class="form-control mb-2"><button type="button" class="remove btn btn-light btn-sm mb-2">Hapus</button></div>');
+            });
+
+            $(document).on('click', '.remove', function() {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

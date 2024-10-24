@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analisis Spasial</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgLXMmx_qx8EQ3PCIpe69WTkj9JxFZXzU&callback=initMap" async defer></script>
+    <script>
+        let map;
+        const competitorColors = [
+            'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/orange-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/pink-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/magenta-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/cyan-dot.png'
+        ];
+        const competitorColorMap = {}; 
+        let colorIndex = 0;
+
+        const facilitiesColors = [
+            'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltblue-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/gray-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/brown-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/navy-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltgreen-dot.png',
+            'http://maps.google.com/mapfiles/ms/icons/ltorange-dot.png'
+        ];
+        const facilitiesColorMap = {};
+        let ColorIndex = 0;
+    
+        function normalizeCompetitorName(name) {
+            return name.trim().toLowerCase(); 
+        }
+
+        function normalizeFacilitiesName(name){
+            return name.trim().toLowerCase();
+        }
+    
+        function matchCompetitor(competitorName, inputCompetitors) {
+            const normalizedCompetitorName = normalizeCompetitorName(competitorName);
+            for (let inputCompetitor of inputCompetitors) {
+                if (normalizedCompetitorName.includes(normalizeCompetitorName(inputCompetitor))) {
+                    return normalizeCompetitorName(inputCompetitor);
+                }
+            }
+            return null; 
+        }
+
+        function matchFacilities(facilitiesName, inputFacilities) {
+            const normalizedFacilitiesName = normalizeFacilitiesName(facilitiesName);
+            for (let inputFacility of inputFacilities) { 
+                if (normalizedFacilitiesName.includes(normalizeFacilitiesName(inputFacility))) {
+                    return normalizeFacilitiesName(inputFacility);
+                }
+            }
+            return null;
+        }
+    
+        function getCompetitorColor(name, inputCompetitors) {
+            const matchedCompetitor = matchCompetitor(name, inputCompetitors);
+    
+            if (matchedCompetitor) {
+                if (!competitorColorMap[matchedCompetitor]) {
+                    competitorColorMap[matchedCompetitor] = competitorColors[colorIndex % competitorColors.length];
+                    colorIndex++;
+                }
+                return competitorColorMap[matchedCompetitor];
+            } else {
+                competitorColorMap[name] = competitorColors[colorIndex % competitorColors.length];
+                colorIndex++;
+                return competitorColorMap[name];
+            }
+        }
+
+        function getFacilitiesColor(name, inputFacilities) {
+            const matchedFacilities = matchFacilities(name, inputFacilities);
+    
+            if (matchedFacilities) {
+                if (!facilitiesColorMap[matchedFacilities]) {
+                    facilitiesColorMap[matchedFacilities] = facilitiesColors[ColorIndex % facilitiesColors.length];
+                    ColorIndex++;
+                }
+                return facilitiesColorMap[matchedFacilities];
+            } else {
+                facilitiesColorMap[name] = facilitiesColors[ColorIndex % facilitiesColors.length];
+                ColorIndex++;
+                return facilitiesColorMap[name];
+            }
+        }
+    
+        function initMap() {
+            const bali = {lat: -8.65, lng: 115.22};
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: bali
+            });
+
+            document.getElementById('searchButton').addEventListener('click', function() {
+                const competitors = $('#competitors').find('input').map(function() { return this.value; }).get();
+                const areas = $('#area').find('input').map(function() { return this.value; }).get();
+                const facilities = $('#facilities').find('input').map(function() { return this.value; }).get();
+
+                $.ajax({
+                    url: '/search',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({competitors: competitors, area: areas, facilities: facilities}),
+                    success: function(response) {
+                        if (response.error) {
+                            alert(response.error);
+                            return;
+                        }
+
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 10,
+                            center: {lat: -8.65, lng: 115.22}
+                        });
+
+                        if (response.ruko.length > 0) {
+                            renderRukoTable(response.ruko);
+                        } else {
+                            renderRukoTable([]);
+                        }
+
+                        response.results.forEach(function(areaResult) {
+                            const areaCenter = {lat: areaResult.area_lat, lng: areaResult.area_lng};
+
+                            const populationMarker = new google.maps.Marker({
+                                position: areaCenter,
+                                map: map,
+                                title: 'Populasi Penduduk'
+                            });
+
+                            const infoWindow = new google.maps.InfoWindow({
+                                content: 'Populasi : ' + areaResult.population
+                            });
+
+                            populationMarker.addListener('click', function() {
+                                infoWindow.open(map, populationMarker);
+                            });
+
+                            areaResult.competitors.forEach(function(competitor) {
+                                const competitorColor = getCompetitorColor(competitor.name, competitors);
+
+                                const competitorMarker = new google.maps.Marker({
+                                    position: {lat: competitor.lat, lng: competitor.lng},
+                                    map: map,
+                                    title: competitor.name,
+                                    icon: competitorColor
+                                });
+
+                                const competitorInfoWindow = new google.maps.InfoWindow({
+                                    content: `<div><strong>${competitor.name}</strong><br>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=${competitor.lat},${competitor.lng}" target="_blank">View on Google Maps</a></div>`
+                                });
+
+                                competitorMarker.addListener('click', function() {
+                                    competitorInfoWindow.open(map, competitorMarker);
+                                });
+                            });
+
+                            areaResult.facilities.forEach(function(facility) {
+                                const facilityColor = getFacilitiesColor(facility.name, facilities);
+
+                                const facilityMarker = new google.maps.Marker({
+                                    position: {lat: facility.lat, lng: facility.lng},
+                                    map: map,
+                                    title: facility.name,
+                                    icon: facilityColor
+                                });
+
+                                const facilityInfoWindow = new google.maps.InfoWindow({
+                                    content: `<div><strong>${facility.name}</strong><br>
+                                            <a href="https://www.google.com/maps/search/?api=1&query=${facility.lat},${facility.lng}" target="_blank">View on Google Maps</a></div>`
+                                });
+
+                                facilityMarker.addListener('click', function() {
+                                    facilityInfoWindow.open(map, facilityMarker);
+                                });
+                            });
+                        });
+
+                        let bounds = new google.maps.LatLngBounds();
+                        response.results.forEach(function(areaResult) {
+                            bounds.extend({lat: areaResult.area_lat, lng: areaResult.area_lng});
+                            areaResult.competitors.forEach(function(competitor) {
+                                bounds.extend({lat: competitor.lat, lng: competitor.lng});
+                            });
+                            areaResult.facilities.forEach(function(facility) {
+                                bounds.extend({lat: facility.lat, lng: facility.lng});
+                            });
+                        });
+                        map.fitBounds(bounds);
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        }
+
+    
+        function renderRukoTable(rukoData) {
+            const tableBody = $('#rukoTable tbody');
+            tableBody.empty();
+    
+            if (rukoData.length === 0) {
+                tableBody.append('<tr><td colspan="4">Tidak Ada Ruko di Area Ini</td></tr>');
+            } else {
+                rukoData.forEach(function(ruko) {
+                    const row = `<tr>
+                                    <td>${ruko['Product Name']}</td>
+                                    <td>${ruko.Price}</td>
+                                    <td>${ruko.Place}</td>
+                                    <td><a href="${ruko.Link}" target="_blank">Link OLX</a></td>
+                                </tr>`;
+                    tableBody.append(row);
+                });
+            }
+        }
+    
+        $(document).ready(function() {
+            $('#addCompetitor').click(function() {
+                $('#competitors').append('<div><input type="text" name="competitors"><button type="button" class="remove">Hapus</button></div>');
+            });
+    
+            $('#addArea').click(function() {
+                $('#area').append('<div><input type="text" name="area"><button type="button" class="remove">Hapus</button></div>');
+            });
+    
+            $('#addFacility').click(function() {
+                $('#facilities').append('<div><input type="text" name="facilities"><button type="button" class="remove">Hapus</button></div>');
+            });
+    
+            $(document).on('click', '.remove', function() {
+                $(this).parent().remove();
+            });
+    
+            $('#rukoTable').DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "ordering": false,
+                "searching": false,
+                "info": false,
+            });
+        });
+    </script>                     
+</head>
+<body>
+    <h1>Analisis Spasial</h1>
+    <form id="searchForm">
+        <div id="competitors">
+            <label for="competitors">Kompetitor:</label><br>
+            <div><input type="text" name="competitors"><button type="button" id="addCompetitor">Tambah</button></div>
+        </div>
+        <br>
+        <div id="area">
+            <label for="area">Area:</label><br>
+            <div><input type="text" name="area"><button type="button" id="addArea">Tambah</button></div>
+        </div>
+        <br>
+        <div id="facilities">
+            <label for="facilities">Fasilitas Publik:</label><br>
+            <div><input type="text" name="facilities"><button type="button" id="addFacility">Tambah</button></div>
+        </div>
+        <br>
+        <button type="button" id="searchButton">Cari</button>
+    </form>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+
+    <h2>Daftar Properti Kosong</h2>
+    <table id="rukoTable" class="display">
+        <thead>
+            <tr>
+                <th>Nama Properti</th>
+                <th>Harga</th>
+                <th>Daerah</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ruko in ruko_list %}
+            <tr>
+                <td>{{ ruko['Product Name'] }}</td>
+                <td>{{ ruko.Price }}</td>
+                <td>{{ ruko.Place }}</td>
+                <td><a href="{{ ruko.Link }}" target="_blank">Link OLX</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
