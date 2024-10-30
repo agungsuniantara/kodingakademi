@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pp = {
+            panjang: 40,
+            lebar: 50,
+
+            luas: function(){
+                return this.panjang * this.lebar;
+            },
+
+            keliling: function(){
+                return 2 * (this.panjang + this.lebar);
+            }
+        };
+
+        document.write("Panjang : " + pp.panjang + "<br>");
+        document.write("lebar : " + pp.lebar + "<br>");
+        document.write("luas : " + pp.luas() + "<br>");
+        document.write("keliling : " + pp.keliling() + "<br>");
+    </script>
+</body>
+</html>

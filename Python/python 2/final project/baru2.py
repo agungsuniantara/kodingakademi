@@ -1,9 +1,9 @@
 class pegawai:
-    def __init__(self, a,b,c,d):
-        self.nama = a
-        self.status = b 
-        self.tahun = c 
-        self.gaji = d 
+    def __init__(self, nama, status, tahun, gaji):
+        self.nama = nama
+        self.status = status 
+        self.tahun = tahun
+        self.gaji = gaji 
 
 class data:
     def __init__(self):

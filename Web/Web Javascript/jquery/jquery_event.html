@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .gambar{
+            background-image: url("gambar.png");
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.1s ease;
+        }
+        .gambar:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <p class="text">test</p>
     <button class="ganti">ganti teks</button>
+
+    <div class="gambar"></div>
 
     <script>
         $(document).ready(function(){
@@ -16,6 +32,15 @@
                 $('.text').text('Teks telah diganti');
                 $('.text').append('<button class="deleteBtn">Hapus</button>');
             });
+
+            $(".gambar").hover(
+                function(){
+                    $(this).css("background-image", "url('logo.jpg')");
+                },
+                function(){
+                    $(this).css("background-image", "url('gambar.png')");
+                }
+            );
 
             $(document).on('click', '.deleteBtn', function(){
                 $('.text').remove();

@@ -3,9 +3,9 @@
 void main ()
 {
     char mystring[6] = "manish"; // hanish // hanism
-    char* ptr1[6];
-    char* ptr2[6];
-    char tampung[6]; // manish
+    char* ptr1[6]; // [ alamat m, , , , , ,]
+    char* ptr2[6]; // [ alamat m, , , , , ,]
+    char tampung[6]; // [ m, , , , , , ]
     int i;
 
     for ( i = 0; i < 6; i++)
