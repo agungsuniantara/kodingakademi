@@ -23,6 +23,8 @@ Copyright (c) 2024 Rutwa Engineer, Dan Zingaro, Peter Dixon, Randy Hickey, Romin
 import csv
 import math
 
+from newspaper.nlp import score
+
 ################################################################################
 # Constants to use in your code
 ################################################################################
@@ -119,7 +121,7 @@ def calculate_distance(lat1: float, lon1: float,
 ################################################################################
 # Part 1 - Querying the data
 ################################################################################
-def find_bridge_by_id(bridges: list[list], bridge_id: int) -> list:
+def find_bridge_by_id(bridges: list[list], bridge_id: int) -> list or bool:
     """Return the data for the bridge with id bridge_id from bridges.
 
     If there is no bridge with the given id in bridges, then return an empty
@@ -277,6 +279,26 @@ def find_worst_bci(bridges: list[list], bridge_ids: list[int]) -> int:
     >>> find_worst_bci(example_bridges, [1, 3])
     1
     """
+    worst_bridge_id = None
+    worst_bci = float('inf')
+
+    for bridge in bridges:
+        bridge_id = bridge[0]
+        if bridge_id in bridge_ids:
+            years, bci_scores = bridge[-1]
+
+            # Find the most recent non-missing BCI score
+            for year, bci in zip(reversed(years), reversed(bci_scores)):
+                if bci != 'MISSING_BCI':
+                    if bci < worst_bci:
+                        worst_bci = bci
+                        worst_bridge_id = bridge_id
+                    elif bci == worst_bci and bridge_id < worst_bridge_id:
+                        worst_bridge_id = bridge_id
+                    break
+
+    return worst_bridge_id
+
 
 
 def map_route(bridges: list[list], lat: float, lon: float,
@@ -366,7 +388,6 @@ def clean_bci_data(bci_years: list[str], start_year: int, bci_scores: list) -> \
     >>> scores
     [-1.0, 72.3, -1.0, 69.5, -1.0, 70.0, -1.0, 70.3, -1.0]
     """
-
 
 ################################################################################
 # Provided function. Do not modify. 

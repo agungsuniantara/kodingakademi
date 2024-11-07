@@ -1,6 +1,7 @@
 <?php
 
-$email = $_POST['email'];
+$email = $_POST["email"];
+$pesan = $_POST["pesan"];
 
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -19,8 +20,8 @@ $mail->Port = 587;
 
 $mail->setFrom('agungsuniantara@gmail.com');
 $mail->addAddress($email);
-$mail->Subject = 'Subject of the Email';
-$mail->Body = 'berhasil registrasi !!!';
+$mail->Subject = 'test';
+$mail->Body = $pesan;
 
 if (!$mail->send()) {
     echo "Mailer error: " . $mail->ErrorInfo;
