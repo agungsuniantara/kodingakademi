@@ -1,7 +1,7 @@
 import tkinter as tk
 import os
 
-folder = r"GUI_crud\text"
+folder = r"/Applications/MAMP/htdocs/local/kodingakademi/Python/python 2/GUI_crud/text"
 
 def create_text():
     try:

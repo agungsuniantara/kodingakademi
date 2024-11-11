@@ -181,9 +181,9 @@ def get_bridge_condition(bridges: list[list], bridge_id: int) -> float:
     if not bridge:
         return MISSING_BCI
     bci_scores = bridge[COLUMN_BCI][INDEX_BCI_SCORES]
-    for score in bci_scores:
-        if score != MISSING_BCI:
-            return score
+    for result in bci_scores:
+        if result != MISSING_BCI:
+            return result
     return MISSING_BCI
 
 
@@ -240,6 +240,12 @@ def inspect_bridge(bridges: list[list], bridge_id: int, inspect_date: str,
     >>> my_bridge[COLUMN_BCI][INDEX_BCI_SCORES][0]
     71.9
     """
+    bridge = find_bridge_by_id(bridges, bridge_id)
+    if bridge:
+        year = inspect_date.split('/')[-1]
+        bridge[COLUMN_LAST_INSPECTED] = inspect_date
+        bridge[COLUMN_BCI][INDEX_BCI_YEARS].insert(0, year)
+        bridge[COLUMN_BCI][INDEX_BCI_SCORES].insert(0, inspect_bci)
 
 
 def rehabilitate_bridge(bridges: list[list], bridge_ids: list[int],
@@ -256,6 +262,13 @@ def rehabilitate_bridge(bridges: list[list], bridge_ids: list[int],
     >>> my_bridge[COLUMN_LAST_MINOR_REHAB]
     '2021'
     """
+    for bridge_id in bridge_ids:
+        bridge = find_bridge_by_id(bridges, bridge_id)
+        if bridge:
+            if is_major:
+                bridge[COLUMN_LAST_MAJOR_REHAB] = new_year
+            else:
+                bridge[COLUMN_LAST_MINOR_REHAB] = new_year
 
 
 ################################################################################
@@ -279,27 +292,14 @@ def find_worst_bci(bridges: list[list], bridge_ids: list[int]) -> int:
     >>> find_worst_bci(example_bridges, [1, 3])
     1
     """
-    worst_bridge_id = None
     worst_bci = float('inf')
-
-    for bridge in bridges:
-        bridge_id = bridge[0]
-        if bridge_id in bridge_ids:
-            years, bci_scores = bridge[-1]
-
-            # Find the most recent non-missing BCI score
-            for year, bci in zip(reversed(years), reversed(bci_scores)):
-                if bci != 'MISSING_BCI':
-                    if bci < worst_bci:
-                        worst_bci = bci
-                        worst_bridge_id = bridge_id
-                    elif bci == worst_bci and bridge_id < worst_bridge_id:
-                        worst_bridge_id = bridge_id
-                    break
-
+    worst_bridge_id = -1
+    for bridge_id in bridge_ids:
+        most_recent_bci = get_bridge_condition(bridges, bridge_id)
+        if most_recent_bci < worst_bci or (most_recent_bci == worst_bci and bridge_id < worst_bridge_id):
+            worst_bci = most_recent_bci
+            worst_bridge_id = bridge_id
     return worst_bridge_id
-
-
 
 def map_route(bridges: list[list], lat: float, lon: float,
               max_bridges: int, radius: int) -> list[int]:
@@ -320,6 +320,17 @@ def map_route(bridges: list[list], lat: float, lon: float,
     >>> map_route(example_bridges, 43.1, -80.5, 30, 10)
     []
     """
+    route = []
+    current_lat, current_lon = lat, lon
+    for _ in range(max_bridges):
+        nearby_bridges = find_bridges_in_radius(bridges, current_lat, current_lon, radius, route)
+        if not nearby_bridges:
+            break
+        next_bridge = find_worst_bci(bridges, nearby_bridges)
+        route.append(next_bridge)
+        bridge = find_bridge_by_id(bridges, next_bridge)
+        current_lat, current_lon = bridge[COLUMN_LAT], bridge[COLUMN_LON]
+    return route
 
 
 ################################################################################
@@ -336,6 +347,7 @@ def clean_length_data(raw_length: str) -> float:
     >>> clean_length_data('12')
     12.0
     """
+    return float(raw_length) if raw_length else 0.0
     
 
 def trim_from_end(raw_data: list, count: int) -> None:
@@ -351,6 +363,7 @@ def trim_from_end(raw_data: list, count: int) -> None:
     >>> my_lst
     [[72.3, 69.5, 70.0, 70.3, 70.5, 70.7, 72.9]]
     """
+    del raw_data[-count:]
 
 
 def clean_span_data(raw_spans: str) -> list[float]:
@@ -363,6 +376,14 @@ def clean_span_data(raw_spans: str) -> list[float]:
     >>> clean_span_data('Total=64  (1)=12;(2)=19;(3)=21;(4)=12;')
     [12.0, 19.0, 21.0, 12.0]
     """
+    data = raw_spans.split("=")
+    span = []
+    for i in data[2:]:
+        span.append(float(i[0:2]))
+
+    return span
+
+
 
 
 def clean_bci_data(bci_years: list[str], start_year: int, bci_scores: list) -> \
@@ -388,6 +409,12 @@ def clean_bci_data(bci_years: list[str], start_year: int, bci_scores: list) -> \
     >>> scores
     [-1.0, 72.3, -1.0, 69.5, -1.0, 70.0, -1.0, 70.3, -1.0]
     """
+    for i in range(len(bci_scores)):
+        bci_years.append(str(start_year - i))
+        if bci_scores[i] == '':
+            bci_scores[i] = MISSING_BCI
+        else:
+            bci_scores[i] = float(bci_scores[i])
 
 ################################################################################
 # Provided function. Do not modify. 

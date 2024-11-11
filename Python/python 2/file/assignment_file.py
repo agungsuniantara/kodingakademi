@@ -24,3 +24,10 @@ with open('data_cewek.csv', 'w', newline='') as cewek_file:
     cewek_writer.writerows(data_cewek)
     
 
+a = 5
+count = 0 # 1 # 6
+
+while count <= a:
+    print("*****")
+    count += 1
+

@@ -1,4 +1,4 @@
-public class App {
+public class tipedata {
     public static void tampil(int angka){
         System.out.println("hasil method void : " + angka);
     }
