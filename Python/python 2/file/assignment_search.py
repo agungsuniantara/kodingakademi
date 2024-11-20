@@ -1,7 +1,7 @@
 search_text = "gunung"
 search_text2 = "Gunung"
 ganti = "pegunungan"
-gunung = []
+gunung = [] 
 
 with open('file\search_data.txt', 'r') as file:
     data = file.read()

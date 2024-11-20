@@ -4,6 +4,7 @@ umur = input("masukan umur : ")
 
 data = [nama, alamat, umur]
 
-f = open("file/test.txt", "w")
-f.writelines(data)
-f.close()
+data = [nama + "\n", alamat + "\n", umur + "\n"]
+
+with open("file/test.txt", "w") as f:
+    f.writelines(data)
