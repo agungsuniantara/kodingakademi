@@ -2,6 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "inheritance1",
+      "request": "launch",
+      "mainClass": "inheritance_java.inheritance1",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "menu",
+      "request": "launch",
+      "mainClass": "menu",
+      "projectName": ""
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",
