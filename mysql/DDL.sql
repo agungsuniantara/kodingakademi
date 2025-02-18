@@ -15,7 +15,7 @@ CREATE TABLE buku (
 -- Menambahkan kolom baru pada tabel
 ALTER TABLE buku ADD penerbit VARCHAR(100);
 
--- Mengubah tipe data kolom
+-- Mengubah tipe data koloms
 ALTER TABLE buku MODIFY COLUMN tahun_terbit INT;
 
 -- Membuat tabel anggota

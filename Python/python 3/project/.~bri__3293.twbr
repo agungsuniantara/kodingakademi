@@ -1,0 +1,1983 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <ExternalImageContentForZones />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Union (laporan_keuangan)' inline='true' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='laporan_keuangan' name='excel-direct.080dkw2097bcsp15x9nad149cq7r'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Applications/MAMP/htdocs/local/kodingakademi/Python/python 3/project/laporan_keuangan.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Union' type='union'>
+          <columns header='yes'>
+            <column datatype='integer' name='F1' />
+            <column datatype='string' name='POS' />
+            <column datatype='integer' name='Individual 30 June 2023' />
+            <column datatype='integer' name='Individual 31 December 2022' />
+            <column datatype='integer' name='Consolidated 30 June 2023' />
+            <column datatype='integer' name='Consolidated 31 December 2022' />
+            <column datatype='string' name='Rasio' />
+            <column datatype='real' name='30 June 2023' />
+            <column datatype='real' name='30 June 2022' />
+            <column datatype='string' name='Sheet' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='aset produktif' table='[&apos;aset produktif$&apos;]' type='table'>
+            <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='POS' ordinal='1' />
+              <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+              <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+              <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+              <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='bopo' table='[bopo$]' type='table'>
+            <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='cir' table='[cir$]' type='table'>
+            <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='kpmm' table='[kpmm$]' type='table'>
+            <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='ldr' table='[ldr$]' type='table'>
+            <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='likuiditas' table='[likuiditas$]' type='table'>
+            <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='POS' ordinal='1' />
+              <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+              <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+              <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+              <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='modal' table='[modal$]' type='table'>
+            <columns gridOrigin='A1:F3:no:A1:F3:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='POS' ordinal='1' />
+              <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+              <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+              <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+              <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='nim' table='[nim$]' type='table'>
+            <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='npl' table='[npl$]' type='table'>
+            <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='roa' table='[roa$]' type='table'>
+            <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='roe' table='[roe$]' type='table'>
+            <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='Rasio' ordinal='1' />
+              <column datatype='real' name='30 June 2023' ordinal='2' />
+              <column datatype='real' name='30 June 2022' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Union]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POS]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>POS</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Individual 30 June 2023</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Individual 30 June 2023]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Individual 30 June 2023</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Individual 31 December 2022</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Individual 31 December 2022]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Individual 31 December 2022</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consolidated 30 June 2023</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Consolidated 30 June 2023]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Consolidated 30 June 2023</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Consolidated 31 December 2022</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Consolidated 31 December 2022]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Consolidated 31 December 2022</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rasio</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Rasio]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Rasio</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>30 June 2023</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[30 June 2023]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>30 June 2023</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>30 June 2022</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[30 June 2022]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>30 June 2022</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+      <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' value='Rasio 2022' />
+          <alias key='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' value='Rasio 2023' />
+          <alias key='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;' value='Keuangan 2023' />
+          <alias key='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;' value='Keuangan 2022' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Consolidated 30 June 2023]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Consolidated 31 December 2022]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Individual 30 June 2023]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Individual 31 December 2022]' role='measure' type='quantitative' />
+      <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_7F69A7515E524384BD8078929D6A9ABC]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[_7F69A7515E524384BD8078929D6A9ABC]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:_7F69A7515E524384BD8078929D6A9ABC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[30 June 2022]' derivation='Sum' name='[cum:sum:30 June 2022:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[30 June 2023]' derivation='Sum' name='[cum:sum:30 June 2023:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[30 June 2022]' derivation='Sum' name='[pcto:sum:30 June 2022:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[30 June 2023]' derivation='Sum' name='[pcto:sum:30 June 2023:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Consolidated 30 June 2023]' derivation='Sum' name='[sum:Consolidated 30 June 2023:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Consolidated 31 December 2022]' derivation='Sum' name='[sum:Consolidated 31 December 2022:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F1]' derivation='Sum' name='[sum:F1:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Individual 30 June 2023]' derivation='Sum' name='[sum:Individual 30 June 2023:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Individual 31 December 2022]' derivation='Sum' name='[sum:Individual 31 December 2022:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/q2/2h4p204s56d3vhv_jx5hmc6m0000gn/T/tableau-temp/#TableauTemp_17f6r9e172re2z1c8fne914apzmq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/10/2025 03:41:12 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>POS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[POS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>POS</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Individual 30 June 2023</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Individual 30 June 2023]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Individual 30 June 2023</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Individual 31 December 2022</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Individual 31 December 2022]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Individual 31 December 2022</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consolidated 30 June 2023</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Consolidated 30 June 2023]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consolidated 30 June 2023</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Consolidated 31 December 2022</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Consolidated 31 December 2022]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Consolidated 31 December 2022</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rasio</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Rasio]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rasio</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>30 June 2023</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[30 June 2023]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>30 June 2023</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Union</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>30 June 2022</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[30 June 2022]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>30 June 2022</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Union</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sheet</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sheet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sheet</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[_7F69A7515E524384BD8078929D6A9ABC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[pcto:sum:30 June 2022:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Consolidated 30 June 2023:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:F1:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[cum:sum:30 June 2023:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[usr:Calculation2:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[cum:sum:30 June 2022:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[usr:Calculation1:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[__tableau_internal_object_id__].[cnt:_7F69A7515E524384BD8078929D6A9ABC:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[pcto:sum:30 June 2023:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Consolidated 31 December 2022:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Union' id='_7F69A7515E524384BD8078929D6A9ABC'>
+            <properties context=''>
+              <relation all='true' name='Union' type='union'>
+                <columns header='yes'>
+                  <column datatype='integer' name='F1' />
+                  <column datatype='string' name='POS' />
+                  <column datatype='integer' name='Individual 30 June 2023' />
+                  <column datatype='integer' name='Individual 31 December 2022' />
+                  <column datatype='integer' name='Consolidated 30 June 2023' />
+                  <column datatype='integer' name='Consolidated 31 December 2022' />
+                  <column datatype='string' name='Rasio' />
+                  <column datatype='real' name='30 June 2023' />
+                  <column datatype='real' name='30 June 2022' />
+                  <column datatype='string' name='Sheet' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='aset produktif' table='[&apos;aset produktif$&apos;]' type='table'>
+                  <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='POS' ordinal='1' />
+                    <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+                    <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+                    <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+                    <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='bopo' table='[bopo$]' type='table'>
+                  <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='cir' table='[cir$]' type='table'>
+                  <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='kpmm' table='[kpmm$]' type='table'>
+                  <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='ldr' table='[ldr$]' type='table'>
+                  <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='likuiditas' table='[likuiditas$]' type='table'>
+                  <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='POS' ordinal='1' />
+                    <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+                    <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+                    <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+                    <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='modal' table='[modal$]' type='table'>
+                  <columns gridOrigin='A1:F3:no:A1:F3:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='POS' ordinal='1' />
+                    <column datatype='integer' name='Individual 30 June 2023' ordinal='2' />
+                    <column datatype='integer' name='Individual 31 December 2022' ordinal='3' />
+                    <column datatype='integer' name='Consolidated 30 June 2023' ordinal='4' />
+                    <column datatype='integer' name='Consolidated 31 December 2022' ordinal='5' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='nim' table='[nim$]' type='table'>
+                  <columns gridOrigin='A1:D2:no:A1:D2:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='npl' table='[npl$]' type='table'>
+                  <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='roa' table='[roa$]' type='table'>
+                  <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.080dkw2097bcsp15x9nad149cq7r' name='roe' table='[roe$]' type='table'>
+                  <columns gridOrigin='A1:D3:no:A1:D3:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='string' name='Rasio' ordinal='1' />
+                    <column datatype='real' name='30 June 2023' ordinal='2' />
+                    <column datatype='real' name='30 June 2022' ordinal='3' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Aset produktif'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Aset produktif</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='integer' name='[Individual 30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Individual 31 December 2022]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Individual 30 June 2023]' derivation='Sum' name='[sum:Individual 30 June 2023:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Individual 31 December 2022]' derivation='Sum' name='[sum:Individual 31 December 2022:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;aset produktif&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan keuangan'>
+              <formatted-text>
+                <run>Laporan keuangan</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{B4FED318-8DE3-4292-B1AE-B82442285049}' />
+    </worksheet>
+    <worksheet name='Bopo'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;bopo&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{4C1CCC7F-B91D-4FDE-B8EA-9D32FACB65D9}' />
+    </worksheet>
+    <worksheet name='Cir'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;cir&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{90CDB73D-7744-4163-8D7D-A63033C773D5}' />
+    </worksheet>
+    <worksheet name='Kpmm'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;kpmm&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{BCA18A28-4D6E-48DE-B134-5BC8F635D5D4}' />
+    </worksheet>
+    <worksheet name='Ldr'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Ldr</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;ldr&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{E9604C23-2831-43ED-8AE7-9A14C57F3F4A}' />
+    </worksheet>
+    <worksheet name='Likuiditas'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Likuiditas</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='integer' name='[Individual 30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Individual 31 December 2022]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Individual 30 June 2023]' derivation='Sum' name='[sum:Individual 30 June 2023:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Individual 31 December 2022]' derivation='Sum' name='[sum:Individual 31 December 2022:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;likuiditas&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan keuangan'>
+              <formatted-text>
+                <run>Laporan keuangan</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{C1852A5D-222A-4456-B69E-864B27CFAA1D}' />
+    </worksheet>
+    <worksheet name='Modal'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Modal</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='integer' name='[Individual 30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Individual 31 December 2022]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Individual 30 June 2023]' derivation='Sum' name='[sum:Individual 30 June 2023:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Individual 31 December 2022]' derivation='Sum' name='[sum:Individual 31 December 2022:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 31 December 2022:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:Individual 30 June 2023:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;modal&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan keuangan'>
+              <formatted-text>
+                <run>Laporan keuangan</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{5A077759-1C93-46D4-9CF7-38B45924DDEC}' />
+    </worksheet>
+    <worksheet name='Nim'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Nim</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;nim&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{A99A5448-27A3-4566-B835-4EDC2C98C6B1}' />
+    </worksheet>
+    <worksheet name='Npl'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Npl</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;npl&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{AF6F5720-A68C-4D88-8C04-7915F032CEF5}' />
+    </worksheet>
+    <worksheet name='Roa'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Roa</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;roa&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{BFDDBEBA-61B4-4DA9-8EB2-A00D27E16981}' />
+    </worksheet>
+    <worksheet name='Roe'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Roa</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Union (laporan_keuangan)' name='federated.0x16ab105s4ukk1b2h7jo1yb9uwj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x16ab105s4ukk1b2h7jo1yb9uwj'>
+            <column datatype='real' name='[30 June 2022]' role='measure' type='quantitative' />
+            <column datatype='real' name='[30 June 2023]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[30 June 2022]' derivation='Sum' name='[sum:30 June 2022:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[30 June 2023]' derivation='Sum' name='[sum:30 June 2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2023:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[sum:30 June 2022:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;roe&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]</column>
+            <column>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' value='Laporan rasio'>
+              <formatted-text>
+                <run>Laporan rasio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' />
+              <text column='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='auto' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[Multiple Values]</rows>
+        <cols>([federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk] / [federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{7A4507BE-E47F-4172-91A3-557133360553}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size maxheight='2000' maxwidth='1259' minheight='2000' minwidth='1259' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='55450' id='13' param='horz' type-v2='layout-flow' w='98730' x='635' y='400'>
+            <zone h='55450' id='11' type-v2='layout-basic' w='98730' x='635' y='400'>
+              <zone h='21250' id='10' name='Aset produktif' w='98730' x='635' y='9250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='25350' id='16' name='Bopo' w='98730' x='635' y='30500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6300' id='19' image-file-url='https://media.suara.com/pictures/1600x840/2024/06/04/49528-logo-bri-logo-bank-bri.jpg' is-scaled='1' type-v2='bitmap' w='98730' x='635' y='400'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='2550' id='20' type-v2='empty' w='98730' x='635' y='6700'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#ddebf0' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='43750' id='18' type-v2='empty' w='98730' x='635' y='55850'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97644' id='3' param='vert' type-v2='layout-flow' w='97538' x='1231' y='1178' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{95F995F9-4B57-4FDB-9511-87D648FA8365}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Aset produktif'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{F768B312-E2D5-4E6E-97BA-7254A53866B3}' />
+    </window>
+    <window class='worksheet' name='Likuiditas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{10AE33F9-D1BC-498C-B08F-83FAD25B00C9}' />
+    </window>
+    <window class='worksheet' name='Modal'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{8C6AD47D-90D3-40D6-B570-B73E750C2F46}' />
+    </window>
+    <window class='worksheet' name='Bopo'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{A92CC207-A3C4-45C2-B91E-967207562FF1}' />
+    </window>
+    <window class='worksheet' name='Cir'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{B21E7DB2-BD17-4ACB-87D3-A32DC27CD8D9}' />
+    </window>
+    <window class='worksheet' name='Kpmm'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{B4969462-515A-4A57-B0E6-126A04059718}' />
+    </window>
+    <window class='worksheet' name='Ldr'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{272C1B8E-48BB-49EB-B945-081D5E05E59A}' />
+    </window>
+    <window class='worksheet' name='Nim'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{620BDCC6-AF6E-412A-826E-DC47648E57A3}' />
+    </window>
+    <window class='worksheet' name='Npl'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{D231BC6E-6325-43ED-9D21-037CCD2E7E83}' />
+    </window>
+    <window class='worksheet' name='Roa'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{0B30E879-3C1D-4590-BA92-662FF97C16D6}' />
+    </window>
+    <window class='worksheet' name='Roe'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[none:Table Name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0x16ab105s4ukk1b2h7jo1yb9uwj].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <simple-id uuid='{054F80E5-F48B-4703-91D7-F347C7CEB51C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Aset produktif'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Bopo'>
+          <zoom type='fit-height' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{BD1E4713-F184-459D-B6C2-ED44CFAC04DE}' />
+    </window>
+  </windows>
+</workbook>

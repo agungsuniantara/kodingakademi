@@ -1,0 +1,28 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+"LAPORAN PERHITUNGAN KEWAJIBAN PENYEDIAAN MODAL MINIMUM  (KPMM) BANK UMUM KONVENSIONALPT BANK RAKYAT INDONESIA (PERSERO) TbkTanggal 30 Juni 2023 dan 2022(dalam jutaan rupiah)",,,,,,,,,
+KOMPONEN MODAL,30 Juni 2023,30 Juni 2022,,,,,,,
+,,,,,"Individual(Direviu)","Konsolidasian(Direviu)",Individual,Konsolidasian,
+,,,,,,,,,
+II,Modal Pelengkap (Tier  2),10.602.647,11.427.453,10.046.943,10.684.490,,,,
+,1,Instrumen modal dalam bentuk saham atau lainnya yang memenuhi persyaratan Tier  2,-,-,100.000,100.000,,,
+,2,Agio/Disagio,-,-,-,-,,,
+,3,"Cadangan umum PPKA atas aset produktif  yang wajib dihitung (paling tinggi 1,25% ATMR Risiko Kredit)",10.602.647,11.427.453,9.946.943,10.618.011,,,
+,4Faktor Pengurang Modal Pelengkap,-,-,-,33.521,,,,
+,4.1Sinking Fund,-,-,-,-,,,,
+,4.2Penempatan dana pada instrumen Tier 2 pada bank lain,-,-,-,33.521,,,,
+"4.3Kepemilikan silang pada entitas lain yang diperoleh berdasarkan peralihan karena hukum, hibah, atau hibah wasiat",-,-,-,-,,,,,
+TOTAL MODAL,234.682.517,277.477.517,231.147.797,267.303.308,,,,,
+,,,,,,,,,
+,30 Juni 2023,30 Juni 2022,,30 Juni 2023,30 Juni 2022,,,,
+,"Individual(Direviu)","Konsolidasian(Direviu)",Individual,Konsolidasian,"Individual(Direviu)","Konsolidasian(Direviu)",Individual,Konsolidasian,
+ASET TERTIMBANG MENURUT RISIKO,,,,,RASIO KPMM,,,,
+ATMR RISIKO KREDIT,846.608.682,912.593.149,794.228.609,847.914.032,Rasio CET 1 (%),"23,53%","25,55%","21,97%","24,05%"
+ATMR RISIKO PASAR,6.550.285,8.485.694,2.309.917,4.058.967,Rasio Tier  1 (%),"23,53%","25,55%","21,97%","24,05%"
+ATMR RISIKO OPERASIONAL,99.021.545,120.236.798,209.879.369,214.875.481,Rasio Tier 2 (%),"1,12%","1,10%","1,00%","1,00%"
+TOTAL ATMR,952.180.512,1.041.315.641,1.006.417.895,1.066.848.480,Rasio KPMM (%),"24,65%","26,65%","22,97%","25,06%"
+RASIO KPMM SESUAI PROFIL RISIKO (%),"9,38%","9,40%","9,51%","9,52%",CET 1 UNTUK  BUFFER (%),"15,27%","17,25%","13,46%","15,53%"
+ALOKASI PEMENUHAN KPMM SESUAI,,,,,PERSENTASE BUFFER YANG WAJIB DIPENUHI OLEH BANK (%),"5,000%","5,000%","5,000%","5,000%"
+Dari CET 1 (%),"8,26%","8,30%","8,51%","8,52%",Capital Conservation Buffer (%),"2,500%","2,500%","2,500%","2,500%"
+Dari AT 1 (%),"0,00%","0,00%","0,00%","0,00%",Countercyclical Buffer (%),"0,000%","0,000%","0,000%","0,000%"
+Dari Tier 2 (%),"1,12%","1,10%","1,00%","1,00%",Capital Surcharge untuk Bank Sistemik (%),"2,500%","2,500%","2,500%","2,500%"
+,,,,,,,,,

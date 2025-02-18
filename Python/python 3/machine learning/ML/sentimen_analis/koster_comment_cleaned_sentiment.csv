@@ -1,0 +1,103 @@
+Normalized,Word Scores,Total Score,Total Sentiment
+theory young people who advanced old,"{'theory': 0.0, 'young': 0.0, 'people': 0.0, 'who': 0.0, 'advanced': 0.25, 'old': 0.0}",0.25,Positive
+yes easy center can difficult,"{'yes': 0.4019, 'easy': 0.4404, 'center': 0.0, 'can': 0.0, 'difficult': -0.3612}",0.4811,Positive
+government will center common sense,"{'government': 0.0, 'will': 0.0, 'center': 0.0, 'common': 0.0, 'sense': 0.0}",0.0,Neutral
+lane mr meaning team fee big okay new president,"{'lane': 0.0, 'mr': 0.0, 'meaning': 0.0, 'team': 0.0, 'fee': 0.0, 'big': 0.0, 'okay': 0.2263, 'new': 0.0, 'president': 0.0}",0.2263,Positive
+wow will governor bring text,"{'wow': 0.5859, 'will': 0.0, 'governor': 0.0, 'bring': 0.0, 'text': 0.0}",0.5859,Positive
+smart people choose quality best,"{'smart': 0.4019, 'people': 0.0, 'choose': 0.0, 'quality': 0.0, 'best': 0.6369}",1.0388,Positive
+young people future now advanced,"{'young': 0.0, 'people': 0.0, 'future': 0.0, 'now': 0.0, 'advanced': 0.25}",0.25,Positive
+anyway right hopefully continue walk important public money just,"{'anyway': 0.0, 'right': 0.0, 'hopefully': 0.4019, 'continue': 0.0, 'walk': 0.0, 'important': 0.2023, 'public': 0.0, 'money': 0.0, 'just': 0.0}",0.6042,Positive
+maybe like election presidential selection command,"{'maybe': 0.0, 'like': 0.3612, 'election': 0.0, 'presidential': 0.0, 'selection': 0.0, 'command': 0.0}",0.3612,Positive
+son campaign party clothes right given shirt,"{'son': 0.0, 'campaign': 0.0, 'party': 0.4019, 'clothes': 0.0, 'right': 0.0, 'given': 0.0, 'shirt': 0.0}",0.4019,Positive
+food next sound small people just way best,"{'food': 0.0, 'next': 0.0, 'sound': 0.0, 'small': 0.0, 'people': 0.0, 'just': 0.0, 'way': 0.0, 'best': 0.6369}",0.6369,Positive
+beginning later will issue central fund exciting,"{'beginning': 0.0, 'later': 0.0, 'will': 0.0, 'issue': 0.0, 'central': 0.0, 'fund': 0.0, 'exciting': 0.4939}",0.4939,Positive
+can only judge cause mr right continue struggle,"{'can': 0.0, 'only': 0.0, 'judge': 0.0, 'cause': 0.0, 'mr': 0.0, 'right': 0.0, 'continue': 0.0, 'struggle': -0.3182}",-0.3182,Negative
+next can only accuse want accept,"{'next': 0.0, 'can': 0.0, 'only': 0.0, 'accuse': -0.2023, 'want': 0.0772, 'accept': 0.3818}",0.2567,Positive
+political who certainly will understand continued still leader like mr,"{'political': 0.0, 'who': 0.0, 'certainly': 0.34, 'will': 0.0, 'understand': 0.0, 'continued': 0.0, 'still': 0.0, 'leader': 0.0, 'like': 0.3612, 'mr': 0.0}",0.7012,Positive
+guard win smart choose leader,"{'guard': 0.0, 'win': 0.5859, 'smart': 0.4019, 'choose': 0.0, 'leader': 0.0}",0.9878,Positive
+young people now know direction positive change great sake prove,"{'young': 0.0, 'people': 0.0, 'now': 0.0, 'know': 0.0, 'direction': 0.0, 'positive': 0.5574, 'change': 0.0, 'great': 0.6249, 'sake': 0.0, 'prove': 0.0}",1.1823000000000001,Positive
+complete package leader who people need fix debate,"{'complete': 0.0, 'package': 0.0, 'leader': 0.0, 'who': 0.0, 'people': 0.0, 'need': 0.0, 'fix': 0.0, 'debate': 0.0}",0.0,Neutral
+definitely able continue development future heart light,"{'definitely': 0.4019, 'able': 0.0, 'continue': 0.0, 'development': 0.0, 'future': 0.0, 'heart': 0.6369, 'light': 0.0}",1.0388,Positive
+present still believe continue mr,"{'present': 0.0, 'still': 0.0, 'believe': 0.0, 'continue': 0.0, 'mr': 0.0}",0.0,Neutral
+choice right people work complete,"{'choice': 0.0, 'right': 0.0, 'people': 0.0, 'work': 0.0, 'complete': 0.0}",0.0,Neutral
+leader concept flight entrepreneur brave useful important value now,"{'leader': 0.0, 'concept': 0.0, 'flight': 0.0, 'entrepreneur': 0.0, 'brave': 0.5267, 'useful': 0.4404, 'important': 0.2023, 'value': 0.34, 'now': 0.0}",1.5094,Positive
+sound pole family definitely choice conscience,"{'sound': 0.0, 'pole': 0.0, 'family': 0.0, 'definitely': 0.4019, 'choice': 0.0, 'conscience': 0.0}",0.4019,Positive
+who know way definitely learn first,"{'who': 0.0, 'know': 0.0, 'way': 0.0, 'definitely': 0.4019, 'learn': 0.0, 'first': 0.0}",0.4019,Positive
+child who can choose naturally,"{'child': 0.0, 'who': 0.0, 'can': 0.0, 'choose': 0.0, 'naturally': 0.0}",0.0,Neutral
+airport let alone think people want,"{'airport': 0.0, 'let': 0.0, 'alone': -0.25, 'think': 0.0, 'people': 0.0, 'want': 0.0772}",-0.1728,Negative
+great statement mr commit promise,"{'great': 0.6249, 'statement': 0.0, 'mr': 0.0, 'commit': 0.296, 'promise': 0.3182}",1.2391,Positive
+still promise realistic build infrastructure first just continued walking new leader beginning,"{'still': 0.0, 'promise': 0.3182, 'realistic': 0.0, 'build': 0.0, 'infrastructure': 0.0, 'first': 0.0, 'just': 0.0, 'continued': 0.0, 'walking': 0.0, 'new': 0.0, 'leader': 0.0, 'beginning': 0.0}",0.3182,Positive
+build short airport wake,"{'build': 0.0, 'short': 0.0, 'airport': 0.0, 'wake': 0.0}",0.0,Neutral
+university student pole educational support,"{'university': 0.0, 'student': 0.0, 'pole': 0.0, 'educational': 0.0, 'support': 0.4019}",0.4019,Positive
+just funny world cancel tragedy,"{'just': 0.0, 'funny': 0.4404, 'world': 0.0, 'cancel': -0.25, 'tragedy': -0.6597}",-0.46929999999999994,Negative
+debate only care world,"{'debate': 0.0, 'only': 0.0, 'care': 0.4939, 'world': 0.0}",0.4939,Positive
+politics ball soccer kind regional dance,"{'politics': 0.0, 'ball': 0.0, 'soccer': 0.0, 'kind': 0.5267, 'regional': 0.0, 'dance': 0.0}",0.5267,Positive
+ok president sorry governor suitable conscience peace election,"{'ok': 0.296, 'president': 0.0, 'sorry': -0.0772, 'governor': 0.0, 'suitable': 0.0, 'conscience': 0.0, 'peace': 0.5423, 'election': 0.0}",0.7611,Positive
+reason common interest definitely people,"{'reason': 0.0, 'common': 0.0, 'interest': 0.4588, 'definitely': 0.4019, 'people': 0.0}",0.8607,Positive
+thank explanation only center can refuse world authority governor,"{'thank': 0.3612, 'explanation': 0.0, 'only': 0.0, 'center': 0.0, 'can': 0.0, 'refuse': -0.296, 'world': 0.0, 'authority': 0.0772, 'governor': 0.0}",0.14240000000000003,Positive
+football clear supporter explanation,"{'football': 0.0, 'clear': 0.3818, 'supporter': 0.2732, 'explanation': 0.0}",0.655,Positive
+candidate governor temple happen guard neutral important people social,"{'candidate': 0.0, 'governor': 0.0, 'temple': 0.0, 'happen': 0.0, 'guard': 0.0, 'neutral': 0.0, 'important': 0.2023, 'people': 0.0, 'social': 0.0}",0.2023,Positive
+definitely read just glimpse people,"{'definitely': 0.4019, 'read': 0.0, 'just': 0.0, 'glimpse': 0.0, 'people': 0.0}",0.4019,Positive
+need care leader take action decision important responsibility invite mr answer,"{'need': 0.0, 'care': 0.4939, 'leader': 0.0, 'take': 0.0, 'action': 0.0, 'decision': 0.0, 'important': 0.2023, 'responsibility': 0.0, 'invite': 0.1531, 'mr': 0.0, 'answer': 0.0}",0.8493,Positive
+shame learning organize candidate,"{'shame': -0.4767, 'learning': 0.0, 'organize': 0.0, 'candidate': 0.0}",-0.4767,Negative
+cool mr soul admit course future will fixed sure great,"{'cool': 0.3182, 'mr': 0.0, 'soul': 0.0, 'admit': 0.2023, 'course': 0.0, 'future': 0.0, 'will': 0.0, 'fixed': 0.0, 'sure': 0.3182, 'great': 0.6249}",1.4636,Positive
+mr governor deputy safe,"{'mr': 0.0, 'governor': 0.0, 'deputy': 0.0, 'safe': 0.4404}",0.4404,Positive
+great mr soul admit directly full,"{'great': 0.6249, 'mr': 0.0, 'soul': 0.0, 'admit': 0.2023, 'directly': 0.0, 'full': 0.0}",0.8272,Positive
+take care just try learn first debate,"{'take': 0.0, 'care': 0.4939, 'just': 0.0, 'try': 0.0, 'learn': 0.0, 'first': 0.0, 'debate': 0.0}",0.4939,Positive
+debate winner maybe president forward,"{'debate': 0.0, 'winner': 0.5859, 'maybe': 0.0, 'president': 0.0, 'forward': 0.0}",0.5859,Positive
+right leader can integrate leadership today,"{'right': 0.0, 'leader': 0.0, 'can': 0.0, 'integrate': 0.0, 'leadership': 0.0, 'today': 0.0}",0.0,Neutral
+pole benefit village assistance clearly,"{'pole': 0.0, 'benefit': 0.4588, 'village': 0.0, 'assistance': 0.0, 'clearly': 0.4019}",0.8607,Positive
+first now being expected support young political figure who leader,"{'first': 0.0, 'now': 0.0, 'being': 0.0, 'expected': 0.0, 'support': 0.4019, 'young': 0.0, 'political': 0.0, 'figure': 0.0, 'who': 0.0, 'leader': 0.0}",0.4019,Positive
+politics like mind mrs couple now opponent,"{'politics': 0.0, 'like': 0.3612, 'mind': 0.0, 'mrs': 0.0, 'couple': 0.0, 'now': 0.0, 'opponent': 0.0}",0.3612,Positive
+thanks support community leader stand establishment fast,"{'thanks': 0.4404, 'support': 0.4019, 'community': 0.0, 'leader': 0.0, 'stand': 0.0, 'establishment': 0.0, 'fast': 0.0}",0.8423,Positive
+support mr who charge time,"{'support': 0.4019, 'mr': 0.0, 'who': 0.0, 'charge': 0.0, 'time': 0.0}",0.4019,Positive
+continue develop people free school hope change life,"{'continue': 0.0, 'develop': 0.0, 'people': 0.0, 'free': 0.5106, 'school': 0.0, 'hope': 0.4404, 'change': 0.0, 'life': 0.0}",0.9510000000000001,Positive
+choose choice still number who heart,"{'choose': 0.0, 'choice': 0.0, 'still': 0.0, 'number': 0.0772, 'who': 0.0, 'heart': 0.6369}",0.7141000000000001,Positive
+steel concrete agricultural land option number,"{'steel': 0.0, 'concrete': 0.0, 'agricultural': 0.0, 'land': 0.0, 'option': 0.0, 'number': 0.0772}",0.0772,Positive
+hopefully will leader governor community best fair mandate,"{'hopefully': 0.4019, 'will': 0.0, 'leader': 0.0, 'governor': 0.0, 'community': 0.0, 'best': 0.6369, 'fair': 0.3182, 'mandate': 0.0}",1.357,Positive
+need agricultural transformation reduction land due conversion massive new form shop house,"{'need': 0.0, 'agricultural': 0.0, 'transformation': 0.0, 'reduction': 0.0, 'land': 0.0, 'due': 0.0, 'conversion': 0.0, 'massive': 0.0, 'new': 0.0, 'form': 0.0, 'shop': 0.0, 'house': 0.0}",0.0,Neutral
+maintain hopefully will advanced light,"{'maintain': 0.0, 'hopefully': 0.4019, 'will': 0.0, 'advanced': 0.25, 'light': 0.0}",0.6518999999999999,Positive
+pole village near mr grant add,"{'pole': 0.0, 'village': 0.0, 'near': 0.0, 'mr': 0.0, 'grant': 0.3612, 'add': 0.0}",0.3612,Positive
+attack question support,"{'attack': -0.4767, 'question': 0.0, 'support': 0.4019}",-0.07480000000000003,Negative
+best people build community especially culture,"{'best': 0.6369, 'people': 0.0, 'build': 0.0, 'community': 0.0, 'especially': 0.0, 'culture': 0.0}",0.6369,Positive
+still who blame mr failure world know sacrifice just book cover,"{'still': 0.0, 'who': 0.0, 'blame': -0.34, 'mr': 0.0, 'failure': -0.5106, 'world': 0.0, 'know': 0.0, 'sacrifice': 0.0, 'just': 0.0, 'book': 0.0, 'cover': 0.0}",-0.8506,Negative
+let think positive only negative see,"{'let': 0.0, 'think': 0.0, 'positive': 0.5574, 'only': 0.0, 'negative': -0.5719, 'see': 0.0}",-0.014499999999999957,Neutral
+extended family ready vote,"{'extended': 0.0, 'family': 0.0, 'ready': 0.3612, 'vote': 0.0}",0.3612,Positive
+gift like next only come side want pole am tolerance,"{'gift': 0.4404, 'like': 0.3612, 'next': 0.0, 'only': 0.0, 'come': 0.0, 'side': 0.0, 'want': 0.0772, 'pole': 0.0, 'am': 0.0, 'tolerance': 0.296}",1.1748,Positive
+time generation lead president number still remember case world ok,"{'time': 0.0, 'generation': 0.0, 'lead': 0.0, 'president': 0.0, 'number': 0.0772, 'still': 0.0, 'remember': 0.0, 'case': 0.0, 'world': 0.0, 'ok': 0.296}",0.3732,Positive
+airport tourism will crowded economy land expensive,"{'airport': 0.0, 'tourism': 0.0, 'will': 0.0, 'crowded': 0.0, 'economy': 0.0, 'land': 0.0, 'expensive': 0.0}",0.0,Neutral
+pray will win quickly,"{'pray': 0.3182, 'will': 0.0, 'win': 0.5859, 'quickly': 0.0}",0.9040999999999999,Positive
+airport will definitely empty difficult beat destination south close tourist attraction,"{'airport': 0.0, 'will': 0.0, 'definitely': 0.4019, 'empty': -0.2023, 'difficult': -0.3612, 'beat': 0.0, 'destination': 0.0, 'south': 0.0, 'close': 0.0, 'tourist': 0.0, 'attraction': 0.4588}",0.2971999999999999,Positive
+later tighten people who want safe peaceful,"{'later': 0.0, 'tighten': 0.0, 'people': 0.0, 'who': 0.0, 'want': 0.0772, 'safe': 0.4404, 'peaceful': 0.4939}",1.0115,Positive
+calm down grant later will vote,"{'calm': 0.3182, 'down': 0.0, 'grant': 0.3612, 'later': 0.0, 'will': 0.0, 'vote': 0.0}",0.6794,Positive
+result will determine definitely change,"{'result': 0.0, 'will': 0.0, 'determine': 0.0, 'definitely': 0.4019, 'change': 0.0}",0.4019,Positive
+survey direction adjust objective disappointed,"{'survey': 0.0, 'direction': 0.0, 'adjust': 0.0, 'objective': 0.0, 'disappointed': -0.4767}",-0.4767,Negative
+can still change later who,"{'can': 0.0, 'still': 0.0, 'change': 0.0, 'later': 0.0, 'who': 0.0}",0.0,Neutral
+survey guarantee win just look,"{'survey': 0.0, 'guarantee': 0.25, 'win': 0.5859, 'just': 0.0, 'look': 0.0}",0.8359,Positive
+choose leader who can listen voice people,"{'choose': 0.0, 'leader': 0.0, 'who': 0.0, 'can': 0.0, 'listen': 0.0, 'voice': 0.0, 'people': 0.0}",0.0,Neutral
+only people who angry,"{'only': 0.0, 'people': 0.0, 'who': 0.0, 'angry': -0.5106}",-0.5106,Negative
+wrong doctor ordinary citizen receive stay touch especially,"{'wrong': -0.4767, 'doctor': 0.0, 'ordinary': 0.0, 'citizen': 0.0, 'receive': 0.0, 'stay': 0.0, 'touch': 0.0, 'especially': 0.0}",-0.4767,Negative
+party will feel just,"{'party': 0.4019, 'will': 0.0, 'feel': 0.0, 'just': 0.0}",0.4019,Positive
+hurt want reply support next camp,"{'hurt': -0.5267, 'want': 0.0772, 'reply': 0.0, 'support': 0.4019, 'next': 0.0, 'camp': 0.0}",-0.047599999999999976,Neutral
+large party feel path part democracy,"{'large': 0.0, 'party': 0.4019, 'feel': 0.0, 'path': 0.0, 'part': 0.0, 'democracy': 0.0}",0.4019,Positive
+ambition fighting join sound still top right road,"{'ambition': 0.0, 'fighting': -0.3612, 'join': 0.296, 'sound': 0.0, 'still': 0.0, 'top': 0.2023, 'right': 0.0, 'road': 0.0}",0.13709999999999997,Positive
+democracy right choose political path including doctor party difficulty,"{'democracy': 0.0, 'right': 0.0, 'choose': 0.0, 'political': 0.0, 'path': 0.0, 'including': 0.0, 'doctor': 0.0, 'party': 0.4019, 'difficulty': -0.34}",0.061899999999999955,Positive
+son mr working help people candidate promise,"{'son': 0.0, 'mr': 0.0, 'working': 0.0, 'help': 0.4019, 'people': 0.0, 'candidate': 0.0, 'promise': 0.3182}",0.7201,Positive
+can lead well hope people,"{'can': 0.0, 'lead': 0.0, 'well': 0.2732, 'hope': 0.4404, 'people': 0.0}",0.7136,Positive
+concept full moon dress company reflection culture effect tourism worldwide smart community,"{'concept': 0.0, 'full': 0.0, 'moon': 0.0, 'dress': 0.0, 'company': 0.0, 'reflection': 0.0, 'culture': 0.0, 'effect': 0.0, 'tourism': 0.0, 'worldwide': 0.0, 'smart': 0.4019, 'community': 0.0}",0.4019,Positive
+later will opinion mr deal tourism,"{'later': 0.0, 'will': 0.0, 'opinion': 0.0, 'mr': 0.0, 'deal': 0.0, 'tourism': 0.0}",0.0,Neutral
+still need experience mr next who will come can,"{'still': 0.0, 'need': 0.0, 'experience': 0.0, 'mr': 0.0, 'next': 0.0, 'who': 0.0, 'will': 0.0, 'come': 0.0, 'can': 0.0}",0.0,Neutral
+pole understand leader who tourism,"{'pole': 0.0, 'understand': 0.0, 'leader': 0.0, 'who': 0.0, 'tourism': 0.0}",0.0,Neutral
+can only sell center gene development tourism wow tomorrow invite,"{'can': 0.0, 'only': 0.0, 'sell': 0.0, 'center': 0.0, 'gene': 0.0, 'development': 0.0, 'tourism': 0.0, 'wow': 0.5859, 'tomorrow': 0.0, 'invite': 0.1531}",0.739,Positive
+agree son advanced positive course,"{'agree': 0.3612, 'son': 0.0, 'advanced': 0.25, 'positive': 0.5574, 'course': 0.0}",1.1686,Positive
+high school student pole scholarship help learning spirit,"{'high': 0.0, 'school': 0.0, 'student': 0.0, 'pole': 0.0, 'scholarship': 0.0, 'help': 0.4019, 'learning': 0.0, 'spirit': 0.1779}",0.5798,Positive
+put forward old manner money,"{'put': 0.0, 'forward': 0.0, 'old': 0.0, 'manner': 0.0, 'money': 0.0}",0.0,Neutral
+want contribute time give money,"{'want': 0.0772, 'contribute': 0.0, 'time': 0.0, 'give': 0.0, 'money': 0.0}",0.0772,Positive
+indigenous village support will large grant sell only thinking,"{'indigenous': 0.0, 'village': 0.0, 'support': 0.4019, 'will': 0.0, 'large': 0.0, 'grant': 0.3612, 'sell': 0.0, 'only': 0.0, 'thinking': 0.0}",0.7631,Positive
+mr convince airport right yesterday mother,"{'mr': 0.0, 'convince': 0.25, 'airport': 0.0, 'right': 0.0, 'yesterday': 0.0, 'mother': 0.0}",0.25,Positive
+only best priority guard continued,"{'only': 0.0, 'best': 0.6369, 'priority': 0.0, 'guard': 0.0, 'continued': 0.0}",0.6369,Positive
+youth pole young people ready,"{'youth': 0.0, 'pole': 0.0, 'young': 0.0, 'people': 0.0, 'ready': 0.3612}",0.3612,Positive
+need important work people political,"{'need': 0.0, 'important': 0.2023, 'work': 0.0, 'people': 0.0, 'political': 0.0}",0.2023,Positive
+afraid right still choice,"{'afraid': 0.0, 'right': 0.0, 'still': 0.0, 'choice': 0.0}",0.0,Neutral
+ice mr governor deputy,"{'ice': 0.0, 'mr': 0.0, 'governor': 0.0, 'deputy': 0.0}",0.0,Neutral
+candidate who poverty welfare community,"{'candidate': 0.0, 'who': 0.0, 'poverty': -0.5106, 'welfare': 0.0, 'community': 0.0}",-0.5106,Negative

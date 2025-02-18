@@ -1,0 +1,37 @@
+import turtle
+
+t1 = turtle.Turtle()
+t2 = turtle.Turtle()
+t3 = turtle.Turtle()
+
+t1.fillcolor("red")
+t1.begin_fill()
+t1.left(90)
+t1.forward(100)
+t1.right(90)
+t1.forward(100)
+t1.right(90)
+t1.forward(100)
+t1.end_fill()
+
+t2.fillcolor("brown")
+t2.begin_fill()
+t2.left(180)
+t2.forward(100)
+t2.left(90)
+t2.forward(100)
+t2.left(90)
+t2.forward(100)
+t2.end_fill()
+
+t3.fillcolor("yellow")
+t3.begin_fill()
+t3.left(270)
+t3.forward(100)
+t3.left(90)
+t3.forward(100)
+t3.left(90)
+t3.forward(100)
+t3.end_fill()
+
+turtle.done()

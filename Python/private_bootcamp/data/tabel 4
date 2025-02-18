@@ -1,0 +1,29 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+"LAPORAN TRANSAKSI SPOT DAN DERIVATIF/FORWARDPT BANK RAKYAT INDONESIA (PERSERO) TbkTanggal 30 Juni 2023 (Direviu)(dalam jutaan rupiah)",,,,,,
+NO.,TRANSAKSI,INDIVIDUAL,,,,
+,,Nilai Notional,Tujuan,Tagihan dan Liabilitas Derivatif,,
+,,Trading,Hedging,Tagihan,Liabilitas,
+,,,,,,
+A.,Terkait dengan Nilai Tukar,,,,,
+1.,Spot,2.326.143,2.326.143,-,2.437,1.919
+2.,Forward,57.725.240,57.725.240,-,398.681,166.453
+3.,Option,,,,,
+,a.Jual,3.440.469,3.440.469,-,-,-
+,b.Beli,44.978,44.978,-,-,-
+4.,Future,-,-,-,-,-
+5.,Swap,48.137.663,48.137.663,-,244.638,151.277
+6.,Lainnya,-,-,-,-,-
+,,,,,,
+B.,Terkait dengan Suku Bunga,,,,,
+1.,Spot,-,-,-,-,-
+2.,Forward,-,-,-,-,-
+3.,Option,,,,,
+,a.Jual,-,-,-,-,-
+,b.Beli,-,-,-,-,-
+4.,Future,-,-,-,-,-
+5.,Swap,12.293.250,12.293.250,-,463.363,472.415
+6.,Lainnya,-,-,-,-,-
+,,,,,,
+C.,Lainnya,1.658.347,1.658.347,-,209,33.687
+,,,,,,
+J U M L A H,125.626.090,125.626.090,-,1.109.328,825.751,

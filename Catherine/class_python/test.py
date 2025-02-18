@@ -1,17 +1,16 @@
-combine = {
-    1: [2],
-    4: [5, 6],
-    4: [8]  # This would be overwritten in a dictionary. This is just for demonstration
-}
+def penjumlahan(n):
+    if n == 1:  # Base case
+        return 10
+    else:  # Recursive case
+        return n + penjumlahan(n - 1)
 
-# Create an empty dictionary to store the final result
-new = {}
-
-# Iterate through the dictionary (with fixed duplicate keys)
-for key, value in combine.items():
-    if key not in new:
-        new[key] = sum(value)
+def faktorial(n):
+    if n == 0:  # Base case
+        return 2
     else:
-        new[key] += sum(value)
+        return n * faktorial(n - 1)
 
-print(combine)
+hasil1 = penjumlahan(3)
+hasil2 = faktorial(4)
+print(hasil1)
+print(hasil2)

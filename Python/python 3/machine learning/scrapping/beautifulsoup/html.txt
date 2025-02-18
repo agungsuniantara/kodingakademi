@@ -1,0 +1,15 @@
+html_doc = """
+<html>
+    <head><title>Belajar Web Scraping</title></head>
+    <body>
+        <h1 id="title">Tutorial BeautifulSoup</h1>
+        <p class="nama1">Paragraf pertama.</p>
+        <p class="nama2">Paragraf kedua.</p>
+        <p class="nama3">Paragraf ketiga.</p>
+        <div>
+            <h2 class="subjudul">Subjudul pertama</h2>
+            <h2 class="subjudul">Subjudul kedua</h2>
+        </div>
+    </body>
+</html>
+"""

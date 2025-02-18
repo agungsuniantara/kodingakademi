@@ -1,0 +1,42 @@
+import turtle
+
+t1 = turtle.Turtle()
+t1.penup()
+t1.goto(-300, 200)
+t1.pendown()
+t1.circle(50)
+t1.forward(600)
+t1.circle(50)
+
+t1.penup()
+t1.goto(-300, 100)
+t1.pendown()
+t1.circle(50)
+t1.forward(600)
+t1.circle(50)
+
+t1.penup()
+t1.goto(-300, 0)
+t1.pendown()
+t1.circle(50)
+t1.forward(600)
+t1.circle(50)
+
+t1.penup()
+t1.goto(-300, -100)
+t1.pendown()
+t1.circle(50)
+t1.forward(600)
+t1.circle(50)
+
+# t1.pencolor("blue")
+# t1.fillcolor("black")
+# t1.begin_fill()
+# t1.forward(100)
+# t1.right(90)
+# t1.forward(100)
+# t1.right(90)
+# t1.circle(50)
+# t1.end_fill()
+
+turtle.done()

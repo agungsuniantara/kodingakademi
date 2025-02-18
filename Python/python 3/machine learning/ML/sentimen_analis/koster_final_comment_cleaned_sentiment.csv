@@ -1,0 +1,348 @@
+Normalized,Word Scores,Total Score,Total Sentiment
+theory young people who advanced old,"{'theory': 0.0, 'young': 0.0, 'people': 0.0, 'who': 0.0, 'advanced': 0.25, 'old': 0.0}",0.25,Positive
+yes easy center can difficult,"{'yes': 0.4019, 'easy': 0.4404, 'center': 0.0, 'can': 0.0, 'difficult': -0.3612}",0.4811,Positive
+government will center common sense,"{'government': 0.0, 'will': 0.0, 'center': 0.0, 'common': 0.0, 'sense': 0.0}",0.0,Neutral
+lane mr meaning team fee big okay new president,"{'lane': 0.0, 'mr': 0.0, 'meaning': 0.0, 'team': 0.0, 'fee': 0.0, 'big': 0.0, 'okay': 0.2263, 'new': 0.0, 'president': 0.0}",0.2263,Positive
+wow will governor bring text,"{'wow': 0.5859, 'will': 0.0, 'governor': 0.0, 'bring': 0.0, 'text': 0.0}",0.5859,Positive
+smart people choose quality best,"{'smart': 0.4019, 'people': 0.0, 'choose': 0.0, 'quality': 0.0, 'best': 0.6369}",1.0388,Positive
+young people future now advanced,"{'young': 0.0, 'people': 0.0, 'future': 0.0, 'now': 0.0, 'advanced': 0.25}",0.25,Positive
+anyway right hopefully continue walk important public money just,"{'anyway': 0.0, 'right': 0.0, 'hopefully': 0.4019, 'continue': 0.0, 'walk': 0.0, 'important': 0.2023, 'public': 0.0, 'money': 0.0, 'just': 0.0}",0.6042,Positive
+maybe like election presidential selection command,"{'maybe': 0.0, 'like': 0.3612, 'election': 0.0, 'presidential': 0.0, 'selection': 0.0, 'command': 0.0}",0.3612,Positive
+son campaign party clothes right given shirt,"{'son': 0.0, 'campaign': 0.0, 'party': 0.4019, 'clothes': 0.0, 'right': 0.0, 'given': 0.0, 'shirt': 0.0}",0.4019,Positive
+food next sound small people just way best,"{'food': 0.0, 'next': 0.0, 'sound': 0.0, 'small': 0.0, 'people': 0.0, 'just': 0.0, 'way': 0.0, 'best': 0.6369}",0.6369,Positive
+beginning later will issue central fund exciting,"{'beginning': 0.0, 'later': 0.0, 'will': 0.0, 'issue': 0.0, 'central': 0.0, 'fund': 0.0, 'exciting': 0.4939}",0.4939,Positive
+can only judge cause mr right continue struggle,"{'can': 0.0, 'only': 0.0, 'judge': 0.0, 'cause': 0.0, 'mr': 0.0, 'right': 0.0, 'continue': 0.0, 'struggle': -0.3182}",-0.3182,Negative
+next can only accuse want accept,"{'next': 0.0, 'can': 0.0, 'only': 0.0, 'accuse': -0.2023, 'want': 0.0772, 'accept': 0.3818}",0.2567,Positive
+political who certainly will understand continued still leader like mr,"{'political': 0.0, 'who': 0.0, 'certainly': 0.34, 'will': 0.0, 'understand': 0.0, 'continued': 0.0, 'still': 0.0, 'leader': 0.0, 'like': 0.3612, 'mr': 0.0}",0.7012,Positive
+guard win smart choose leader,"{'guard': 0.0, 'win': 0.5859, 'smart': 0.4019, 'choose': 0.0, 'leader': 0.0}",0.9878,Positive
+young people now know direction positive change great sake prove,"{'young': 0.0, 'people': 0.0, 'now': 0.0, 'know': 0.0, 'direction': 0.0, 'positive': 0.5574, 'change': 0.0, 'great': 0.6249, 'sake': 0.0, 'prove': 0.0}",1.1823000000000001,Positive
+complete package leader who people need fix debate,"{'complete': 0.0, 'package': 0.0, 'leader': 0.0, 'who': 0.0, 'people': 0.0, 'need': 0.0, 'fix': 0.0, 'debate': 0.0}",0.0,Neutral
+definitely able continue development future heart light,"{'definitely': 0.4019, 'able': 0.0, 'continue': 0.0, 'development': 0.0, 'future': 0.0, 'heart': 0.6369, 'light': 0.0}",1.0388,Positive
+present still believe continue mr,"{'present': 0.0, 'still': 0.0, 'believe': 0.0, 'continue': 0.0, 'mr': 0.0}",0.0,Neutral
+choice right people work complete,"{'choice': 0.0, 'right': 0.0, 'people': 0.0, 'work': 0.0, 'complete': 0.0}",0.0,Neutral
+leader concept flight entrepreneur brave useful important value now,"{'leader': 0.0, 'concept': 0.0, 'flight': 0.0, 'entrepreneur': 0.0, 'brave': 0.5267, 'useful': 0.4404, 'important': 0.2023, 'value': 0.34, 'now': 0.0}",1.5094,Positive
+sound pole family definitely choice conscience,"{'sound': 0.0, 'pole': 0.0, 'family': 0.0, 'definitely': 0.4019, 'choice': 0.0, 'conscience': 0.0}",0.4019,Positive
+who know way definitely learn first,"{'who': 0.0, 'know': 0.0, 'way': 0.0, 'definitely': 0.4019, 'learn': 0.0, 'first': 0.0}",0.4019,Positive
+child who can choose naturally,"{'child': 0.0, 'who': 0.0, 'can': 0.0, 'choose': 0.0, 'naturally': 0.0}",0.0,Neutral
+airport let alone think people want,"{'airport': 0.0, 'let': 0.0, 'alone': -0.25, 'think': 0.0, 'people': 0.0, 'want': 0.0772}",-0.1728,Negative
+great statement mr commit promise,"{'great': 0.6249, 'statement': 0.0, 'mr': 0.0, 'commit': 0.296, 'promise': 0.3182}",1.2391,Positive
+still promise realistic build infrastructure first just continued walking new leader beginning,"{'still': 0.0, 'promise': 0.3182, 'realistic': 0.0, 'build': 0.0, 'infrastructure': 0.0, 'first': 0.0, 'just': 0.0, 'continued': 0.0, 'walking': 0.0, 'new': 0.0, 'leader': 0.0, 'beginning': 0.0}",0.3182,Positive
+build short airport wake,"{'build': 0.0, 'short': 0.0, 'airport': 0.0, 'wake': 0.0}",0.0,Neutral
+university student pole educational support,"{'university': 0.0, 'student': 0.0, 'pole': 0.0, 'educational': 0.0, 'support': 0.4019}",0.4019,Positive
+just funny world cancel tragedy,"{'just': 0.0, 'funny': 0.4404, 'world': 0.0, 'cancel': -0.25, 'tragedy': -0.6597}",-0.46929999999999994,Negative
+debate only care world,"{'debate': 0.0, 'only': 0.0, 'care': 0.4939, 'world': 0.0}",0.4939,Positive
+politics ball soccer kind regional dance,"{'politics': 0.0, 'ball': 0.0, 'soccer': 0.0, 'kind': 0.5267, 'regional': 0.0, 'dance': 0.0}",0.5267,Positive
+ok president sorry governor suitable conscience peace election,"{'ok': 0.296, 'president': 0.0, 'sorry': -0.0772, 'governor': 0.0, 'suitable': 0.0, 'conscience': 0.0, 'peace': 0.5423, 'election': 0.0}",0.7611,Positive
+reason common interest definitely people,"{'reason': 0.0, 'common': 0.0, 'interest': 0.4588, 'definitely': 0.4019, 'people': 0.0}",0.8607,Positive
+thank explanation only center can refuse world authority governor,"{'thank': 0.3612, 'explanation': 0.0, 'only': 0.0, 'center': 0.0, 'can': 0.0, 'refuse': -0.296, 'world': 0.0, 'authority': 0.0772, 'governor': 0.0}",0.14240000000000003,Positive
+football clear supporter explanation,"{'football': 0.0, 'clear': 0.3818, 'supporter': 0.2732, 'explanation': 0.0}",0.655,Positive
+candidate governor temple happen like want guard neutral important people social,"{'candidate': 0.0, 'governor': 0.0, 'temple': 0.0, 'happen': 0.0, 'like': 0.3612, 'want': 0.0772, 'guard': 0.0, 'neutral': 0.0, 'important': 0.2023, 'people': 0.0, 'social': 0.0}",0.6407,Positive
+definitely read just glimpse people,"{'definitely': 0.4019, 'read': 0.0, 'just': 0.0, 'glimpse': 0.0, 'people': 0.0}",0.4019,Positive
+need care leader take action decision important responsibility invite mr answer,"{'need': 0.0, 'care': 0.4939, 'leader': 0.0, 'take': 0.0, 'action': 0.0, 'decision': 0.0, 'important': 0.2023, 'responsibility': 0.0, 'invite': 0.1531, 'mr': 0.0, 'answer': 0.0}",0.8493,Positive
+shame learning organize candidate,"{'shame': -0.4767, 'learning': 0.0, 'organize': 0.0, 'candidate': 0.0}",-0.4767,Negative
+cool mr soul admit course future will fixed sure great,"{'cool': 0.3182, 'mr': 0.0, 'soul': 0.0, 'admit': 0.2023, 'course': 0.0, 'future': 0.0, 'will': 0.0, 'fixed': 0.0, 'sure': 0.3182, 'great': 0.6249}",1.4636,Positive
+mr governor deputy safe,"{'mr': 0.0, 'governor': 0.0, 'deputy': 0.0, 'safe': 0.4404}",0.4404,Positive
+great mr soul admit directly full,"{'great': 0.6249, 'mr': 0.0, 'soul': 0.0, 'admit': 0.2023, 'directly': 0.0, 'full': 0.0}",0.8272,Positive
+take care just try learn first debate,"{'take': 0.0, 'care': 0.4939, 'just': 0.0, 'try': 0.0, 'learn': 0.0, 'first': 0.0, 'debate': 0.0}",0.4939,Positive
+debate winner maybe president forward,"{'debate': 0.0, 'winner': 0.5859, 'maybe': 0.0, 'president': 0.0, 'forward': 0.0}",0.5859,Positive
+right leader can integrate leadership today,"{'right': 0.0, 'leader': 0.0, 'can': 0.0, 'integrate': 0.0, 'leadership': 0.0, 'today': 0.0}",0.0,Neutral
+pole benefit village assistance clearly,"{'pole': 0.0, 'benefit': 0.4588, 'village': 0.0, 'assistance': 0.0, 'clearly': 0.4019}",0.8607,Positive
+first now being expected support young political figure who leader,"{'first': 0.0, 'now': 0.0, 'being': 0.0, 'expected': 0.0, 'support': 0.4019, 'young': 0.0, 'political': 0.0, 'figure': 0.0, 'who': 0.0, 'leader': 0.0}",0.4019,Positive
+politics like mind mrs couple now opponent,"{'politics': 0.0, 'like': 0.3612, 'mind': 0.0, 'mrs': 0.0, 'couple': 0.0, 'now': 0.0, 'opponent': 0.0}",0.3612,Positive
+thanks support community leader stand establishment fast,"{'thanks': 0.4404, 'support': 0.4019, 'community': 0.0, 'leader': 0.0, 'stand': 0.0, 'establishment': 0.0, 'fast': 0.0}",0.8423,Positive
+support mr who charge time,"{'support': 0.4019, 'mr': 0.0, 'who': 0.0, 'charge': 0.0, 'time': 0.0}",0.4019,Positive
+continue develop people free school hope change life,"{'continue': 0.0, 'develop': 0.0, 'people': 0.0, 'free': 0.5106, 'school': 0.0, 'hope': 0.4404, 'change': 0.0, 'life': 0.0}",0.9510000000000001,Positive
+choose choice still number who heart,"{'choose': 0.0, 'choice': 0.0, 'still': 0.0, 'number': 0.0772, 'who': 0.0, 'heart': 0.6369}",0.7141000000000001,Positive
+steel concrete agricultural land option number,"{'steel': 0.0, 'concrete': 0.0, 'agricultural': 0.0, 'land': 0.0, 'option': 0.0, 'number': 0.0772}",0.0772,Positive
+hopefully will leader governor community best fair mandate,"{'hopefully': 0.4019, 'will': 0.0, 'leader': 0.0, 'governor': 0.0, 'community': 0.0, 'best': 0.6369, 'fair': 0.3182, 'mandate': 0.0}",1.357,Positive
+need agricultural transformation reduction land due conversion massive new form shop house,"{'need': 0.0, 'agricultural': 0.0, 'transformation': 0.0, 'reduction': 0.0, 'land': 0.0, 'due': 0.0, 'conversion': 0.0, 'massive': 0.0, 'new': 0.0, 'form': 0.0, 'shop': 0.0, 'house': 0.0}",0.0,Neutral
+maintain hopefully will advanced light,"{'maintain': 0.0, 'hopefully': 0.4019, 'will': 0.0, 'advanced': 0.25, 'light': 0.0}",0.6518999999999999,Positive
+pole village near mr grant add,"{'pole': 0.0, 'village': 0.0, 'near': 0.0, 'mr': 0.0, 'grant': 0.3612, 'add': 0.0}",0.3612,Positive
+attack question support,"{'attack': -0.4767, 'question': 0.0, 'support': 0.4019}",-0.07480000000000003,Negative
+best people community especially culture,"{'best': 0.6369, 'people': 0.0, 'community': 0.0, 'especially': 0.0, 'culture': 0.0}",0.6369,Positive
+still who blame mr failure world know sacrifice just book cover,"{'still': 0.0, 'who': 0.0, 'blame': -0.34, 'mr': 0.0, 'failure': -0.5106, 'world': 0.0, 'know': 0.0, 'sacrifice': 0.0, 'just': 0.0, 'book': 0.0, 'cover': 0.0}",-0.8506,Negative
+let think positive only negative see,"{'let': 0.0, 'think': 0.0, 'positive': 0.5574, 'only': 0.0, 'negative': -0.5719, 'see': 0.0}",-0.014499999999999957,Neutral
+extended family ready vote,"{'extended': 0.0, 'family': 0.0, 'ready': 0.3612, 'vote': 0.0}",0.3612,Positive
+gift like next only come side want pole am tolerance,"{'gift': 0.4404, 'like': 0.3612, 'next': 0.0, 'only': 0.0, 'come': 0.0, 'side': 0.0, 'want': 0.0772, 'pole': 0.0, 'am': 0.0, 'tolerance': 0.296}",1.1748,Positive
+time generation lead president number still remember case world ok,"{'time': 0.0, 'generation': 0.0, 'lead': 0.0, 'president': 0.0, 'number': 0.0772, 'still': 0.0, 'remember': 0.0, 'case': 0.0, 'world': 0.0, 'ok': 0.296}",0.3732,Positive
+airport tourism will crowded economy land expensive,"{'airport': 0.0, 'tourism': 0.0, 'will': 0.0, 'crowded': 0.0, 'economy': 0.0, 'land': 0.0, 'expensive': 0.0}",0.0,Neutral
+pray will win quickly,"{'pray': 0.3182, 'will': 0.0, 'win': 0.5859, 'quickly': 0.0}",0.9040999999999999,Positive
+airport will definitely empty difficult beat destination south close tourist attraction,"{'airport': 0.0, 'will': 0.0, 'definitely': 0.4019, 'empty': -0.2023, 'difficult': -0.3612, 'beat': 0.0, 'destination': 0.0, 'south': 0.0, 'close': 0.0, 'tourist': 0.0, 'attraction': 0.4588}",0.2971999999999999,Positive
+later tighten people who want safe peaceful,"{'later': 0.0, 'tighten': 0.0, 'people': 0.0, 'who': 0.0, 'want': 0.0772, 'safe': 0.4404, 'peaceful': 0.4939}",1.0115,Positive
+calm down grant later will vote,"{'calm': 0.3182, 'down': 0.0, 'grant': 0.3612, 'later': 0.0, 'will': 0.0, 'vote': 0.0}",0.6794,Positive
+result will determine definitely change,"{'result': 0.0, 'will': 0.0, 'determine': 0.0, 'definitely': 0.4019, 'change': 0.0}",0.4019,Positive
+survey direction adjust objective disappointed,"{'survey': 0.0, 'direction': 0.0, 'adjust': 0.0, 'objective': 0.0, 'disappointed': -0.4767}",-0.4767,Negative
+can still change later who,"{'can': 0.0, 'still': 0.0, 'change': 0.0, 'later': 0.0, 'who': 0.0}",0.0,Neutral
+survey guarantee win just look,"{'survey': 0.0, 'guarantee': 0.25, 'win': 0.5859, 'just': 0.0, 'look': 0.0}",0.8359,Positive
+choose leader who can listen voice people,"{'choose': 0.0, 'leader': 0.0, 'who': 0.0, 'can': 0.0, 'listen': 0.0, 'voice': 0.0, 'people': 0.0}",0.0,Neutral
+only people who angry,"{'only': 0.0, 'people': 0.0, 'who': 0.0, 'angry': -0.5106}",-0.5106,Negative
+wrong doctor ordinary citizen receive stay touch especially,"{'wrong': -0.4767, 'doctor': 0.0, 'ordinary': 0.0, 'citizen': 0.0, 'receive': 0.0, 'stay': 0.0, 'touch': 0.0, 'especially': 0.0}",-0.4767,Negative
+party will feel just,"{'party': 0.4019, 'will': 0.0, 'feel': 0.0, 'just': 0.0}",0.4019,Positive
+hurt want reply support next camp,"{'hurt': -0.5267, 'want': 0.0772, 'reply': 0.0, 'support': 0.4019, 'next': 0.0, 'camp': 0.0}",-0.047599999999999976,Neutral
+large party feel path part democracy,"{'large': 0.0, 'party': 0.4019, 'feel': 0.0, 'path': 0.0, 'part': 0.0, 'democracy': 0.0}",0.4019,Positive
+ambition fighting join sound still top right road,"{'ambition': 0.0, 'fighting': -0.3612, 'join': 0.296, 'sound': 0.0, 'still': 0.0, 'top': 0.2023, 'right': 0.0, 'road': 0.0}",0.13709999999999997,Positive
+democracy right choose political path including doctor party difficulty,"{'democracy': 0.0, 'right': 0.0, 'choose': 0.0, 'political': 0.0, 'path': 0.0, 'including': 0.0, 'doctor': 0.0, 'party': 0.4019, 'difficulty': -0.34}",0.061899999999999955,Positive
+son mr working help people candidate promise,"{'son': 0.0, 'mr': 0.0, 'working': 0.0, 'help': 0.4019, 'people': 0.0, 'candidate': 0.0, 'promise': 0.3182}",0.7201,Positive
+can lead well hope people,"{'can': 0.0, 'lead': 0.0, 'well': 0.2732, 'hope': 0.4404, 'people': 0.0}",0.7136,Positive
+concept full moon dress company reflection culture effect tourism worldwide smart community,"{'concept': 0.0, 'full': 0.0, 'moon': 0.0, 'dress': 0.0, 'company': 0.0, 'reflection': 0.0, 'culture': 0.0, 'effect': 0.0, 'tourism': 0.0, 'worldwide': 0.0, 'smart': 0.4019, 'community': 0.0}",0.4019,Positive
+later will opinion mr deal tourism,"{'later': 0.0, 'will': 0.0, 'opinion': 0.0, 'mr': 0.0, 'deal': 0.0, 'tourism': 0.0}",0.0,Neutral
+still need experience mr next who will come can,"{'still': 0.0, 'need': 0.0, 'experience': 0.0, 'mr': 0.0, 'next': 0.0, 'who': 0.0, 'will': 0.0, 'come': 0.0, 'can': 0.0}",0.0,Neutral
+pole understand leader who tourism,"{'pole': 0.0, 'understand': 0.0, 'leader': 0.0, 'who': 0.0, 'tourism': 0.0}",0.0,Neutral
+can only sell center gene development tourism wow tomorrow invite,"{'can': 0.0, 'only': 0.0, 'sell': 0.0, 'center': 0.0, 'gene': 0.0, 'development': 0.0, 'tourism': 0.0, 'wow': 0.5859, 'tomorrow': 0.0, 'invite': 0.1531}",0.739,Positive
+agree son advanced positive course,"{'agree': 0.3612, 'son': 0.0, 'advanced': 0.25, 'positive': 0.5574, 'course': 0.0}",1.1686,Positive
+high school student pole scholarship help learning spirit,"{'high': 0.0, 'school': 0.0, 'student': 0.0, 'pole': 0.0, 'scholarship': 0.0, 'help': 0.4019, 'learning': 0.0, 'spirit': 0.1779}",0.5798,Positive
+put forward old manner money,"{'put': 0.0, 'forward': 0.0, 'old': 0.0, 'manner': 0.0, 'money': 0.0}",0.0,Neutral
+want contribute time give money,"{'want': 0.0772, 'contribute': 0.0, 'time': 0.0, 'give': 0.0, 'money': 0.0}",0.0772,Positive
+indigenous village support will large grant sell only thinking,"{'indigenous': 0.0, 'village': 0.0, 'support': 0.4019, 'will': 0.0, 'large': 0.0, 'grant': 0.3612, 'sell': 0.0, 'only': 0.0, 'thinking': 0.0}",0.7631,Positive
+mr convince airport right yesterday mother,"{'mr': 0.0, 'convince': 0.25, 'airport': 0.0, 'right': 0.0, 'yesterday': 0.0, 'mother': 0.0}",0.25,Positive
+only best priority guard continued,"{'only': 0.0, 'best': 0.6369, 'priority': 0.0, 'guard': 0.0, 'continued': 0.0}",0.6369,Positive
+youth pole young people ready,"{'youth': 0.0, 'pole': 0.0, 'young': 0.0, 'people': 0.0, 'ready': 0.3612}",0.3612,Positive
+need important work people political,"{'need': 0.0, 'important': 0.2023, 'work': 0.0, 'people': 0.0, 'political': 0.0}",0.2023,Positive
+afraid right still choice,"{'afraid': 0.0, 'right': 0.0, 'still': 0.0, 'choice': 0.0}",0.0,Neutral
+ice mr governor deputy,"{'ice': 0.0, 'mr': 0.0, 'governor': 0.0, 'deputy': 0.0}",0.0,Neutral
+candidate who poverty welfare community,"{'candidate': 0.0, 'who': 0.0, 'poverty': -0.5106, 'welfare': 0.0, 'community': 0.0}",-0.5106,Negative
+way answer understanding want party leader who people,"{'way': 0.0, 'answer': 0.0, 'understanding': 0.0, 'want': 0.0772, 'party': 0.4019, 'leader': 0.0, 'who': 0.0, 'people': 0.0}",0.47909999999999997,Positive
+clearly way answer greatly able run budget will center,"{'clearly': 0.4019, 'way': 0.0, 'answer': 0.0, 'greatly': 0.0, 'able': 0.0, 'run': 0.0, 'budget': 0.0, 'will': 0.0, 'center': 0.0}",0.4019,Positive
+like clothes understand answer extraordinary,"{'like': 0.3612, 'clothes': 0.0, 'understand': 0.0, 'answer': 0.0, 'extraordinary': 0.0}",0.3612,Positive
+wise leader extraordinary mr burning,"{'wise': 0.4767, 'leader': 0.0, 'extraordinary': 0.0, 'mr': 0.0, 'burning': 0.0}",0.4767,Positive
+know understand here can see hesitate choose,"{'know': 0.0, 'understand': 0.0, 'here': 0.0, 'can': 0.0, 'see': 0.0, 'hesitate': -0.2732, 'choose': 0.0}",-0.2732,Negative
+important who understand budget extraordinary,"{'important': 0.2023, 'who': 0.0, 'understand': 0.0, 'budget': 0.0, 'extraordinary': 0.0}",0.2023,Positive
+doubt public mr benefit people,"{'doubt': -0.3612, 'public': 0.0, 'mr': 0.0, 'benefit': 0.4588, 'people': 0.0}",0.09759999999999996,Positive
+father experienced extraordinary advanced mr,"{'father': 0.0, 'experienced': 0.0, 'extraordinary': 0.0, 'advanced': 0.25, 'mr': 0.0}",0.25,Positive
+people hesitate choose case know overcome,"{'people': 0.0, 'hesitate': -0.2732, 'choose': 0.0, 'case': 0.0, 'know': 0.0, 'overcome': 0.0}",-0.2732,Negative
+line center regulate possible will automatically run forward candidate,"{'line': 0.0, 'center': 0.0, 'regulate': 0.0, 'possible': 0.0, 'will': 0.0, 'automatically': 0.0, 'run': 0.0, 'forward': 0.0, 'candidate': 0.0}",0.0,Neutral
+father extraordinary answer am confident able forward,"{'father': 0.0, 'extraordinary': 0.0, 'answer': 0.0, 'am': 0.0, 'confident': 0.4939, 'able': 0.0, 'forward': 0.0}",0.4939,Positive
+clothes original job work local,"{'clothes': 0.0, 'original': 0.3182, 'job': 0.0, 'work': 0.0, 'local': 0.0}",0.3182,Positive
+agree people hopefully future will safe period,"{'agree': 0.3612, 'people': 0.0, 'hopefully': 0.4019, 'future': 0.0, 'will': 0.0, 'safe': 0.4404, 'period': 0.0}",1.2035,Positive
+great strongly agree let alone advance community,"{'great': 0.6249, 'strongly': 0.2732, 'agree': 0.3612, 'let': 0.0, 'alone': -0.25, 'advance': 0.0, 'community': 0.0}",1.0093,Positive
+agree best tourist who come purpose people,"{'agree': 0.3612, 'best': 0.6369, 'tourist': 0.0, 'who': 0.0, 'come': 0.0, 'purpose': 0.0, 'people': 0.0}",0.9981,Positive
+able regional regulation respect culture,"{'able': 0.0, 'regional': 0.0, 'regulation': 0.0, 'respect': 0.4767, 'culture': 0.0}",0.4767,Positive
+yes mr firm people continue control,"{'yes': 0.4019, 'mr': 0.0, 'firm': 0.0, 'people': 0.0, 'continue': 0.0, 'control': 0.0}",0.4019,Positive
+marriage clothes basically first local,"{'marriage': 0.0, 'clothes': 0.0, 'basically': 0.0, 'first': 0.0, 'local': 0.0}",0.0,Neutral
+who clothes people think hopefully can foreign forward,"{'who': 0.0, 'clothes': 0.0, 'people': 0.0, 'think': 0.0, 'hopefully': 0.4019, 'can': 0.0, 'foreign': 0.0, 'forward': 0.0}",0.4019,Positive
+agree let difficult work who dominate,"{'agree': 0.3612, 'let': 0.0, 'difficult': -0.3612, 'work': 0.0, 'who': 0.0, 'dominate': -0.128}",-0.128,Negative
+here position want difficult who feel powerful,"{'here': 0.0, 'position': 0.0, 'want': 0.0772, 'difficult': -0.3612, 'who': 0.0, 'feel': 0.0, 'powerful': 0.4215}",0.13749999999999996,Positive
+complicated important center just run,"{'complicated': 0.0, 'important': 0.2023, 'center': 0.0, 'just': 0.0, 'run': 0.0}",0.2023,Positive
+lead narrative center only execution gene,"{'lead': 0.0, 'narrative': 0.0, 'center': 0.0, 'only': 0.0, 'execution': 0.0, 'gene': 0.0}",0.0,Neutral
+suppose mr governor president airport,"{'suppose': 0.0, 'mr': 0.0, 'governor': 0.0, 'president': 0.0, 'airport': 0.0}",0.0,Neutral
+sense airport political issue plan access first time toll take,"{'sense': 0.0, 'airport': 0.0, 'political': 0.0, 'issue': 0.0, 'plan': 0.0, 'access': 0.0, 'first': 0.0, 'time': 0.0, 'toll': 0.0, 'take': 0.0}",0.0,Neutral
+task government land execution center food path,"{'task': 0.0, 'government': 0.0, 'land': 0.0, 'execution': 0.0, 'center': 0.0, 'food': 0.0, 'path': 0.0}",0.0,Neutral
+new airport just campaign issue,"{'new': 0.0, 'airport': 0.0, 'just': 0.0, 'campaign': 0.0, 'issue': 0.0}",0.0,Neutral
+clothing tourism culture period,"{'clothing': 0.0, 'tourism': 0.0, 'culture': 0.0, 'period': 0.0}",0.0,Neutral
+experienced leader who choose progress maintain tourism future culture,"{'experienced': 0.0, 'leader': 0.0, 'who': 0.0, 'choose': 0.0, 'progress': 0.4215, 'maintain': 0.0, 'tourism': 0.0, 'future': 0.0, 'culture': 0.0}",0.4215,Positive
+great clothes continue welfare people,"{'great': 0.6249, 'clothes': 0.0, 'continue': 0.0, 'welfare': 0.0, 'people': 0.0}",0.6249,Positive
+anyway occupy governor past project can run prove,"{'anyway': 0.0, 'occupy': 0.0, 'governor': 0.0, 'past': 0.0, 'project': 0.0, 'can': 0.0, 'run': 0.0, 'prove': 0.0}",0.0,Neutral
+agree tourism closely local culture policy continue,"{'agree': 0.3612, 'tourism': 0.0, 'closely': 0.0, 'local': 0.0, 'culture': 0.0, 'policy': 0.0, 'continue': 0.0}",0.3612,Positive
+agree clothes who come participate culture anyway ahead,"{'agree': 0.3612, 'clothes': 0.0, 'who': 0.0, 'come': 0.0, 'participate': 0.0, 'culture': 0.0, 'anyway': 0.0, 'ahead': 0.0}",0.3612,Positive
+leader who supposed lead small large concerned wise consistent,"{'leader': 0.0, 'who': 0.0, 'supposed': 0.0, 'lead': 0.0, 'small': 0.0, 'large': 0.0, 'concerned': 0.0, 'wise': 0.4767, 'consistent': 0.0}",0.4767,Positive
+tourism leader well right word,"{'tourism': 0.0, 'leader': 0.0, 'well': 0.2732, 'right': 0.0, 'word': 0.0}",0.2732,Positive
+great infrastructure create new project can tourist opportunity north spirit win,"{'great': 0.6249, 'infrastructure': 0.0, 'create': 0.2732, 'new': 0.0, 'project': 0.0, 'can': 0.0, 'tourist': 0.0, 'opportunity': 0.4215, 'north': 0.0, 'spirit': 0.1779, 'win': 0.5859}",2.0833999999999997,Positive
+let give opportunity continue foundation progress period,"{'let': 0.0, 'give': 0.0, 'opportunity': 0.4215, 'continue': 0.0, 'foundation': 0.0, 'progress': 0.4215, 'period': 0.0}",0.843,Positive
+local village community hopefully will,"{'local': 0.0, 'village': 0.0, 'community': 0.0, 'hopefully': 0.4019, 'will': 0.0}",0.4019,Positive
+hopefully given health continue running,"{'hopefully': 0.4019, 'given': 0.0, 'health': 0.0, 'continue': 0.0, 'running': 0.0}",0.4019,Positive
+doubt governor people choose number burning,"{'doubt': -0.3612, 'governor': 0.0, 'people': 0.0, 'choose': 0.0, 'number': 0.0772, 'burning': 0.0}",-0.28400000000000003,Negative
+great who small people enjoy feel comfortable,"{'great': 0.6249, 'who': 0.0, 'small': 0.0, 'people': 0.0, 'enjoy': 0.4939, 'feel': 0.0, 'comfortable': 0.5106}",1.6294,Positive
+happy birthday hopefully life continue advance,"{'happy': 0.5719, 'birthday': 0.0, 'hopefully': 0.4019, 'life': 0.0, 'continue': 0.0, 'advance': 0.0}",0.9738,Positive
+mr leader thinking welfare people,"{'mr': 0.0, 'leader': 0.0, 'thinking': 0.0, 'welfare': 0.0, 'people': 0.0}",0.0,Neutral
+father whom can hope future add,"{'father': 0.0, 'whom': 0.0, 'can': 0.0, 'hope': 0.4404, 'future': 0.0, 'add': 0.0}",0.4404,Positive
+come advance sustain lower middle economy can directly community,"{'come': 0.0, 'advance': 0.0, 'sustain': 0.0, 'lower': -0.296, 'middle': 0.0, 'economy': 0.0, 'can': 0.0, 'directly': 0.0, 'community': 0.0}",-0.296,Negative
+top feed local maintain name wine remain distinctive drink,"{'top': 0.2023, 'feed': 0.0, 'local': 0.0, 'maintain': 0.0, 'name': 0.0, 'wine': 0.0, 'remain': 0.0, 'distinctive': 0.0, 'drink': 0.0}",0.2023,Positive
+thank help traditional especially local develop hopefully second period can abroad,"{'thank': 0.3612, 'help': 0.4019, 'traditional': 0.0, 'especially': 0.0, 'local': 0.0, 'develop': 0.0, 'hopefully': 0.4019, 'second': 0.0, 'period': 0.0, 'can': 0.0, 'abroad': 0.0}",1.165,Positive
+great can support typical sustainable period,"{'great': 0.6249, 'can': 0.0, 'support': 0.4019, 'typical': 0.0, 'sustainable': 0.0, 'period': 0.0}",1.0268,Positive
+strongly agree traffic southern severe hopefully solution can reduce south,"{'strongly': 0.2732, 'agree': 0.3612, 'traffic': 0.0, 'southern': 0.0, 'severe': -0.3818, 'hopefully': 0.4019, 'solution': 0.3182, 'can': 0.0, 'reduce': 0.0, 'south': 0.0}",0.9727000000000001,Positive
+hopefully leadership second period south will anymore light,"{'hopefully': 0.4019, 'leadership': 0.0, 'second': 0.0, 'period': 0.0, 'south': 0.0, 'will': 0.0, 'anymore': 0.0, 'light': 0.0}",0.4019,Positive
+construction road traffic continue,"{'construction': 0.0, 'road': 0.0, 'traffic': 0.0, 'continue': 0.0}",0.0,Neutral
+great increasingly dense now period,"{'great': 0.6249, 'increasingly': 0.0, 'dense': 0.0, 'now': 0.0, 'period': 0.0}",0.6249,Positive
+hopefully can return traffic father,"{'hopefully': 0.4019, 'can': 0.0, 'return': 0.0, 'traffic': 0.0, 'father': 0.0}",0.4019,Positive
+cool picture new road can soon possible office later period,"{'cool': 0.3182, 'picture': 0.0, 'new': 0.0, 'road': 0.0, 'can': 0.0, 'soon': 0.0, 'possible': 0.0, 'office': 0.0, 'later': 0.0, 'period': 0.0}",0.3182,Positive
+best people minimize traffic hopefully will run well,"{'best': 0.6369, 'people': 0.0, 'minimize': 0.0, 'traffic': 0.0, 'hopefully': 0.4019, 'will': 0.0, 'run': 0.0, 'well': 0.2732}",1.3119999999999998,Positive
+spirit building advanced avoid severe traffic,"{'spirit': 0.1779, 'building': 0.0, 'advanced': 0.25, 'avoid': -0.296, 'severe': -0.3818, 'traffic': 0.0}",-0.24989999999999996,Negative
+hopefully will selected reduce east add,"{'hopefully': 0.4019, 'will': 0.0, 'selected': 0.0, 'reduce': 0.0, 'east': 0.0, 'add': 0.0}",0.4019,Positive
+hopefully clothes can anticipate traffic,"{'hopefully': 0.4019, 'clothes': 0.0, 'can': 0.0, 'anticipate': 0.0, 'traffic': 0.0}",0.4019,Positive
+development design side road construction,"{'development': 0.0, 'design': 0.0, 'side': 0.0, 'road': 0.0, 'construction': 0.0}",0.0,Neutral
+plan interesting organize new future spirit,"{'plan': 0.0, 'interesting': 0.4019, 'organize': 0.0, 'new': 0.0, 'future': 0.0, 'spirit': 0.1779}",0.5798,Positive
+hopefully will soon effect tourism forward,"{'hopefully': 0.4019, 'will': 0.0, 'soon': 0.0, 'effect': 0.0, 'tourism': 0.0, 'forward': 0.0}",0.4019,Positive
+just best solution overcome traffic future,"{'just': 0.0, 'best': 0.6369, 'solution': 0.3182, 'overcome': 0.0, 'traffic': 0.0, 'future': 0.0}",0.9551000000000001,Positive
+great people traffic want think hope will quickly continue,"{'great': 0.6249, 'people': 0.0, 'traffic': 0.0, 'want': 0.0772, 'think': 0.0, 'hope': 0.4404, 'will': 0.0, 'quickly': 0.0, 'continue': 0.0}",1.1425,Positive
+continue mr hopefully traffic will,"{'continue': 0.0, 'mr': 0.0, 'hopefully': 0.4019, 'traffic': 0.0, 'will': 0.0}",0.4019,Positive
+great mr sake future continue gradually organized,"{'great': 0.6249, 'mr': 0.0, 'sake': 0.0, 'future': 0.0, 'continue': 0.0, 'gradually': 0.0, 'organized': 0.0}",0.6249,Positive
+still remember case evening poverty government mr let people,"{'still': 0.0, 'remember': 0.0, 'case': 0.0, 'evening': 0.0, 'poverty': -0.5106, 'government': 0.0, 'mr': 0.0, 'let': 0.0, 'people': 0.0}",-0.5106,Negative
+tourist important density population can thought far ahead best,"{'tourist': 0.0, 'important': 0.2023, 'density': 0.0, 'population': 0.0, 'can': 0.0, 'thought': 0.0, 'far': 0.0, 'ahead': 0.0, 'best': 0.6369}",0.8392000000000001,Positive
+current continue hopefully development can add smooth,"{'current': 0.0, 'continue': 0.0, 'hopefully': 0.4019, 'development': 0.0, 'can': 0.0, 'add': 0.0, 'smooth': 0.0}",0.4019,Positive
+special island best donate country,"{'special': 0.4019, 'island': 0.0, 'best': 0.6369, 'donate': 0.0, 'country': 0.0}",1.0388,Positive
+choose governor like who thinking cultural culture,"{'choose': 0.0, 'governor': 0.0, 'like': 0.3612, 'who': 0.0, 'thinking': 0.0, 'cultural': 0.0, 'culture': 0.0}",0.3612,Positive
+dare development tourism regional far light mr,"{'dare': 0.0, 'development': 0.0, 'tourism': 0.0, 'regional': 0.0, 'far': 0.0, 'light': 0.0, 'mr': 0.0}",0.0,Neutral
+brave need today overcome can happen,"{'brave': 0.5267, 'need': 0.0, 'today': 0.0, 'overcome': 0.0, 'can': 0.0, 'happen': 0.0}",0.5267,Positive
+feed can quickly who want temple comfortable safe calm,"{'feed': 0.0, 'can': 0.0, 'quickly': 0.0, 'who': 0.0, 'want': 0.0772, 'temple': 0.0, 'comfortable': 0.5106, 'safe': 0.4404, 'calm': 0.3182}",1.3464,Positive
+mr hopefully planning build infrastructure can well,"{'mr': 0.0, 'hopefully': 0.4019, 'planning': 0.0, 'build': 0.0, 'infrastructure': 0.0, 'can': 0.0, 'well': 0.2732}",0.6751,Positive
+now access temple who want can comfortable safe calm,"{'now': 0.0, 'access': 0.0, 'temple': 0.0, 'who': 0.0, 'want': 0.0772, 'can': 0.0, 'comfortable': 0.5106, 'safe': 0.4404, 'calm': 0.3182}",1.3464,Positive
+step intention restore temple period,"{'step': 0.0, 'intention': 0.0, 'restore': 0.296, 'temple': 0.0, 'period': 0.0}",0.296,Positive
+anyway careful planning regular regularly father,"{'anyway': 0.0, 'careful': 0.1531, 'planning': 0.0, 'regular': 0.0, 'regularly': 0.0, 'father': 0.0}",0.1531,Positive
+hopefully will continue continued period,"{'hopefully': 0.4019, 'will': 0.0, 'continue': 0.0, 'continued': 0.0, 'period': 0.0}",0.4019,Positive
+careful planning commitment continue improve religious,"{'careful': 0.1531, 'planning': 0.0, 'commitment': 0.3818, 'continue': 0.0, 'improve': 0.4404, 'religious': 0.0}",0.9753,Positive
+reason hopefully next period can tourism sector run harmony,"{'reason': 0.0, 'hopefully': 0.4019, 'next': 0.0, 'period': 0.0, 'can': 0.0, 'tourism': 0.0, 'sector': 0.0, 'run': 0.0, 'harmony': 0.4019}",0.8038,Positive
+clothes meaningful people protect culture diversity,"{'clothes': 0.0, 'meaningful': 0.3182, 'people': 0.0, 'protect': 0.3818, 'culture': 0.0, 'diversity': 0.0}",0.7,Positive
+agree clothes people work tourism keep rise,"{'agree': 0.3612, 'clothes': 0.0, 'people': 0.0, 'work': 0.0, 'tourism': 0.0, 'keep': 0.0, 'rise': 0.0}",0.3612,Positive
+great choice difficult deal resistance brave now community,"{'great': 0.6249, 'choice': 0.0, 'difficult': -0.3612, 'deal': 0.0, 'resistance': 0.0, 'brave': 0.5267, 'now': 0.0, 'community': 0.0}",0.7904,Positive
+great believe will able restore tourism period right,"{'great': 0.6249, 'believe': 0.0, 'will': 0.0, 'able': 0.0, 'restore': 0.296, 'tourism': 0.0, 'period': 0.0, 'right': 0.0}",0.9209,Positive
+agree who doubt decision protect best people,"{'agree': 0.3612, 'who': 0.0, 'doubt': -0.3612, 'decision': 0.0, 'protect': 0.3818, 'best': 0.6369, 'people': 0.0}",1.0187,Positive
+clothing extraordinary leader existing action best reason community,"{'clothing': 0.0, 'extraordinary': 0.0, 'leader': 0.0, 'existing': 0.0, 'action': 0.0, 'best': 0.6369, 'reason': 0.0, 'community': 0.0}",0.6369,Positive
+great who can explain just name rule well,"{'great': 0.6249, 'who': 0.0, 'can': 0.0, 'explain': 0.0, 'just': 0.0, 'name': 0.0, 'rule': 0.0, 'well': 0.2732}",0.8981,Positive
+follow existing see time hopefully can understand explanation,"{'follow': 0.0, 'existing': 0.0, 'see': 0.0, 'time': 0.0, 'hopefully': 0.4019, 'can': 0.0, 'understand': 0.0, 'explanation': 0.0}",0.4019,Positive
+broken explanation people understand will period,"{'broken': -0.4767, 'explanation': 0.0, 'people': 0.0, 'understand': 0.0, 'will': 0.0, 'period': 0.0}",-0.4767,Negative
+great clothes decision situation just recover continued,"{'great': 0.6249, 'clothes': 0.0, 'decision': 0.0, 'situation': 0.0, 'just': 0.0, 'recover': 0.0, 'continued': 0.0}",0.6249,Positive
+important president allow mr say mix palestinian politics,"{'important': 0.2023, 'president': 0.0, 'allow': 0.2263, 'mr': 0.0, 'say': 0.0, 'mix': 0.0, 'palestinian': 0.0, 'politics': 0.0}",0.4286,Positive
+great risk explanation people know negative positive decision,"{'great': 0.6249, 'risk': -0.2732, 'explanation': 0.0, 'people': 0.0, 'know': 0.0, 'negative': -0.5719, 'positive': 0.5574, 'decision': 0.0}",0.33720000000000006,Positive
+mr impact smart leader community continue,"{'mr': 0.0, 'impact': 0.0, 'smart': 0.4019, 'leader': 0.0, 'community': 0.0, 'continue': 0.0}",0.4019,Positive
+who easy can build period,"{'who': 0.0, 'easy': 0.4404, 'can': 0.0, 'build': 0.0, 'period': 0.0}",0.4404,Positive
+worth decision thinking carefully am sure best community know negative positive,"{'worth': 0.2263, 'decision': 0.0, 'thinking': 0.0, 'carefully': 0.128, 'am': 0.0, 'sure': 0.3182, 'best': 0.6369, 'community': 0.0, 'know': 0.0, 'negative': -0.5719, 'positive': 0.5574}",1.2949000000000002,Positive
+great clear reason community important state,"{'great': 0.6249, 'clear': 0.3818, 'reason': 0.0, 'community': 0.0, 'important': 0.2023, 'state': 0.0}",1.2089999999999999,Positive
+let just follow regulation way common,"{'let': 0.0, 'just': 0.0, 'follow': 0.0, 'regulation': 0.0, 'way': 0.0, 'common': 0.0}",0.0,Neutral
+football politics look law reading president allow,"{'football': 0.0, 'politics': 0.0, 'look': 0.0, 'law': 0.0, 'reading': 0.0, 'president': 0.0, 'allow': 0.2263}",0.2263,Positive
+leader understand like line can advance,"{'leader': 0.0, 'understand': 0.0, 'like': 0.3612, 'line': 0.0, 'can': 0.0, 'advance': 0.0}",0.3612,Positive
+previous line now invitation hopefully future,"{'previous': 0.0, 'line': 0.0, 'now': 0.0, 'invitation': 0.0, 'hopefully': 0.4019, 'future': 0.0}",0.4019,Positive
+need lane debate yesterday believe best father,"{'need': 0.0, 'lane': 0.0, 'debate': 0.0, 'yesterday': 0.0, 'believe': 0.0, 'best': 0.6369, 'father': 0.0}",0.6369,Positive
+continue people hesitate choose light period,"{'continue': 0.0, 'people': 0.0, 'hesitate': -0.2732, 'choose': 0.0, 'light': 0.0, 'period': 0.0}",-0.2732,Negative
+take mr running anyway best,"{'take': 0.0, 'mr': 0.0, 'running': 0.0, 'anyway': 0.0, 'best': 0.6369}",0.6369,Positive
+continue believe will certainly build,"{'continue': 0.0, 'believe': 0.0, 'will': 0.0, 'certainly': 0.34, 'build': 0.0}",0.34,Positive
+word certainly continue mr build light,"{'word': 0.0, 'certainly': 0.34, 'continue': 0.0, 'mr': 0.0, 'build': 0.0, 'light': 0.0}",0.34,Positive
+anyway know concept development best think path light,"{'anyway': 0.0, 'know': 0.0, 'concept': 0.0, 'development': 0.0, 'best': 0.6369, 'think': 0.0, 'path': 0.0, 'light': 0.0}",0.6369,Positive
+just logical who north airport road still small far center government access first infrastructure fan,"{'just': 0.0, 'logical': 0.0, 'who': 0.0, 'north': 0.0, 'airport': 0.0, 'road': 0.0, 'still': 0.0, 'small': 0.0, 'far': 0.0, 'center': 0.0, 'government': 0.0, 'access': 0.0, 'first': 0.0, 'infrastructure': 0.0, 'fan': 0.3182}",0.3182,Positive
+party family dare refuse queen,"{'party': 0.4019, 'family': 0.0, 'dare': 0.0, 'refuse': -0.296, 'queen': 0.0}",0.1059,Positive
+prepare carefully let development spirit,"{'prepare': 0.0, 'carefully': 0.128, 'let': 0.0, 'development': 0.0, 'spirit': 0.1779}",0.3059,Positive
+true clearly new north airport agree,"{'true': 0.4215, 'clearly': 0.4019, 'new': 0.0, 'north': 0.0, 'airport': 0.0, 'agree': 0.3612}",1.1845999999999999,Positive
+great hopefully airport north will quickly wake advanced,"{'great': 0.6249, 'hopefully': 0.4019, 'airport': 0.0, 'north': 0.0, 'will': 0.0, 'quickly': 0.0, 'wake': 0.0, 'advanced': 0.25}",1.2768,Positive
+just great airport new,"{'just': 0.0, 'great': 0.6249, 'airport': 0.0, 'new': 0.0}",0.6249,Positive
+just question road will land,"{'just': 0.0, 'question': 0.0, 'road': 0.0, 'will': 0.0, 'land': 0.0}",0.0,Neutral
+arrangement construction parking full billion government,"{'arrangement': 0.0, 'construction': 0.0, 'parking': 0.0, 'full': 0.0, 'billion': 0.0, 'government': 0.0}",0.0,Neutral
+initial plan billion currently only full deficit,"{'initial': 0.0, 'plan': 0.0, 'billion': 0.0, 'currently': 0.0, 'only': 0.0, 'full': 0.0, 'deficit': -0.4019}",-0.4019,Negative
+care parking still reduce traffic private public,"{'care': 0.4939, 'parking': 0.0, 'still': 0.0, 'reduce': 0.0, 'traffic': 0.0, 'private': 0.0, 'public': 0.0}",0.4939,Positive
+return community people want work addition parking,"{'return': 0.0, 'community': 0.0, 'people': 0.0, 'want': 0.0772, 'work': 0.0, 'addition': 0.0, 'parking': 0.0}",0.0772,Positive
+realize difficulty want traffic bring small who construction new road can minimize,"{'realize': 0.0, 'difficulty': -0.34, 'want': 0.0772, 'traffic': 0.0, 'bring': 0.0, 'small': 0.0, 'who': 0.0, 'construction': 0.0, 'new': 0.0, 'road': 0.0, 'can': 0.0, 'minimize': 0.0}",-0.26280000000000003,Negative
+plan forward who know people only,"{'plan': 0.0, 'forward': 0.0, 'who': 0.0, 'know': 0.0, 'people': 0.0, 'only': 0.0}",0.0,Neutral
+impact community hopefully can quickly focus find parking best,"{'impact': 0.0, 'community': 0.0, 'hopefully': 0.4019, 'can': 0.0, 'quickly': 0.0, 'focus': 0.0, 'find': 0.0, 'parking': 0.0, 'best': 0.6369}",1.0388,Positive
+campaign ride helicopter fixed choice,"{'campaign': 0.0, 'ride': 0.0, 'helicopter': 0.0, 'fixed': 0.0, 'choice': 0.0}",0.0,Neutral
+great mr car guest gene,"{'great': 0.6249, 'mr': 0.0, 'car': 0.0, 'guest': 0.0, 'gene': 0.0}",0.6249,Positive
+choose sure mr who experienced leader government flight,"{'choose': 0.0, 'sure': 0.3182, 'mr': 0.0, 'who': 0.0, 'experienced': 0.0, 'leader': 0.0, 'government': 0.0, 'flight': 0.0}",0.3182,Positive
+who experience especially now leading period,"{'who': 0.0, 'experience': 0.0, 'especially': 0.0, 'now': 0.0, 'leading': 0.0, 'period': 0.0}",0.0,Neutral
+believe father experience let period best,"{'believe': 0.0, 'father': 0.0, 'experience': 0.0, 'let': 0.0, 'period': 0.0, 'best': 0.6369}",0.6369,Positive
+great believe father experience continue,"{'great': 0.6249, 'believe': 0.0, 'father': 0.0, 'experience': 0.0, 'continue': 0.0}",0.6249,Positive
+spirit leader who can certainly overcome advance next period,"{'spirit': 0.1779, 'leader': 0.0, 'who': 0.0, 'can': 0.0, 'certainly': 0.34, 'overcome': 0.0, 'advance': 0.0, 'next': 0.0, 'period': 0.0}",0.5179,Positive
+toll road people answer who understand,"{'toll': 0.0, 'road': 0.0, 'people': 0.0, 'answer': 0.0, 'who': 0.0, 'understand': 0.0}",0.0,Neutral
+hopefully clothes will run transportation,"{'hopefully': 0.4019, 'clothes': 0.0, 'will': 0.0, 'run': 0.0, 'transportation': 0.0}",0.4019,Positive
+remember governor toll road will continue select,"{'remember': 0.0, 'governor': 0.0, 'toll': 0.0, 'road': 0.0, 'will': 0.0, 'continue': 0.0, 'select': 0.0}",0.0,Neutral
+clothes can quickly development,"{'clothes': 0.0, 'can': 0.0, 'quickly': 0.0, 'development': 0.0}",0.0,Neutral
+toll road can quickly mr,"{'toll': 0.0, 'road': 0.0, 'can': 0.0, 'quickly': 0.0, 'mr': 0.0}",0.0,Neutral
+continue building infrastructure easy community,"{'continue': 0.0, 'building': 0.0, 'infrastructure': 0.0, 'easy': 0.4404, 'community': 0.0}",0.4404,Positive
+yes can know variety culture,"{'yes': 0.4019, 'can': 0.0, 'know': 0.0, 'variety': 0.0, 'culture': 0.0}",0.4019,Positive
+interesting can access fear traffic,"{'interesting': 0.4019, 'can': 0.0, 'access': 0.0, 'fear': -0.4939, 'traffic': 0.0}",-0.09200000000000003,Negative
+great honest work leader period,"{'great': 0.6249, 'honest': 0.5106, 'work': 0.0, 'leader': 0.0, 'period': 0.0}",1.1355,Positive
+governor sake advanced steady burning,"{'governor': 0.0, 'sake': 0.0, 'advanced': 0.25, 'steady': 0.0, 'burning': 0.0}",0.25,Positive
+can continued next period mr,"{'can': 0.0, 'continued': 0.0, 'next': 0.0, 'period': 0.0, 'mr': 0.0}",0.0,Neutral
+who know let say father spirit,"{'who': 0.0, 'know': 0.0, 'let': 0.0, 'say': 0.0, 'father': 0.0, 'spirit': 0.1779}",0.1779,Positive
+leader honest work doubt anymore burning,"{'leader': 0.0, 'honest': 0.5106, 'work': 0.0, 'doubt': -0.3612, 'anymore': 0.0, 'burning': 0.0}",0.14940000000000003,Positive
+mr equal distribution plan suitable,"{'mr': 0.0, 'equal': 0.0, 'distribution': 0.0, 'plan': 0.0, 'suitable': 0.0}",0.0,Neutral
+working evidence leader concern community continue mr,"{'working': 0.0, 'evidence': 0.0, 'leader': 0.0, 'concern': 0.0, 'community': 0.0, 'continue': 0.0, 'mr': 0.0}",0.0,Neutral
+travel time faster view interesting,"{'travel': 0.0, 'time': 0.0, 'faster': 0.0, 'view': 0.0, 'interesting': 0.4019}",0.4019,Positive
+gene development people cost rise average,"{'gene': 0.0, 'development': 0.0, 'people': 0.0, 'cost': 0.0, 'rise': 0.0, 'average': 0.0}",0.0,Neutral
+solution building new road reduce will cause change land increasingly massive small island mr,"{'solution': 0.3182, 'building': 0.0, 'new': 0.0, 'road': 0.0, 'reduce': 0.0, 'will': 0.0, 'cause': 0.0, 'change': 0.0, 'land': 0.0, 'increasingly': 0.0, 'massive': 0.0, 'small': 0.0, 'island': 0.0, 'mr': 0.0}",0.3182,Positive
+think people thank now can,"{'think': 0.0, 'people': 0.0, 'thank': 0.3612, 'now': 0.0, 'can': 0.0}",0.3612,Positive
+great clearly process serving later period,"{'great': 0.6249, 'clearly': 0.4019, 'process': 0.0, 'serving': 0.0, 'later': 0.0, 'period': 0.0}",1.0268,Positive
+great overcome traffic time society comfortable road,"{'great': 0.6249, 'overcome': 0.0, 'traffic': 0.0, 'time': 0.0, 'society': 0.0, 'comfortable': 0.5106, 'road': 0.0}",1.1355,Positive
+strongly path break facilitate access,"{'strongly': 0.2732, 'path': 0.0, 'break': 0.0, 'facilitate': 0.0, 'access': 0.0}",0.2732,Positive
+mr quickly traffic anymore burning,"{'mr': 0.0, 'quickly': 0.0, 'traffic': 0.0, 'anymore': 0.0, 'burning': 0.0}",0.0,Neutral
+hope will fast feed surely helpful help thank,"{'hope': 0.4404, 'will': 0.0, 'fast': 0.0, 'feed': 0.0, 'surely': 0.4404, 'helpful': 0.4215, 'help': 0.4019, 'thank': 0.3612}",2.0654,Positive
+hopefully new road can quickly traffic,"{'hopefully': 0.4019, 'new': 0.0, 'road': 0.0, 'can': 0.0, 'quickly': 0.0, 'traffic': 0.0}",0.4019,Positive
+now strongly agree policy crowded,"{'now': 0.0, 'strongly': 0.2732, 'agree': 0.3612, 'policy': 0.0, 'crowded': 0.0}",0.6344000000000001,Positive
+great overcome traffic tourism advanced period,"{'great': 0.6249, 'overcome': 0.0, 'traffic': 0.0, 'tourism': 0.0, 'advanced': 0.25, 'period': 0.0}",0.8749,Positive
+overcome extraordinary development especially visible,"{'overcome': 0.0, 'extraordinary': 0.0, 'development': 0.0, 'especially': 0.0, 'visible': 0.0}",0.0,Neutral
+spirit mr hopefully can quickly finish,"{'spirit': 0.1779, 'mr': 0.0, 'hopefully': 0.4019, 'can': 0.0, 'quickly': 0.0, 'finish': 0.0}",0.5798,Positive
+great rarely who pay attention like hopefully mr can overcome later period,"{'great': 0.6249, 'rarely': 0.0, 'who': 0.0, 'pay': -0.1027, 'attention': 0.0, 'like': 0.3612, 'hopefully': 0.4019, 'mr': 0.0, 'can': 0.0, 'overcome': 0.0, 'later': 0.0, 'period': 0.0}",1.2852999999999999,Positive
+continue like traffic accident road,"{'continue': 0.0, 'like': 0.3612, 'traffic': 0.0, 'accident': -0.4767, 'road': 0.0}",-0.11549999999999999,Negative
+wrong choose community hopefully traffic,"{'wrong': -0.4767, 'choose': 0.0, 'community': 0.0, 'hopefully': 0.4019, 'traffic': 0.0}",-0.07480000000000003,Negative
+focus managing true mr concerned small greatly interest come,"{'focus': 0.0, 'managing': 0.0, 'true': 0.4215, 'mr': 0.0, 'concerned': 0.0, 'small': 0.0, 'greatly': 0.0, 'interest': 0.4588, 'come': 0.0}",0.8803,Positive
+name party officer who agree,"{'name': 0.0, 'party': 0.4019, 'officer': 0.0, 'who': 0.0, 'agree': 0.3612}",0.7631,Positive
+alone able build private sector,"{'alone': -0.25, 'able': 0.0, 'build': 0.0, 'private': 0.0, 'sector': 0.0}",-0.25,Negative
+only way path center right,"{'only': 0.0, 'way': 0.0, 'path': 0.0, 'center': 0.0, 'right': 0.0}",0.0,Neutral
+am middle gene just airport leader optimistic mr function solution,"{'am': 0.0, 'middle': 0.0, 'gene': 0.0, 'just': 0.0, 'airport': 0.0, 'leader': 0.0, 'optimistic': 0.3182, 'mr': 0.0, 'function': 0.0, 'solution': 0.3182}",0.6364,Positive
+north course international airport large,"{'north': 0.0, 'course': 0.0, 'international': 0.0, 'airport': 0.0, 'large': 0.0}",0.0,Neutral
+can state money only given support,"{'can': 0.0, 'state': 0.0, 'money': 0.0, 'only': 0.0, 'given': 0.0, 'support': 0.4019}",0.4019,Positive
+who private sector possible airport will able,"{'who': 0.0, 'private': 0.0, 'sector': 0.0, 'possible': 0.0, 'airport': 0.0, 'will': 0.0, 'able': 0.0}",0.0,Neutral
+can private want investment,"{'can': 0.0, 'private': 0.0, 'want': 0.0772, 'investment': 0.0}",0.0772,Positive
+choose who can build new airport,"{'choose': 0.0, 'who': 0.0, 'can': 0.0, 'build': 0.0, 'new': 0.0, 'airport': 0.0}",0.0,Neutral
+control bull agree construction north airport,"{'control': 0.0, 'bull': 0.0, 'agree': 0.3612, 'construction': 0.0, 'north': 0.0, 'airport': 0.0}",0.3612,Positive
+can play who online driver result traffic tourism,"{'can': 0.0, 'play': 0.34, 'who': 0.0, 'online': 0.0, 'driver': 0.0, 'result': 0.0, 'traffic': 0.0, 'tourism': 0.0}",0.34,Positive
+great take care local wisdom disappear,"{'great': 0.6249, 'take': 0.0, 'care': 0.4939, 'local': 0.0, 'wisdom': 0.5267, 'disappear': -0.2263}",1.4192,Positive
+want consider hopefully policy can,"{'want': 0.0772, 'consider': 0.0, 'hopefully': 0.4019, 'policy': 0.0, 'can': 0.0}",0.47909999999999997,Positive
+thank mr keep spirit period,"{'thank': 0.3612, 'mr': 0.0, 'keep': 0.0, 'spirit': 0.1779, 'period': 0.0}",0.5391,Positive
+amazing best know sure aim advance,"{'amazing': 0.5859, 'best': 0.6369, 'know': 0.0, 'sure': 0.3182, 'aim': 0.0, 'advance': 0.0}",1.541,Positive
+extraordinary planning hopefully selected can,"{'extraordinary': 0.0, 'planning': 0.0, 'hopefully': 0.4019, 'selected': 0.0, 'can': 0.0}",0.4019,Positive
+let alone realize tourism north south traffic,"{'let': 0.0, 'alone': -0.25, 'realize': 0.0, 'tourism': 0.0, 'north': 0.0, 'south': 0.0, 'traffic': 0.0}",-0.25,Negative
+great inspiration road temple people who pray can interfere travel traffic,"{'great': 0.6249, 'inspiration': 0.5267, 'road': 0.0, 'temple': 0.0, 'people': 0.0, 'who': 0.0, 'pray': 0.3182, 'can': 0.0, 'interfere': 0.0, 'travel': 0.0, 'traffic': 0.0}",1.4698,Positive
+cool concept directly detailed,"{'cool': 0.3182, 'concept': 0.0, 'directly': 0.0, 'detailed': 0.0}",0.3182,Positive
+stay tolerance clothes respect tribal,"{'stay': 0.0, 'tolerance': 0.296, 'clothes': 0.0, 'respect': 0.4767, 'tribal': 0.0}",0.7726999999999999,Positive
+tolerance religious figure leader who community,"{'tolerance': 0.296, 'religious': 0.0, 'figure': 0.0, 'leader': 0.0, 'who': 0.0, 'community': 0.0}",0.296,Positive
+who heart like figure leader need sense mutual high tolerance,"{'who': 0.0, 'heart': 0.6369, 'like': 0.3612, 'figure': 0.0, 'leader': 0.0, 'need': 0.0, 'sense': 0.0, 'mutual': 0.0, 'high': 0.0, 'tolerance': 0.296}",1.2941,Positive
+value tolerance people like figure leader who soft heart sweet smile,"{'value': 0.34, 'tolerance': 0.296, 'people': 0.0, 'like': 0.3612, 'figure': 0.0, 'leader': 0.0, 'who': 0.0, 'soft': 0.0, 'heart': 0.6369, 'sweet': 0.4588, 'smile': 0.3612}",2.4541000000000004,Positive
+care love people clothes can voice republic,"{'care': 0.4939, 'love': 0.6369, 'people': 0.0, 'clothes': 0.0, 'can': 0.0, 'voice': 0.0, 'republic': 0.0}",1.1308,Positive
+clothing best just keep clothes complete community comfortable period,"{'clothing': 0.0, 'best': 0.6369, 'just': 0.0, 'keep': 0.0, 'clothes': 0.0, 'complete': 0.0, 'community': 0.0, 'comfortable': 0.5106, 'period': 0.0}",1.1475,Positive
+who high tolerance clothing guard period,"{'who': 0.0, 'high': 0.0, 'tolerance': 0.296, 'clothing': 0.0, 'guard': 0.0, 'period': 0.0}",0.296,Positive
+figure leader who fair steady,"{'figure': 0.0, 'leader': 0.0, 'who': 0.0, 'fair': 0.3182, 'steady': 0.0}",0.3182,Positive
+northern airport building new north,"{'northern': 0.0, 'airport': 0.0, 'building': 0.0, 'new': 0.0, 'north': 0.0}",0.0,Neutral
+north airport governor definitely world can mother president,"{'north': 0.0, 'airport': 0.0, 'governor': 0.0, 'definitely': 0.4019, 'world': 0.0, 'can': 0.0, 'mother': 0.0, 'president': 0.0}",0.4019,Positive
+agree north welfare southern father will continue development,"{'agree': 0.3612, 'north': 0.0, 'welfare': 0.0, 'southern': 0.0, 'father': 0.0, 'will': 0.0, 'continue': 0.0, 'development': 0.0}",0.3612,Positive
+steady continue second period can complete north airport project quickly operate,"{'steady': 0.0, 'continue': 0.0, 'second': 0.0, 'period': 0.0, 'can': 0.0, 'complete': 0.0, 'north': 0.0, 'airport': 0.0, 'project': 0.0, 'quickly': 0.0, 'operate': 0.0}",0.0,Neutral
+walk second time only narrow remember village,"{'walk': 0.0, 'second': 0.0, 'time': 0.0, 'only': 0.0, 'narrow': 0.0, 'remember': 0.0, 'village': 0.0}",0.0,Neutral
+yes am airport especially lately vulnerable traffic,"{'yes': 0.4019, 'am': 0.0, 'airport': 0.0, 'especially': 0.0, 'lately': 0.0, 'vulnerable': -0.2263, 'traffic': 0.0}",0.17559999999999998,Positive
+debate suitable leading choose wrong leader,"{'debate': 0.0, 'suitable': 0.0, 'leading': 0.0, 'choose': 0.0, 'wrong': -0.4767, 'leader': 0.0}",-0.4767,Negative
+certainly choose experienced steady come,"{'certainly': 0.34, 'choose': 0.0, 'experienced': 0.0, 'steady': 0.0, 'come': 0.0}",0.34,Positive
+involve traditional harmony center village,"{'involve': 0.0, 'traditional': 0.0, 'harmony': 0.4019, 'center': 0.0, 'village': 0.0}",0.4019,Positive
+burning great mr keep move,"{'burning': 0.0, 'great': 0.6249, 'mr': 0.0, 'keep': 0.0, 'move': 0.0}",0.6249,Positive
+extraordinary debate beginning end first,"{'extraordinary': 0.0, 'debate': 0.0, 'beginning': 0.0, 'end': 0.0, 'first': 0.0}",0.0,Neutral
+debate cook understand still,"{'debate': 0.0, 'cook': 0.0, 'understand': 0.0, 'still': 0.0}",0.0,Neutral
+time community certainly performance spirit burning,"{'time': 0.0, 'community': 0.0, 'certainly': 0.34, 'performance': 0.0, 'spirit': 0.1779, 'burning': 0.0}",0.5179,Positive
+great clothes right leader continue,"{'great': 0.6249, 'clothes': 0.0, 'right': 0.0, 'leader': 0.0, 'continue': 0.0}",0.6249,Positive
+struggle need leader like self seek,"{'struggle': -0.3182, 'need': 0.0, 'leader': 0.0, 'like': 0.3612, 'self': 0.0, 'seek': 0.0}",0.04300000000000004,Neutral
+hopefully sense religious tolerance forward,"{'hopefully': 0.4019, 'sense': 0.0, 'religious': 0.0, 'tolerance': 0.296, 'forward': 0.0}",0.6979,Positive
+who hear people little can,"{'who': 0.0, 'hear': 0.0, 'people': 0.0, 'little': 0.0, 'can': 0.0}",0.0,Neutral
+leader who brave important care cultural,"{'leader': 0.0, 'who': 0.0, 'brave': 0.5267, 'important': 0.2023, 'care': 0.4939, 'cultural': 0.0}",1.2229,Positive
+great big contribute foreign exchange thanks leader proud community,"{'great': 0.6249, 'big': 0.0, 'contribute': 0.0, 'foreign': 0.0, 'exchange': 0.0, 'thanks': 0.4404, 'leader': 0.0, 'proud': 0.4767, 'community': 0.0}",1.5420000000000003,Positive
+choose governor center development smooth,"{'choose': 0.0, 'governor': 0.0, 'center': 0.0, 'development': 0.0, 'smooth': 0.0}",0.0,Neutral
+choose optimistic leader president way exit,"{'choose': 0.0, 'optimistic': 0.3182, 'leader': 0.0, 'president': 0.0, 'way': 0.0, 'exit': 0.0}",0.3182,Positive
+entry tourism airport fortunately right,"{'entry': 0.0, 'tourism': 0.0, 'airport': 0.0, 'fortunately': 0.0, 'right': 0.0}",0.0,Neutral
+building process pack certainly time development only generation next,"{'building': 0.0, 'process': 0.0, 'pack': 0.0, 'certainly': 0.34, 'time': 0.0, 'development': 0.0, 'only': 0.0, 'generation': 0.0, 'next': 0.0}",0.34,Positive
+rice agriculture important food develop agricultural sector mr,"{'rice': 0.0, 'agriculture': 0.0, 'important': 0.2023, 'food': 0.0, 'develop': 0.0, 'agricultural': 0.0, 'sector': 0.0, 'mr': 0.0}",0.2023,Positive
+strongly agree agricultural can source food export land,"{'strongly': 0.2732, 'agree': 0.3612, 'agricultural': 0.0, 'can': 0.0, 'source': 0.0, 'food': 0.0, 'export': 0.0, 'land': 0.0}",0.6344000000000001,Positive
+hopefully future can stand alone agree need direction government,"{'hopefully': 0.4019, 'future': 0.0, 'can': 0.0, 'stand': 0.0, 'alone': -0.25, 'agree': 0.3612, 'need': 0.0, 'direction': 0.0, 'government': 0.0}",0.5131,Positive
+agree let agricultural land addition tourist attraction heritage,"{'agree': 0.3612, 'let': 0.0, 'agricultural': 0.0, 'land': 0.0, 'addition': 0.0, 'tourist': 0.0, 'attraction': 0.4588, 'heritage': 0.0}",0.8200000000000001,Positive
+increasingly future continued let rice disappear construction field,"{'increasingly': 0.0, 'future': 0.0, 'continued': 0.0, 'let': 0.0, 'rice': 0.0, 'disappear': -0.2263, 'construction': 0.0, 'field': 0.0}",-0.2263,Negative
+agree let agricultural land heritage,"{'agree': 0.3612, 'let': 0.0, 'agricultural': 0.0, 'land': 0.0, 'heritage': 0.0}",0.3612,Positive
+little attention land agricultural rich especially can export extraordinary,"{'little': 0.0, 'attention': 0.0, 'land': 0.0, 'agricultural': 0.0, 'rich': 0.5574, 'especially': 0.0, 'can': 0.0, 'export': 0.0, 'extraordinary': 0.0}",0.5574,Positive
+maintain agricultural land people future,"{'maintain': 0.0, 'agricultural': 0.0, 'land': 0.0, 'people': 0.0, 'future': 0.0}",0.0,Neutral
+support now can income future abroad land,"{'support': 0.4019, 'now': 0.0, 'can': 0.0, 'income': 0.0, 'future': 0.0, 'abroad': 0.0, 'land': 0.0}",0.4019,Positive
+take next time fold preserve,"{'take': 0.0, 'next': 0.0, 'time': 0.0, 'fold': 0.0, 'preserve': 0.0}",0.0,Neutral
+agree support local self food glory,"{'agree': 0.3612, 'support': 0.4019, 'local': 0.0, 'self': 0.0, 'food': 0.0, 'glory': 0.5423}",1.3054000000000001,Positive
+maybe can preserve agricultural land government little farm native labor may generation,"{'maybe': 0.0, 'can': 0.0, 'preserve': 0.0, 'agricultural': 0.0, 'land': 0.0, 'government': 0.0, 'little': 0.0, 'farm': 0.0, 'native': 0.0, 'labor': 0.0, 'may': 0.0, 'generation': 0.0}",0.0,Neutral
+clothing will continue let rice,"{'clothing': 0.0, 'will': 0.0, 'continue': 0.0, 'let': 0.0, 'rice': 0.0}",0.0,Neutral
+road added surrounding grow quickly,"{'road': 0.0, 'added': 0.0, 'surrounding': 0.0, 'grow': 0.0, 'quickly': 0.0}",0.0,Neutral
+excellent planning can positive impact people,"{'excellent': 0.5719, 'planning': 0.0, 'can': 0.0, 'positive': 0.5574, 'impact': 0.0, 'people': 0.0}",1.1293,Positive
+great deliver whole tourism safe comfortable,"{'great': 0.6249, 'deliver': 0.0, 'whole': 0.0, 'tourism': 0.0, 'safe': 0.4404, 'comfortable': 0.5106}",1.5759000000000003,Positive
+like tourism pile only south move north balanced,"{'like': 0.3612, 'tourism': 0.0, 'pile': 0.0, 'only': 0.0, 'south': 0.0, 'move': 0.0, 'north': 0.0, 'balanced': 0.0}",0.3612,Positive
+extraordinary planning presentation yesterday debate,"{'extraordinary': 0.0, 'planning': 0.0, 'presentation': 0.0, 'yesterday': 0.0, 'debate': 0.0}",0.0,Neutral
+interesting can easily introduce culture only south remote north will increasingly known,"{'interesting': 0.4019, 'can': 0.0, 'easily': 0.34, 'introduce': 0.0, 'culture': 0.0, 'only': 0.0, 'south': 0.0, 'remote': 0.0, 'north': 0.0, 'will': 0.0, 'increasingly': 0.0, 'known': 0.0}",0.7419,Positive
+hopefully will tourist destination advanced period,"{'hopefully': 0.4019, 'will': 0.0, 'tourist': 0.0, 'destination': 0.0, 'advanced': 0.25, 'period': 0.0}",0.6518999999999999,Positive
+useful mr price thanks,"{'useful': 0.4404, 'mr': 0.0, 'price': 0.0, 'thanks': 0.4404}",0.8808,Positive
+public transportation can educate general future community dependent,"{'public': 0.0, 'transportation': 0.0, 'can': 0.0, 'educate': 0.0, 'general': 0.0, 'future': 0.0, 'community': 0.0, 'dependent': 0.0}",0.0,Neutral
+transportation clothes useful especially price,"{'transportation': 0.0, 'clothes': 0.0, 'useful': 0.4404, 'especially': 0.0, 'price': 0.0}",0.4404,Positive
+transport useful community who want ride anyway,"{'transport': 0.0, 'useful': 0.4404, 'community': 0.0, 'who': 0.0, 'want': 0.0772, 'ride': 0.0, 'anyway': 0.0}",0.5176000000000001,Positive
+existence helpful existing private can public easily travel low budget,"{'existence': 0.0, 'helpful': 0.4215, 'existing': 0.0, 'private': 0.0, 'can': 0.0, 'public': 0.0, 'easily': 0.34, 'travel': 0.0, 'low': -0.2732, 'budget': 0.0}",0.48830000000000007,Positive
+expand like density vehicle can overcome small possibility least extraordinary,"{'expand': 0.3182, 'like': 0.3612, 'density': 0.0, 'vehicle': 0.0, 'can': 0.0, 'overcome': 0.0, 'small': 0.0, 'possibility': 0.0, 'least': 0.0, 'extraordinary': 0.0}",0.6794,Positive
+important community reduce road continue support mr period,"{'important': 0.2023, 'community': 0.0, 'reduce': 0.0, 'road': 0.0, 'continue': 0.0, 'support': 0.4019, 'mr': 0.0, 'period': 0.0}",0.6042,Positive
+true public transportation sake vehicle,"{'true': 0.4215, 'public': 0.0, 'transportation': 0.0, 'sake': 0.0, 'vehicle': 0.0}",0.4215,Positive
+useful clothes thank public transportation,"{'useful': 0.4404, 'clothes': 0.0, 'thank': 0.3612, 'public': 0.0, 'transportation': 0.0}",0.8016000000000001,Positive
+who useful people mr example community,"{'who': 0.0, 'useful': 0.4404, 'people': 0.0, 'mr': 0.0, 'example': 0.0, 'community': 0.0}",0.4404,Positive
+continue clothes helpful community future,"{'continue': 0.0, 'clothes': 0.0, 'helpful': 0.4215, 'community': 0.0, 'future': 0.0}",0.4215,Positive
+can reduce transportation future will,"{'can': 0.0, 'reduce': 0.0, 'transportation': 0.0, 'future': 0.0, 'will': 0.0}",0.0,Neutral
+hopefully can educate public future,"{'hopefully': 0.4019, 'can': 0.0, 'educate': 0.0, 'public': 0.0, 'future': 0.0}",0.4019,Positive
+still time community adjust existing,"{'still': 0.0, 'time': 0.0, 'community': 0.0, 'adjust': 0.0, 'existing': 0.0}",0.0,Neutral
+great hopefully can increase public interest transportation,"{'great': 0.6249, 'hopefully': 0.4019, 'can': 0.0, 'increase': 0.3182, 'public': 0.0, 'interest': 0.4588, 'transportation': 0.0}",1.8037999999999998,Positive

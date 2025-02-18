@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+
+.header-bottom{
+    padding: -1px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+}
+.in-bottom p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.in-bottom{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    gap: 30px;
+}
+.in-bottom h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+            color: rgb(56, 29, 0);
+}
+.login-bottom{
+    display: flex;
+    position: relative;
+    gap: 10px;
+    left: 120px;
+}
+.login-bottom button{
+    color: rgb(56, 29, 0);
+    background-color: transparent;
+    list-style: none;
+    border: 2px solid rgb(56, 29, 0);
+    padding: 8px 30px;
+    border-radius: 50px;
+}
+.login-bottom :hover{
+    background-color: rgb(56, 29, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+.bars{
+    display: none;
+}
+.in-bottom h2{
+    position: relative; 
+    bottom: 2px; 
+    right: 120px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.bg-img{
+  background: url(room.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.bg-img:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  text-align: center;
+  padding: 60px 32px;
+  width: 770px;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  border-radius: 50px ;
+  
+}
+.content header{
+  color: white;
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  font-family: 'Poppins',sans-serif;
+  
+}
+.register a:hover{
+  text-decoration: underline;
+}
+.form-content{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-radius: 50px;
+ margin-bottom: 20px;
+}
+.form-content span{
+  color: #222;
+  width: 40px;
+  line-height: 45px;
+}
+.form-content input{
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+  border-radius: 50px;
+}
+.space{
+  margin-top: 16px;
+}
+.pass{
+  position: absolute;
+  right: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  display: none;
+  cursor: pointer;
+  font-family: 'Poppins',sans-serif;
+}
+.keyword:valid ~ .pass{
+  display: block;
+}
+.password-input{
+  text-align: left;
+  margin: 10px 0;
+}
+.password-input a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+.password-input:hover a{
+  text-decoration: underline;
+}
+.form-content input[type="submit"]{
+  background: rgb(136, 120, 90);
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins',sans-serif;
+}
+.form-content input[type="submit"]:hover{
+  opacity: 0.8;
+}
+.login{
+  color: white;
+  margin: 20px 0;
+  font-family: 'Poppins',sans-serif;
+}
+.icon{
+  display: flex;
+  cursor: pointer;
+  color: white;
+  margin: 0 0 20px 0;
+  gap: 10px;
+}
+.facebook,.Apple{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  margin-left: 10px;
+}
+.Apple{
+  background: black;
+  border-radius: 50px;
+  
+}
+.Apple:hover{
+  background: white;
+  color: black;
+}
+.facebook{
+  margin-left: 0;
+  background: black;
+  border-radius: 50px;
+}
+
+.facebook:hover{
+  background: white;
+  color: black;
+}
+
+.icon i{
+  font-size: 17px;
+}
+i span{
+  margin-left: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+}
+.register{
+  font-size: 15px;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+}
+.register a{
+  color:  rgb(136, 120, 90);
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
+button{
+  border: none;
+}
+
+/* ukuran tablet */
+@media only screen and (max-width: 1130px){
+  .navbar {
+      display: block;
+      
+  } 
+  .container-header{
+      display: none;
+  }  
+  .konten-header{
+      display: none;
+  }
+  .container-header input{
+      display: none;
+
+  }
+  .container-header button{
+      display: none;
+
+  }
+  
+
+}
+
+/* ukuran mobile L */
+@media only screen and (max-width: 426px){
+  
+  .navbar {
+      display: block;
+      
+  }    
+  
+}
+
+
+/* ukuran mobile M */
+@media only screen and (max-width: 376px){
+  .content2{
+      width: auto;
+  }
+  .container-div{
+      margin: auto;
+  }
+  .footer{
+      width: 100%;
+  }
+
+
+}
+
+/* ukuran mobile S */
+@media only screen and (max-width: 321px){
+  .content2{
+      width: auto;
+  }
+
+}

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d0f30de00a710f3ccec49cdc4fce4012 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d0f30de00a710f3ccec49cdc4fce4012" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d0f30de00a710f3ccec49cdc4fce4012 = L.map(
+                "map_d0f30de00a710f3ccec49cdc4fce4012",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e16d8ce470955b680e05647e7ae22895 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_e16d8ce470955b680e05647e7ae22895.addTo(map_d0f30de00a710f3ccec49cdc4fce4012);
+        
+    
+            var marker_cluster_3e09e0a243a07f7597b825620725454c = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var circle_marker_67b467ecc2721c31c8054aeb5183735c = L.circleMarker(
+                [46.8797, -110.3626],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_e18661d93dc1a88b60b970a2d644a2c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2075ee7dd6d9938ebb64b0c6d4978456 = $(`<div id="html_2075ee7dd6d9938ebb64b0c6d4978456" style="width: 100.0%; height: 100.0%;">Montana: 96 purchases</div>`)[0];
+                popup_e18661d93dc1a88b60b970a2d644a2c5.setContent(html_2075ee7dd6d9938ebb64b0c6d4978456);
+            
+        
+
+        circle_marker_67b467ecc2721c31c8054aeb5183735c.bindPopup(popup_e18661d93dc1a88b60b970a2d644a2c5)
+        ;
+
+        
+    
+    
+            var circle_marker_ee68e8def8284c2f7fa0351a33738bb4 = L.circleMarker(
+                [36.7783, -119.4179],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_0939f2ae2bb5223724d2e1d37c28bf65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64b89ea2822134525b4d22890aaa795e = $(`<div id="html_64b89ea2822134525b4d22890aaa795e" style="width: 100.0%; height: 100.0%;">California: 95 purchases</div>`)[0];
+                popup_0939f2ae2bb5223724d2e1d37c28bf65.setContent(html_64b89ea2822134525b4d22890aaa795e);
+            
+        
+
+        circle_marker_ee68e8def8284c2f7fa0351a33738bb4.bindPopup(popup_0939f2ae2bb5223724d2e1d37c28bf65)
+        ;
+
+        
+    
+    
+            var circle_marker_6e52774b7c89ce6927349c05dff438e6 = L.circleMarker(
+                [44.0682, -114.742],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_45eafc84771f41f7ff1d8908e8c28e78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d7b9755379299acc5b5d6a37d6ff00b = $(`<div id="html_3d7b9755379299acc5b5d6a37d6ff00b" style="width: 100.0%; height: 100.0%;">Idaho: 93 purchases</div>`)[0];
+                popup_45eafc84771f41f7ff1d8908e8c28e78.setContent(html_3d7b9755379299acc5b5d6a37d6ff00b);
+            
+        
+
+        circle_marker_6e52774b7c89ce6927349c05dff438e6.bindPopup(popup_45eafc84771f41f7ff1d8908e8c28e78)
+        ;
+
+        
+    
+    
+            var circle_marker_9332503e0b797fc7b32dbb2fcf1814a8 = L.circleMarker(
+                [40.6331, -89.3985],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_0b0194c9a19a38838844550965ab19f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bd5042cd6c64e75b3e2633970b3ff69 = $(`<div id="html_8bd5042cd6c64e75b3e2633970b3ff69" style="width: 100.0%; height: 100.0%;">Illinois: 92 purchases</div>`)[0];
+                popup_0b0194c9a19a38838844550965ab19f3.setContent(html_8bd5042cd6c64e75b3e2633970b3ff69);
+            
+        
+
+        circle_marker_9332503e0b797fc7b32dbb2fcf1814a8.bindPopup(popup_0b0194c9a19a38838844550965ab19f3)
+        ;
+
+        
+    
+    
+            var circle_marker_a4933d1790504531fd8c5380bbc5a836 = L.circleMarker(
+                [32.3182, -86.9023],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_2826cebfd3ef4f8671b38ed5af66ed6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8839a1b29c3fb7769ed33efbcfbce01e = $(`<div id="html_8839a1b29c3fb7769ed33efbcfbce01e" style="width: 100.0%; height: 100.0%;">Alabama: 89 purchases</div>`)[0];
+                popup_2826cebfd3ef4f8671b38ed5af66ed6d.setContent(html_8839a1b29c3fb7769ed33efbcfbce01e);
+            
+        
+
+        circle_marker_a4933d1790504531fd8c5380bbc5a836.bindPopup(popup_2826cebfd3ef4f8671b38ed5af66ed6d)
+        ;
+
+        
+    
+    
+            var circle_marker_d470c78d65b17e624f1354a0283919c9 = L.circleMarker(
+                [46.7296, -94.6859],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_7e1284104d2ba7fec9d1c2526b9ec7cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1711328e6e44c4fc3670d7db44823ef3 = $(`<div id="html_1711328e6e44c4fc3670d7db44823ef3" style="width: 100.0%; height: 100.0%;">Minnesota: 88 purchases</div>`)[0];
+                popup_7e1284104d2ba7fec9d1c2526b9ec7cf.setContent(html_1711328e6e44c4fc3670d7db44823ef3);
+            
+        
+
+        circle_marker_d470c78d65b17e624f1354a0283919c9.bindPopup(popup_7e1284104d2ba7fec9d1c2526b9ec7cf)
+        ;
+
+        
+    
+    
+            var circle_marker_4c70ea0c78b4f9dec37bc3f5d2536b37 = L.circleMarker(
+                [41.4925, -99.9018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_3519dc209618e88af21b94391a202785 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c817822c719b5830af99e0fdbf133ff = $(`<div id="html_9c817822c719b5830af99e0fdbf133ff" style="width: 100.0%; height: 100.0%;">Nebraska: 87 purchases</div>`)[0];
+                popup_3519dc209618e88af21b94391a202785.setContent(html_9c817822c719b5830af99e0fdbf133ff);
+            
+        
+
+        circle_marker_4c70ea0c78b4f9dec37bc3f5d2536b37.bindPopup(popup_3519dc209618e88af21b94391a202785)
+        ;
+
+        
+    
+    
+            var circle_marker_e7306d45803bfeddf5651037a7a52aaa = L.circleMarker(
+                [43.2994, -74.2179],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_03475e09145461d2bbf2b5455dd7ff9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea361b4f541b96bba0399c75bc0b4d45 = $(`<div id="html_ea361b4f541b96bba0399c75bc0b4d45" style="width: 100.0%; height: 100.0%;">New York: 87 purchases</div>`)[0];
+                popup_03475e09145461d2bbf2b5455dd7ff9e.setContent(html_ea361b4f541b96bba0399c75bc0b4d45);
+            
+        
+
+        circle_marker_e7306d45803bfeddf5651037a7a52aaa.bindPopup(popup_03475e09145461d2bbf2b5455dd7ff9e)
+        ;
+
+        
+    
+    
+            var circle_marker_aee294e58b927016d19eb41a236ed063 = L.circleMarker(
+                [38.8026, -116.4194],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_a7983b0a356d27684c9d27fd52e1f336 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_019521b91314ef5418ae23ff5fa9a706 = $(`<div id="html_019521b91314ef5418ae23ff5fa9a706" style="width: 100.0%; height: 100.0%;">Nevada: 87 purchases</div>`)[0];
+                popup_a7983b0a356d27684c9d27fd52e1f336.setContent(html_019521b91314ef5418ae23ff5fa9a706);
+            
+        
+
+        circle_marker_aee294e58b927016d19eb41a236ed063.bindPopup(popup_a7983b0a356d27684c9d27fd52e1f336)
+        ;
+
+        
+    
+    
+            var circle_marker_ecc7bba3c2389d0522670b8846427c66 = L.circleMarker(
+                [39.0458, -76.6413],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_90245be725911897f2e21eda4633c721 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad2e1f60e4f7789ecdd20a67f0af54aa = $(`<div id="html_ad2e1f60e4f7789ecdd20a67f0af54aa" style="width: 100.0%; height: 100.0%;">Maryland: 86 purchases</div>`)[0];
+                popup_90245be725911897f2e21eda4633c721.setContent(html_ad2e1f60e4f7789ecdd20a67f0af54aa);
+            
+        
+
+        circle_marker_ecc7bba3c2389d0522670b8846427c66.bindPopup(popup_90245be725911897f2e21eda4633c721)
+        ;
+
+        
+    
+    
+            var circle_marker_1d6359ff7acb5dfa3ffb74db6314461d = L.circleMarker(
+                [38.9108, -75.5277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_5c216d95b14949eca8965e067a3497fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8790f8422a57cd6495655f00d4c57185 = $(`<div id="html_8790f8422a57cd6495655f00d4c57185" style="width: 100.0%; height: 100.0%;">Delaware: 86 purchases</div>`)[0];
+                popup_5c216d95b14949eca8965e067a3497fa.setContent(html_8790f8422a57cd6495655f00d4c57185);
+            
+        
+
+        circle_marker_1d6359ff7acb5dfa3ffb74db6314461d.bindPopup(popup_5c216d95b14949eca8965e067a3497fa)
+        ;
+
+        
+    
+    
+            var circle_marker_94072e3fd478e3d3699c2cc6f8e64877 = L.circleMarker(
+                [44.5588, -72.5778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_040d901ac63be6340d844e48fe5d66a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e1f85b6a1237ed624d435af060e5078 = $(`<div id="html_3e1f85b6a1237ed624d435af060e5078" style="width: 100.0%; height: 100.0%;">Vermont: 85 purchases</div>`)[0];
+                popup_040d901ac63be6340d844e48fe5d66a4.setContent(html_3e1f85b6a1237ed624d435af060e5078);
+            
+        
+
+        circle_marker_94072e3fd478e3d3699c2cc6f8e64877.bindPopup(popup_040d901ac63be6340d844e48fe5d66a4)
+        ;
+
+        
+    
+    
+            var circle_marker_bbd064765071129af1b0b45460c4a3ea = L.circleMarker(
+                [30.9843, -91.9623],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_615637e176eaf90ef08a8969e9d82867 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26caeb157567d327b7458136e77763fe = $(`<div id="html_26caeb157567d327b7458136e77763fe" style="width: 100.0%; height: 100.0%;">Louisiana: 84 purchases</div>`)[0];
+                popup_615637e176eaf90ef08a8969e9d82867.setContent(html_26caeb157567d327b7458136e77763fe);
+            
+        
+
+        circle_marker_bbd064765071129af1b0b45460c4a3ea.bindPopup(popup_615637e176eaf90ef08a8969e9d82867)
+        ;
+
+        
+    
+    
+            var circle_marker_240a3ca389b075a3356c7ef5c1095e05 = L.circleMarker(
+                [47.5515, -101.002],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_11381a0ae6bc636f69412719321b1fd7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02ea1ddc02e4bee2e40031beb2a04b85 = $(`<div id="html_02ea1ddc02e4bee2e40031beb2a04b85" style="width: 100.0%; height: 100.0%;">North Dakota: 83 purchases</div>`)[0];
+                popup_11381a0ae6bc636f69412719321b1fd7.setContent(html_02ea1ddc02e4bee2e40031beb2a04b85);
+            
+        
+
+        circle_marker_240a3ca389b075a3356c7ef5c1095e05.bindPopup(popup_11381a0ae6bc636f69412719321b1fd7)
+        ;
+
+        
+    
+    
+            var circle_marker_e752bc5542893b39b370c4690fefc459 = L.circleMarker(
+                [37.9643, -91.8318],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_92cbb74974353de431a055b66f698e18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd8254355356f432f660113a151b7463 = $(`<div id="html_dd8254355356f432f660113a151b7463" style="width: 100.0%; height: 100.0%;">Missouri: 81 purchases</div>`)[0];
+                popup_92cbb74974353de431a055b66f698e18.setContent(html_dd8254355356f432f660113a151b7463);
+            
+        
+
+        circle_marker_e752bc5542893b39b370c4690fefc459.bindPopup(popup_92cbb74974353de431a055b66f698e18)
+        ;
+
+        
+    
+    
+            var circle_marker_f6dad42500e78c063c17b6496a4fc5c2 = L.circleMarker(
+                [38.5976, -80.4549],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_39458c1c94abdeef268f5f6e7c797b57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_348f9d5cca39d8f36f02a6444006964e = $(`<div id="html_348f9d5cca39d8f36f02a6444006964e" style="width: 100.0%; height: 100.0%;">West Virginia: 81 purchases</div>`)[0];
+                popup_39458c1c94abdeef268f5f6e7c797b57.setContent(html_348f9d5cca39d8f36f02a6444006964e);
+            
+        
+
+        circle_marker_f6dad42500e78c063c17b6496a4fc5c2.bindPopup(popup_39458c1c94abdeef268f5f6e7c797b57)
+        ;
+
+        
+    
+    
+            var circle_marker_fcd49cb3be210c15b7ad5069b0b7f139 = L.circleMarker(
+                [34.5199, -105.8701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_c5afa9d97509d7068cfd6fdc36fdabf1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94fd8cba625978843d6ee856d3b7c90f = $(`<div id="html_94fd8cba625978843d6ee856d3b7c90f" style="width: 100.0%; height: 100.0%;">New Mexico: 81 purchases</div>`)[0];
+                popup_c5afa9d97509d7068cfd6fdc36fdabf1.setContent(html_94fd8cba625978843d6ee856d3b7c90f);
+            
+        
+
+        circle_marker_fcd49cb3be210c15b7ad5069b0b7f139.bindPopup(popup_c5afa9d97509d7068cfd6fdc36fdabf1)
+        ;
+
+        
+    
+    
+            var circle_marker_8269b1fe867fca5f6c76c4532118d429 = L.circleMarker(
+                [32.3547, -89.3985],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_db64ea7c8d5d7221975250afa180caaf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f02f601983242baea03ef00952d18d7b = $(`<div id="html_f02f601983242baea03ef00952d18d7b" style="width: 100.0%; height: 100.0%;">Mississippi: 80 purchases</div>`)[0];
+                popup_db64ea7c8d5d7221975250afa180caaf.setContent(html_f02f601983242baea03ef00952d18d7b);
+            
+        
+
+        circle_marker_8269b1fe867fca5f6c76c4532118d429.bindPopup(popup_db64ea7c8d5d7221975250afa180caaf)
+        ;
+
+        
+    
+    
+            var circle_marker_e2b8a6cea3e69bda8ff93f939fa448fd = L.circleMarker(
+                [40.2672, -86.1349],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_c4f4b98c72de3c2da2cf5780fc6689fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c6b10b542eafa884cf45e79e2d3306d = $(`<div id="html_6c6b10b542eafa884cf45e79e2d3306d" style="width: 100.0%; height: 100.0%;">Indiana: 79 purchases</div>`)[0];
+                popup_c4f4b98c72de3c2da2cf5780fc6689fc.setContent(html_6c6b10b542eafa884cf45e79e2d3306d);
+            
+        
+
+        circle_marker_e2b8a6cea3e69bda8ff93f939fa448fd.bindPopup(popup_c4f4b98c72de3c2da2cf5780fc6689fc)
+        ;
+
+        
+    
+    
+            var circle_marker_fa595757771174ecaff37085a4beeb7e = L.circleMarker(
+                [32.1656, -82.9001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_a671a2ef3029ca9a68c9db612f1d2505 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d34635fa367fb5f0c3ce422984f718b = $(`<div id="html_7d34635fa367fb5f0c3ce422984f718b" style="width: 100.0%; height: 100.0%;">Georgia: 79 purchases</div>`)[0];
+                popup_a671a2ef3029ca9a68c9db612f1d2505.setContent(html_7d34635fa367fb5f0c3ce422984f718b);
+            
+        
+
+        circle_marker_fa595757771174ecaff37085a4beeb7e.bindPopup(popup_a671a2ef3029ca9a68c9db612f1d2505)
+        ;
+
+        
+    
+    
+            var circle_marker_1be5217c13a415851fd1729c995ff4b0 = L.circleMarker(
+                [37.8393, -84.27],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_1c399c80c59dbad3713a4aac232e2be8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4862468ab9be68086d64619096e5f62 = $(`<div id="html_c4862468ab9be68086d64619096e5f62" style="width: 100.0%; height: 100.0%;">Kentucky: 79 purchases</div>`)[0];
+                popup_1c399c80c59dbad3713a4aac232e2be8.setContent(html_c4862468ab9be68086d64619096e5f62);
+            
+        
+
+        circle_marker_1be5217c13a415851fd1729c995ff4b0.bindPopup(popup_1c399c80c59dbad3713a4aac232e2be8)
+        ;
+
+        
+    
+    
+            var circle_marker_2aa1d3fba86dcaf885f47ea452eaff6e = L.circleMarker(
+                [35.201, -91.8318],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_0d1889438fd95825055f82e50729ea80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_854c83d5270e16342e2763857483609f = $(`<div id="html_854c83d5270e16342e2763857483609f" style="width: 100.0%; height: 100.0%;">Arkansas: 79 purchases</div>`)[0];
+                popup_0d1889438fd95825055f82e50729ea80.setContent(html_854c83d5270e16342e2763857483609f);
+            
+        
+
+        circle_marker_2aa1d3fba86dcaf885f47ea452eaff6e.bindPopup(popup_0d1889438fd95825055f82e50729ea80)
+        ;
+
+        
+    
+    
+            var circle_marker_a47a09f9ad8bb65cfaf0efa0cfc93d98 = L.circleMarker(
+                [35.7596, -79.0193],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_7a6dc8841a1036fca467b4fdee33f81f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5433151f7981ebdc300dec175295743b = $(`<div id="html_5433151f7981ebdc300dec175295743b" style="width: 100.0%; height: 100.0%;">North Carolina: 78 purchases</div>`)[0];
+                popup_7a6dc8841a1036fca467b4fdee33f81f.setContent(html_5433151f7981ebdc300dec175295743b);
+            
+        
+
+        circle_marker_a47a09f9ad8bb65cfaf0efa0cfc93d98.bindPopup(popup_7a6dc8841a1036fca467b4fdee33f81f)
+        ;
+
+        
+    
+    
+            var circle_marker_5eb76426bc30d3711bcffaedc3a02080 = L.circleMarker(
+                [41.6032, -73.0877],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_78bbab640b86425d64e45b1f5655221c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abaa7af54c72b0b0cd5fe5205befe462 = $(`<div id="html_abaa7af54c72b0b0cd5fe5205befe462" style="width: 100.0%; height: 100.0%;">Connecticut: 78 purchases</div>`)[0];
+                popup_78bbab640b86425d64e45b1f5655221c.setContent(html_abaa7af54c72b0b0cd5fe5205befe462);
+            
+        
+
+        circle_marker_5eb76426bc30d3711bcffaedc3a02080.bindPopup(popup_78bbab640b86425d64e45b1f5655221c)
+        ;
+
+        
+    
+    
+            var circle_marker_b574323dc3bf1384724a59773c130b93 = L.circleMarker(
+                [37.4316, -78.6569],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_b6d01e83997ec6cc7f60d539aa05bee6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2f976ff9cdb5494a1a5cdef588afc94 = $(`<div id="html_d2f976ff9cdb5494a1a5cdef588afc94" style="width: 100.0%; height: 100.0%;">Virginia: 77 purchases</div>`)[0];
+                popup_b6d01e83997ec6cc7f60d539aa05bee6.setContent(html_d2f976ff9cdb5494a1a5cdef588afc94);
+            
+        
+
+        circle_marker_b574323dc3bf1384724a59773c130b93.bindPopup(popup_b6d01e83997ec6cc7f60d539aa05bee6)
+        ;
+
+        
+    
+    
+            var circle_marker_1bca9c79d8f7a53828adb78725c4e93a = L.circleMarker(
+                [40.4173, -82.9071],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_838b47beb1440229549ed349a77f5f4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ba0b533de0d72f4b73f9ebf5f416e79 = $(`<div id="html_5ba0b533de0d72f4b73f9ebf5f416e79" style="width: 100.0%; height: 100.0%;">Ohio: 77 purchases</div>`)[0];
+                popup_838b47beb1440229549ed349a77f5f4d.setContent(html_5ba0b533de0d72f4b73f9ebf5f416e79);
+            
+        
+
+        circle_marker_1bca9c79d8f7a53828adb78725c4e93a.bindPopup(popup_838b47beb1440229549ed349a77f5f4d)
+        ;
+
+        
+    
+    
+            var circle_marker_9a9b807211f3442f7107cd7732350f0b = L.circleMarker(
+                [35.5175, -86.5804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_5dfcc43640477b3cd2079890ad16f7b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85f19c9cf550ff9e2bdb8b9f6c272abf = $(`<div id="html_85f19c9cf550ff9e2bdb8b9f6c272abf" style="width: 100.0%; height: 100.0%;">Tennessee: 77 purchases</div>`)[0];
+                popup_5dfcc43640477b3cd2079890ad16f7b5.setContent(html_85f19c9cf550ff9e2bdb8b9f6c272abf);
+            
+        
+
+        circle_marker_9a9b807211f3442f7107cd7732350f0b.bindPopup(popup_5dfcc43640477b3cd2079890ad16f7b5)
+        ;
+
+        
+    
+    
+            var circle_marker_2492e73dd6b4dff5f243be953c24c222 = L.circleMarker(
+                [31.9686, -99.9018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_653d1a20b0dceeae5d8a6c069c74fea7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dad421439349ecad9860f73db1e0dcd0 = $(`<div id="html_dad421439349ecad9860f73db1e0dcd0" style="width: 100.0%; height: 100.0%;">Texas: 77 purchases</div>`)[0];
+                popup_653d1a20b0dceeae5d8a6c069c74fea7.setContent(html_dad421439349ecad9860f73db1e0dcd0);
+            
+        
+
+        circle_marker_2492e73dd6b4dff5f243be953c24c222.bindPopup(popup_653d1a20b0dceeae5d8a6c069c74fea7)
+        ;
+
+        
+    
+    
+            var circle_marker_0d7b437ab10807728ec86be50e3b8c29 = L.circleMarker(
+                [45.2538, -69.4455],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_cac1340dbfb2afd609a136f7f71ec7f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25525baa86eb8bb2dabca822b5a41646 = $(`<div id="html_25525baa86eb8bb2dabca822b5a41646" style="width: 100.0%; height: 100.0%;">Maine: 77 purchases</div>`)[0];
+                popup_cac1340dbfb2afd609a136f7f71ec7f7.setContent(html_25525baa86eb8bb2dabca822b5a41646);
+            
+        
+
+        circle_marker_0d7b437ab10807728ec86be50e3b8c29.bindPopup(popup_cac1340dbfb2afd609a136f7f71ec7f7)
+        ;
+
+        
+    
+    
+            var circle_marker_3157469b823ed7a4b17f75875b9c55f9 = L.circleMarker(
+                [33.8361, -81.1637],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_8aa9b1e9eb78951f6c4941f49d01bf2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcf9fbe5df67fa0f6d2cfff7c3a120b9 = $(`<div id="html_dcf9fbe5df67fa0f6d2cfff7c3a120b9" style="width: 100.0%; height: 100.0%;">South Carolina: 76 purchases</div>`)[0];
+                popup_8aa9b1e9eb78951f6c4941f49d01bf2e.setContent(html_dcf9fbe5df67fa0f6d2cfff7c3a120b9);
+            
+        
+
+        circle_marker_3157469b823ed7a4b17f75875b9c55f9.bindPopup(popup_8aa9b1e9eb78951f6c4941f49d01bf2e)
+        ;
+
+        
+    
+    
+            var circle_marker_cfbecba2229b21d2c9b7d937f4895626 = L.circleMarker(
+                [39.5501, -105.7821],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_6baf420f2f056440741f8725b167a05a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a674282946c6ea011800ee7d5496fa6 = $(`<div id="html_2a674282946c6ea011800ee7d5496fa6" style="width: 100.0%; height: 100.0%;">Colorado: 75 purchases</div>`)[0];
+                popup_6baf420f2f056440741f8725b167a05a.setContent(html_2a674282946c6ea011800ee7d5496fa6);
+            
+        
+
+        circle_marker_cfbecba2229b21d2c9b7d937f4895626.bindPopup(popup_6baf420f2f056440741f8725b167a05a)
+        ;
+
+        
+    
+    
+            var circle_marker_84d3fa84e8e1437a329eb6a3c454c32c = L.circleMarker(
+                [35.0078, -97.0929],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_7fccb6da025b80c0405285ed4b7334f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dab7bc8f083b9958d1ddd805c05d2eca = $(`<div id="html_dab7bc8f083b9958d1ddd805c05d2eca" style="width: 100.0%; height: 100.0%;">Oklahoma: 75 purchases</div>`)[0];
+                popup_7fccb6da025b80c0405285ed4b7334f2.setContent(html_dab7bc8f083b9958d1ddd805c05d2eca);
+            
+        
+
+        circle_marker_84d3fa84e8e1437a329eb6a3c454c32c.bindPopup(popup_7fccb6da025b80c0405285ed4b7334f2)
+        ;
+
+        
+    
+    
+            var circle_marker_82d5030b0d5bab9cdd863faa8bba4626 = L.circleMarker(
+                [43.7844, -88.7879],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_6486e9278ad97a15adb4a69b41270026 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_693c9f3c93a15bdc1378e2ade8df3a34 = $(`<div id="html_693c9f3c93a15bdc1378e2ade8df3a34" style="width: 100.0%; height: 100.0%;">Wisconsin: 75 purchases</div>`)[0];
+                popup_6486e9278ad97a15adb4a69b41270026.setContent(html_693c9f3c93a15bdc1378e2ade8df3a34);
+            
+        
+
+        circle_marker_82d5030b0d5bab9cdd863faa8bba4626.bindPopup(popup_6486e9278ad97a15adb4a69b41270026)
+        ;
+
+        
+    
+    
+            var circle_marker_02ddd2230fb5664c03c11630d0fd82e9 = L.circleMarker(
+                [43.8041, -120.5542],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_e3a3e200475bd17cb0dc27bff0e81560 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6362b62419fe855eb0ae18904f5303c9 = $(`<div id="html_6362b62419fe855eb0ae18904f5303c9" style="width: 100.0%; height: 100.0%;">Oregon: 74 purchases</div>`)[0];
+                popup_e3a3e200475bd17cb0dc27bff0e81560.setContent(html_6362b62419fe855eb0ae18904f5303c9);
+            
+        
+
+        circle_marker_02ddd2230fb5664c03c11630d0fd82e9.bindPopup(popup_e3a3e200475bd17cb0dc27bff0e81560)
+        ;
+
+        
+    
+    
+            var circle_marker_9b52ef2f5681d9e973838c26b44c0162 = L.circleMarker(
+                [41.2033, -77.1945],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_16029f018d65a6a9f7bae165bfccd490 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8660ab9b86f624458a765b91fa051ca9 = $(`<div id="html_8660ab9b86f624458a765b91fa051ca9" style="width: 100.0%; height: 100.0%;">Pennsylvania: 74 purchases</div>`)[0];
+                popup_16029f018d65a6a9f7bae165bfccd490.setContent(html_8660ab9b86f624458a765b91fa051ca9);
+            
+        
+
+        circle_marker_9b52ef2f5681d9e973838c26b44c0162.bindPopup(popup_16029f018d65a6a9f7bae165bfccd490)
+        ;
+
+        
+    
+    
+            var circle_marker_e1c6d55106f248b7de9ff2ba881d6fd5 = L.circleMarker(
+                [47.7511, -120.7401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_0021765d7207080923c8356c9a8f7a5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_909967f29e369fbe5f0390bfc18be3c0 = $(`<div id="html_909967f29e369fbe5f0390bfc18be3c0" style="width: 100.0%; height: 100.0%;">Washington: 73 purchases</div>`)[0];
+                popup_0021765d7207080923c8356c9a8f7a5e.setContent(html_909967f29e369fbe5f0390bfc18be3c0);
+            
+        
+
+        circle_marker_e1c6d55106f248b7de9ff2ba881d6fd5.bindPopup(popup_0021765d7207080923c8356c9a8f7a5e)
+        ;
+
+        
+    
+    
+            var circle_marker_d3994a2c40f5c3af2c5f39d759fcfb73 = L.circleMarker(
+                [44.3148, -85.6024],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_43bd28613b5b7654207e1b294bf0517d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fae5699288ac1c454410f1f967e147c = $(`<div id="html_4fae5699288ac1c454410f1f967e147c" style="width: 100.0%; height: 100.0%;">Michigan: 73 purchases</div>`)[0];
+                popup_43bd28613b5b7654207e1b294bf0517d.setContent(html_4fae5699288ac1c454410f1f967e147c);
+            
+        
+
+        circle_marker_d3994a2c40f5c3af2c5f39d759fcfb73.bindPopup(popup_43bd28613b5b7654207e1b294bf0517d)
+        ;
+
+        
+    
+    
+            var circle_marker_51abc23d6fbc2ff393ef1a236bcc9ca8 = L.circleMarker(
+                [64.2008, -149.4937],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_3f107b65e70136b2de09811bcd469697 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e08347795a56b94600753b111dd9b65 = $(`<div id="html_3e08347795a56b94600753b111dd9b65" style="width: 100.0%; height: 100.0%;">Alaska: 72 purchases</div>`)[0];
+                popup_3f107b65e70136b2de09811bcd469697.setContent(html_3e08347795a56b94600753b111dd9b65);
+            
+        
+
+        circle_marker_51abc23d6fbc2ff393ef1a236bcc9ca8.bindPopup(popup_3f107b65e70136b2de09811bcd469697)
+        ;
+
+        
+    
+    
+            var circle_marker_2f37a766391f1fe6f71564201fd1397e = L.circleMarker(
+                [42.4072, -71.3824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_a01f92440ee77fc2c2d3268c99be93f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_017eea0af49ba4cc673f9c8c212dd7d8 = $(`<div id="html_017eea0af49ba4cc673f9c8c212dd7d8" style="width: 100.0%; height: 100.0%;">Massachusetts: 72 purchases</div>`)[0];
+                popup_a01f92440ee77fc2c2d3268c99be93f7.setContent(html_017eea0af49ba4cc673f9c8c212dd7d8);
+            
+        
+
+        circle_marker_2f37a766391f1fe6f71564201fd1397e.bindPopup(popup_a01f92440ee77fc2c2d3268c99be93f7)
+        ;
+
+        
+    
+    
+            var circle_marker_ae395009cd36f2cb59dc535b4cd9b1fe = L.circleMarker(
+                [43.0759, -107.2903],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_848cd80b41ed628a921b8b58f2af59aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84f547cfceec04e61bc040f9ae90fef6 = $(`<div id="html_84f547cfceec04e61bc040f9ae90fef6" style="width: 100.0%; height: 100.0%;">Wyoming: 71 purchases</div>`)[0];
+                popup_848cd80b41ed628a921b8b58f2af59aa.setContent(html_84f547cfceec04e61bc040f9ae90fef6);
+            
+        
+
+        circle_marker_ae395009cd36f2cb59dc535b4cd9b1fe.bindPopup(popup_848cd80b41ed628a921b8b58f2af59aa)
+        ;
+
+        
+    
+    
+            var circle_marker_7bf0f474a3c778f4c4d6f9760a99afee = L.circleMarker(
+                [39.321, -111.0937],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_5346d71e6dc6dca5391a5145b113a441 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_378c24516dfc2386e4f571cba67795d9 = $(`<div id="html_378c24516dfc2386e4f571cba67795d9" style="width: 100.0%; height: 100.0%;">Utah: 71 purchases</div>`)[0];
+                popup_5346d71e6dc6dca5391a5145b113a441.setContent(html_378c24516dfc2386e4f571cba67795d9);
+            
+        
+
+        circle_marker_7bf0f474a3c778f4c4d6f9760a99afee.bindPopup(popup_5346d71e6dc6dca5391a5145b113a441)
+        ;
+
+        
+    
+    
+            var circle_marker_8923d1640b3e5bd72bc3f3cf7dd10532 = L.circleMarker(
+                [43.1939, -71.5724],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_ebbd4dcfc80df1b639169312b7a52223 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d344ab9a263024aaf1c6d9fd211d631 = $(`<div id="html_6d344ab9a263024aaf1c6d9fd211d631" style="width: 100.0%; height: 100.0%;">New Hampshire: 71 purchases</div>`)[0];
+                popup_ebbd4dcfc80df1b639169312b7a52223.setContent(html_6d344ab9a263024aaf1c6d9fd211d631);
+            
+        
+
+        circle_marker_8923d1640b3e5bd72bc3f3cf7dd10532.bindPopup(popup_ebbd4dcfc80df1b639169312b7a52223)
+        ;
+
+        
+    
+    
+            var circle_marker_344f73766d5423a7b93ba7858f3eda8d = L.circleMarker(
+                [43.9695, -99.9018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_845ce919d1409ca110670ebab4909023 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af8da5b6b7c2f5e5a0cbbfdd32679378 = $(`<div id="html_af8da5b6b7c2f5e5a0cbbfdd32679378" style="width: 100.0%; height: 100.0%;">South Dakota: 70 purchases</div>`)[0];
+                popup_845ce919d1409ca110670ebab4909023.setContent(html_af8da5b6b7c2f5e5a0cbbfdd32679378);
+            
+        
+
+        circle_marker_344f73766d5423a7b93ba7858f3eda8d.bindPopup(popup_845ce919d1409ca110670ebab4909023)
+        ;
+
+        
+    
+    
+            var circle_marker_5849a53a77833fbccabfb3c4629316ae = L.circleMarker(
+                [41.878, -93.0977],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_e5c2f555e131dc609b22fe94d5eec0aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b749b1f5acf89fbbd7d97650737e3ccd = $(`<div id="html_b749b1f5acf89fbbd7d97650737e3ccd" style="width: 100.0%; height: 100.0%;">Iowa: 69 purchases</div>`)[0];
+                popup_e5c2f555e131dc609b22fe94d5eec0aa.setContent(html_b749b1f5acf89fbbd7d97650737e3ccd);
+            
+        
+
+        circle_marker_5849a53a77833fbccabfb3c4629316ae.bindPopup(popup_e5c2f555e131dc609b22fe94d5eec0aa)
+        ;
+
+        
+    
+    
+            var circle_marker_ace964ae12a1fe26d3c7cdd4fa10d3dc = L.circleMarker(
+                [27.9944, -81.7603],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_ab994943e5ac9a6855a2699b4dfa994d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20e92cae56bec06b4381b8354e9702d9 = $(`<div id="html_20e92cae56bec06b4381b8354e9702d9" style="width: 100.0%; height: 100.0%;">Florida: 68 purchases</div>`)[0];
+                popup_ab994943e5ac9a6855a2699b4dfa994d.setContent(html_20e92cae56bec06b4381b8354e9702d9);
+            
+        
+
+        circle_marker_ace964ae12a1fe26d3c7cdd4fa10d3dc.bindPopup(popup_ab994943e5ac9a6855a2699b4dfa994d)
+        ;
+
+        
+    
+    
+            var circle_marker_0911ac483b05f329b594cfae2ba85544 = L.circleMarker(
+                [40.0583, -74.4057],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_cd1568e30d73550e278e242c24a7c2a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11227e90626b16d4c31dc0d45bbb72ea = $(`<div id="html_11227e90626b16d4c31dc0d45bbb72ea" style="width: 100.0%; height: 100.0%;">New Jersey: 67 purchases</div>`)[0];
+                popup_cd1568e30d73550e278e242c24a7c2a5.setContent(html_11227e90626b16d4c31dc0d45bbb72ea);
+            
+        
+
+        circle_marker_0911ac483b05f329b594cfae2ba85544.bindPopup(popup_cd1568e30d73550e278e242c24a7c2a5)
+        ;
+
+        
+    
+    
+            var circle_marker_7f8ee91cb9b3a915792e7b9c8024c08a = L.circleMarker(
+                [19.8968, -155.5828],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_eca11e8a9f608d5d1a0b6664bae6c634 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f90a03eb89a1db16864a14272b897e1 = $(`<div id="html_6f90a03eb89a1db16864a14272b897e1" style="width: 100.0%; height: 100.0%;">Hawaii: 65 purchases</div>`)[0];
+                popup_eca11e8a9f608d5d1a0b6664bae6c634.setContent(html_6f90a03eb89a1db16864a14272b897e1);
+            
+        
+
+        circle_marker_7f8ee91cb9b3a915792e7b9c8024c08a.bindPopup(popup_eca11e8a9f608d5d1a0b6664bae6c634)
+        ;
+
+        
+    
+    
+            var circle_marker_7f81c1740a94b2cf9ef9a500713ec6d4 = L.circleMarker(
+                [34.0489, -111.0937],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_2e79df421bbfdbef48945f4aaeeaa2e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1365104f125bda13b8ee0935d887bc9f = $(`<div id="html_1365104f125bda13b8ee0935d887bc9f" style="width: 100.0%; height: 100.0%;">Arizona: 65 purchases</div>`)[0];
+                popup_2e79df421bbfdbef48945f4aaeeaa2e4.setContent(html_1365104f125bda13b8ee0935d887bc9f);
+            
+        
+
+        circle_marker_7f81c1740a94b2cf9ef9a500713ec6d4.bindPopup(popup_2e79df421bbfdbef48945f4aaeeaa2e4)
+        ;
+
+        
+    
+    
+            var circle_marker_36852d05437ee313c0398e5d7e5d8b2f = L.circleMarker(
+                [39.0119, -98.4842],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_0c8f562e84cb69a79aea369d1f7972dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc566370996c52c225dac8c238e4ba1d = $(`<div id="html_cc566370996c52c225dac8c238e4ba1d" style="width: 100.0%; height: 100.0%;">Kansas: 63 purchases</div>`)[0];
+                popup_0c8f562e84cb69a79aea369d1f7972dc.setContent(html_cc566370996c52c225dac8c238e4ba1d);
+            
+        
+
+        circle_marker_36852d05437ee313c0398e5d7e5d8b2f.bindPopup(popup_0c8f562e84cb69a79aea369d1f7972dc)
+        ;
+
+        
+    
+    
+            var circle_marker_d43989713ea45fda5fb116c87a77f983 = L.circleMarker(
+                [41.5801, -71.4774],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3e09e0a243a07f7597b825620725454c);
+        
+    
+        var popup_8ecc769e9aee841152c701b7d1f51e02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfcd8d6453a7070fde5292275d96854f = $(`<div id="html_bfcd8d6453a7070fde5292275d96854f" style="width: 100.0%; height: 100.0%;">Rhode Island: 63 purchases</div>`)[0];
+                popup_8ecc769e9aee841152c701b7d1f51e02.setContent(html_bfcd8d6453a7070fde5292275d96854f);
+            
+        
+
+        circle_marker_d43989713ea45fda5fb116c87a77f983.bindPopup(popup_8ecc769e9aee841152c701b7d1f51e02)
+        ;
+
+        
+    
+    
+            marker_cluster_3e09e0a243a07f7597b825620725454c.addTo(map_d0f30de00a710f3ccec49cdc4fce4012);
+        
+</script>
+</html>

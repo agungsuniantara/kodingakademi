@@ -45,6 +45,7 @@ public class assignment_oop2 {
         return this.balance;
     }
 
+    @Override
     public String toString() {
         return "Account: id = " + getID() + ", name = " + getName() + ", balance = " + getBalance();
     }
