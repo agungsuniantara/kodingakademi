@@ -11,7 +11,7 @@ int main() {
     cin >> N;
 
     // Alokasi dinamis untuk array 2D
-    int** arr = new int*[M];
+    int** arr = new int*[N];
     
     for (int i = 0; i < M; i++) {
         arr[i] = new int[N];
@@ -25,12 +25,20 @@ int main() {
         }
     }
 
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
     // Menghapus memori yang dialokasikan secara dinamis
     for (int i = 0; i < M; i++) {
         delete[] arr[i];
     }
 
     delete[] arr;
+
 
     return 0;
 }

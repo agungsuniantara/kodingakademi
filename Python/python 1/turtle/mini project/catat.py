@@ -69,7 +69,6 @@ def check_goal():
         kura.color("white")
         kura.write("you win !")
 
-
 screen.onkey(move_up, "Up")
 screen.onkey(move_left, "Left")
 screen.onkey(move_right, "Right")
