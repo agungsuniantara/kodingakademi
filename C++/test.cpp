@@ -3,14 +3,21 @@
 using namespace std;
 
 int main(){
-    int n;
-    cout << "masukan n :";
-    cin >> n;
+    float tinggi, weight, score;
 
-    int hasil = 2;
+    cout << "tinggi : ";
+    cin >> tinggi;
+    cout << "berat : ";
+    cin >> weight;
 
-    for (int i = 1; i < n; i++){
-        hasil *= 2;
+    score = weight / tinggi;
+    if (score < 18.5){
+        cout << "kurus";
     }
-    cout << hasil;
+    else if (score >= 18.5 && score <= 25){
+        cout << "Normal";
+    }
+    else if (score > 25){
+        cout << "Kelebihan berat badan";
+    }
 }

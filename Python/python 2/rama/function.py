@@ -1,6 +1,9 @@
-def tambah(satu, dua):
-    hasil = satu + dua 
-    return hasil
-    
-result = tambah(10, 20)
-print(result)
+def total(*a):
+    total = sum(a)
+    panjang = len(a)
+    return total, panjang 
+
+hasil,panjang = total(10,20,30,40,50)
+
+rata = (lambda a,b : a / b)(hasil, panjang)
+print(rata)

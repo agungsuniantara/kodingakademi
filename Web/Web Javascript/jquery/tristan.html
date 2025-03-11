@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .item {
+            background-color: rgb(255, 202, 193);
+        }
+    </style>
+</head>
+<body>
+    <button class="tambah">Tambahkan</button>
+    <div class="container">
+        <p class="item">text awal</p>
+    </div>   
+    <script>
+        $(document).ready(function(){
+            $(".tambah").click(function(){
+                $("<p class='item'>Item</p>").appendTo(".container")
+            });
+            $(".item").click(function(){
+                $(this).css(
+                    "background-color", "red"
+                )
+            })
+        });
+    </script>
+</body>
+</html>
