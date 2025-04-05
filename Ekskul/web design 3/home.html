@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-image: url(https://wallpapers.com/images/hd/food-4k-1vrcb0mw76zcg4qf.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .navbar{
+            height: 10vh;
+            background-color:rgba(185, 217, 249, 0.687);
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 0vh 10vh;
+        }
+        .logo{
+            background-image: url(https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg);
+            width: 10vh;
+            height: 10vh;
+            background-size:contain;
+            mix-blend-mode:darken;
+        }
+        .preview{
+            display: flex;
+            gap: 10vh;
+        }
+        .preview a{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            color: white;
+            font-family:cursive;
+            font-size:larger;
+        }
+        .preview a:hover{
+            background-color:rgb(185, 217, 249);
+            border-radius: 1vh;
+        }
+        .submit{
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 10px;
+            padding: 1vh 2vh;
+            border: none;
+            outline: none;
+        }
+        .submit:hover{
+            background-color:rgb(92, 137, 221);
+            cursor: pointer;
+        }
+        .header{
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-header{
+            width: 90%;
+            height: 70%;
+            background-image: url(https://i.etsystatic.com/9684337/r/il/5c0f82/726795730/il_fullxfull.726795730_km9q.jpg);
+            border-radius: 5vh;
+            background-size:contain;
+            background-position: center;
+        }
+        .food{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10vh;
+        }
+        .content-food{
+            width: 90%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10vh;
+        }
+        .item-food{
+            width: 50vh;
+            height: 50vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .picture{
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .picture img{
+            height: 30vh;
+            width: 100%;
+        }
+        .description{
+            text-align: center;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5vh;
+        }
+        .footer{
+            margin-top: 10vh;
+            padding-bottom: 5vh;
+            height: 100%;
+            background-color:rgba(185, 217, 249, 0.925);
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            flex-direction: column;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:large;
+            gap: 3vh;
+        }
+        .footer-logo{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .img-logo{
+            background-image: url(https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg);
+            width: 30vh;
+            height: 30vh;
+            background-size:contain;
+            mix-blend-mode:darken;
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3vh;
+        }
+        .social-link{
+            display: flex;
+            gap: 5vh;
+        }
+        .img-social img{
+            width: 5vh;
+            height: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"></div>
+        <div class="preview">
+            <a href="#header">Header</a>
+            <a href="#food">Content</a>
+            <a href="#footer">About us</a>
+        </div>
+        <div class="button">
+            <a href="login.html"><button class="submit">LOGOUT</button></a>
+        </div>
+    </div>
+
+    <div class="header" id="header">
+        <div class="content-header"></div>
+    </div>
+
+    <div class="food" id="food">
+        <div class="content-food">
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-food">
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+            <div class="item-food">
+                <div class="picture">
+                    <img src="https://asset.kompas.com/crops/VcgvggZKE2VHqIAUp1pyHFXXYCs=/202x66:1000x599/1200x800/data/photo/2023/05/07/6456a450d2edd.jpg" alt="">
+                </div>
+                <div class="description">
+                    <p>Nasi goreng merupakan sajian nasi yang digoreng dalam sebuah wajan atau penggorengan yang menghasilkan cita rasa berbeda karena dicampur dengan bumbu-bumbu seperti garam, bawang putih, bawang merah, merica, rempah-rempah tertentu, saos dan kecap manis. Selain itu, ditambahkan bahan-bahan pelengkap seperti telur, sayur-sayuran, makanan laut, atau daging.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        <div class="footer-logo">
+            <div class="img-logo"></div>
+            <div class="img-description">
+                <p>Cooking adalah website yang berisi kumpulan informasi tentang makanan</p>
+            </div>
+        </div>
+        
+        <div class="social">
+            <div class="social-description">
+                <p>Follow us on social media</p>
+            </div>
+            <div class="social-link">
+                <div class="img-social">
+                    <img src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN" alt="">
+                </div>
+                <div class="img-social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="">
+                </div>
+                <div class="img-social">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/220px-2021_Facebook_icon.svg.png" alt="">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy 2025 Cooking Healthfood</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

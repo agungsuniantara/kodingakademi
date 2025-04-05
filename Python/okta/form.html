@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-bottom: 10px;
+            width: 270px;
+        }
+        .label{
+            text-align: left;
+        }
+        .input{
+            margin-left: 137px; 
+            margin-top: -20px;
+        }
+        .select{
+            margin-left: 123px; 
+            margin-top: -20px;
+        }
+        .radio{
+            margin-left: 55px; 
+            margin-top: -40px;
+        }
+        .checkbox{
+            margin-left: 55px; 
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <p>Novell Services Login</p>
+        <div class="box">
+            <div class="label">
+                <label>Username : </label>
+            </div>
+            <div class="input">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <div class="label">
+                <label>Password : </label>
+            </div>
+            <div class="input">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <div class="label">
+                <label>City of <br> Employment : </label>
+            </div>
+            <div class="input">
+                <input type="text">
+            </div>
+        </div>
+        <div class="box">
+            <div class="label">
+                <label>Web server : </label>
+            </div>
+            <div class="select">
+                <select>
+                    <option>Choose a server</option>
+                </select>
+            </div>
+        </div>
+        <div class="box">
+            <div class="label">
+                <label>Please specify <br> your role : </label>
+            </div>
+            <div class="radio">
+                <input type="radio"> Admin <br>
+                <input type="radio" style="margin-left: 18px;"> Engineer <br>
+                <input type="radio" style="margin-left: 16px;"> Manager <br>
+                <input type="radio" style="margin-left: -5px;"> Guest
+            </div>
+        </div>
+        <div class="box">
+            <div class="label">
+                <label>Single sign-on <br> to the following : </label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" style="margin-left: -12px;"> Mail <br>
+                <input type="checkbox"> Payroll <br>
+                <input type="checkbox" style="margin-left: 32px;"> Self service
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Login">
+            <input type="submit" value="Reset">
+        </div>
+    </center>
+</body>
+</html>

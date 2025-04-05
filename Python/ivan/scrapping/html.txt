@@ -1,0 +1,14 @@
+html_doc = """
+<html>
+<head>
+<title>Contoh script html</title>
+</head>
+<body>
+<h1 id="title"><b>Title 1</b></h1>
+<h1 id="title"><b>Title 2</b></h2>
+<p class="nama1">Agik</p>
+<p class="nama2">Anang</p>
+<p class="nama3">Wahyu</p>
+</body>
+</html>
+"""

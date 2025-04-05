@@ -1,7 +1,26 @@
 <?php
 
+include "koneksi.php";
+
 $email = $_POST["email"];
 $pesan = $_POST["pesan"];
+
+$sql = "insert into contact_form('','$email','$pesan')";
+$query = mysqli_query($koneksi, $sql);
+
+if ($query){
+    echo "
+        <script>
+            alert('berhasil');
+        </script>
+    ";
+}else{
+    echo "
+    <script>
+        alert('gagal');
+    </script>
+";
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 
