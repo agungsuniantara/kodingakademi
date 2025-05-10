@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .table1, .table1 td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px 20px 5px 20px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .kolom{
+            background-color: green;
+        }
+
+        .table2, .table2 th, .table2 td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 5px 20px 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table1">
+        <tr class="kolom">
+            <td>No</td>
+            <td>Nama</td>
+            <td>Alamat</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Buja</td>
+            <td>Denpasar</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Agung</td>
+            <td>Denpasar</td>
+        </tr>
+    </table>
+
+    <table class="table2">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Foto</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Buja</td>
+            <td>Denpasar</td>
+            <td rowspan="2">
+                <i class="fa-solid fa-pen-to-square fa-xl" style="color: #74C0FC;"></i>
+            </td>
+        </tr>
+        <tr>     
+            <td>1</td>
+            <td>Buja</td>
+            <td>Denpasar</td>
+        </tr>
+    </table>
+</body>
+</html>

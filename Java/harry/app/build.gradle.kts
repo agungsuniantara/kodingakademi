@@ -33,3 +33,11 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+sourceSets {
+    main {
+        java {
+            srcDirs("src/main/java")
+        }
+    }
+}

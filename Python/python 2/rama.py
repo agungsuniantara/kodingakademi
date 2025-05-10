@@ -1,16 +1,20 @@
-class orang:
-    nama = "rama"
-    umur = 20
-    
-    def __init__(self, a):
-        self.alamat = a
-    
-    def tampil(self):
-        print(self.nama)
-        print(self.umur)
-        print(self.alamat)
+nama = "dek gus" # str (string = tipe data yang menyimpan karakter)
+angka1 = 10 # int (integer = tipe data yang menyimpan bilangan bulat)
+angka2 = 10.5 # float = tipda data yang menyimpan bilangan desimal
+benar = True # boolean benar
+salah = False # boolean salah
+karakter1 = 'a'
 
-data1 = orang("denpasar")
-data2 = orang("badung")
-data1.tampil()
-data2.tampil()
+print(type(nama))
+print(type(angka1))
+print(type(angka2))
+print(type(benar))
+print(type(salah))
+print(type(karakter1))
+
+angka1 = float(angka1)
+print(angka1)
+print(type(angka1))
+
+nama = "agung"
+print("nama =", nama)

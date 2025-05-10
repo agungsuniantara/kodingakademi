@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #username{
+            border: none;
+            outline: none;
+            padding: 5px;
+            background-color:beige;
+            border-bottom: 1px solid red;
+        }
+        #password{
+            border: none;
+            outline: none;
+            padding: 5px;
+            margin: 0px 0px 0px 4px;
+            background-color:beige;
+            border-bottom: 1px solid red;
+        }
+        #text-area{
+            border: none;
+            outline: none;
+            background-color:beige;
+            border-bottom: 1px solid red;
+            height: 100px;
+            width: 200px;
+            font-size: medium;
+            margin: 10px 0px 0px 0px;
+        }
+        .kotak{
+            margin: 0px 0px 20px 0px;
+        }
+        #form-parent{
+            background-color:beige;
+            padding: 20px 0px 20px 20px;
+            width: 300px;
+            margin: 50px 0px 0px 250px;
+            border-radius: 20px;
+        }
+        #submit{
+            border: none;
+            outline: none;
+            padding: 10px 50px 10px 50px;
+            background-color: cadetblue;
+            color: white;
+            margin: 0px 0px 0px 70px;
+        }
+        body{
+            background-image: url(https://thumbs.dreamstime.com/b/landscape-nature-view-background-view-window-landscape-nature-view-background-view-window-wonderful-landscape-121459679.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <form id="form-parent">
+        <h3 style="text-align: center;">FORM</h3>
+        <div class="kotak">
+            <label for="username">Username : </label>
+            <input type="text" id="username">
+        </div>
+        <div class="kotak">
+            <label for="password">Password : </label>
+            <input type="password" id="password">
+        </div>
+        <div class="kotak">
+            <input type="checkbox" id="pasti"> 
+            <label for="pasti">sudah pasti ?</label>
+        </div>
+        <div class="kotak">
+            <div>
+                <label for="text-area">Text area : </label>
+            </div>
+            <textarea id="text-area"></textarea>
+        </div>
+        <div class="kotak">
+            <input type="radio" id="html">
+            <label for="html">HTML</label>
+            <input type="radio" id="css">
+            <label for="css">CSS</label>
+        </div>
+        <div class="kotak">
+            <select>
+                <option value="red">Red</option>
+                <option value="blue">blue</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+        <div class="kotak">
+            <input type="submit" value="Submit" id="submit">
+        </div>
+    </form>
+</body>
+</html>

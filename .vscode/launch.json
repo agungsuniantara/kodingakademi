@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "assignment",
+      "request": "launch",
+      "mainClass": "position.assignment",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "mangagus",
       "request": "launch",
       "mainClass": "mangagus",

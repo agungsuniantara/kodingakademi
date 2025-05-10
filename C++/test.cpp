@@ -3,21 +3,28 @@
 using namespace std;
 
 int main(){
-    float tinggi, weight, score;
+    // int a = 10;
+    // int *c = &a;
 
-    cout << "tinggi : ";
-    cin >> tinggi;
-    cout << "berat : ";
-    cin >> weight;
+    // cout << "alamat a : " << &a << endl;
+    // cout << "isi c : " << c << endl;
+    // cout << "nilai a : " << *c << endl;
 
-    score = weight / tinggi;
-    if (score < 18.5){
-        cout << "kurus";
+    // *c = 20;
+    // cout << "nilai a : " << a << endl;
+
+
+    int a[2][2] = {
+        {1,2},
+        {3,4}
+    };
+
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 2; j++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
     }
-    else if (score >= 18.5 && score <= 25){
-        cout << "Normal";
-    }
-    else if (score > 25){
-        cout << "Kelebihan berat badan";
-    }
+
+
 }

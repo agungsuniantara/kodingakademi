@@ -6,10 +6,10 @@ public class oop2
 	
 	// constructor tanpa parameter
 	
-	public oop2(){
-		merek = "Unknown";
-		warna = "Putih";
-		tahunProduksi = 2020;
+	public oop2(String a, String b, int c){
+		merek = a;
+		warna = b;
+		tahunProduksi = c;
 	}
 	
 	public void tampilkanInfo(){
@@ -17,12 +17,18 @@ public class oop2
 		System.out.println("Warna : " + warna);
 		System.out.println("Tahun produksi : " + tahunProduksi);
 	}
+
+	public String get_merek(){
+		return merek;
+	}
 	
 	public static void main(String[] args)
 	{
-		oop2 mobil = new oop2();
+		oop2 mobil = new oop2("honda", "merah", 20);
 		System.out.println("informasi mobil 1 : ");
 		mobil.tampilkanInfo();
-		System.out.println();
+
+		String value = mobil.get_merek();
+		System.out.println(value);
 	}
 }

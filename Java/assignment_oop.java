@@ -33,7 +33,6 @@ public class assignment_oop
 	public static void main(String[] args)
 	{
 		assignment_oop data1 = new assignment_oop("agung", 20);
-		assignment_oop data2 = new assignment_oop("wayan", 30);
 		
 		System.out.println(data1.getNama());
 		

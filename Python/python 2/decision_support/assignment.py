@@ -73,12 +73,10 @@ def start_new_diagnosis():
     diagnosis = assess_appearance()
     save_new_diagnosis(name, diagnosis)
 
-
 def tampil_pasien():
     with open("data2.txt", "r") as file:
         data = file.read()
         print(data)
-
 
 def main():
     while True:

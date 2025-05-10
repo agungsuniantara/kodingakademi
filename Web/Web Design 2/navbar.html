@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBox</title>
+</head>
+<style>
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap : 20px;
+    }
+    .kotak1{
+        display : flex;
+        background-color: rgb(37, 36, 36);
+        color: white;
+        justify-content: center;
+        padding : 10px;
+        font-size: xx-large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .kotak2{
+        background-color: rgba(239, 239, 239, 0.968);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin : 0px 20px 0px 20px;
+        padding : 20px 0px 20px 0px;
+        gap : 20px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+        
+    }
+    .kd2{
+        background-color: white;
+        padding : 20px 15px 20px 15px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+        
+    }
+    .text1{
+        font-size: large;
+        text-align: center;
+        margin: 5px 0px 0px 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text2{
+        text-align: center;
+        font-size: x-small;
+        font-family: Arial, Helvetica, sans-serif;
+        margin : 3px 0px 0px 0px;
+    }
+    .gambar1{
+        width : 150px;
+        height : 150px;
+    }
+
+    .navbar {
+        display : flex;
+        background-color: white;
+        margin-bottom : 10px;
+        justify-content: space-evenly;
+    }
+    .logo{
+        display: flex;
+    }
+    .gambar{
+        height: 50px;
+    }
+    .task{
+        display: flex;
+        gap : 60px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tombol{
+        background-color: black;
+        color: white;
+        padding : 5px 15px 5px 15px;
+        border : none;
+        border-radius: 15px;
+    }
+    .footer{
+        display : flex;
+        flex-direction: column;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .footer-konten {
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .footer-bawah{
+        display: flex;
+        justify-content: center;
+    }
+
+    .services-wrapper{
+        position: relative;
+        display: inline-block;
+    }
+
+    .services-dropdown{
+        position: absolute;
+        color: white;
+        display: none;
+        background-color: black;
+        padding: 20px;
+        width: 100px;
+    }
+
+    .services:hover{
+        background-color: antiquewhite;
+        cursor: pointer;
+    }
+
+    .services-wrapper:hover .services-dropdown {
+        display: block;
+    }
+    
+    .services-dropdown p {
+        margin: 20px 0;
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+   
+    <div class = "navbar">
+        <div class = "logo">
+            <img class = "gambar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsLCk8rNByKZe5WuSa6n-nhd-XjKTtA04Ww&s" alt="">
+        </div>
+
+        <div class = "task">
+            <p> Home</p>
+            <p> About</p>
+            <div class="services-wrapper">
+                <div class="services">
+                    <p> Feature</p>
+                </div>
+                <div class="services-dropdown">
+                    <p> Test 1</p>
+                    <p> Tes 2</p>
+                </div>
+            </div>
+
+            <div class="services-wrapper">
+                <div class="services">
+                    <p> Services</p>
+                </div>
+                <div class="services-dropdown">
+                    <p> Maintenance</p>
+                    <p> Buy</p>
+                </div>
+            </div>
+            
+            <p> Contact</p>
+            <p> Articles</p>
+        </div>
+
+        <div class = "login">
+           <button class = "tombol">login</button>
+        </div>
+
+    </div>
+    <div class = "wrapper">
+        <div class="kotak1">
+            <div>
+                <p><b>iPhone Catalog</b></p>
+            </div>
+        </div>
+    
+        <div class = "kotak2">
+            <div class = "kd2"> 
+                <img class = "gambar1" src="https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_14_pro_deep_purple_1.jpg&w=3840&q=45" alt="">
+                <p class = "text1"><b>iPhone 14 Pro</b> </p>
+                <p class = "text2">iPhone 14 Pro.</p>
+            </div>
+    
+            <div class = "kd2"> 
+                <img class = "gambar1" src="https://cdnpro.eraspace.com/media/catalog/product/i/p/iphone_14_blue_1.jpg"alt="">
+                <p class = "text1"><b>iPhone 14</b> </p>
+                <p class = "text2">Penuh Keajaiban</p>
+            </div>
+    
+            <div class = "kd2"> 
+                <img class = "gambar1" src="https://cdnpro.eraspace.com/media/catalog/product/i/p/iphone_13_blue_1.jpg" alt="">
+                <p class = "text1"><b>iPhone 13 Pro</b> </p>
+                <p class = "text2">Ponsel Paling Pro</p>
+            </div>
+    
+        </div>
+
+        <div class="footer">
+            <div class = "footer-konten">
+                <div>
+                    <h5>iBox</h5>
+                    <p>Memberdayakan pengembang melalui <br>pendidikan personal dan layanan profesional</p>
+                </div>
+               
+                <div>
+                <h5>Kursus</h5>
+                <p>JavaScript</p>
+                <p>PHP</p>
+                <p>Java</p>
+                <p>Python</p>
+                </div>
+    
+                <div>
+                    <h5>Layanan</h5>
+                    <p>Les Privat</p>
+                    <p>Pengembangan Web</p>
+                    <p>Review Kode</p>
+                    <p>Konsultasi</p>
+    
+                </div>
+    
+                <div>
+                    <h5>Kontak</h5>
+                    <p>Email: iBox@gmail.com</p>
+                    <p>Telepon: 087 786 865 654</p>
+                    <p>Lokasi: Indonesia</p>
+    
+                </div>
+    
+            </div>
+            
+            <div class = "footer-bawah">
+                <p> 2025 iBox. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
