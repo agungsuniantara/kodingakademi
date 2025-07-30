@@ -19,7 +19,6 @@
         alert ('Login berhasil');
         location.href='home.php';
         </script>";
-
     }else{
         echo "<script>
         alert ('Akun tidak ditemukan');

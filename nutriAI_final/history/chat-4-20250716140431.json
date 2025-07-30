@@ -1,0 +1,107 @@
+[
+  {
+    "sender": "Bot",
+    "time": "14:04",
+    "message": "\n\ud83c\udf7d\ufe0f Selamat Datang di NutriAI! \ud83c\udf7d\ufe0f\n\nSaya akan membantu Anda membuat rencana makan 7 hari yang dipersonalisasi berdasarkan kebutuhan kalori dan preferensi makronutrien Anda.\n\nUntuk memulai, saya perlu mengumpulkan beberapa informasi:\n1. Target kalori harian Anda\n2. Preferensi makronutrien Anda (persentase protein/karbohidrat/lemak)\n3. Pembatasan diet atau alergi\n\nSiap untuk memulai? Ketik 'MULAI' untuk melanjutkan atau 'BANTUAN' untuk informasi lebih lanjut.\n"
+  },
+  {
+    "sender": "You",
+    "time": "14:04",
+    "message": "mulai"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:04",
+    "message": "\u26a1 Mari kita mulai!\nBerapa kalori yang ingin Anda konsumsi setiap hari? (misalnya, 2000)"
+  },
+  {
+    "sender": "You",
+    "time": "14:04",
+    "message": "1500"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:04",
+    "message": "\ud83d\udcaa Bagus! Sekarang, berapa persen kalori Anda yang harus berasal dari **protein**? (misalnya, 30)"
+  },
+  {
+    "sender": "You",
+    "time": "14:04",
+    "message": "20"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:04",
+    "message": "\ud83c\udf5e Baik. Berapa persen yang harus berasal dari **karbohidrat**? (misalnya, 40)"
+  },
+  {
+    "sender": "You",
+    "time": "14:04",
+    "message": "30"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:04",
+    "message": "\ud83e\udd51 Dan 50% sisanya untuk **lemak**. Silakan masukkan: 50"
+  },
+  {
+    "sender": "You",
+    "time": "14:05",
+    "message": "25"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:05",
+    "message": "\u26a0\ufe0f Total makro Anda harus sama dengan 100%. Anda memasukkan 75%."
+  },
+  {
+    "sender": "You",
+    "time": "14:05",
+    "message": "50"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:05",
+    "message": "Bagus! Sekarang, apakah Anda memiliki pembatasan diet? (misalnya, vegetarian, vegan, bebas gluten, tidak ada)"
+  },
+  {
+    "sender": "You",
+    "time": "14:05",
+    "message": "tidak ada"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:05",
+    "message": "Baik! Apakah Anda memiliki alergi makanan? (misalnya, kacang, susu, telur, tidak ada)"
+  },
+  {
+    "sender": "You",
+    "time": "14:05",
+    "message": "tidak ada"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:05",
+    "message": "\u23f3 Bagus! Saya sedang menyiapkan rencana makan Anda menggunakan resep yang dihasilkan oleh AI... Ini mungkin membutuhkan waktu, karena saya sedang menghasilkan resep yang dipersonalisasi untuk Anda. \ud83c\udf73(ketik: 'oke')"
+  },
+  {
+    "sender": "You",
+    "time": "14:06",
+    "message": "oke"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:06",
+    "message": "\u2709\ufe0f Apakah Anda ingin hasil ini dikirim ke email Anda? Jika ya, tuliskan email Anda di sini.\nAtau ketik 'tidak' untuk mengabaikan."
+  },
+  {
+    "sender": "You",
+    "time": "14:06",
+    "message": "agungsuniantara@gmail.com"
+  },
+  {
+    "sender": "Bot",
+    "time": "14:07",
+    "message": "\u2705 Rencana makan berhasil dikirim ke email Anda!\n\n\ud83d\udd01 Ketik 'RESET' untuk membuat rencana baru atau 'KELUAR' untuk keluar."
+  }
+]

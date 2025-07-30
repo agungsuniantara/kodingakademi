@@ -1,6 +1,5 @@
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class write_append_file
 {

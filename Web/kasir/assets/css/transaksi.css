@@ -1,0 +1,41 @@
+.card-summary {
+    border-radius: 16px;
+    border: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px 0 rgba(45,65,160,0.04);
+    min-width: 230px;
+    margin-bottom: 12px;
+}
+.card-blue    { background: #2563eb; }
+.card-green   { background: #22c55e; }
+.card-yellow  { background: #fbbf24; color: #fff; }
+.card-cyan    { background: #06b6d4; }
+.card-summary .icon-bg {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    font-size: 2.5rem;
+    opacity: 0.16;
+}
+.table-transaksi th {
+    background: #23272f;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+}
+.table-transaksi td {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+.table-transaksi tr:nth-child(even) {
+    background: #f8f9fb;
+}
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}

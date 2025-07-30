@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Koding Akademi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: "Segoe UI", Arial, sans-serif; background: #f7f9fa; margin: 0; padding: 0;}
+        .container { max-width: 700px; margin: 36px auto; background: #fff; border-radius: 14px; box-shadow: 0 3px 18px rgba(0,0,0,0.10); padding: 28px 18px 24px 18px;}
+        h2 { text-align: center; color: #294197; font-size: 1.55rem; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 22px; }
+        th, td { padding: 10px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
+        th { background: #f2f3fa; color: #28345a; text-align: left; }
+        textarea { width: 96%; padding: 6px 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; background: #f9fafd; resize: vertical; min-height: 42px;}
+        .btn { display: inline-block; background: #294197; color: white; border: none; border-radius: 6px; padding: 10px 32px; font-size: 1rem; font-weight: 600; cursor: pointer; margin: 0 auto; transition: background 0.22s; box-shadow: 0 2px 8px rgba(41,65,151,0.05);}
+        .btn:hover { background: #19255a; }
+        .add-row { margin: 10px 0 18px 0; display: flex; justify-content: flex-end; }
+        @media (max-width: 600px) { .container { padding: 10px 3px 18px 3px; max-width: 98vw; } th, td { padding: 7px 2px;} .btn { padding: 9px 18px; } }
+        .nav { text-align:center; margin-bottom: 12px;}
+        .nav a { display: inline-block; padding: 7px 16px; border-radius: 4px; text-decoration:none; background: #f0f4ff; color:#1a255a; margin: 0 3px; font-size: 1em; }
+        .nav a.active, .nav a:hover { background: #294197; color: #fff;}
+    </style>
+    <script>
+        function autoResizeTA(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+        }
+    
+        window.onload = function() {
+            document.querySelectorAll('textarea').forEach(function(ta) {
+                autoResizeTA(ta);
+                ta.addEventListener('input', function() { autoResizeTA(this); });
+            });
+        };
+    
+        function addRow() {
+            var table = document.getElementById('data-table');
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            cell1.innerHTML = '<textarea name="question" rows="2" placeholder="Masukkan pertanyaan"></textarea>';
+            cell2.innerHTML = '<textarea name="answer" rows="2" placeholder="Masukkan jawaban"></textarea>';
+            cell3.innerHTML = '<button type="button" onclick="removeRow(this)" title="Hapus baris">🗑️</button>';
+            cell3.style.textAlign = "center";
+            var textareas = row.querySelectorAll('textarea');
+            textareas.forEach(function(ta) {
+                ta.addEventListener('input', function() { autoResizeTA(this); });
+            });
+        }
+    
+        function removeRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>       
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Panel Admin Knowledgebase<br>
+            <small style="font-size:0.98em;color:#444;">Koding Akademi</small><br>
+            <small style="font-size:1em;color:#587;" >{{ tipe }}</small>
+        </h2>
+        <div class="nav">
+            <a href="{{ url_for('admin_faq') }}" class="{{ 'active' if endpoint == 'admin_faq' else '' }}">FAQ</a>
+            <a href="{{ url_for('admin_program') }}" class="{{ 'active' if endpoint == 'admin_program' else '' }}">Program/Jadwal</a>
+        </div>
+        <form method="post" autocomplete="off">
+            <table id="data-table">
+                <tr>
+                    <th>Pertanyaan</th>
+                    <th>Jawaban</th>
+                    <th>Aksi</th>
+                </tr>
+                {% for item in data %}
+                <tr>
+                    <td>
+                        <textarea name="question" rows="2" required>{{item.question}}</textarea>
+                    </td>
+                    <td>
+                        <textarea name="answer" rows="2" required>{{item.answer}}</textarea>
+                    </td>
+                    <td style="text-align:center">
+                        <button type="submit" name="delete" value="{{loop.index0}}" onclick="return confirm('Yakin hapus data ini?')">🗑️</button>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% if data|length == 0 %}
+                <tr>
+                    <td>
+                        <textarea name="question" rows="2" placeholder="Masukkan pertanyaan"></textarea>
+                    </td>
+                    <td>
+                        <textarea name="answer" rows="2" placeholder="Masukkan jawaban"></textarea>
+                    </td>
+                    <td></td>
+                </tr>
+                {% endif %}
+            </table>
+            <div class="add-row">
+                <button type="button" class="btn" onclick="addRow()">+ Tambah Baris</button>
+            </div>
+            <div style="text-align:center">
+                <button type="submit" class="btn">Simpan Data</button>
+            </div>
+        </form>        
+        <div style="text-align:right; font-size:0.97em; margin-top:16px;">
+            <a href="/" style="color:#294197;text-decoration:none;">&larr; Kembali ke Landing</a>
+        </div>
+    </div>
+</body>
+</html>

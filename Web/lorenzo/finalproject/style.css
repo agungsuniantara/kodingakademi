@@ -1,0 +1,117 @@
+*{
+    outline: none;
+}
+
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px 10px 4px 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.483);
+    border-radius: 5px;
+    height: 880px;
+}
+
+.add-employee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    background-color: rgba(128,128,128,0.06);
+    height: auto;
+}
+
+.search-employee{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-table{
+    padding: 15px;
+    overflow: scroll;
+    height: 800px;
+    width: 1740px;
+
+}
+
+.employee, .employee > div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type=submit]{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.add{
+    background-color: rgba(0, 0, 255, 0.708);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.add:hover{
+    background-color: rgba(0, 0, 255);
+}
+
+.edit{
+    background-color: rgba(0, 128, 0, 0.828);
+    color: white;
+    border-radius: 5px;
+}
+
+.edit:hover{
+    background-color: green;
+}
+
+.delete{
+    background-color: rgba(255, 0, 0, 0.769);
+    color: white;
+    border-radius: 5px;
+}
+
+.delete:hover{
+    background-color: rgb(255,0,0);
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.251);
+}
+
+th, td{
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(even) {background-color: rgba(128,128,128,0.06);}
+
+.navbar {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    color: #fff;
+    background: #007bff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: #0056b3;
+}

@@ -1,0 +1,89 @@
+.sidebar {
+    min-height: 100vh;
+    background: #f7f9fb;
+    border-right: 1px solid #f1f1f1;
+    width: 240px;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 24px 0;
+}
+.sidebar .nav-link {
+    color: #222;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+    background: #2563eb;
+    color: #fff;
+}
+.sidebar .logo {
+    font-size: 1.35rem;
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+    margin-left: 18px;
+}
+.content {
+    margin-left: 250px;
+    padding: 36px 32px;
+    min-height: 100vh;
+    background: #fff;
+}
+.card-dashboard {
+    border-radius: 16px;
+    border: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px 0 rgba(45,65,160,0.04);
+}
+.card-dashboard .icon-bg {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 2.5rem;
+    opacity: 0.15;
+}
+.card-blue    { background: #2563eb; }
+.card-green   { background: #22c55e; }
+.card-yellow  { background: #fbbf24; color: #fff; }
+.card-cyan    { background: #06b6d4; }
+.card-dashboard a { color: #fff; opacity: 0.8; font-size: 0.95rem; }
+.card-dashboard a:hover { text-decoration: underline; opacity: 1; }
+.card-dashboard .title { font-size: 1.1rem; font-weight: 600; }
+.card-dashboard .value { font-size: 2.2rem; font-weight: bold; }
+.table-dashboard th {
+    font-weight: 700;
+    background: #fafbfc;
+}
+.table-dashboard td, .table-dashboard th {
+    font-size: 0.97rem;
+    vertical-align: middle;
+}
+
+/* Hanya submenu laporan yang aktif/hover biru */
+#laporanMenu .nav-link {
+    background: none;
+    color: #222;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+#laporanMenu .nav-link.active, 
+#laporanMenu .nav-link:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* Hide arrow on parent active */
+.laporan-dropdown > .laporan-toggle.active .bi-chevron-down {
+    color: #2563eb;
+}
+
+/* Remove blue background for parent even if expanded */
+.laporan-dropdown > .laporan-toggle[aria-expanded="true"] {
+    background: none !important;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-image: url(https://wallpapers.com/images/hd/food-4k-1vrcb0mw76zcg4qf.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .navbar{
+            height: 10vh;
+            background-color:rgba(185, 217, 249, 0.687);
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 0vh 10vh;
+        }
+        .logo{
+            background-image: url(https://marketplace.canva.com/EAFaFUz4aKo/2/0/1600w/canva-yellow-abstract-cooking-fire-free-logo-JmYWTjUsE-Q.jpg);
+            width: 10vh;
+            height: 10vh;
+            background-size:contain;
+            mix-blend-mode:darken;
+        }
+        .preview{
+            display: flex;
+            gap: 10vh;
+        }
+        .preview a{
+            text-decoration: none;
+            padding: 1.5vh 2vh;
+            color: white;
+            font-family:cursive;
+            font-size:larger;
+        }
+        .preview a:hover{
+            background-color:rgb(185, 217, 249);
+            border-radius: 1vh;
+        }
+        .submit{
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 10px;
+            padding: 1vh 2vh;
+            border: none;
+            outline: none;
+        }
+        .submit:hover{
+            background-color:rgb(92, 137, 221);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"></div>
+        <div class="preview">
+            <a href="#">Header</a>
+            <a href="#">Content</a>
+            <a href="#">About us</a>
+        </div>
+        <div class="button">
+            <a href="login.html"><button class="submit">LOGOUT</button></a>
+        </div>
+    </div>
+</body>
+</html>

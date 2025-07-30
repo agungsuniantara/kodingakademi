@@ -1,2 +1,2 @@
-sabun - Rp 10000
-batre - Rp -5000
+sabun - Rp 20000
+sepatu - Rp -50000

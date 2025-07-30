@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Applications/MAMP/htdocs/local/kodingakademi/Java/java/jdbc/lib/mysql-connector-j-8.4.0.jar"
+    ]
+}

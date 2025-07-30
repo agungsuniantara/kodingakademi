@@ -6,7 +6,7 @@ int main() {
 
     cout << "Enter 6 numbers: " << endl;
 
-    // Storing user input in the array
+    // Storing user input in the array 
     for (int i = 0; i < 2; ++i) {
         for (int j = 0; j < 3; ++j) {
             cin >> numbers[i][j];

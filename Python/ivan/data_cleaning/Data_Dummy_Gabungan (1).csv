@@ -1,0 +1,7 @@
+ID,Nama,Email,Kelas,Nilai,Status,Tingkat,Waktu Transaksi,Fitur1,Fitur2,Fitur3,Bulan,Penjualan,Pengeluaran
+S1,  Andi  ,andi@gmail.com,A,85,Aktif,A,2023-01-01 08:30:00,0.0,0.0,0,Jan,250,180
+S2,BUDI,budi@yahoo.com,B,90,Cuti,B,2023-02-15 15:45:00,0.0,0.0,0,Feb,270,190
+S3,citra suci,citra@gmail.com,A,88,Tidak Aktif,C,2023-03-10 12:00:00,3.5,0.0,0,Mar,300,200
+S4,Dewi	,dewi@gmail.com,C,70,Aktif,B,2023-04-25 09:15:00,0.0,0.0,0,Apr,280,195
+S5,"eko
+",eko@outlook.com,B,95,Cuti,A,2023-05-30 18:20:00,0.0,1.2,0,Mei,310,210

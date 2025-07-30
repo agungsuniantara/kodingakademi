@@ -78,10 +78,12 @@
     
     <script>
         $(document).ready(function(){
+            const gridSize = 3;
+            let emptyPos = 9;
+
             // Dark Mode Functionality
             $("#darkmodeButton").click(function(){
                 $(this).prop("disabled", true);
-                
                 if($(this).text() === "Dark Mode") {
                     $("body").css({"background-color": "#1c1c1c", "color": "#ffffff"});
                     $(this).text("Light Mode");
@@ -89,72 +91,53 @@
                     $("body").css({"background-color": "#e3ffc2", "color": "#000000"});
                     $(this).text("Dark Mode");
                 }
-                
                 $(this).prop("disabled", false);
             });
-            
-            // Puzzle Logic
-            const gridSize = 3;
-            let emptyPos = 9; // Posisi awal kotak kosong
 
-            function canMove(clickedPos) {
-                // Konversi posisi ke koordinat grid
+            // Check if tile can move to the empty space
+            function canMove(clickedPos, emptyPos) {
                 const emptyRow = Math.floor((emptyPos - 1) / gridSize);
                 const emptyCol = (emptyPos - 1) % gridSize;
                 const clickedRow = Math.floor((clickedPos - 1) / gridSize);
                 const clickedCol = (clickedPos - 1) % gridSize;
-
-                // Pengecekan ketat untuk mencegah gerakan diagonal
-                const rowDiff = Math.abs(emptyRow - clickedRow);
-                const colDiff = Math.abs(emptyCol - clickedCol);
-
-                // Pastikan hanya satu arah yang berbeda (tidak diagonal)
-                if (rowDiff > 0 && colDiff > 0) {
-                    return false;
-                }
-
-                // Pastikan perbedaan maksimal 1
-                if (rowDiff > 1 || colDiff > 1) {
-                    return false;
-                }
-
-                // Hanya mengizinkan gerakan yang tepat bersebelahan
-                return true;
+                return Math.abs(emptyRow - clickedRow) + Math.abs(emptyCol - clickedCol) === 1;
             }
 
+            // Swap tiles
             function swapTiles(clickedTile) {
                 const clickedPos = parseInt(clickedTile.data('pos'));
                 const emptyTile = $('.empty');
-                
-                if (!canMove(clickedPos)) {
-                    return;
-                }
-                
-                // Update posisi kosong
-                const oldEmptyPos = emptyPos;
+                if (!canMove(clickedPos, emptyPos)) return;
+
                 emptyPos = clickedPos;
-                
-                // Swap data attributes
-                clickedTile.data('pos', oldEmptyPos);
-                emptyTile.data('pos', clickedPos);
-                
-                // Swap appearance
                 const clickedBg = clickedTile.css('background-color');
                 const clickedContent = clickedTile.html();
-                
-                clickedTile.css('background-color', 'white')
-                        .html('')
-                        .addClass('empty');
-                
-                emptyTile.css('background-color', clickedBg)
-                        .html(clickedContent)
-                        .removeClass('empty');
+
+                clickedTile.css('background-color', 'white').html('').addClass('empty');
+                emptyTile.css('background-color', clickedBg).html(clickedContent).removeClass('empty');
             }
 
-            // Event listener untuk semua tile yang bisa diklik
+            // Shuffle the puzzle at start
+            function shufflePuzzle(moves) {
+                const directions = [-1, 1, -gridSize, gridSize];
+                for (let i = 0; i < moves; i++) {
+                    const validMoves = directions
+                        .map(d => emptyPos + d)
+                        .filter(p => p > 0 && p <= 9 && canMove(p, emptyPos));
+
+                    const nextPos = validMoves[Math.floor(Math.random() * validMoves.length)];
+                    const nextTile = $(`[data-pos="${nextPos}"]`);
+                    swapTiles(nextTile);
+                }
+            }
+
+            // Event listener for tile click
             $(document).on('click', '.tile:not(.empty)', function() {
                 swapTiles($(this));
             });
+
+            // Shuffle the puzzle when page loads
+            shufflePuzzle(100);
         });
     </script>
 </body>

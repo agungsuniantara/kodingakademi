@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline{
+            display: inline;
+            padding: 5px;
+        }
+        .block{
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+        .inline-block{
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            margin: 5px;
+        }
+        .static{
+            position: static;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        .relative{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        .absolute {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            top: 20px;
+            left: 20px;
+            background-color: lightblue;
+        }
+        .fixed{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            height: 50px;
+            background-color: aqua;
+        }
+        .sticky{
+            position: sticky;
+            top: 0;
+            background-color: white;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span class="inline red">Welcome to my website</span>
+        <span class="inline blue">Lorem, ipsum dolor.</span>
+        <span class="inline green">Lorem, ipsum./span>
+    </p>
+
+    <div class="block red">About us</div>
+    <div class="block blue">Our services</div>
+    <div class="block green">Testimonials</div>
+
+    <div class="inline-block red">Product 1</div>
+    <div class="inline-block blue">Product 2</div>
+    <div class="inline-block green">Product 3</div>
+
+    <!-- position -->
+    <div class="static red">Product 1</div>
+    <div class="static blue">Product 2</div>
+    <div class="static green">Product 3</div>
+
+    <div class="relative red">Product 1</div>
+    <div class="relative blue" style="top: 30px">Product 2</div>
+    <div class="relative green" style="left: 40px">Product 3</div>
+
+    <div class="absolute-parent" style="position: relative; height:200px; background-color:red"></div>
+    <div class="absolute blue">overlay content</div>
+
+    <div class="fixed">fixed navigation</div>
+
+    <h2 class="sticky">Sticky navigation</h2>
+    <p>Scroll down to see sticky</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+    <p>More content</p>
+</body>
+</html>

@@ -3,7 +3,7 @@ from tkinter import messagebox, scrolledtext
 import time
 import os
 import json
-from generate_response import generate_meal_plan, welcome_message
+from generate_response import hasilkan_rencana_makan as generate_meal_plan, pesan_selamat_datang as welcome_message
 from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
 import threading

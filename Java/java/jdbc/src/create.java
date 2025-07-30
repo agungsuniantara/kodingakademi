@@ -1,27 +1,35 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class create {
     public static void main(String[] args) {
-        try {
-            Connection database = koneksi.connect();
-            String sql = "INSERT INTO users (Name_user, Gender, Email, Phone, Address, Date_of_birth, Username, Passwords) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement pstmt = database.prepareStatement(sql);
+        String sql = "INSERT INTO users (Name_user, Gender, Email, Phone, Address, Date_of_birth, Username, Passwords) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-            pstmt.setString(1, "Jono"); // Name_user
-            pstmt.setString(2, "laki-laki"); // Gender
-            pstmt.setString(3, "jono@gmail.com"); // Email
-            pstmt.setString(4, "78674556"); // Phone
-            pstmt.setString(5, "ubud"); // Address
-            pstmt.setString(6, "1997-05-05"); // Date_of_birth
-            pstmt.setString(7, "jono"); // Username
-            pstmt.setString(8, "jono"); // Passwords
+        try (Connection database = koneksi.connect(); 
+             PreparedStatement pstmt = database.prepareStatement(sql)) {
 
-            pstmt.executeUpdate();
+            if (database != null) {
+                pstmt.setString(1, "Jono");          // Name_user
+                pstmt.setString(2, "laki-laki");     // Gender
+                pstmt.setString(3, "jono@gmail.com");// Email
+                pstmt.setString(4, "78674556");      // Phone
+                pstmt.setString(5, "ubud");          // Address
+                pstmt.setString(6, "1997-05-05");    // Date_of_birth
+                pstmt.setString(7, "jono");          // Username
+                pstmt.setString(8, "jono");          // Passwords
 
-            System.out.println("Data berhasil dimasukkan ke tabel users.");
-            database.close();
+                int rowsInserted = pstmt.executeUpdate();
+                if (rowsInserted > 0) {
+                    System.out.println("Data berhasil dimasukkan ke tabel users.");
+                } else {
+                    System.out.println("Data gagal dimasukkan.");
+                }
+            } else {
+                System.out.println("Tidak dapat melakukan operasi pada database.");
+            }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Terjadi kesalahan saat memasukkan data: " + e.getMessage());
         }
     }
 }

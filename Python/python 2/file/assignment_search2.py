@@ -4,7 +4,7 @@ ganti = "pegunungan"
 data = open("/Applications/MAMP/htdocs/local/kodingakademi/Python/python 2/file/search_data.txt", "r+")
 teks = data.read()
 
-data_baru = teks.split()
+data_baru = teks.split() 
 
 Gunung = []
 

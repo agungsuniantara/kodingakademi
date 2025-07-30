@@ -1,0 +1,5 @@
+This is the first line.
+Machine learning with TensorFlow is fun.
+Deep learning enables powerful applications.
+Data pipelines make training efficient.
+End of sample text.

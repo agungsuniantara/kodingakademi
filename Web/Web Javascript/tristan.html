@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e3ffc2;
+            margin: 0;
+            padding: 20px;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+            background-color: #344b00; 
+            text-align: left;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        #darkmodeButton {
+            width: 100px;
+            height: 50px;
+        }
+        #puzzle {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            gap: 5px;
+            width: 615px;
+            margin: 20px auto;
+        }
+        .tile {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .tile h1 {
+            font-size: 100px;
+            margin: 0;
+        }
+        .empty {
+            background-color: white !important;
+            cursor: default;
+        }
+    </style>
+</head>
+<body id="lightBg">
+    <p id="darkLightText">Sliding Puzzle</p>
+
+    <div id="puzzle">
+        <div class="tile" style="background-color: #ff0000;" data-pos="1"><h1 style="color: #00ffff;">1</h1></div>
+        <div class="tile" style="background-color: #ffaa00;" data-pos="2"><h1 style="color: #0055ff;">2</h1></div>
+        <div class="tile" style="background-color: #ffff00;" data-pos="3"><h1 style="color: #0000ff;">3</h1></div>
+        <div class="tile" style="background-color: #aaff00;" data-pos="4"><h1 style="color: #5500ff;">4</h1></div>
+        <div class="tile" style="background-color: #00ff00;" data-pos="5"><h1 style="color: #ff00ff;">5</h1></div>
+        <div class="tile" style="background-color: #00a2ff;" data-pos="6"><h1 style="color: #ff5d00;">6</h1></div>
+        <div class="tile" style="background-color: #4400ff;" data-pos="7"><h1 style="color: #bbff00;">7</h1></div>
+        <div class="tile" style="background-color: #8400ff;" data-pos="8"><h1 style="color: #7bff00;">8</h1></div>
+        <div class="tile empty" data-pos="9"></div>
+    </div>
+    
+    <footer>
+        <button id="darkmodeButton">Dark Mode</button>
+    </footer>
+    
+    <script>
+        $(document).ready(function(){
+            const gridSize = 3;
+            let emptyPos = 9;
+
+            // Dark Mode Functionality
+            $("#darkmodeButton").click(function(){
+                $(this).prop("disabled", true);
+                if($(this).text() === "Dark Mode") {
+                    $("body").css({"background-color": "#1c1c1c", "color": "#ffffff"});
+                    $(this).text("Light Mode");
+                } else {
+                    $("body").css({"background-color": "#e3ffc2", "color": "#000000"});
+                    $(this).text("Dark Mode");
+                }
+                $(this).prop("disabled", false);
+            });
+
+            // Check if tile can move to the empty space
+            function canMove(clickedPos, emptyPos) {
+                const emptyRow = Math.floor((emptyPos - 1) / gridSize);
+                const emptyCol = (emptyPos - 1) % gridSize;
+                const clickedRow = Math.floor((clickedPos - 1) / gridSize);
+                const clickedCol = (clickedPos - 1) % gridSize;
+                return Math.abs(emptyRow - clickedRow) + Math.abs(emptyCol - clickedCol) === 1;
+            }
+
+            // Swap tiles
+            function swapTiles(clickedTile) {
+                const clickedPos = parseInt(clickedTile.data('pos'));
+                const emptyTile = $('.empty');
+                if (!canMove(clickedPos, emptyPos)) return;
+
+                emptyPos = clickedPos;
+                const clickedBg = clickedTile.css('background-color');
+                const clickedContent = clickedTile.html();
+
+                clickedTile.css('background-color', 'white').html('').addClass('empty');
+                emptyTile.css('background-color', clickedBg).html(clickedContent).removeClass('empty');
+            }
+
+            // Shuffle the puzzle at start
+            function shufflePuzzle(moves) {
+                const directions = [-1, 1, -gridSize, gridSize];
+                for (let i = 0; i < moves; i++) {
+                    const validMoves = directions
+                        .map(d => emptyPos + d)
+                        .filter(p => p > 0 && p <= 9 && canMove(p, emptyPos));
+
+                    const nextPos = validMoves[Math.floor(Math.random() * validMoves.length)];
+                    const nextTile = $(`[data-pos="${nextPos}"]`);
+                    swapTiles(nextTile);
+                }
+            }
+
+            // Check if puzzle is solved
+            function isPuzzleSolved() {
+                let solved = true;
+                for (let i = 1; i <= 8; i++) {
+                    const tile = $(`[data-pos="${i}"]`);
+                    const number = parseInt(tile.find('h1').text());
+                    if (number !== i) {
+                        solved = false;
+                        break;
+                    }
+                }
+                return solved;
+            }
+
+            // Event listener for tile click
+            $(document).on('click', '.tile:not(.empty)', function() {
+                swapTiles($(this));
+                // Check if puzzle is solved after each move
+                if (isPuzzleSolved()) {
+                    alert("Puzzle solved! Reshuffling...");
+                    shufflePuzzle(2763);
+                }
+            });
+
+            // Shuffle the puzzle when page loads
+            shufflePuzzle(2763);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+user_id,amount,status,payment_type,region
+101,750.0,success,credit_card,Jabodetabek
+102,300.0,failed,debit_card,Bandung
+103,1200.0,success,credit_card,Jabodetabek
+104,450.0,success,debit_card,Surabaya
+105,800.0,success,credit_card,Semarang
+106,200.0,failed,credit_card,Bandung
+107,1100.0,success,credit_card,Jabodetabek
+108,350.0,success,credit_card,Surabaya
+109,950.0,failed,debit_card,Semarang
+110,700.0,success,credit_card,Jabodetabek
+111,1800.0,success,credit_card,Bandung
+112,650.0,success,credit_card,Jabodetabek
+113,150.0,failed,debit_card,Surabaya
+114,250.0,success,debit_card,Semarang
+115,900.0,success,credit_card,Jabodetabek

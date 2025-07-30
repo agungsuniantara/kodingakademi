@@ -1,20 +1,26 @@
-# function kwargs (use single variable to contain many key and value)
-def show2(**a): # ** = kwargs
-    print(a)
+class test:
+    def __init__(self):
+        self.data = {}
+    
+    def simpan(self, a, b, c, d):
+        nim = d[2:] + a 
+        self.data[nim] = [b,c,d]
+    
+    def tampil(self):
+        print("Data mahasiswa : ")
+        for key, value in self.data.items(): # key = 21099, value = ["dsada", "dasdas"]
+            print(f"Nim : {key}")
+            print(f"Nama : {value[0]}")
+            print(f"Alamat : {value[1]}")
+            print(f"Tahun : {value[2]}")
+        
 
-show2(name="panji", address = "denpasar")
+data1 = test()
 
-# function args (use single variable to contain many value)
-def add(*a): # * = args
-    result = sum(a)
-    return result
+nim = input("masukan nim : ")
+nama = input("masukan nama : ")
+alamat = input("masukan alamat : ")
+tahun = input("masukan tahun : ")
 
-assignment = add(1,2,3,4,5, 6, 7, 8, 9, 10)
-print(f"result using args = {assignment}")
-
-mean = (lambda a,b : a / b)(assignment, 10)
-print(f"mean = {mean}")
-
-
-
-
+data1.simpan(nim, nama, alamat, tahun)
+data1.tampil()
