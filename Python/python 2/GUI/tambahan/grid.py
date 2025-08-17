@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 # Fungsi yang akan dipanggil saat tombol "Klik Saya" ditekan
 def on_button_click():
     name = entry.get()
@@ -9,18 +8,15 @@ def on_button_click():
     else:
         result_text.config(text="Hello, World")
 
-
 # Fungsi yang akan dipanggil saat tombol "Reset" ditekan
 def on_reset_button_click():
     entry.delete(0, tk.END)
     result_text.config(text="")
 
-
 # Fungsi yang akan dipanggil saat kotak daftar dipilih
 def on_listbox_select(event):
     selected_item = listbox.get(tk.ACTIVE)
     label.config(text="Anda memilih: " + selected_item)
-
 
 # Membuat jendela utama
 root = tk.Tk()

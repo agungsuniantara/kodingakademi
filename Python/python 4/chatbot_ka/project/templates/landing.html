@@ -1,27 +1,30 @@
 <!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Koding Akademi - Dashboard Admin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: "Segoe UI", Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 0; display: flex; min-height: 100vh; align-items: center; justify-content: center; }
-        .card { background: white; padding: 32px 24px; border-radius: 18px; box-shadow: 0 3px 18px rgba(0,0,0,0.10); max-width: 380px; text-align: center; }
-        .logo { width: 66px; margin-bottom: 18px; }
-        h1 { margin: 0 0 16px 0; font-size: 1.7rem; color: #294197; font-weight: 700; }
-        p { color: #34495e; margin-bottom: 30px; font-size: 1.05rem; }
-        a.button { display: inline-block; padding: 12px 28px; background: #294197; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background 0.22s; }
-        a.button:hover { background: #19255a; }
-        @media (max-width: 480px) { .card { padding: 18px 6px; max-width: 98vw; } }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Koding Akademi - Dashboard Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: "Segoe UI", Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 0; display: flex; min-height: 100vh; align-items: center; justify-content: center; }
+    .card { background: white; padding: 32px 24px; border-radius: 18px; box-shadow: 0 3px 18px rgba(0,0,0,0.10); max-width: 420px; text-align: center; }
+    .logo { width: 66px; margin-bottom: 18px; }
+    h1 { margin: 0 0 16px 0; font-size: 1.7rem; color: #294197; font-weight: 700; }
+    p { color: #34495e; margin-bottom: 30px; font-size: 1.05rem; }
+    a.button { display: inline-block; padding: 12px 28px; background: #294197; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background 0.22s; }
+    a.button:hover { background: #19255a; }
+    .btns a { margin: 0 6px; }
+    @media (max-width: 480px) { .card { padding: 18px 6px; max-width: 98vw; } }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo Koding Akademi"/>
-        <h1>Koding Akademi</h1>
-        <p>Selamat datang di Dashboard Admin<br>Manajemen Knowledgebase Koding Akademi.</p>
-        <a class="button" href="{{ url_for('admin_faq') }}">Edit FAQ</a>
-        <a class="button" href="{{ url_for('admin_program') }}" style="margin-left:8px;">Edit Program/Jadwal</a>
+  <div class="card">
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo Koding Akademi" />
+    <h1>Koding Akademi</h1>
+    <p>Dashboard Admin Knowledgebase Koding Akademi.</p>
+    <div class="btns">
+      <a class="button" href="{{ url_for('admin_programs') }}">Edit Program (Usia/Lokasi)</a>
+      <a class="button" href="{{ url_for('admin_faq') }}">Edit FAQ</a>
     </div>
+  </div>
 </body>
 </html>

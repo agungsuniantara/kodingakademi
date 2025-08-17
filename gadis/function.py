@@ -57,5 +57,8 @@ print(hasil_rekursif)
 hasil_lambda = (lambda a,b : a + b)(10,20)
 print(hasil_lambda)
 
+data = {"nama": "gadis", "alamat": "denpasar"}
 
+for key, value in data.items():
+    print(f"{key} : {value}")
 

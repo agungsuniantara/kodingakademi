@@ -1,0 +1,13 @@
+pandas
+numpy
+rapidfuzz
+textdistance
+xgboost
+lightgbm
+scikit-learn
+camel-tools
+qalsadi
+streamlit
+langchain
+chromadb
+pymupdf

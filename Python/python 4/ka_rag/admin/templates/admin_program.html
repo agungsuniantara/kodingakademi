@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Program/Jadwal - Koding Akademi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: "Segoe UI", Arial, sans-serif; background:#f7f9fa; margin:0; padding:0; }
+    .container { max-width: 1800px; margin: 32px auto; background:#fff; border-radius:14px; box-shadow:0 3px 18px rgba(0,0,0,.1); padding: 22px 16px; }
+    h2 { text-align:center; color:#294197; font-size:1.55rem; margin:8px 0 18px; }
+    .nav { text-align:center; margin-bottom:14px; }
+    .nav a { display:inline-block; padding:7px 16px; border-radius:4px; text-decoration:none; background:#f0f4ff; color:#1a255a; margin:0 3px; font-size:1em; }
+    .nav a.active, .nav a:hover { background:#294197; color:#fff; }
+
+    table { border-collapse: collapse; width:100%; }
+    th, td { padding:10px 8px; border-bottom:1px solid #eee; vertical-align:top; }
+    th { background:#f2f3fa; color:#28345a; text-align:left; position:sticky; top:0; z-index:1; }
+    input[type="text"], select, textarea {
+      width:100%; padding:7px 8px; border:1px solid #ccd4e0;margin:6px 0; border-radius:6px; background:#f9fafd; font-size:.98rem;
+    }
+    textarea { min-height:48px; resize:vertical; }
+    .btn { display:inline-block; background:#294197; color:#fff; border:none; border-radius:6px; padding:10px 18px; font-size:1rem; font-weight:600; cursor:pointer; transition:background .22s; box-shadow:0 2px 8px rgba(41,65,151,.06); }
+    .btn:hover { background:#19255a; }
+    .btn-ghost { background:#eef2ff; color:#1a255a; }
+    .row-actions { text-align:center; white-space:nowrap; }
+    .foot { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:14px; }
+    .hint { color:#516078; font-size:.92rem; }
+    @media (max-width: 720px) {
+      .container { padding: 10px 6px 18px; max-width:98vw; }
+      th, td { padding:8px 6px; }
+      .foot { flex-direction:column; align-items:stretch; }
+      .btn { width:100%; }
+    }
+  </style>
+  <script>
+    function autoResizeTA(el){ el.style.height='auto'; el.style.height=(el.scrollHeight)+'px'; }
+    function enhanceAutoResize(){
+      document.querySelectorAll('textarea').forEach(ta=>{
+        autoResizeTA(ta);
+        ta.addEventListener('input', ()=>autoResizeTA(ta));
+      });
+    }
+    function removeRow(btn){
+      const row = btn.closest('tr');
+      row.parentNode.removeChild(row);
+    }
+    function addRow(){
+      const tbody = document.querySelector('#data-body');
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>
+          <select name="type">
+            <option value="program" selected>program</option>
+            <option value="promo">promo</option>
+          </select>
+        </td>
+        <td><input type="text" name="title" placeholder="Judul program, mis. USIA 8+: Game Programming..." /></td>
+        <td><input type="text" name="age_range" placeholder="contoh: 6+ atau 7-10" /></td>
+        <td><input type="text" name="city" placeholder="contoh: Denpasar / Surabaya / Gianyar" /></td>
+        <td>
+          <textarea name="links" placeholder="Satu link per baris"></textarea>
+        </td>
+        <td>
+          <textarea name="summary" placeholder="Ringkasan singkat program..."></textarea>
+        </td>
+        <td class="row-actions">
+          <button type="button" title="Hapus baris" onclick="removeRow(this)">🗑️</button>
+        </td>`;
+      tbody.appendChild(tr);
+      enhanceAutoResize();
+    }
+    window.addEventListener('load', enhanceAutoResize);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>
+      Panel Admin Knowledgebase<br />
+      <small style="font-size:.98em;color:#444;">Koding Akademi</small><br />
+      <small style="font-size:1em;color:#587;">Program/Jadwal</small>
+    </h2>
+
+    <div class="nav">
+      <a href="{{ url_for('admin_faq') }}">FAQ</a>
+      <a href="{{ url_for('admin_program') }}" class="active">Program/Jadwal</a>
+    </div>
+
+    <form method="post" autocomplete="off">
+      <div class="hint" style="margin:8px 0 10px;">
+        Catatan: <b>Links</b> diisi satu per baris. Kosongkan baris untuk mengabaikan saat simpan.
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th >Type</th>
+            <th >Title</th>
+            <th >Age Range</th>
+            <th >City</th>
+            <th >Links (1/baris)</th>
+            <th >Summary</th>
+            <th >Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="data-body">
+          {% for item in data %}
+          <tr>
+            <td>
+              <select name="type">
+                <option value="program" {{ 'selected' if item.type=='program' else '' }}>program</option>
+                <option value="promo"   {{ 'selected' if item.type=='promo' else '' }}>promo</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" name="title" value="{{ item.title }}" required />
+            </td>
+            <td>
+              <input type="text" name="age_range" value="{{ item.age_range or '' }}" />
+            </td>
+            <td>
+              <input type="text" name="city" value="{{ item.city or '' }}" />
+            </td>
+            <td>
+              <textarea name="links">{% for ln in item.links or [] %}{{ ln }}
+{% endfor %}</textarea>
+            </td>
+            <td>
+              <textarea name="summary" required>{{ item.summary }}</textarea>
+            </td>
+            <td class="row-actions">
+              <button type="submit" name="delete" value="{{ loop.index0 }}" title="Hapus baris" onclick="return confirm('Yakin hapus data ini?')">🗑️</button>
+            </td>
+          </tr>
+          {% endfor %}
+
+          {% if data|length == 0 %}
+          <tr>
+            <td>
+              <select name="type">
+                <option value="program" selected>program</option>
+                <option value="promo">promo</option>
+              </select>
+            </td>
+            <td><input type="text" name="title" placeholder="Judul program..." /></td>
+            <td><input type="text" name="age_range" placeholder="6+ / 7-10" /></td>
+            <td><input type="text" name="city" placeholder="Denpasar / Surabaya / Gianyar" /></td>
+            <td><textarea name="links" placeholder="Satu link per baris"></textarea></td>
+            <td><textarea name="summary" placeholder="Ringkasan singkat program..."></textarea></td>
+            <td class="row-actions"></td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+
+      <div class="foot">
+        <button type="button" class="btn btn-ghost" onclick="addRow()">+ Tambah Baris</button>
+        <div>
+          <button type="submit" class="btn">Simpan Data</button>
+        </div>
+      </div>
+    </form>
+
+    <div style="text-align:right; font-size:.97rem; margin-top:16px;">
+      <a href="{{ url_for('home') }}" style="color:#294197; text-decoration:none;">&larr; Kembali ke Landing</a>
+    </div>
+  </div>
+</body>
+</html>

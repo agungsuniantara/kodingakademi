@@ -45,7 +45,10 @@
         }
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+            background: linear-gradient(135deg, rgba(78, 115, 223, 0.9) 0%, rgba(34, 74, 190, 0.9) 100%), url('image/logo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 6rem 0;
             margin-bottom: 4rem;
@@ -340,15 +343,12 @@
         <section class="hero-section">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-md-12 text-center">
                         <h1 class="hero-title">Selamat Datang di E-Commerce Kami</h1>
                         <p class="hero-subtitle">Temukan berbagai produk berkualitas dengan harga terbaik untuk kebutuhan Anda.</p>
                         <a href="produk.php" class="btn btn-light btn-lg">
                             <i class="fas fa-shopping-bag me-2"></i>Belanja Sekarang
                         </a>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="assets/hero-image.png" alt="Shopping" class="img-fluid">
                     </div>
                 </div>
             </div>

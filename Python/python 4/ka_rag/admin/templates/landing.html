@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Koding Akademi - Dashboard Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --brand:#294197; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f7fa; margin: 0; padding: 0;
+      display: flex; min-height: 100vh; align-items: center; justify-content: center;
+    }
+    .card { background: #fff; padding: 32px 24px; border-radius: 18px;
+      box-shadow: 0 3px 18px rgba(0,0,0,.10); max-width: 420px; text-align: center; }
+    .logo { width: 66px; margin-bottom: 18px; }
+    h1 { margin: 0 0 12px; font-size: 1.7rem; color: var(--brand); font-weight: 700; }
+    p { color: #34495e; margin: 0 0 22px; font-size: 1.03rem; }
+    .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    a.button, button.button {
+      display: inline-block; padding: 12px 16px; background: var(--brand); color: #fff;
+      border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;
+      transition: background .2s; border: none; cursor: pointer;
+    }
+    a.button:hover, button.button:hover { background: #19255a; }
+    .links { margin-top: 8px; font-size: .95rem; }
+    .links a { color: var(--brand); text-decoration: none; margin: 0 6px; }
+    .links a:hover { text-decoration: underline; }
+    .muted { color:#667085; font-size:.9rem; margin-top:12px; }
+    @media (max-width: 480px) {
+      .card { padding: 20px 12px; max-width: 96vw; }
+      .btn-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo Koding Akademi" />
+    <h1>Koding Akademi</h1>
+    <p>Selamat datang di Dashboard Admin<br>Manajemen Knowledgebase Koding Akademi.</p>
+
+    <div class="btn-row">
+      <a class="button" href="{{ url_for('admin_faq') }}">Edit FAQ</a>
+      <a class="button" href="{{ url_for('admin_program') }}">Edit Program/Jadwal</a>
+    </div>
+
+    <!-- Opsional: tombol rebuild index (akan POST ke chat service jika berjalan) -->
+    <form method="post" action="http://127.0.0.1:8001/admin/rebuild" style="margin-top:6px;"
+          onsubmit="return confirm('Rebuild index sekarang?');">
+      <button class="button" type="submit" style="width:100%;">Rebuild Index (opsional)</button>
+    </form>
+
+    <!-- Quick view JSON (read-only) -->
+    <div class="links">
+      <a href="{{ url_for('api_faq') }}" target="_blank" rel="noopener">Lihat FAQ JSON</a> ·
+      <a href="{{ url_for('api_data') }}" target="_blank" rel="noopener">Lihat Program JSON</a>
+    </div>
+
+    <div class="muted">Gunakan tombol di atas untuk mengelola konten. Rebuild hanya perlu saat data berubah.</div>
+  </div>
+</body>
+</html>

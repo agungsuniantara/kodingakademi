@@ -5,7 +5,7 @@ gunung = []
 
 with open('file\search_data.txt', 'r') as file:
     data = file.read()
-    test = data.split()
+    test = data.split() 
     for i in test:
         if i == search_text or i == search_text2:
             gunung.append(i)
@@ -19,3 +19,10 @@ with open('file\search_data.txt', 'w') as file:
     file.write(data)
     
 print(f"jumlah gunung = {len(gunung)}")
+
+angka = 100 
+
+if angka % 2 == 0:
+    print("genap")
+else:
+    print("ganjil")

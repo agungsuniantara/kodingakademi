@@ -1,0 +1,131 @@
+[
+  {
+    "type": "program",
+    "title": "USIA 6+: Basic Coding Junior Class (Gianyar)",
+    "age_range": "6+",
+    "city": "Gianyar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/coding-junior-6/",
+      "https://bit.ly/vid-codJR"
+    ],
+    "summary": "Kelas coding pemula untuk usia 6+. Cocok mengenalkan konsep logika & kreativitas lewat proyek sederhana."
+  },
+  {
+    "type": "program",
+    "title": "USIA 6+: Basic Coding Junior Class (Denpasar)",
+    "age_range": "6+",
+    "city": "Denpasar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-codingjunior/",
+      "https://bit.ly/vid-codJR"
+    ],
+    "summary": "Kelas coding pemula untuk usia 6+ di Denpasar. Fokus pengenalan dasar dan proyek kreatif."
+  },
+  {
+    "type": "program",
+    "title": "USIA 7+: Basic Coding Class (Denpasar)",
+    "age_range": "7+",
+    "city": "Denpasar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-basiccoding/",
+      "https://bit.ly/vid-coding-junior-2"
+    ],
+    "summary": "Untuk yang belum punya dasar coding. Belajar konsep fundamental lewat proyek interaktif."
+  },
+  {
+    "type": "program",
+    "title": "USIA 7+: Basic Coding Class (Surabaya)",
+    "age_range": "7+",
+    "city": "Surabaya",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/plsub-basicoding/",
+      "https://bit.ly/vid-coding-junior-2"
+    ],
+    "summary": "Kelas coding pemula untuk usia 7+ di Surabaya. Tidak perlu pengalaman sebelumnya."
+  },
+  {
+    "type": "program",
+    "title": "USIA 8+: Game Programming for Beginner (Denpasar)",
+    "age_range": "8+",
+    "city": "Denpasar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-gameprogbeginner/",
+      "https://bit.ly/vid-game-prog-1"
+    ],
+    "summary": "Belajar membuat game sederhana. Syarat: sudah terbiasa menggunakan komputer/laptop."
+  },
+  {
+    "type": "program",
+    "title": "USIA 8+: Game Programming for Beginner (Surabaya)",
+    "age_range": "8+",
+    "city": "Surabaya",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/plsub-gameprogbeginner/",
+      "https://bit.ly/vid-game-prog-1"
+    ],
+    "summary": "Kelas pemula pembuatan game untuk usia 8+ di Surabaya."
+  },
+  {
+    "type": "program",
+    "title": "USIA 10+: Game Programming for Intermediate (Denpasar)",
+    "age_range": "10+",
+    "city": "Denpasar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-gameprogintermediate/",
+      "https://bit.ly/vid-game-prog-2"
+    ],
+    "summary": "Tingkat lanjutan untuk yang sudah punya dasar coding/game. Tantangan dan fitur game lebih kompleks."
+  },
+  {
+    "type": "program",
+    "title": "USIA 10+: Game Programming for Intermediate (Surabaya)",
+    "age_range": "10+",
+    "city": "Surabaya",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/plsub-gameprogintermediate/",
+      "https://bit.ly/vid-game-prog-2"
+    ],
+    "summary": "Kelas intermediate pembuatan game untuk usia 10+ di Surabaya. Butuh basic sebelumnya."
+  },
+  {
+    "type": "program",
+    "title": "USIA 4+: Robotics Junior 1.0",
+    "age_range": "4+",
+    "city": "Umum",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-roboticsjr1/"
+    ],
+    "summary": "Program robotika usia dini. Rakit & bermain sambil belajar konsep sains & teknologi."
+  },
+  {
+    "type": "program",
+    "title": "USIA 5–6: Robotics Junior 2.0",
+    "age_range": "5-6",
+    "city": "Umum",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-roboticsjr2/"
+    ],
+    "summary": "Robotika pemula untuk 5–6 tahun yang belum punya dasar robotika."
+  },
+  {
+    "type": "program",
+    "title": "USIA 7–10: Robotics Explorer 1.0",
+    "age_range": "7-10",
+    "city": "Umum",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/pldps-roboticsexp1/",
+      "https://bit.ly/vid-robotexp1"
+    ],
+    "summary": "Untuk anak yang sudah bisa literasi/membaca. Eksplorasi robotika tingkat dasar-menengah."
+  },
+  {
+    "type": "promo",
+    "title": "Voucher Discount Basic Coding 6+ (Gianyar)",
+    "age_range": "6+",
+    "city": "Gianyar",
+    "links": [
+      "https://taplink.cc/kodingakademi/p/voucher-discount-gianyar-coding-junior/"
+    ],
+    "summary": "Potongan biaya kursus khusus kelas offline/onsite di center Gianyar."
+  }
+]

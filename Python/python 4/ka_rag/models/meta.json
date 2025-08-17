@@ -1,0 +1,164 @@
+[
+  {
+    "id": 0,
+    "question": "welcome message",
+    "answer": "Selamat Datang di Masa Depan! 😎 Terimakasih telah menghubungi *Koding Akademi* Pusat belajar dan pengembangan digital skills (coding dan robotika) terlengkap.",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 1,
+    "question": "Apa saja program yang tersedia di Koding Akademi?",
+    "answer": "Secara garis besar kami memiliki 2 program utama yaitu Coding dan Robotika.",
+    "age_min": 2,
+    "age_max": 2,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 2,
+    "question": "Program Coding",
+    "answer": "Belajar dasar pemrograman mulai usia 6thn hingga dewasa/umum (20+). Bisa buat project berupa games, animasi science, greeting card, roblox, dsb. Sampai level senior bisa buat website, aplikasi, aplikasi android, games 3D, belajar data analisis. Latih logic thinking, kreatifitas, imajinasi, problem solving dan computational thinking dengan ikut kelas coding.",
+    "age_min": 20,
+    "age_max": 100,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 3,
+    "question": "Program Robotika",
+    "answer": "Belajar merakit robot dari awal hingga memprogramnya. Junior mulai 4 thn (Lego Education), contoh: dancing bird, sea cleaner. Senior 12+ (Arduino Kit), contoh: Sumobot.",
+    "age_min": 12,
+    "age_max": 100,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 4,
+    "question": "koding akademi denpasar",
+    "answer": "Alamat Koding Akademi Denpasar: Jl. Tukad Batanghari No.55, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80225.",
+    "age_min": 55,
+    "age_max": 55,
+    "city": "denpasar",
+    "links": []
+  },
+  {
+    "id": 5,
+    "question": "koding akademi gianyar",
+    "answer": "Alamat Koding Akademi Gianyar: Jl. Dharma Giri No.777, Bitera, Kec. Gianyar, Kabupaten Gianyar, Bali 80581.",
+    "age_min": null,
+    "age_max": null,
+    "city": "gianyar",
+    "links": []
+  },
+  {
+    "id": 6,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 7,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 8,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 9,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 10,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 11,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 12,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 13,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 14,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 15,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 16,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  },
+  {
+    "id": 17,
+    "question": "",
+    "answer": "",
+    "age_min": null,
+    "age_max": null,
+    "city": null,
+    "links": []
+  }
+]

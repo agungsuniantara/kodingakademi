@@ -1,0 +1,26 @@
+[
+  {
+    "question": "welcome message",
+    "answer": "Selamat Datang di Masa Depan! 😎 Terimakasih telah menghubungi *Koding Akademi* Pusat belajar dan pengembangan digital skills (coding dan robotika) terlengkap."
+  },
+  {
+    "question": "Apa saja program yang tersedia di Koding Akademi?",
+    "answer": "Secara garis besar kami memiliki 2 program utama yaitu Coding dan Robotika."
+  },
+  {
+    "question": "Program Coding",
+    "answer": "Belajar dasar pemrograman mulai usia 6thn hingga dewasa/umum (20+). Bisa buat project berupa games, animasi science, greeting card, roblox, dsb. Sampai level senior bisa buat website, aplikasi, aplikasi android, games 3D, belajar data analisis. Latih logic thinking, kreatifitas, imajinasi, problem solving dan computational thinking dengan ikut kelas coding."
+  },
+  {
+    "question": "Program Robotika",
+    "answer": "Belajar merakit robot dari awal hingga memprogramnya. Junior mulai 4 thn (Lego Education), contoh: dancing bird, sea cleaner. Senior 12+ (Arduino Kit), contoh: Sumobot."
+  },
+  {
+    "question": "koding akademi denpasar",
+    "answer": "Alamat Koding Akademi Denpasar: Jl. Tukad Batanghari No.55, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80225."
+  },
+  {
+    "question": "koding akademi gianyar",
+    "answer": "Alamat Koding Akademi Gianyar: Jl. Dharma Giri No.777, Bitera, Kec. Gianyar, Kabupaten Gianyar, Bali 80581."
+  }
+]

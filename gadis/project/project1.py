@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-Username = "gadistya"
-Password = "2914"
+Username = "admin"
+Password = "1234"
 
 book_list = [] 
 
