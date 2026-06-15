@@ -1,0 +1,1 @@
+columns = [desc[0] for desc in cursor.description]

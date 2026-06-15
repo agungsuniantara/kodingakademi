@@ -1,0 +1,223 @@
+import customtkinter as ctk
+from sklearn.metrics.pairwise import cosine_similarity
+from transformers import AutoTokenizer, AutoModel
+import torch, re
+
+# ===============   1. Tema Global  ===============
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("dark-blue")
+
+# ===============   2. Knowledge Base  ===============
+KNOWLEDGE_BASE = {
+  "how do motor vehicles cause carbon emissions": "Motor vehicles burn fossil fuels (gasoline/diesel), releasing exhaust gases such as carbon dioxide (CO2) and other greenhouse gases that contribute to global warming.",
+  "what is the contribution of the transport sector to national emissions": "In Indonesia, the transport sector is one of the largest contributors to carbon emissions. According to data, its contribution can reach around 20–25% of total national emissions, mainly from private vehicles.",
+  "how can I reduce the carbon footprint of my travel": "To reduce your travel carbon footprint, consider switching to public transportation (bus, train), cycling, walking, or using electric/hybrid vehicles when possible. Combining trips and driving efficiently also helps.",
+  "what happens if I switch from a motorcycle to public transport for a year": "If you switch from a motorcycle to public transportation for a year, you can significantly reduce CO2 emissions, save fuel costs, reduce congestion, and contribute to cleaner air. The emission reduction can reach hundreds of kilograms of CO2 per year depending on travel distance.",
+  "what is carbon emission": "Carbon emission is the release of carbon gases into the Earth's atmosphere, mainly carbon dioxide (CO2), mostly produced by fossil fuel combustion due to human activity and is a major cause of climate change.",
+  "what are the impacts of carbon emissions on the environment": "The impacts of carbon emissions include global warming, extreme climate events (floods, droughts), rising sea levels, damage to marine ecosystems (coral bleaching), and health problems due to air pollution.",
+  "sustainable transport tips": "Sustainable transport tips include: use public transportation, cycle or walk for short distances, consider electric vehicles, use carpooling, and maintain your vehicle for better fuel efficiency.",
+  "definition of climate change": "Climate change refers to significant and long-term shifts in global or regional weather patterns, mainly caused by increased greenhouse gas concentrations in the atmosphere due to human activity.",
+  "what are the main sources of carbon emissions": "The main sources of carbon emissions include fossil fuel combustion for electricity and transportation, deforestation, industrial activities, and intensive agriculture that produces methane (CH4) and nitrous oxide (N2O).",
+  "how does deforestation relate to carbon emissions": "Deforestation reduces the Earth’s ability to absorb carbon dioxide due to fewer trees. In addition, the cutting and burning of forests release the carbon stored in the biomass of trees into the atmosphere.",
+  "how can renewable energy reduce carbon emissions": "Renewable energy such as solar, wind, hydro, and biomass can produce electricity without burning fossil fuels. Replacing fossil-based sources with renewables drastically reduces CO2 emissions.",
+  "what is the impact of carbon emissions on human health": "Carbon emissions are often accompanied by pollutants such as particulates (PM2.5) and nitrogen oxides that can cause respiratory issues, heart disease, and worsen chronic conditions like asthma.",
+  "what is carbon footprint": "A carbon footprint is the total amount of greenhouse gases emitted directly or indirectly by an individual, organization, or product, usually expressed in kilograms or tons of CO2 equivalent.",
+  "how to calculate personal carbon footprint": "A personal carbon footprint is calculated based on daily activities such as vehicle usage, electricity consumption, diet, and air travel. Many online calculators can estimate your total emissions based on this data.",
+  "what is carbon neutrality": "Carbon neutrality means that the amount of carbon emitted equals the amount absorbed through actions like reforestation, energy efficiency, or carbon offsetting.",
+  "examples of carbon reduction policies": "Examples of carbon reduction policies include carbon taxes, emission trading (carbon trading), renewable energy subsidies, and bans on forest burning.",
+  "what is the role of individuals in reducing carbon emissions": "Individuals play a key role by adopting sustainable lifestyles such as saving energy, choosing eco-friendly transport, reducing meat consumption, and supporting environmentally responsible companies.",
+  "difference between CO2 and other greenhouse gases": "CO2 is the most common greenhouse gas from fuel combustion. However, there are others like methane (CH4), nitrous oxide (N2O), and fluorinated gases that have stronger warming effects even in smaller amounts.",
+  "how does industry contribute to carbon emissions": "The industrial sector emits carbon through production processes, fossil fuel energy use in machinery, and chemical reactions (such as cement and steel production) that release CO2 into the atmosphere.",
+  "what is the relationship between electricity use and carbon emissions": "Most electricity in Indonesia is still generated from coal or gas power plants. The higher the electricity use, the larger the carbon emissions if the energy source is not renewable.",
+  "what is carbon capture": "Carbon Capture, Utilization, and Storage (CCUS) is a technology that captures CO2 from major emission sources (like power plants and factories), then permanently stores it underground or repurposes it for other uses.",
+  "how does agriculture contribute to carbon emissions": "Agriculture contributes to emissions through the use of nitrogen fertilizers (producing N2O), livestock digestion (producing methane from cows), and land-use changes like peatland clearing.",
+  "how can cities reduce carbon emissions": "Cities can reduce emissions by promoting public transportation, developing green infrastructure, improving building energy efficiency, managing waste properly, and using renewable energy sources.",
+  "what is carbon credit": "A carbon credit is a permit that allows the holder to emit one ton of carbon dioxide. These can be traded, allowing companies to buy 'rights' to emit or sell their 'emission savings'.",
+  "how is meat consumption related to carbon emissions": "Meat production, especially red meat, requires large amounts of land, water, and feed. Livestock also produce methane. Reducing meat consumption can significantly decrease personal carbon footprint.",
+  "how can smart technology help reduce emissions": "Smart technologies like smart grids, IoT sensors for building energy efficiency, transportation route optimization, and data analytics for energy prediction can help cut emissions.",
+  "what is energy transition": "Energy transition is the global shift from fossil fuel-based energy systems to sustainable energy systems that rely on renewable sources and low-carbon technologies.",
+  "what is the impact of carbon emissions on marine life": "Increased atmospheric CO2 causes oceans to absorb more CO2, leading to ocean acidification. This harms shellfish, coral reefs, and other marine ecosystems.",
+  "what is blue carbon": "Blue carbon refers to carbon stored in coastal and marine ecosystems such as mangroves, seagrass meadows, and salt marshes. These ecosystems are highly effective at absorbing and storing carbon.",
+  "how do reforestation and afforestation reduce emissions": "Reforestation (replanting forests) and afforestation (planting forests on non-forested land) help absorb CO2 from the atmosphere through photosynthesis, storing it in biomass and soil.",
+  "what is climate change mitigation": "Climate change mitigation refers to actions taken to reduce or absorb greenhouse gas emissions, aiming to slow down or stop global warming.",
+  "how is sustainable development related to carbon emissions": "Sustainable development aims to meet present needs without compromising future generations. It includes reducing carbon emissions through environmentally responsible economic and social practices.",
+  "what is renewable energy (EBT)": "EBT stands for Renewable Energy, which comes from sustainable natural processes like solar, wind, hydro, geothermal, biomass, and wave energy. Its development is vital to reducing carbon emissions.",
+  "what is the role of banks in supporting emissions reduction": "Banks can support emission reduction by providing loans for renewable energy projects, funding green initiatives, offering sustainable financial products, and adopting environmentally responsible investment policies."
+}
+
+# ===============   3. Model Transformer Embedding  ===============
+tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
+model = AutoModel.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
+
+def mean_pooling(model_output, attention_mask):
+    token_embeddings = model_output[0]
+    input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+    sum_embeddings = torch.sum(token_embeddings * input_mask_expanded, 1)
+    sum_mask = torch.clamp(input_mask_expanded.sum(1), min=1e-9)
+    return sum_embeddings / sum_mask
+
+def get_transformer_embeddings(texts):
+    encoded_input = tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
+    with torch.no_grad():
+        model_output = model(**encoded_input)
+    sentence_embeddings = mean_pooling(model_output, encoded_input["attention_mask"])
+    sentence_embeddings = torch.nn.functional.normalize(sentence_embeddings, p=2, dim=1)
+    return sentence_embeddings.cpu().numpy()
+
+kb_keys = list(KNOWLEDGE_BASE.keys())
+kb_embeddings = get_transformer_embeddings(kb_keys)
+
+# ===============   4. Fungsi Chatbot   ===============
+def preprocess_text(text):
+    text = text.lower()
+    text = re.sub(r"[^a-z\s]", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+def get_chatbot_response(user_input):
+    processed_input = preprocess_text(user_input)
+    if not processed_input:
+        return "Maaf, saya tidak bisa memproses input kosong."
+
+    input_embedding = get_transformer_embeddings([processed_input])
+    similarities = cosine_similarity(input_embedding, kb_embeddings)[0]
+    best_match_index = similarities.argmax()
+    max_similarity_score = similarities[best_match_index]
+    if max_similarity_score >= 0.70:
+        return KNOWLEDGE_BASE[kb_keys[best_match_index]]
+    else:
+        return "Maaf, saya tidak memahami pertanyaan Anda. Coba pertanyaan lain terkait emisi karbon."
+
+# ===============   5. Kelas UI Chatbot   ===============
+class CarbonChatbotApp(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+
+        # set fullscreen
+        self.title("Carbon Chatbot (Fullscreen UI)")
+        self.state("zoomed")  # fullscreen otomatis
+        self.configure(fg_color="#0D0D0D")
+
+        # grid utama
+        self.grid_rowconfigure(1, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+        # === Title ===
+        self.title_label = ctk.CTkLabel(
+            self,
+            text="🌍 What can I help with?",
+            font=("Segoe UI", 28, "bold"),
+            text_color="white"
+        )
+        self.title_label.grid(row=0, column=0, pady=(40, 10), sticky="n")
+
+        # === Chat Area ===
+        self.chat_frame = ctk.CTkScrollableFrame(
+            self,
+            fg_color="#1E1E1E",
+            width=1000,
+            height=500,
+            border_width=0,
+        )
+        self.chat_frame.grid(row=1, column=0, sticky="nsew", padx=300, pady=10)
+
+        # === Input section (sticky bottom) ===
+        self.bottom_bar = ctk.CTkFrame(self, fg_color="#141414", height=90)
+        self.bottom_bar.grid(row=2, column=0, sticky="ew", padx=0, pady=(10, 20))
+        self.bottom_bar.grid_columnconfigure(0, weight=1)
+        self.bottom_bar.grid_rowconfigure(0, weight=1)
+
+        self.input_container = ctk.CTkFrame(self.bottom_bar, fg_color="#202020", corner_radius=50)
+        self.input_container.grid(sticky="ew", padx=400, pady=10)
+        self.input_container.grid_columnconfigure(0, weight=1)
+
+        self.user_input = ctk.CTkEntry(
+            self.input_container,
+            placeholder_text="Ketik sesuatu...",
+            height=50,
+            font=("Segoe UI", 18),
+            corner_radius=30,
+            fg_color="#2A2A2A",
+            border_width=0,
+            text_color="white",
+        )
+        self.user_input.grid(row=0, column=0, padx=(20, 10), pady=10, sticky="ew")
+        self.user_input.bind("<Return>", self.send_message_event)
+        self.user_input.bind("<KeyRelease>", self.update_suggestions)
+
+        self.send_button = ctk.CTkButton(
+            self.input_container,
+            text="➤",
+            width=60,
+            height=40,
+            fg_color="#2A2A2A",
+            hover_color="#3C3C3C",
+            font=("Segoe UI", 20),
+            command=self.send_message,
+            corner_radius=50,
+        )
+        self.send_button.grid(row=0, column=1, padx=10, pady=5)
+
+        # === suggestion frame ===
+        self.suggestion_frame = ctk.CTkFrame(self, fg_color="#0D0D0D")
+        self.suggestion_frame.grid(row=3, column=0, sticky="ew", padx=420, pady=(0, 20))
+
+        # pesan pembuka
+        self.add_message("Chatbot", "Halo! Tanyakan apa saja tentang emisi karbon 🌱")
+
+    def add_message(self, sender, message):
+        frame = ctk.CTkFrame(self.chat_frame, fg_color="#1E1E1E")
+        label = ctk.CTkLabel(
+            frame,
+            text=f"{sender}: {message}",
+            anchor="w",
+            justify="left",
+            wraplength=800,
+            font=("Segoe UI", 16),
+            text_color="#eaeaea"
+        )
+        label.pack(fill="x", padx=10, pady=5)
+        frame.pack(fill="x", padx=20, pady=5)
+
+    def send_message_event(self, event=None):
+        self.send_message()
+
+    def send_message(self, text_from_suggestion=None):
+        user_text = text_from_suggestion if text_from_suggestion else self.user_input.get()
+        if user_text.strip() == "":
+            return
+        self.add_message("Anda", user_text)
+        self.user_input.delete(0, "end")
+        self.clear_suggestions()
+        response = get_chatbot_response(user_text)
+        self.add_message("Chatbot", response)
+
+    def update_suggestions(self, event=None):
+        typed = self.user_input.get().lower().strip()
+        self.clear_suggestions()
+        if not typed:
+            return
+        matches = [q for q in KNOWLEDGE_BASE.keys() if typed in q.lower()][:3]
+        for s in matches:
+            btn = ctk.CTkButton(
+                self.suggestion_frame,
+                text=s,
+                command=lambda text=s: self.send_message(text),
+                fg_color="#202020",
+                hover_color="#303030",
+                corner_radius=12,
+                anchor="w",
+                width=900,
+                font=("Segoe UI", 14),
+                text_color="#cccccc",
+            )
+            btn.pack(fill="x", pady=2)
+
+    def clear_suggestions(self):
+        for widget in self.suggestion_frame.winfo_children():
+            widget.destroy()
+
+# Jalankan aplikasi
+if __name__ == "__main__":
+    app = CarbonChatbotApp()
+    app.mainloop()

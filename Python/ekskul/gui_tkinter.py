@@ -4,7 +4,6 @@ root = tk.Tk()
 
 root.title("Simple Chatbot")      # Set the window title
 root.geometry("400x300")          # Set the window size (width x height)
-root.configure(bg="lightblue")
 
 label1 = tk.Label(root, text="Welcome to the Simple Chatbot!")
 label1.pack()

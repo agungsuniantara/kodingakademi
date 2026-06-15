@@ -59,17 +59,17 @@ INSERT INTO nilai_mahasiswa (nama, matkul, nilai) VALUES
 -- AGREGASI --
 
 -- COUNT
-
 SELECT COUNT(*) AS jumlah_fisika FROM mahasiswa_fisika;
 
--- SUM 
+-- COUNT DISTINCT (Menghitung jumlah mata kuliah unik yang ada di tabel, tanpa menghitung duplikat)
+SELECT COUNT(DISTINCT matkul) AS jumlah_mata_kuliah FROM nilai_mahasiswa;
 
+-- SUM 
 SELECT SUM(nilai) AS total_nilai_fisika
 FROM nilai_mahasiswa
 WHERE matkul = 'Fisika';
 
 -- AVG & ROUND
-
 SELECT AVG(nilai) AS rata_rata_nilai
 FROM nilai_mahasiswa;
 
@@ -77,7 +77,6 @@ SELECT ROUND(AVG(nilai),2) AS rata_rata_nilai
 FROM nilai_mahasiswa;
 
 -- MIN dan MAX
-
 SELECT MIN(nilai) AS nilai_terendah, MAX(nilai) AS nilai_tertinggi
 FROM nilai_mahasiswa;
 
@@ -99,6 +98,13 @@ SELECT nama, 'Matematika' AS jurusan FROM mahasiswa_matematika;
 SELECT nama FROM mahasiswa_fisika
 UNION ALL
 SELECT nama FROM mahasiswa_matematika;
+
+-- UNION DENGAN ORDER BY
+-- Menggabungkan semua nama dan mengurutkannya sesuai abjad
+SELECT nama FROM mahasiswa_fisika
+UNION
+SELECT nama FROM mahasiswa_matematika
+ORDER BY nama ASC;
 
 -- SUBQUERY -- 
 
@@ -129,7 +135,16 @@ FROM (
   SELECT nama FROM mahasiswa_matematika
 ) AS semua_mahasiswa;
 
+-- Subquery menggunakan IN
+-- Mencari data ujian khusus untuk mahasiswa yang benar-benar terdaftar di jurusan Fisika
+SELECT nama, matkul, nilai 
+FROM nilai_mahasiswa
+WHERE nama IN (SELECT nama FROM mahasiswa_fisika);
 
-
-
-
+-- Subquery di bagian SELECT
+-- Menampilkan setiap mahasiswa beserta perbandingan nilai mereka dengan nilai maksimum di kampus
+SELECT 
+    nama, 
+    nilai, 
+    (SELECT MAX(nilai) FROM nilai_mahasiswa) AS nilai_tertinggi_kampus
+FROM nilai_mahasiswa;

@@ -1,11 +1,28 @@
 import os, re, time, json, platform
+import warnings
 import numpy as np
 import requests
 import torch
+
 from sentence_transformers import SentenceTransformer, util
-from langchain_ollama import OllamaLLM
-from langchain.memory import ConversationBufferMemory
-from langchain.schema import HumanMessage, AIMessage
+
+# === Gunakan paket resmi langchain-ollama ===
+# pip install -U langchain-ollama
+try:
+    from langchain_ollama import OllamaLLM
+except Exception as e:
+    raise RuntimeError(
+        "Paket 'langchain-ollama' belum terpasang atau versi lawas. "
+        "Jalankan: pip install -U langchain-ollama"
+    ) from e
+
+from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core._api import LangChainDeprecationWarning  # untuk suppress warning
+
+# =========================
+# Suppress warnings (tanpa ubah flow)
+# =========================
+warnings.filterwarnings("ignore", category=LangChainDeprecationWarning)
 
 # =========================
 # Environment safety (hindari semaphore leak/segfault kecil)
@@ -25,24 +42,21 @@ except Exception:
 FAQ_API_URL   = "http://127.0.0.1:5000/api/knowledge_faq"
 PROGRAMS_API  = "http://127.0.0.1:5000/api/knowledge_data"
 
-CACHE_DURATION     = 300          # detik: refresh data dari API
-SIM_THRESHOLD_RAG  = 0.35         # threshold sim untuk RAG context keeper
+CACHE_DURATION     = 300
+SIM_THRESHOLD_RAG  = 0.35
 TOP_K              = 5
 
-FAQ_HARD_THRESHOLD = 0.60         # skor min utk direct FAQ answer (semantik)
-FAQ_SOFT_THRESHOLD = 0.45         # soft → dipakai sbg konteks RAG
+FAQ_HARD_THRESHOLD = 0.60
+FAQ_SOFT_THRESHOLD = 0.45
 
-# Persistance FAISS (pakai kalau USE_FAISS=True)
 INDEX_FILE      = "faiss.index"
 EMBEDDINGS_FILE = "embeddings.npy"
 DOCS_FILE       = "docs.json"
 
-# Default: matikan FAISS di macOS (sering jadi sumber segfault kalau build-nya tidak cocok)
 IS_MAC = platform.system().lower() == "darwin"
-USE_FAISS = FAISS_AVAILABLE and (not IS_MAC)  # ganti ke True kalau kamu yakin build FAISS-mu stabil
+USE_FAISS = FAISS_AVAILABLE and (not IS_MAC)
 
-# Device untuk SBERT (CPU aman)
-DEVICE = "cpu"  # set ke "cuda" bila tersedia dan ingin pakai GPU
+DEVICE = "cpu"
 
 _sentence_model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 _sentence_model.to(DEVICE)
@@ -51,11 +65,10 @@ _dynamic_cache = {
     "last_update": 0,
     "faiss_index": None,
     "embeddings": None,
-    "docs": None,            # gabungan docs (programs + faq) untuk RAG
-    "raw": None,             # {"programs": [...], "faq": [...]}
-    # cache khusus FAQ direct match
-    "faq_qs": None,          # list pertanyaan FAQ
-    "faq_qs_emb": None,      # embeddings pertanyaan FAQ (torch tensor di DEVICE)
+    "docs": None,
+    "raw": None,
+    "faq_qs": None,
+    "faq_qs_emb": None,
 }
 
 CITY_KEYWORDS = {
@@ -63,6 +76,29 @@ CITY_KEYWORDS = {
     "gianyar": "Gianyar",
     "surabaya": "Surabaya"
 }
+
+# =========================
+# Simple drop-in replacement for ConversationBufferMemory
+# =========================
+class SimpleBufferMemory:
+    """API yang dipakai kode ini:
+       - load_memory_variables({}) -> {"history": List[HumanMessage|AIMessage]}
+       - save_context({"input": ...}, {"output": ...}) -> append ke history
+    """
+    def __init__(self, return_messages: bool = True):
+        self.return_messages = return_messages
+        self._history = []  # list of HumanMessage / AIMessage
+
+    def load_memory_variables(self, _: dict) -> dict:
+        return {"history": list(self._history)}
+
+    def save_context(self, input_dict: dict, output_dict: dict) -> None:
+        user_text = input_dict.get("input", "")
+        bot_text  = output_dict.get("output", "")
+        if user_text:
+            self._history.append(HumanMessage(content=user_text))
+        if bot_text:
+            self._history.append(AIMessage(content=bot_text))
 
 # =========================
 # Helper ambil data
@@ -113,17 +149,15 @@ Link:
 # FAISS utils (opsional)
 # =========================
 def _norm_f32(a: np.ndarray) -> np.ndarray:
-    """Pastikan float32, contiguous, dan normalized (L2)."""
     if a.dtype != np.float32:
         a = a.astype(np.float32, copy=False)
     a = np.ascontiguousarray(a)
-    # normalize row-wise
     norms = np.linalg.norm(a, axis=1, keepdims=True) + 1e-12
     a = a / norms
     return a
 
 def save_index_and_embeddings(index, embeddings, docs):
-    import faiss  # local import
+    import faiss
     faiss.write_index(index, INDEX_FILE)
     np.save(EMBEDDINGS_FILE, embeddings)
     with open(DOCS_FILE, "w", encoding="utf-8") as f:
@@ -140,7 +174,6 @@ def load_index_and_embeddings():
     return None, None, None
 
 def build_faiss_index_IP(embeddings):
-    """Index Inner Product (IP) untuk cosine (embeddings harus dinormalisasi)."""
     import faiss
     dim = embeddings.shape[1]
     index = faiss.IndexFlatIP(dim)
@@ -156,9 +189,9 @@ def ensure_faq_question_embeddings(faq):
         _dynamic_cache["faq_qs"] = []
         _dynamic_cache["faq_qs_emb"] = None
         return
-    emb = _sentence_model.encode(qs, convert_to_tensor=True)  # tensor di DEVICE
+    emb = _sentence_model.encode(qs, convert_to_tensor=True)
     _dynamic_cache["faq_qs"] = qs
-    _dynamic_cache["faq_qs_emb"] = emb  # torch tensor
+    _dynamic_cache["faq_qs_emb"] = emb
 
 def load_all_and_build_if_needed():
     now = time.time()
@@ -175,9 +208,7 @@ def load_all_and_build_if_needed():
             _dynamic_cache.update({"raw": {"programs": programs, "faq": faq}, "docs": [], "faiss_index": None})
             return _dynamic_cache["raw"], _dynamic_cache["docs"], _dynamic_cache["faiss_index"]
 
-        # Embeddings untuk retrieval
         embs = _sentence_model.encode(docs, convert_to_numpy=True, show_progress_bar=False)
-        # Simpan FAISS jika dipakai
         if USE_FAISS:
             try:
                 embs_n = _norm_f32(embs)
@@ -188,7 +219,7 @@ def load_all_and_build_if_needed():
             except Exception as e:
                 print("Peringatan: FAISS gagal, fallback ke NumPy cosine. Err:", e)
                 _dynamic_cache["faiss_index"] = None
-                _dynamic_cache["embeddings"] = _norm_f32(embs)  # tetap normalisasi utk cosine numpy
+                _dynamic_cache["embeddings"] = _norm_f32(embs)
         else:
             _dynamic_cache["faiss_index"] = None
             _dynamic_cache["embeddings"] = _norm_f32(embs)
@@ -200,7 +231,6 @@ def load_all_and_build_if_needed():
         })
 
     else:
-        # Kalau FAISS diaktifkan, coba load dari disk bila cache kosong
         if USE_FAISS and _dynamic_cache["faiss_index"] is None:
             try:
                 index, embs, docs_disk = load_index_and_embeddings()
@@ -301,7 +331,6 @@ def faq_direct_match(query, faq):
     greeting = extract_greeting(query)
     city = extract_city(query)
 
-    # 1) Alamat
     if is_address_intent(query) and city:
         target_key = f"koding akademi {city.lower()}"
         for item in faq:
@@ -315,7 +344,6 @@ def faq_direct_match(query, faq):
         head = f"{greeting+'! ' if greeting else ''}Alamat untuk {city} belum tersedia di data."
         return {"mode":"direct", "text": head}
 
-    # 2) Semantic ke daftar pertanyaan FAQ (tensor di DEVICE)
     qs = _dynamic_cache.get("faq_qs") or []
     qembs = _dynamic_cache.get("faq_qs_emb")
     if qs and qembs is not None:
@@ -337,19 +365,16 @@ def faq_direct_match(query, faq):
 # =========================
 def retrieve(query, docs, embeddings, faiss_index=None, top_k=TOP_K):
     if faiss_index is not None and USE_FAISS:
-        # FAISS (IP) – query juga harus dinormalisasi
         q = _sentence_model.encode([query], convert_to_numpy=True)
         q = _norm_f32(q)
         D, I = faiss_index.search(q, top_k)
-        # Untuk IP, similarity = score langsung (semakin besar semakin mirip)
         sims = D[0]
         idxs = I[0]
         return [docs[i] for i in idxs], idxs, sims
-    # Fallback NumPy cosine (aman & stabil)
     q = _sentence_model.encode([query], convert_to_numpy=True)
-    q = _norm_f32(q)[0]  # (d,)
-    M = embeddings.T      # (d, N)
-    sims = q @ M          # (N,), karena semua sudah dinormalisasi → cosine
+    q = _norm_f32(q)[0]
+    M = embeddings.T
+    sims = q @ M
     top_idx = np.argsort(-sims)[:top_k]
     return [docs[i] for i in top_idx], top_idx, sims[top_idx]
 
@@ -357,13 +382,17 @@ def retrieve(query, docs, embeddings, faiss_index=None, top_k=TOP_K):
 # Prompt builder
 # =========================
 def build_full_prompt(memory, context, query, extra_instruksi=""):
-    history_messages = memory.load_memory_variables({})["history"]
+    history_payload = memory.load_memory_variables({}).get("history", [])
     history_txt = ""
-    for msg in history_messages:
-        if isinstance(msg, HumanMessage):
-            history_txt += f"Pengguna: {msg.content}\n"
-        elif isinstance(msg, AIMessage):
-            history_txt += f"Bot: {msg.content}\n"
+    if isinstance(history_payload, list):
+        for msg in history_payload:
+            if isinstance(msg, HumanMessage):
+                history_txt += f"Pengguna: {msg.content}\n"
+            elif isinstance(msg, AIMessage):
+                history_txt += f"Bot: {msg.content}\n"
+    elif isinstance(history_payload, str):
+        history_txt = history_payload
+
     prompt = f"""
 Kamu adalah staf Koding Akademi yang ramah.
 Jawab singkat, jelas, santai (Bahasa Indonesia).
@@ -371,6 +400,7 @@ Gunakan HANYA info pada 'Pengetahuan'. DILARANG membuat link/program baru.
 Jika link tidak ada di Pengetahuan, tulis 'link tidak tersedia'.
 Jika beberapa program/opsi cocok, sebutkan semuanya yang ADA di Pengetahuan.
 Jangan sebut AI/pengetahuan/referensi, dan jangan pakai bridging. {extra_instruksi}
+Jangan jawab tidak ada di pengetahuan, bisa jawab silahkan menghubungi admin.
 
 Riwayat:
 {history_txt}
@@ -390,13 +420,17 @@ Jawaban:
 # =========================
 def chatbot():
     llm = OllamaLLM(model="llama3:8b")
-    memory = ConversationBufferMemory(return_messages=True)
+    memory = SimpleBufferMemory(return_messages=True)
 
     print("=== Chatbot Koding Akademi (Programs by Age + Deterministic FAQ + RAG) ===")
     print("Ketik 'exit' untuk keluar.\n")
 
     while True:
-        query = input("You: ").strip()
+        try:
+            query = input("You: ").strip()
+        except EOFError:
+            break
+
         if not query or query.lower() == "exit":
             break
 
@@ -433,7 +467,6 @@ def chatbot():
             continue
 
         contexts, indices, scores = retrieve(query, docs, embeddings, faiss_index, top_k=TOP_K)
-        # Untuk IP/cosine → skor makin besar makin mirip
         kept = [(i, s) for i, s in zip(indices, scores) if s >= SIM_THRESHOLD_RAG]
         if not kept:
             kept = [(indices[0], scores[0])]

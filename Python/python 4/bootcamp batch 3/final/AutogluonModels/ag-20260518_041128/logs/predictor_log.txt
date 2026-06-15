@@ -1,0 +1,84 @@
+Beginning AutoGluon training... Time limit = 120s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260518_041128'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.97 GB / 8.00 GB (24.7%)
+Disk Space Avail:   6.98 GB / 228.27 GB (3.1%)
+	WARNING: Available disk space is low and there is a risk that AutoGluon will run out of disk during fit, causing an exception. 
+	We recommend a minimum available disk space of 10 GB, and large datasets may require more.
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 5,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'total_penjualan',
+ 'time_limit': 120,
+ 'verbosity': 2}
+
+Inferred time series frequency: 'D'
+Provided train_data has 30 rows, 1 time series. Median time series length is 30 (min=30, max=30). 
+
+Provided data contains following columns:
+	target: 'total_penjualan'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-05-18 12:11:28
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 17.1s of the 120.0s of remaining time.
+	-26.0000      = Validation score (-MAE)
+	0.00    s     = Training runtime
+	1.95    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 19.7s of the 118.0s of remaining time.
+	-116.2000     = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.92    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 23.4s of the 117.1s of remaining time.
+	-102.5231     = Validation score (-MAE)
+	0.20    s     = Training runtime
+	0.01    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 29.2s of the 116.9s of remaining time.
+	-25.6000      = Validation score (-MAE)
+	0.14    s     = Training runtime
+	0.01    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 38.9s of the 116.7s of remaining time.
+	-27.8837      = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.99    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 57.9s of the 115.7s of remaining time.
+	-22.8021      = Validation score (-MAE)
+	0.00    s     = Training runtime
+	1.56    s     = Validation (prediction) runtime
+Fitting 1 ensemble(s), in 1 layers.
+Training ensemble model WeightedEnsemble. Training for up to 114.2s.
+	Ensemble weights: {'DirectTabular': 0.16, 'ETS': 0.06, 'RecursiveTabular': 0.05, 'SeasonalNaive': 0.01, 'Theta': 0.72}
+	-17.2523      = Validation score (-MAE)
+	0.07    s     = Training runtime
+	3.50    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 5.90 s
+Best model: WeightedEnsemble
+Best model score: -17.2523
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).
+Additional data provided, testing on additional data. Resulting leaderboard will be sorted according to test score (`score_test`).

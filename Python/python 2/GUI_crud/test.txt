@@ -1,0 +1,17 @@
+FUNCTION CalculateDiscount(TotalPurchase : REAL) RETURNS REAL
+    RETURN TotalPurchase * 0.10
+ENDFUNCTION
+
+DECLARE TotalAmount : REAL
+DECLARE FinalDiscount : REAL
+
+OUTPUT "Enter total purchase amount: "
+INPUT TotalAmount
+
+FinalDiscount <- CalculateDiscount(TotalAmount)
+
+OPENFILE "Receipt.txt" FOR WRITE
+WRITEFILE "Receipt.txt", FinalDiscount
+CLOSEFILE "Receipt.txt"
+
+OUTPUT "Discount calculated and saved to Receipt.txt"

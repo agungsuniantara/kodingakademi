@@ -1,0 +1,851 @@
+#include <stdio.h>
+
+int main(){
+    // array (larik) = sekelompok variabel dengan tipe data yang sama yang diakses menggunakan indeks
+
+    // deklarasi array
+    int angka[5]; // array dengan tipe data integer dan ukuran 5 elemen
+
+    // inisialisasi array
+    angka[0] = 10;
+    angka[1] = 20;
+    angka[2] = 30;
+    angka[3] = 40;
+    angka[4] = 50;
+
+    // akses array index
+    printf("angka[0] = %d\n", angka[0]);
+    printf("angka[1] = %d\n", angka[1]);
+
+    // akses elemen array
+    for (int i = 0; i < 5; i++){
+        printf("angka[%d] = %d\n", i, angka[i]);
+    }
+
+    int angka2[5] = {1, 2, 3, 4, 5}; // deklarasi dan inisialisasi array
+
+    angka2[2] = 10; // mengubah nilai elemen array pada index ke-2
+    printf("angka2[2] = %d\n", angka2[2]);
+
+    // array multidimensi
+    int matrix[2][3] = {{1, 2, 3},
+                      {4, 5, 6}};
+
+    // akses elemen array multidimensi
+    printf("matrix[0][0] = %d\n", matrix[0][0]);
+    printf("matrix[0][0] = %d\n", matrix[0][1]);
+    printf("matrix[0][0] = %d\n", matrix[0][2]);
+    printf("matrix[1][2] = %d\n", matrix[1][0]);
+    printf("matrix[1][2] = %d\n", matrix[1][1]);
+    printf("matrix[1][2] = %d\n", matrix[1][2]);
+
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 3; j++){
+            printf("matrix[%d][%d] = %d\n", i, j, matrix[i][j]);
+        }
+    }
+
+    // studi kasus 1
+
+    int data[5];
+
+    for (int i = 0; i < 5; i++){
+        printf("Masukkan angka ke-%d: ", i+1);
+        scanf("%d", &data[i]);
+    }
+
+    printf("Data yang dimasukkan:\n");
+    for (int i = 0; i < 5; i++){
+        printf("data[%d] = %d\n", i, data[i]);
+    }
+
+    // studi kasus 2 (mencari nilai maksimum dalam array)
+
+    int data_angka[5] = {12, 45, 9, 77, 30};
+    int max = data_angka[0];
+
+    for (int i = 1; i < 5; i++){
+        if (data_angka[i] > max){
+            max = data_angka[i];
+        }
+    }
+    printf("Nilai maksimum dalam array adalah: %d\n", max);
+
+    // assignment
+
+    // Buat program kasir sederhana.
+
+    // 1. Minta user input harga untuk 5 barang (simpan dalam Array).
+    // 2. Tampilkan daftar harga yang sudah diinput.
+    // 3. Hitung Total Harga (penjumlahan semua array).
+    // 4. Jika total belanja di atas 100.000, berikan diskon 10%.
+    // 5. Tampilkan total bayar akhir.
+
+    int harga[5];
+
+    // no 1
+    for (int i = 0; i < 5; i++){
+        printf("Masukkan harga barang ke-%d: ", i+1);
+        scanf("%d", &harga[i]);
+    }
+
+    // no 2
+    printf("\nDaftar harga barang:\n");
+    for (int i = 0; i < 5; i++){
+        printf("Harga barang ke-%d: %d\n", i+1, harga[i]);
+    }
+
+    // no 3
+    int total_harga = 0;
+    for (int i = 0; i < 5; i++){
+        total_harga += harga[i]; // total_harga = total_harga + harga[i]
+    }
+
+    // asignment 2
+
+    // 1. minta user menginputkan angka sebanyak 5 kali.
+    // 2. simpan angka-angka tersebut dalam array.
+    // 3. buat inputan untuk mencari angka dalam array.
+    // 4. tampilkan apakah angka tersebut ada dalam array atau tidak.
+
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    // control flow (for loop, while loop)
+
+    // for loop (perulangan dengan jumlah iterasi yang sudah ditentukan)
+
+    for (int i = 1; i <= 5; i++){
+        printf("For Loop Iteration: %d\n", i);
+    }
+
+    // while loop (perulangan dengan kondisi tertentu)
+
+    int j = 1;
+    while (j <= 5){
+        printf("While Loop Iteration: %d\n", j);
+        j++;
+    }
+
+    // do-while loop (perulangan yang dijalankan minimal satu kali)
+
+    int k = 1;
+    do {
+        printf("Do-While Loop Iteration: %d\n", k);
+        k++;
+    } while (k <= 5);
+
+    // studi kasus 
+
+    int kondisi = 1;
+    int angka = 0;
+    while (kondisi){
+        printf("angka = %d\n", angka);
+        angka++;
+        if (angka > 5){
+            kondisi = 0;
+            // break;
+        }
+    }
+
+    // assignment
+
+    // 1. Buat program yang menampilkan bilangan genap dari 2 hingga 20 menggunakan for loop.
+    int i = 10;
+    if (i % 2 == 0){
+        printf("%d", i);
+    }
+    // 2. Buat program yang menampilkan bilangan ganjil dari 1 hingga 19 menggunakan while loop.
+    int m = 1;
+    while (m < 20){
+        if (m % 2 != 0){
+            printf("%d\n", m);
+        }
+        m++;
+    }
+
+    // input (scanf & fgets)
+
+    char nama[50];
+    int nim;
+    float ipk;
+    char grade;
+
+    printf("--- input data mahasiswa ---\n");
+
+    printf("nama: ");
+    scanf("%s", nama);
+
+    printf("nim: ");
+    scanf("%d", &nim);
+
+    printf("ipk: ");
+    scanf("%f", &ipk);
+
+    printf("grade: ");
+    scanf(" %c", &grade);
+
+    printf("\n--- data mahasiswa ---\n");
+    printf("nama: %s\n", nama);
+    printf("nim: %d\n", nim);
+    printf("ipk: %.2f\n", ipk);
+    printf("grade: %c\n", grade);
+
+    // assignment
+
+    // 1. Minta user menginput Alas (gunakan tipe data float).
+    // 2. Minta user menginput Tinggi (gunakan tipe data float).
+    // 3. Hitung luasnya dengan rumus: 0.5 * Alas * Tinggi.
+    // 4. Tampilkan hasilnya dengan 2 angka di belakang koma.
+
+    int a, b;
+
+    printf("masukan angka : ");
+    scanf("%d %d", &a, &b);
+    printf("a : %d\n", a);
+    printf("b : %d\n", b);
+
+    getchar(); // membersihkan buffer
+
+    char nama_lengkap[50];
+
+    printf("Masukkan nama lengkap: ");
+    fgets(nama_lengkap, sizeof(nama_lengkap), stdin);
+
+    printf("Nama lengkap Anda adalah: %s", nama_lengkap);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+
+    // w = write, membuat file baru atau menimpa file lama
+    // r = read, membaca file
+    // a = append, menambahkan data di akhir file
+
+    // fopen() = fungsi untuk membuka file
+    // fwrite() = fungsi untuk menulis ke file
+    // fread() = fungsi untuk membaca dari file
+    // fclose() = fungsi untuk menutup file
+    // fprintf() = fungsi untuk menulis ke file dengan format
+
+    // membuat file
+    FILE *filePtr;
+
+    filePtr = fopen("data.txt", "w"); // membuka / membuat file data.txt untuk ditulis
+
+    if (filePtr == NULL){
+        printf("Gagal membuka file.\n");
+        return 1; // keluar dari program dengan kode error 1
+    }
+
+    fprintf(filePtr, "Nama : lila\n");
+    fprintf(filePtr, "Umur : 25\n");
+    fprintf(filePtr, "Kota : Jakarta\n");
+
+    fclose(filePtr); // menutup file
+
+    // membaca file
+    FILE *baca;
+
+    baca = fopen("data.txt", "r"); // membuka file data.txt untuk dibaca
+
+    printf("isi biodata telah ditulis ke file data.txt\n");
+
+    char buffer[100];
+
+    // fgets(buffer, sizeof(buffer), baca); 
+    // printf("%s \n", buffer);
+    // fgets(buffer, sizeof(buffer), baca); 
+    // printf("%s \n", buffer);
+
+    while (fgets(buffer, sizeof(buffer), baca) != NULL){
+        printf("%s", buffer);
+    }   
+
+    fclose(baca); // menutup file
+
+    return 0;
+}
+
+#include <stdio.h>
+
+void tukar(int x, int y){ // tanpa pointer
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+    printf("nilai x di dalam fungsi tukar: %d\n", x);
+    printf("nilai y di dalam fungsi tukar: %d\n", y);
+}
+
+void tukar_pointer(int *x, int *y){ // dengan pointer
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    printf("nilai x di dalam fungsi tukar_pointer: %d\n", *x);
+    printf("nilai y di dalam fungsi tukar_pointer: %d\n", *y);
+}
+
+int main(){
+    int a = 10;
+    int b = 20;
+    printf("nilai a: %d\n", a);
+    printf("alamat a: %p\n", &a); // & = operator untuk mendapatkan alamat variabel
+    printf("nilai b: %d\n", b);
+    printf("alamat b: %p\n", &b);
+
+    // pointer = variabel yang menyimpan alamat dari variabel lain
+
+    int *p; // deklarasi pointer
+    p = &a; // menyimpan alamat variabel a ke pointer p
+
+    printf("alamat pointer p: %p\n", p);
+    printf("nilai yang ditunjuk pointer p: %d\n", *p);  
+
+    *p = 15; // mengubah nilai a melalui pointer p
+    printf("nilai a setelah diubah melalui pointer p: %d\n", a);
+
+    // studi kasus mengapa pointer itu penting
+
+    int c = 30;
+    int d = 40;
+
+    printf("\nSebelum ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+    tukar(c, d);
+    printf("Setelah ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+
+    // nilai c dan d tidak berubah karena yang dikirim ke fungsi tukar adalah salinan nilai c dan d
+
+    printf("\nSebelum ditukar dengan pointer:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+    tukar_pointer(&c, &d); // mengirim alamat c dan d ke fungsi
+    printf("Setelah ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+
+    // assignment
+
+    // Kalkulator Update Nilai. Buatlah sebuah fungsi bernama updateNilai yang:
+    // Menerima parameter alamat dari sebuah nilai (int *nilai).
+    // Menerima parameter angka penambah (int tambah).
+    // Di dalam fungsi, tambahkan nilai asli dengan penambah.
+
+    // Di main():
+    // Buat variabel skor = 100.
+    // Panggil fungsi: updateNilai(&skor, 50);
+    // Print skor. Output harus 150, bukan 100.
+
+    // assignment 2
+
+    // Buat variabel integer target = 10.
+    // Buat pointer int *p yang menunjuk ke alamat target.
+    // Tantangan: Ubah nilai target menjadi 500, TAPI syaratnya:    
+    // Dilarang menulis target = 500;
+    // Harus menggunakan pointer p.
+    // Tampilkan nilai target di layar untuk membuktikan bahwa nilainya berubah.
+
+    int angka[3] = {100, 200, 300};
+    int *z = angka; // pointer menunjuk ke elemen pertama array
+
+    printf("\nAlamat array angka: %p\n", angka);
+    printf("elemen pointer z: %p\n", z);
+    printf("elemen pertama: %d\n", *z); // 100
+    printf("elemen kedua: %d\n", *(z + 1)); // 200
+    printf("elemen ketiga: %d\n", *(z + 2)); // 300
+
+    for (int i = 0; i < 3; i++){
+        printf("elemen ke-%d: %d\n", i, *(z + i));
+    }
+
+    // assignment 3
+
+    // buat variabel char kalimat[5] = "manish";
+    // tukar karakter pertama dan terakhir menggunakan pointer.
+
+    char kalimat[7] = "manish";
+    char *ptr_start = &kalimat[0];
+    char *ptr_end = &kalimat[5];
+
+    printf("\nSebelum ditukar: %s\n", kalimat);
+    // tukar karakter pertama dan terakhir
+    char temp_char = *ptr_start;
+    *ptr_start = *ptr_end;
+    *ptr_end = temp_char;
+
+    // assignment 4
+
+    // buat array integer numbers[4] = {10, 20, 30, 40};
+    // jumlahkan semua elemen dalam array menggunakan pointer dan tampilkan hasilnya.
+
+    int numbers[4] = {10, 20, 30, 40};
+    int *ptr_numbers = numbers;
+    int total = 0;
+
+    for (int i = 0; i < 4; i++){
+        total += *(ptr_numbers + i); // total = total + numbers[i];
+    }
+
+    printf("Total: %d\n", total);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+void tukar(int x, int y){ // tanpa pointer
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+    printf("nilai x di dalam fungsi tukar: %d\n", x);
+    printf("nilai y di dalam fungsi tukar: %d\n", y);
+}
+
+void tukar_pointer(int *x, int *y){ // dengan pointer
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    printf("nilai x di dalam fungsi tukar_pointer: %d\n", *x);
+    printf("nilai y di dalam fungsi tukar_pointer: %d\n", *y);
+}
+
+int main(){
+    int a = 10;
+    int b = 20;
+    printf("nilai a: %d\n", a);
+    printf("alamat a: %p\n", &a); // & = operator untuk mendapatkan alamat variabel
+    printf("nilai b: %d\n", b);
+    printf("alamat b: %p\n", &b);
+
+    // pointer = variabel yang menyimpan alamat dari variabel lain
+
+    int *p; // deklarasi pointer
+    p = &a; // menyimpan alamat variabel a ke pointer p
+
+    printf("alamat pointer p: %p\n", p);
+    printf("nilai yang ditunjuk pointer p: %d\n", *p);  
+
+    *p = 15; // mengubah nilai a melalui pointer p
+    printf("nilai a setelah diubah melalui pointer p: %d\n", a);
+
+    // studi kasus mengapa pointer itu penting
+
+    int c = 30;
+    int d = 40;
+
+    printf("\nSebelum ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+    tukar(c, d);
+    printf("Setelah ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+
+    // nilai c dan d tidak berubah karena yang dikirim ke fungsi tukar adalah salinan nilai c dan d
+
+    printf("\nSebelum ditukar dengan pointer:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+    tukar_pointer(&c, &d); // mengirim alamat c dan d ke fungsi
+    printf("Setelah ditukar:\n");
+    printf("nilai c: %d\n", c);
+    printf("nilai d: %d\n", d);
+
+    // assignment
+
+    // Kalkulator Update Nilai. Buatlah sebuah fungsi bernama updateNilai yang:
+    // Menerima parameter alamat dari sebuah nilai (int *nilai).
+    // Menerima parameter angka penambah (int tambah).
+    // Di dalam fungsi, tambahkan nilai asli dengan penambah.
+
+    // Di main():
+    // Buat variabel skor = 100.
+    // Panggil fungsi: updateNilai(&skor, 50);
+    // Print skor. Output harus 150, bukan 100.
+
+    // assignment 2
+
+    // Buat variabel integer target = 10.
+    // Buat pointer int *p yang menunjuk ke alamat target.
+    // Tantangan: Ubah nilai target menjadi 500, TAPI syaratnya:    
+    // Dilarang menulis target = 500;
+    // Harus menggunakan pointer p.
+    // Tampilkan nilai target di layar untuk membuktikan bahwa nilainya berubah.
+
+    int angka[3] = {100, 200, 300};
+    int *z = angka; // pointer menunjuk ke elemen pertama array
+
+    printf("\nAlamat array angka: %p\n", angka);
+    printf("elemen pointer z: %p\n", z);
+    printf("elemen pertama: %d\n", *z); // 100
+    printf("elemen kedua: %d\n", *(z + 1)); // 200
+    printf("elemen ketiga: %d\n", *(z + 2)); // 300
+
+    for (int i = 0; i < 3; i++){
+        printf("elemen ke-%d: %d\n", i, *(z + i));
+    }
+
+    // assignment 3
+
+    // buat variabel char kalimat[5] = "manish";
+    // tukar karakter pertama dan terakhir menggunakan pointer.
+
+    char kalimat[7] = "manish";
+    char *ptr_start = &kalimat[0];
+    char *ptr_end = &kalimat[5];
+
+    printf("\nSebelum ditukar: %s\n", kalimat);
+    // tukar karakter pertama dan terakhir
+    char temp_char = *ptr_start;
+    *ptr_start = *ptr_end;
+    *ptr_end = temp_char;
+
+    // assignment 4
+
+    // buat array integer numbers[4] = {10, 20, 30, 40};
+    // jumlahkan semua elemen dalam array menggunakan pointer dan tampilkan hasilnya.
+
+    int numbers[4] = {10, 20, 30, 40};
+    int *ptr_numbers = numbers;
+    int total = 0;
+
+    for (int i = 0; i < 4; i++){
+        total += *(ptr_numbers + i); // total = total + numbers[i];
+    }
+
+    printf("Total: %d\n", total);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+// algoritma = langkah-langkah penyelesaian masalah
+// searching = pencarian data di dalam struktur data
+
+void linear_search(int target, int data[], int n){
+    // linear search (sequential search)
+    // mencari data dengan cara mengecek satu per satu dari awal hingga akhir
+
+    int found = 0;
+    for (int i = 0; i < n; i++){
+        if (data[i] == target){
+            found = 1;
+            printf("Data %d ditemukan pada indeks ke-%d\n", target, i);
+            break;
+        }
+    }
+
+    if (!found){
+        printf("Data %d tidak ditemukan\n", target);
+    }
+}
+
+void binary_search(int target, int data[], int n){
+    // binary search
+    // mencari data dengan cara membagi dua bagian dari data yang sudah terurut
+
+    int left = 0;
+    int right = n - 1;
+
+    while (left <= right){
+        int mid = left + (right - left) / 2;
+
+        if (data[mid] == target){
+            printf("Data %d ditemukan pada indeks ke-%d\n", target, mid);
+            break;
+        } else if (data[mid] < target){
+            left = mid + 1; // cari di bagian kanan
+        } else {
+            right = mid - 1; // cari di bagian kiri
+        }
+
+        if (left > right){
+            printf("Data %d tidak ditemukan\n", target);
+            break;
+        }
+    }
+}
+
+// sorting = pengurutan data dalam struktur data
+
+int bubble_sort(int data[], int n){
+    // bubble sort
+    // mengurutkan data dengan cara menukar elemen yang berdekatan jika urutannya salah
+
+    for (int i = 0; i < n-1; i++){
+        for (int j = 0; j < n-i-1; j++){
+            if (data[j] > data[j+1]){
+                // swap
+                int temp = data[j];
+                data[j] = data[j+1];
+                data[j+1] = temp;
+            }
+        }
+    }
+}
+
+int selection_sort(int data[], int n){
+    // selection sort
+    // mengurutkan data dengan cara mencari elemen terkecil dan menukarnya dengan elemen pertama yang belum terurut
+
+    for (int i = 0; i < n-1; i++){
+        int min_idx = i;
+        for (int j = i+1; j < n; j++){
+            if (data[j] < data[min_idx]){
+                min_idx = j;
+            }
+        }
+        // swap
+        int temp = data[i];
+        data[i] = data[min_idx];
+        data[min_idx] = temp;
+    }
+}
+
+int main(){
+    int data[] = {1,2,3,4,5,6,7,8,9,10}; // data harus terurut untuk binary search
+    int n = sizeof(data) / sizeof(data[0]); // menghitung jumlah elemen dalam array
+
+    linear_search(5, data, n); 
+    binary_search(7, data, n);
+
+    int data2[] = {5,3,8,6,2,7,4,1,10,9};
+    int m = sizeof(data2) / sizeof(data2[0]);
+
+    int hasil_bubble = bubble_sort(data2, m);
+
+    printf("Data setelah diurutkan menggunakan bubble sort: \n ");
+    for (int i = 0; i < m; i++){
+        printf("%d ", data2[i]);
+    }
+    printf("\n");
+
+    int data3[] = {5,3,8,6,2,7,4,1,10,9};
+    int z = sizeof(data3) / sizeof(data3[0]);
+
+    int hasil_selection = selection_sort(data3, z);
+
+    printf("Data setelah diurutkan menggunakan selection sort: \n ");
+    for (int i = 0; i < z; i++){
+        printf("%d ", data3[i]);
+    }
+    printf("\n");
+
+    // assignment
+    // buatlah program yang mencari angka 10 pada array = {8,2,7,6,2,10,4,5,9,1} menggunakan binary search.
+    // sebelum melakukan binary search, urutkan terlebih dahulu array tersebut menggunakan bubble sort atau selection sort.
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char nama[10] = "Budi"; // ["B", "u", "d", "i", "\0"]
+
+    // char copy_nama[10] = nama; // salah karena array tidak bisa diassign langsung
+
+    int total = 0;
+    for (int i = 0; nama[i] != '\0'; i++){
+        total++;
+    }
+    printf("Panjang nama: %d\n", total); // cara panjang string manual
+
+    // strlen (digunakan untuk menghitung panjang string)
+    int panjang = strlen(nama);
+    printf("Panjang nama menggunakan strlen: %d\n", panjang);
+
+    // strcpy(digunakan untuk menyalin string)
+    char copy_nama[10];
+    strcpy(copy_nama, nama); // (tujuan, sumber)
+    printf("copy_nama: %s\n", copy_nama);
+
+    // strcmp(digunakan untuk membandingkan string)
+    char nama2[10] = "Budi";
+    int hasil = strcmp(nama, nama2); // (string1, string2)
+    if (hasil == 0){
+        printf("nama dan nama2 sama\n");
+    } else {
+        printf("nama dan nama2 berbeda\n");
+    }
+
+    // strcat(digunakan untuk menggabungkan string)
+    char teks[20] = "Hello, ";
+    strcat(teks, nama); // (tujuan, sumber)
+    printf("salam: %s\n", teks);
+
+    // studi kasus 
+
+    char username[20];
+    char password[20];
+
+    printf("Masukkan username: ");
+    scanf("%s", username);
+
+    printf("Masukkan password: ");
+    scanf("%s", password);
+
+    if (strcmp(username, "admin") == 0 && strcmp(password, "password123") == 0){
+        printf("Login berhasil!\n");
+    } else if (strcmp(username, "user") == 0 && strcmp(password, "user123") == 0){
+        printf("Login berhasil sebagai user!\n");
+    } else {
+        printf("Login gagal!\n");
+    }
+
+    // assignment
+
+    // Buat program yang meminta input kalimat, lalu hitung ada berapa huruf vokal (a, i, u, e, o) di dalamnya.
+    // Hint: Gunakan Array Loop + If (kata[i] == 'a' || kata[i] == 'i' ...)
+
+    // asignment 2
+
+    // Buat program yang meminta input kata, lalu menampilkannya secara terbalik.
+    // Input: "KASUR"
+    // Output: "RUSAK"
+    // Hint: Gunakan Loop for mundur, dimulai dari strlen(kata) - 1 sampai 0.
+
+    char kata[100];
+    printf("Masukkan sebuah kata: ");
+    scanf("%s", kata);
+
+    int len = strlen(kata);
+    printf("Kata terbalik: ");
+    for (int i = len - 1; i >= 0; i--){
+        printf("%c", kata[i]);
+    }
+
+    // assignment 3
+
+    // buat program untuk berapa jumlah huruf konsonan dalam sebuah kalimat.
+
+    // assignment 4
+
+    // buat program untuk mengganti kalimat dengan format tertentu.
+    // contoh: ganti semua huruf 'a' menjadi 'o' dalam kalimat
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+struct Mahasiswa {
+    char nama[50];
+    char alamat[100];
+    int umur;
+};
+
+typedef struct {
+    char nama[50];
+    char alamat[100];
+    int umur;
+} Mahasiswa_baru;
+
+int main(){
+    // contoh yang tidak efisien jika menggunakan array biasa
+    int nama[50]; // nama[0] = lila
+    int alamat[50]; // alamat[0] = jakarta
+    int umur[50]; // umur[0] = 20
+
+    struct Mahasiswa data_lila;
+    strcpy(data_lila.nama, "lila");
+    strcpy(data_lila.alamat, "jakarta");
+    data_lila.umur = 20;
+
+    printf("nama: %s\n", data_lila.nama);
+    printf("alamat: %s\n", data_lila.alamat);
+    printf("umur: %d\n", data_lila.umur);
+
+    struct Mahasiswa database[3];
+    strcpy(database[0].nama, "lila");
+    strcpy(database[0].alamat, "jakarta");
+    database[0].umur = 20;
+
+    strcpy(database[1].nama, "budi");
+    strcpy(database[1].alamat, "bandung");
+    database[1].umur = 22;
+
+    strcpy(database[2].nama, "ani");
+    strcpy(database[2].alamat, "surabaya");
+    database[2].umur = 21;
+
+    printf("\nData Mahasiswa:\n");
+    printf("1. %s, %s, %d\n", database[0].nama, database[0].alamat, database[0].umur);
+    printf("2. %s, %s, %d\n", database[1].nama, database[1].alamat, database[1].umur);
+    printf("3. %s, %s, %d\n", database[2].nama, database[2].alamat, database[2].umur);
+
+    printf("\n looping data mahasiswa:\n");
+    for (int i = 0; i < 3; i++){
+        printf("%d. %s, %s, %d\n", i+1, database[i].nama, database[i].alamat, database[i].umur);
+    }
+
+    Mahasiswa_baru data_budi;
+    strcpy(data_budi.nama, "budi");
+    strcpy(data_budi.alamat, "bandung");
+    data_budi.umur = 22;
+
+    printf("\nData Mahasiswa Baru:\n");
+    printf("nama: %s\n", data_budi.nama);
+    printf("alamat: %s\n", data_budi.alamat);
+    printf("umur: %d\n", data_budi.umur);
+
+    // assignment 1
+
+    // Buatlah program menggunakan Struct dan Array untuk mengelola inventaris item di sebuah game RPG. 
+    // Buat struct Item yang berisi : nama (string), harga (int), kekuatan (int).
+    // Di main, buat array Item inventory[3].
+    // Minta user menginput data untuk 3 item tersebut.
+    // Tantangan Logika: Setelah input selesai, tampilkan item mana yang merupakan 
+    // "Item Termahal" (Gunakan algoritma pencarian Max yang sudah dipelajari di materi Array).
+
+    struct Item {
+        char nama[50];
+        int harga;
+        int kekuatan;
+    };
+
+    struct Item inventory[3];
+
+    for (int i = 0; i < 3; i++){
+        printf("\nMasukkan data untuk item ke-%d:\n", i+1);
+        printf("Nama item: ");
+        scanf("%s", inventory[i].nama);
+        printf("Harga item: ");
+        scanf("%d", &inventory[i].harga);
+        printf("Kekuatan item: ");
+        scanf("%d", &inventory[i].kekuatan);
+    }
+
+    int max_harga_index = 0;
+    for (int i = 1; i < 3; i++){
+        if (inventory[i].harga > inventory[max_harga_index].harga){
+            max_harga_index = i;
+        }
+    }
+
+    printf("\nItem Termahal:\n");
+    printf("Nama: %s\n", inventory[max_harga_index].nama);
+    printf("Harga: %d\n", inventory[max_harga_index].harga);
+    printf("Kekuatan: %d\n", inventory[max_harga_index].kekuatan);
+
+    return 0;
+}

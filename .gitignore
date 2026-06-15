@@ -1,16 +1,17 @@
+# 1. Mengabaikan semua file dataset CSV
+*.csv
 
-Python/bootcamp data analis/pertemuan/data/uber-traffic/Uber-Jan-Feb-FOIL.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-apr14.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-aug14.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-janjune-15.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-jul14.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-jun14.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-may14.csv
-Python/bootcamp data analis/pertemuan/data/uber-traffic/uber-raw-data-sep14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-apr14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-aug14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-janjune-15.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-jul14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-jun14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-may14.csv
-Python/private_bootcamp/uber-traffic/uber-raw-data-sep14.csv
+# 2. Mengabaikan folder virtual environment Python
+venv/
+env/
+.venv/
+
+# 3. Mengabaikan file model/bobot Machine Learning (PyTorch)
+*.pth
+
+# 4. Mengabaikan file library/kompilasi (biasanya sudah ter-ignore bersama venv)
+*.so
+*.dylib
+*.abi3.so
+.DS_Store
+**/.DS_Store

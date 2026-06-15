@@ -1,0 +1,13 @@
+
+nama : anik 
+alamat : denpasar 
+umur : 20 
+nama : agung 
+alamat : denpasar 
+umur : 27 
+nama : anik 
+alamat : denpasar 
+umur : 20 
+nama : agung 
+alamat : denpasar 
+umur : 27 

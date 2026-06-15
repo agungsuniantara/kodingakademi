@@ -1,0 +1,16 @@
+names:
+- Hardhat
+- Mask
+- NO-Hardhat
+- NO-Mask
+- NO-Safety Vest
+- Orang
+- Safety Cone
+- Safety Vest
+- machinery
+- vehicle
+nc: 10
+path: /Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/cctv_manual2/datasets/data_kustom
+test: test/images
+train: train/images
+val: valid/images

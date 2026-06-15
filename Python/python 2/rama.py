@@ -1,20 +1,9 @@
-nama = "dek gus" # str (string = tipe data yang menyimpan karakter)
-angka1 = 10 # int (integer = tipe data yang menyimpan bilangan bulat)
-angka2 = 10.5 # float = tipda data yang menyimpan bilangan desimal
-benar = True # boolean benar
-salah = False # boolean salah
-karakter1 = 'a'
+data_1d = [1,2,3]
 
-print(type(nama))
-print(type(angka1))
-print(type(angka2))
-print(type(benar))
-print(type(salah))
-print(type(karakter1))
+data_2d = [
+    [-(4 * 2), (5 * 2)],
+    [4,5]
+]
 
-angka1 = float(angka1)
-print(angka1)
-print(type(angka1))
+print(data_2d[0][1])
 
-nama = "agung"
-print("nama =", nama)

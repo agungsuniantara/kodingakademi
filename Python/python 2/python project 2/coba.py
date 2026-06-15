@@ -1,17 +1,12 @@
-class Mahasiswa:
-    def __init__(self):
-        self.dict = {}
-        
-    def daftar(self,nama, nim, usia, jurusan, alamat):
-        tahun = f"20{nim[0:2]}"
-        self.dict[nim] = {nama, usia, jurusan, alamat, tahun}
-    
-    def tampil(self):
-        for key,value in self.dict.items():
-            print("Data : ")
-            print(f"Nim : {key}")
-            print(f"Data : {value}")
+def find_peak_element(lst: list[int]) -> int:
+    if lst[0] >= lst[1]:
+        return lst[0]
 
-mahasiswa = Mahasiswa()
-mahasiswa.daftar("agus", "198888", "20 tahun", "sistem informasi", "denpasar")
-mahasiswa.tampil()
+    for i in range(1, len(lst) - 1):
+        if lst[i] >= lst[i - 1] and lst[i] >= lst[i + 1]:
+            return lst[i]
+    
+    if lst[-1] >= lst[-2]:
+        return lst[-1]
+    
+    return lst[0] 

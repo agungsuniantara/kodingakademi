@@ -1,23 +1,6 @@
 import tkinter as tk
 import random
 
-root = tk.Tk()
-root.title("Simple Chatbot")
-root.geometry("500x400")
-root.resizable(False, False)
-
-chat_area = tk.Text(root, height=15, width=55, state="disabled")
-chat_area.pack(pady=(10, 10))
-
-input_frame = tk.Frame(root)
-input_frame.pack(padx = (0, 10), pady=(0, 10))
-
-message_entry = tk.Entry(input_frame, width=35)
-message_entry.pack(side="left", padx=(10, 10), pady=(0, 10))
-
-send_button = tk.Button(input_frame, text="Send") 
-send_button.pack(pady=(0, 10))
-
 def get_bot_reply(message):
     msg = message.lower()
     greetings = ["hello", "hi", "hey", "good morning", "good afternoon"]
@@ -71,7 +54,23 @@ def send_message():
 def send_message_event(event):
     send_message()
 
+root = tk.Tk()
+root.title("Simple Chatbot")
+root.geometry("500x400")
+root.resizable(False, False)
+
+chat_area = tk.Text(root, height=15, width=55, state="disabled")
+chat_area.pack(pady=(10, 10))
+
+input_frame = tk.Frame(root)
+input_frame.pack(padx = (0, 10), pady=(0, 10))
+
+message_entry = tk.Entry(input_frame, width=35)
+message_entry.pack(side="left", padx=(10, 10), pady=(0, 10))
 message_entry.bind("<Return>", send_message_event)
+
+send_button = tk.Button(input_frame, text="Send") 
+send_button.pack(pady=(0, 10))
 send_button.config(command=send_message)
 
 root.mainloop()

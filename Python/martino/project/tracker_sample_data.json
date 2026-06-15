@@ -1,0 +1,14 @@
+{
+    "1": {
+        "date": "2025-10-10",
+        "description": "aaa",
+        "amount": 10,
+        "category": "aaa"
+    },
+    "2": {
+        "date": "2024-10-10",
+        "description": "bbb",
+        "amount": 5,
+        "category": "bbb"
+    }
+}

@@ -9,7 +9,7 @@ class kantor:
         self.data = {}
     
     def tambah_data(self, user):
-        nama = user.nama # guspram
+        nama = user.nama 
         self.data[nama] = user
     
     def tampil_dictionary(self):

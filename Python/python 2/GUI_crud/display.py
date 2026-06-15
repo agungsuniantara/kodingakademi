@@ -1,72 +1,52 @@
 import tkinter as tk
 import os
 
-folder = r"/Applications/MAMP/htdocs/local/kodingakademi/Python/python 2/GUI_crud/text"
-
 def create_text():
-    try:
-        nama_file = f"{teks_nama.get()}.txt"
-        if nama_file != "":
-            teks = kolom_teks.get("1.0", tk.END)
-            with open(os.path.join(folder, nama_file), "w") as file:
-                file.write(teks)
-            kolom_teks.delete("1.0", tk.END)
-            read_text()
-    except Exception as e:
-        print("Error:", e)
-
+    nama_file = f"{teks_nama.get()}.txt"
+    if nama_file != "":
+        teks = kolom_teks.get("1.0", tk.END)
+        with open(nama_file, "w") as file:
+            file.write(teks)
+        kolom_teks.delete("1.0", tk.END)
+        
 def append_text():
-    try:
-        nama_file = f"{teks_nama.get()}.txt"
-        if nama_file != "":
-            teks = kolom_teks.get("1.0", tk.END)
-            with open(os.path.join(folder, nama_file), "a") as file:
-                file.write(teks)
-            kolom_teks.delete("1.0", tk.END)
-            read_text()
-    except Exception as e:
-        print("Error:", e)
+    nama_file = f"{teks_nama.get()}.txt"
+    if nama_file != "":
+        teks = kolom_teks.get("1.0", tk.END)
+        with open(nama_file, "a") as file:
+            file.write(teks)
+        kolom_teks.delete("1.0", tk.END)
 
 def read_text():
-    try:
-        nama_file = f"{teks_nama.get()}.txt"
-        if nama_file != "":
-            with open(os.path.join(folder, nama_file), "r") as file:
-                data = file.read()
-                kolom_tampil.delete("1.0", tk.END)
-                kolom_tampil.insert(tk.END, data)
-        else:
+    nama_file = f"{teks_nama.get()}.txt"
+    if nama_file != "":
+        with open(nama_file, "r") as file:
+            data = file.read()
             kolom_tampil.delete("1.0", tk.END)
-    except Exception as e:
-        print("Error:", e)
+            kolom_tampil.insert(tk.END, data)
+    else:
+        kolom_tampil.delete("1.0", tk.END)
 
 def update_txt():
-    try:
-        nama_file = f"{teks_nama.get()}.txt"
-        if nama_file != "":
-            search = searchText_input.get()
-            new = updateteks_input.get()
-            with open(os.path.join(folder, nama_file), "r") as file:
-                data = file.read()
-                data = data.replace(search, new)
-            with open(os.path.join(folder, nama_file), "w") as file:
-                file.write(data)
-            searchText_input.delete(0, tk.END) 
-            updateteks_input.delete(0, tk.END)  
-            read_text()
-    except Exception as e:
-        print("Error:", e)
+    nama_file = f"{teks_nama.get()}.txt"
+    if nama_file != "":
+        search = searchText_input.get()
+        new = updateteks_input.get()
+        with open(nama_file, "r") as file:
+            data = file.read()
+            data = data.replace(search, new)
+        with open(nama_file, "w") as file:
+            file.write(data)
+        searchText_input.delete(0, tk.END) 
+        updateteks_input.delete(0, tk.END)  
 
 def delete_txt():
-    try:
-        nama_file = f"{deletefile_input.get()}.txt"
-        if nama_file != "":
-            os.remove(os.path.join(folder, nama_file))
-            deletefile_input.delete(0, tk.END)
-            kolom_tampil.delete("1.0", tk.END)
-            teks_nama.delete(0, tk.END)
-    except Exception as e:
-        print("Error:", e)
+    nama_file = f"{deletefile_input.get()}.txt"
+    if nama_file != "":
+        os.remove(nama_file)
+        deletefile_input.delete(0, tk.END)
+        kolom_tampil.delete("1.0", tk.END)
+        teks_nama.delete(0, tk.END)
 
 # Membuat jendela utama
 root = tk.Tk()

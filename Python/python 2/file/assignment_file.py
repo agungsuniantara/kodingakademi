@@ -3,6 +3,8 @@ import csv
 data_cowok = []
 data_cewek = []
 
+data = {"nama" : "agung", "kelamin" : "laki - laki"}
+
 with open('datsetFinal.csv') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     for row in csv_reader:

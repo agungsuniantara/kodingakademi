@@ -1,15 +1,10 @@
-data = []
-for i in range(10):
-    a = int(input("masukan nilai : "))
-    data.append(a)
+def total (*a):
+    jumlah_data = sum(a)
+    banyak_data = len(a)
+    return jumlah_data, banyak_data
 
-def test(*a): # ([1, 2, 3, 4, 5, 6, 7, 8, 9, 1])
-    z = 0
-    print(a[0])
-    for i in a[0]: # [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
-        z += i
-    return z
+hasil, banyak = total(10,20,30,40,50)
 
-hasil = test(data)
+rata = (lambda a,b : a / b)(hasil, banyak)
 
-result = (lambda a: a / len(data))(hasil)
+print("rata - rata = ", rata)

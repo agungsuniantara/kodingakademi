@@ -1,0 +1,32 @@
+UNTUK MAC : 
+
+1. install homebrew buka terminal lalu ketik : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. masukan password mac, kemudian tunggu install.
+3. install python : brew install python@3.9
+4. brew install cmake boost boost-python dlib
+5. python3 -m venv dlib_env
+6. source dlib_env/bin/activate
+7. pip install dlib
+
+Part selanjutnya mac : 
+
+pip install pyqt5==5.15.10
+pip install labelImg==1.8.6
+pip install opencv-python
+pip install ultralytics
+
+Part selanjutnya windows :
+
+pip install setuptools
+pip install cmake
+pip install pyqt5==5.15.10
+pip install labelImg==1.8.6
+pip install opencv-python
+pip install ultralytics
+pip install dlib-19.22.99-cp39-cp39-win_amd64.whl
+
+# training
+yolo task=detect mode=train model=models/yolov8n.pt data=data/data_kustom.yaml epochs=50 imgsz=640
+
+# testing
+yolo task=detect mode=predict model='runs/detect/weights/train/best.pt' source='datasets/data_kustom/train/images/helm1.jpeg' 

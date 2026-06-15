@@ -1,0 +1,113 @@
+/* --- DARK MODE THEME --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+    color: #FAFAFA; /* Text White */
+}
+
+/* Main Area Background - Dark */
+.stApp {
+    background-color: #0E1117; /* Darkest Grey */
+}
+
+/* Sidebar Customization - Slightly Lighter Dark */
+[data-testid="stSidebar"] {
+    background-color: #262730; 
+    border-right: 1px solid #3E4048;
+}
+
+/* Sidebar Titles */
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3, [data-testid="stSidebar"] span, [data-testid="stSidebar"] p {
+    color: #E0E0E0 !important;
+}
+
+/* --- BUTTON STYLING --- */
+
+/* Primary Button (Upgrade) - Gold Gradient (Kept for Premium Feel) */
+div.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+div.stButton > button[kind="primary"]:hover {
+    box-shadow: 0 6px 8px -1px rgba(245, 158, 11, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Secondary Buttons (History, Suggestions) - Dark Card Style */
+div.stButton > button[kind="secondary"] {
+    background-color: #1F2937; /* Grey 800 */
+    border: 1px solid #374151 !important; /* Grey 700 */
+    color: #D1D5DB !important; /* Grey 300 */
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+div.stButton > button[kind="secondary"]:hover {
+    border-color: #6B7280 !important;
+    background-color: #374151 !important;
+    color: #FFFFFF !important;
+}
+
+/* --- CHAT INPUT FIX --- */
+/* Input bar container */
+.stChatInputContainer {
+    padding-bottom: 2rem;
+    background-color: transparent !important;
+}
+
+/* Input Box Itself */
+[data-testid="stChatInput"] {
+    background-color: #262730 !important; /* Sidebar color for consistency */
+    border-radius: 12px;
+    border: 1px solid #4B5563 !important;
+    color: white !important;
+}
+
+/* Input inside the box */
+[data-testid="stChatInput"] textarea {
+    color: white !important;
+    caret-color: #F59E0B; /* Gold caret */
+}
+
+/* Hide annoying Streamlit elements but keep sidebar toggle */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+/* Header styling - hide text but keep sidebar toggle button */
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* Hide Deploy button */
+.stDeployButton,
+[data-testid="stToolbar"],
+.stAppDeployButton,
+button[title="Deploy this app"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide loading screen elements during refresh */
+[data-testid="stStatusWidget"],
+.stSpinner,
+[data-testid="stAppViewContainer"] > div:first-child:empty,
+.stApp > header,
+div[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+/* Pricing Card (Inside Modal) - Dark Mode */
+.pricing-card {
+    background: #1F2937 !important;
+    border: 1px solid #374151 !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+.pricing-title { color: white !important; }
+.pricing-price { color: #60A5FA !important; } /* Light Blue */

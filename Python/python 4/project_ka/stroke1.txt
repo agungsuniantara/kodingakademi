@@ -1,0 +1,203 @@
+#include <Servo.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <math.h>
+
+Servo servo1;
+Servo servo2;
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// MPU6050
+const int MPU = 0x68;
+int16_t AccX, AccY, AccZ;
+float sudut;
+
+// Pin tombol
+const int tombol1 = 2;
+const int tombol2 = 3;
+const int tombol3 = 4;
+
+// Pin motor
+const int ENA = 5;
+const int IN1 = 6;
+const int IN2 = 7;
+
+// Force Sensor
+#define FORCE_SENSOR A0
+int sensorValue = 0;
+
+// Posisi servo
+int posisiIndex = 0;
+int servo1Pos[] = {90, 30, 0};
+int servo2Pos[] = {0, 30, 90};
+
+// posisi sekarang
+int currentServo1 = 0;
+int currentServo2 = 0;
+
+int speedMotor = 150;
+
+bool lastButton1 = HIGH;
+bool lastButton2 = HIGH;
+bool lastButton3 = HIGH;
+
+// ===== GERAK SERVO HALUS =====
+void gerakServoHalus(int target1, int target2) {
+  while (currentServo1 != target1 || currentServo2 != target2) {
+    if (currentServo1 < target1) currentServo1++;
+    if (currentServo1 > target1) currentServo1--;
+    if (currentServo2 < target2) currentServo2++;
+    if (currentServo2 > target2) currentServo2--;
+    servo1.write(currentServo1);
+    servo2.write(currentServo2);
+    delay(15);
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  Wire.begin();
+
+  // Aktifkan MPU6050
+  Wire.beginTransmission(MPU);
+  Wire.write(0x6B);
+  Wire.write(0);
+  Wire.endTransmission(true);
+
+  servo1.attach(9);
+  servo2.attach(10);
+
+  pinMode(tombol1, INPUT_PULLUP);
+  pinMode(tombol2, INPUT_PULLUP);
+  pinMode(tombol3, INPUT_PULLUP);
+
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0,0);
+  lcd.print("System Ready");
+
+  delay(2000);
+  lcd.clear();
+
+  servo1.write(90);
+  servo2.write(0);
+
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  analogWrite(ENA, 0);
+}
+
+void loop() {
+
+  // ===== FORCE SENSOR =====
+  sensorValue = analogRead(FORCE_SENSOR);
+
+  // ===== MPU6050 =====
+  Wire.beginTransmission(MPU);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU, 6, true);
+
+  AccX = Wire.read() << 8 | Wire.read();
+  AccY = Wire.read() << 8 | Wire.read();
+  AccZ = Wire.read() << 8 | Wire.read();
+
+  sudut = atan2(AccY, AccZ) * 180 / PI;
+
+  // ===== PENERAPAN RUMUS KLASIFIKASI STROKE =====
+  
+  // 1. Normalisasi ke persen (0-100)
+  // Memastikan nilai sudut positif dan dibatasi maksimal 180
+  float sudutSiku = constrain(abs(sudut), 0, 180); 
+  float romPersen = (sudutSiku / 180.0) * 100.0;
+  float gripPersen = (sensorValue / 1023.0) * 100.0;
+
+  // 2. Hitung skor total
+  float skorTotal = (romPersen * 0.6) + (gripPersen * 0.4);
+
+  // 3. Tentukan Level
+  int level = 0;
+  String stringLevel = "";
+  if (skorTotal <= 33) {
+    level = 1; // Stroke Berat
+    stringLevel = "BERAT";
+  } else if (skorTotal <= 66) {
+    level = 2; // Stroke Sedang
+    stringLevel = "SEDANG";
+  } else {
+    level = 3; // Stroke Ringan
+    stringLevel = "RINGAN";
+  }
+
+  // ===== SERIAL MONITOR =====
+  Serial.print("Force: ");
+  Serial.print(sensorValue);
+  Serial.print(" | Sudut: ");
+  Serial.print(sudut);
+  Serial.print(" | Skor: ");
+  Serial.print(skorTotal);
+  Serial.print(" | Status: ");
+  Serial.println(stringLevel);
+
+  // ===== LCD =====
+  lcd.setCursor(0,0);
+  lcd.print("F:");
+  lcd.print(sensorValue);
+  lcd.print(" S:");
+  lcd.print((int)skorTotal); 
+  lcd.print("   ");
+
+  lcd.setCursor(0,1);
+  lcd.print("A:");
+  lcd.print((int)sudutSiku); 
+  lcd.print(" Lvl:");
+  lcd.print(level);
+  lcd.print("   ");
+
+  // ===== TOMBOL 1 (GERAK SERVO) =====
+  bool currentButton1 = digitalRead(tombol1);
+
+  if (lastButton1 == HIGH && currentButton1 == LOW) {
+    gerakServoHalus(servo1Pos[posisiIndex], servo2Pos[posisiIndex]);
+    posisiIndex++;
+    if (posisiIndex > 2) posisiIndex = 0;
+    delay(300);
+  }
+  lastButton1 = currentButton1;
+
+  // ===== MOTOR KANAN =====
+  bool currentButton2 = digitalRead(tombol2);
+
+  if (lastButton2 == HIGH && currentButton2 == LOW) {
+    analogWrite(ENA, speedMotor);
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+    delay(2000);
+    analogWrite(ENA, 0);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+  }
+  lastButton2 = currentButton2;
+
+  // ===== MOTOR KIRI =====
+  bool currentButton3 = digitalRead(tombol3);
+
+  if (lastButton3 == HIGH && currentButton3 == LOW) {
+    analogWrite(ENA, speedMotor);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    delay(2000);
+    analogWrite(ENA, 0);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+  }
+  lastButton3 = currentButton3;
+
+  delay(100);
+}

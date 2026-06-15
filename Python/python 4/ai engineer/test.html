@@ -1,0 +1,1200 @@
+Travel Company Landing Page
+Here's a complete, modern landing page with green accents for a travel company:
+
+				
+					
+					
+					<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wanderlust Travel Co.   Explore the World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green-50:  #f0fdf4;
+      --green-100: #dcfce7;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-700: #15803d;
+      --green-800: #166534;
+      --neutral-50:  #fafafa;
+      --neutral-100: #f5f5f5;
+      --neutral-200: #e5e5e5;
+      --neutral-400: #a3a3a3;
+      --neutral-600: #525252;
+      --neutral-800: #262626;
+      --neutral-900: #171717;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --transition: .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--neutral-800);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── SCROLLBAR ────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--neutral-100); }
+    ::-webkit-scrollbar-thumb { background: var(--green-500); border-radius: 99px; }
+
+    /* ─── UTILITIES ────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--green-600);
+      background: var(--green-50); border: 1px solid var(--green-100);
+      padding: 6px 14px; border-radius: 99px; margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700; color: var(--neutral-900); line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.05rem; color: var(--neutral-600);
+      max-width: 560px; line-height: 1.75;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .95rem; font-weight: 600;
+      padding: 13px 28px; border-radius: var(--radius-sm);
+      border: none; cursor: pointer; text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--green-600); color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--green-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(22,163,74,.35);
+    }
+    .btn-outline {
+      background: transparent; color: var(--green-700);
+      border: 2px solid var(--green-600);
+    }
+    .btn-outline:hover {
+      background: var(--green-600); color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,.15);
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.4);
+      backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover {
+      background: var(--white); color: var(--green-700);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       HEADER / NAVBAR
+    ═══════════════════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0;
+      transition: var(--transition);
+    }
+    #navbar.scrolled {
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--neutral-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 40px; height: 40px;
+      background: var(--green-600);
+      border-radius: var(--radius-sm);
+      display: grid; place-items: center;
+      font-size: 1.2rem; color: var(--white);
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--white);
+      transition: var(--transition);
+    }
+    #navbar.scrolled .logo-text { color: var(--neutral-900); }
+    .nav-links {
+      display: flex; align-items: center; gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .9rem; font-weight: 500;
+      text-decoration: none; color: rgba(255,255,255,.85);
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    #navbar.scrolled .nav-links a { color: var(--neutral-700); }
+    .nav-links a:hover, #navbar.scrolled .nav-links a:hover {
+      color: var(--green-600);
+      background: var(--green-50);
+    }
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
+    .nav-cta .btn { padding: 9px 20px; font-size: .88rem; }
+    .nav-cta .btn-outline { border-color: rgba(255,255,255,.7); color: var(--white); }
+    .nav-cta .btn-outline:hover { background: var(--white); color: var(--green-700); border-color: var(--white); }
+    #navbar.scrolled .nav-cta .btn-outline { border-color: var(--green-600); color: var(--green-700); }
+    #navbar.scrolled .nav-cta .btn-outline:hover { background: var(--green-600); color: var(--white); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--white);
+      border-radius: 99px; transition: var(--transition);
+    }
+    #navbar.scrolled .hamburger span { background: var(--neutral-800); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none; position: fixed; top: 72px; left: 0; right: 0;
+      background: var(--white); border-bottom: 1px solid var(--neutral-200);
+      padding: 16px 24px 24px; box-shadow: var(--shadow-md);
+      flex-direction: column; gap: 4px; z-index: 999;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none; font-weight: 500; color: var(--neutral-700);
+      padding: 12px 16px; border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { background: var(--green-50); color: var(--green-700); }
+    .mobile-menu .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    /* ═══════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════ */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        linear-gradient(135deg, rgba(15,60,30,.75) 0%, rgba(22,101,52,.55) 50%, rgba(0,0,0,.4) 100%),
+        url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 180px;
+      background: linear-gradient(to top, var(--white), transparent);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      padding-top: 120px; padding-bottom: 80px;
+      max-width: 780px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.3);
+      color: var(--white); font-size: .8rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 7px 16px; border-radius: 99px; margin-bottom: 24px;
+    }
+    .hero-badge i { color: var(--green-400); }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.12; margin-bottom: 24px;
+    }
+    .hero-title span { color: var(--green-400); }
+    .hero-desc {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: rgba(255,255,255,.8); max-width: 540px;
+      line-height: 1.8; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero Stats */
+    .hero-stats {
+      position: relative; z-index: 1;
+      display: flex; gap: 0;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: var(--radius-md); overflow: hidden;
+      margin-top: 56px; max-width: fit-content;
+    }
+    .hero-stat {
+      padding: 20px 36px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num {
+      font-size: 1.75rem; font-weight: 800; color: var(--white);
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-stat-lbl { font-size: .8rem; color: rgba(255,255,255,.65); font-weight: 500; }
+
+    /* Search Bar */
+    .hero-search {
+      position: relative; z-index: 1;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-lg);
+      margin-top: 32px;
+      display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end;
+    }
+    .search-field { flex: 1; min-width: 160px; }
+    .search-field label {
+      display: block; font-size: .75rem; font-weight: 600;
+      color: var(--neutral-600); text-transform: uppercase;
+      letter-spacing: .06em; margin-bottom: 6px;
+    }
+    .search-field input, .search-field select {
+      width: 100%; padding: 10px 12px;
+      border: 1.5px solid var(--neutral-200);
+      border-radius: var(--radius-sm); font-size: .9rem;
+      font-family: 'Inter', sans-serif; color: var(--neutral-800);
+      outline: none; transition: var(--transition);
+    }
+    .search-field input:focus, .search-field select:focus {
+      border-color: var(--green-500);
+      box-shadow: 0 0 0 3px rgba(34,197,94,.12);
+    }
+    .search-btn { flex-shrink: 0; }
+    .search-btn .btn { padding: 12px 24px; width: 100%; }
+
+    /* ═══════════════════════════════════════════════════
+       WHY US   FEATURES
+    ═══════════════════════════════════════════════════ */
+    #features {
+      padding: 100px 0;
+      background: var(--neutral-50);
+    }
+    .features-header { text-align: center; margin-bottom: 64px; }
+    .features-header .section-sub { margin: 0 auto; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--neutral-200);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      transition: var(--transition);
+      cursor: default;
+    }
+    .feature-card:hover {
+      border-color: var(--green-400);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-6px);
+    }
+    .feature-icon {
+      width: 56px; height: 56px;
+      background: var(--green-50);
+      border-radius: var(--radius-sm);
+      display: grid; place-items: center;
+      font-size: 1.4rem; color: var(--green-600);
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .feature-card:hover .feature-icon {
+      background: var(--green-600); color: var(--white);
+    }
+    .feature-title {
+      font-weight: 700; font-size: 1.05rem;
+      color: var(--neutral-900); margin-bottom: 10px;
+    }
+    .feature-desc { font-size: .9rem; color: var(--neutral-600); line-height: 1.7; }
+
+    /* ═══════════════════════════════════════════════════
+       DESTINATIONS
+    ═══════════════════════════════════════════════════ */
+    #destinations { padding: 100px 0; }
+    .dest-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 48px;
+      flex-wrap: wrap; gap: 24px;
+    }
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+    .dest-card {
+      position: relative; border-radius: var(--radius-md);
+      overflow: hidden; cursor: pointer;
+    }
+    .dest-card:first-child {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+    .dest-card img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+      display: block;
+    }
+    .dest-card:first-child img { min-height: 480px; }
+    .dest-card:not(:first-child) img { height: 220px; }
+    .dest-card:hover img { transform: scale(1.08); }
+    .dest-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.72) 0%, transparent 55%);
+      padding: 24px; display: flex; flex-direction: column;
+      justify-content: flex-end;
+    }
+    .dest-badge {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--green-600); color: var(--white);
+      font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 99px;
+    }
+    .dest-country {
+      font-size: .78rem; font-weight: 600; color: var(--green-400);
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .dest-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem; font-weight: 700; color: var(--white);
+      margin-bottom: 10px;
+    }
+    .dest-card:first-child .dest-name { font-size: 1.8rem; }
+    .dest-meta {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .dest-price { font-size: .88rem; color: rgba(255,255,255,.75); }
+    .dest-price strong { color: var(--green-400); font-size: 1.05rem; }
+    .dest-rating {
+      display: flex; align-items: center; gap: 4px;
+      font-size: .82rem; color: rgba(255,255,255,.85); font-weight: 600;
+    }
+    .dest-rating i { color: #fbbf24; font-size: .75rem; }
+
+    /* ═══════════════════════════════════════════════════
+       PACKAGES / TOURS
+    ═══════════════════════════════════════════════════ */
+    #packages {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--green-50) 0%, var(--white) 100%);
+    }
+    .packages-header { text-align: center; margin-bottom: 64px; }
+    .packages-header .section-sub { margin: 0 auto; }
+    .packages-tabs {
+      display: flex; justify-content: center; gap: 8px;
+      margin-bottom: 48px; flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 9px 22px; border-radius: 99px; border: none;
+      font-size: .88rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition);
+      background: var(--white); color: var(--neutral-600);
+      border: 1.5px solid var(--neutral-200);
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--green-600); color: var(--white); border-color: var(--green-600);
+    }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .package-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--neutral-200);
+      transition: var(--transition);
+    }
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .package-img {
+      position: relative; height: 220px; overflow: hidden;
+    }
+    .package-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .package-card:hover .package-img img { transform: scale(1.08); }
+    .pkg-tag {
+      position: absolute; top: 14px; right: 14px;
+      background: var(--green-600); color: var(--white);
+      font-size: .72rem; font-weight: 700; padding: 5px 12px;
+      border-radius: 99px;
+    }
+    .pkg-tag.popular {
+      background: #f59e0b;
+    }
+    .package-body { padding: 24px; }
+    .pkg-location {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .8rem; color: var(--neutral-400); margin-bottom: 10px;
+    }
+    .pkg-location i { color: var(--green-500); }
+    .pkg-title {
+      font-weight: 700; font-size: 1.05rem; color: var(--neutral-900);
+      margin-bottom: 14px; line-height: 1.4;
+    }
+    .pkg-includes {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .pkg-include-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: .78rem; color: var(--neutral-600);
+    }
+    .pkg-include-item i { color: var(--green-500); font-size: .7rem; }
+    .pkg-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 18px; border-top: 1px solid var(--neutral-100);
+    }
+    .pkg-price { line-height: 1.2; }
+    .pkg-price span { font-size: .75rem; color: var(--neutral-400); display: block; }
+    .pkg-price strong { font-size: 1.3rem; color: var(--green-700); font-weight: 800; }
+    .pkg-btn {
+      font-size: .83rem; font-weight: 600; color: var(--green-700);
+      padding: 8px 18px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--green-600);
+      background: transparent; cursor: pointer; text-decoration: none;
+      transition: var(--transition);
+    }
+    .pkg-btn:hover { background: var(--green-600); color: var(--white); }
+
+    /* ═══════════════════════════════════════════════════
+       HOW IT WORKS
+    ═══════════════════════════════════════════════════ */
+    #how { padding: 100px 0; }
+    .how-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .how-visual { position: relative; }
+    .how-img {
+      border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow-lg);
+    }
+    .how-img img { width: 100%; display: block; border-radius: var(--radius-lg); }
+    .how-floating {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--neutral-200);
+      display: flex; align-items: center; gap: 14px;
+      min-width: 220px;
+    }
+    .how-floating-icon {
+      width: 48px; height: 48px; background: var(--green-100);
+      border-radius: 50%; display: grid; place-items: center;
+      font-size: 1.2rem; color: var(--green-600); flex-shrink: 0;
+    }
+    .how-floating-text strong { display: block; font-size: .95rem; color: var(--neutral-900); }
+    .how-floating-text span { font-size: .8rem; color: var(--neutral-500); }
+    .steps { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
+    .step { display: flex; gap: 20px; }
+    .step-num {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--green-600); color: var(--white);
+      border-radius: 50%; display: grid; place-items: center;
+      font-weight: 800; font-size: 1rem; position: relative;
+    }
+    .step-num::after {
+      content: '';
+      position: absolute; top: 44px; left: 50%;
+      transform: translateX(-50%);
+      width: 2px; height: calc(32px + 100% - 44px);
+      background: var(--green-100);
+    }
+    .step:last-child .step-num::after { display: none; }
+    .step-body {}
+    .step-title {
+      font-weight: 700; font-size: 1rem; color: var(--neutral-900); margin-bottom: 6px;
+    }
+    .step-desc { font-size: .9rem; color: var(--neutral-600); line-height: 1.65; }
+
+    /* ═══════════════════════════════════════════════════
+       TESTIMONIALS
+    ═══════════════════════════════════════════════════ */
+    #testimonials {
+      padding: 100px 0;
+      background: var(--neutral-900);
+    }
+    .test-header { text-align: center; margin-bottom: 64px; }
+    .test-header .section-label { background: rgba(74,222,128,.1); border-color: rgba(74,222,128,.2); }
+    .test-header .section-title { color: var(--white); }
+    .test-header .section-sub { color: var(--neutral-400); margin: 0 auto; }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .test-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      transition: var(--transition);
+    }
+    .test-card:hover {
+      background: rgba(255,255,255,.09);
+      border-color: rgba(74,222,128,.3);
+      transform: translateY(-4px);
+    }
+    .test-stars { display: flex; gap: 4px; margin-bottom: 20px; }
+    .test-stars i { color: #fbbf24; font-size: .9rem; }
+    .test-quote {
+      font-size: .95rem; color: rgba(255,255,255,.75);
+      line-height: 1.8; margin-bottom: 28px;
+      font-style: italic;
+    }
+    .test-author { display: flex; align-items: center; gap: 14px; }
+    .test-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--green-500);
+    }
+    .test-name { font-weight: 700; font-size: .95rem; color: var(--white); }
+    .test-origin { font-size: .8rem; color: var(--neutral-400); }
+
+    /* ═══════════════════════════════════════════════════
+       CTA BANNER
+    ═══════════════════════════════════════════════════ */
+    #cta {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--green-700) 0%, var(--green-600) 60%, var(--green-500) 100%);
+      position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .cta-inner {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .cta-text .section-title { color: var(--white); margin-bottom: 10px; }
+    .cta-text p { color: rgba(255,255,255,.8); font-size: 1.05rem; }
+    .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ═══════════════════════════════════════════════════
+       PARTNERS
+    ═══════════════════════════════════════════════════ */
+    #partners {
+      padding: 64px 0;
+      background: var(--neutral-50);
+      border-top: 1px solid var(--neutral-200);
+    }
+    .partners-label {
+      text-align: center; font-size: .8rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--neutral-400); margin-bottom: 32px;
+    }
+    .partners-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .partner-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--neutral-300);
+      transition: var(--transition);
+      letter-spacing: .03em;
+    }
+    .partner-logo:hover { color: var(--green-600); }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    #footer {
+      background: var(--neutral-900);
+      padding: 80px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 64px;
+    }
+    .footer-brand .logo { margin-bottom: 18px; }
+    .footer-brand .logo-text { color: var(--white); }
+    .footer-brand p {
+      font-size: .9rem; color: var(--neutral-400);
+      line-height: 1.75; margin-bottom: 24px;
+    }
+    .footer-socials { display: flex; gap: 10px; }
+    .social-btn {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-sm);
+      display: grid; place-items: center;
+      color: var(--neutral-400); font-size: .9rem;
+      transition: var(--transition); text-decoration: none;
+    }
+    .social-btn:hover {
+      background: var(--green-600); color: var(--white);
+      border-color: var(--green-600);
+    }
+    .footer-col h4 {
+      font-size: .88rem; font-weight: 700; color: var(--white);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: .9rem; color: var(--neutral-400);
+      text-decoration: none; transition: var(--transition);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .footer-col ul li a i { font-size: .7rem; color: var(--green-500); }
+    .footer-col ul li a:hover { color: var(--green-400); padding-left: 4px; }
+
+    .footer-newsletter { margin-top: 8px; }
+    .footer-newsletter p {
+      font-size: .88rem; color: var(--neutral-400); margin-bottom: 14px;
+    }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input {
+      flex: 1; padding: 10px 14px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-sm); color: var(--white);
+      font-size: .88rem; font-family: 'Inter', sans-serif;
+      outline: none; transition: var(--transition);
+    }
+    .newsletter-form input::placeholder { color: var(--neutral-500); }
+    .newsletter-form input:focus {
+      border-color: var(--green-500);
+      box-shadow: 0 0 0 3px rgba(34,197,94,.12);
+    }
+    .newsletter-form button {
+      padding: 10px 16px; background: var(--green-600); color: var(--white);
+      border: none; border-radius: var(--radius-sm);
+      font-size: .88rem; font-weight: 600; cursor: pointer;
+      transition: var(--transition);
+    }
+    .newsletter-form button:hover { background: var(--green-700); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding: 22px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: .82rem; color: var(--neutral-500); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a {
+      font-size: .82rem; color: var(--neutral-500);
+      text-decoration: none; transition: var(--transition);
+    }
+    .footer-bottom-links a:hover { color: var(--green-400); }
+
+    /* ═══════════════════════════════════════════════════
+       BACK TO TOP
+    ═══════════════════════════════════════════════════ */
+    #backTop {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      width: 44px; height: 44px;
+      background: var(--green-600); color: var(--white);
+      border-radius: 50%; border: none; cursor: pointer;
+      display: grid; place-items: center;
+      box-shadow: 0 4px 16px rgba(22,163,74,.4);
+      transition: var(--transition);
+      opacity: 0; pointer-events: none;
+    }
+    #backTop.visible { opacity: 1; pointer-events: auto; }
+    #backTop:hover { background: var(--green-700); transform: translateY(-3px); }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .dest-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .dest-card:first-child {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+      .dest-card:first-child img { min-height: 300px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .how-inner { grid-template-columns: 1fr; gap: 48px; }
+      .how-visual { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .dest-grid { grid-template-columns: 1fr; }
+      .dest-card:first-child { grid-column: 1; grid-row: auto; }
+      .dest-card:first-child img { min-height: 260px; }
+      .cta-inner { text-align: center; justify-content: center; }
+      .cta-actions { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-stats { display: none; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-compass"></i></div>
+        <span class="logo-text">Wanderlust</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-outline">Sign In</a>
+        <a href="#packages" class="btn btn-primary">Book Now</a>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#destinations">Destinations</a>
+  <a href="#packages">Packages</a>
+  <a href="#how">How It Works</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#footer">Contact</a>
+  <a href="#" class="btn btn-outline">Sign In</a>
+  <a href="#packages" class="btn btn-primary">Book Now</a>
+</div>
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-star"></i>
+        #1 Trusted Travel Agency   Since 2008
+      </div>
+      <h1 class="hero-title">
+        Discover the World's<br>
+        <span>Hidden Wonders</span>
+      </h1>
+      <p class="hero-desc">
+        Curated travel experiences crafted for curious souls. 
+        From tropical paradises to ancient mountain trails   your perfect journey starts here.
+      </p>
+      <div class="hero-actions">
+        <a href="#destinations" class="btn btn-primary">
+          <i class="fa-solid fa-map-location-dot"></i> Explore Destinations
+        </a>
+        <a href="#packages" class="btn btn-ghost">
+          <i class="fa-solid fa-play"></i> View Packages
+        </a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="hero-search">
+        <div class="search-field">
+          <label>Where To?</label>
+          <input type="text" placeholder="e.g. Bali, Paris, Tokyo..." />
+        </div>
+        <div class="search-field">
+          <label>Departure Date</label>
+          <input type="date" />
+        </div>
+        <div class="search-field">
+          <label>Duration</label>
+          <select>
+            <option>Any Duration</option>
+            <option>3–5 Days</option>
+            <option>6–9 Days</option>
+            <option>10–14 Days</option>
+            <option>15+ Days</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>Travelers</label>
+          <select>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3–5 People</option>
+            <option>6+ People</option>
+          </select>
+        </div>
+        <div class="search-btn">
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">12K+</div>
+          <div class="hero-stat-lbl">Happy Travelers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">80+</div>
+          <div class="hero-stat-lbl">Destinations</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.9★</div>
+          <div class="hero-stat-lbl">Avg. Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">15yr</div>
+          <div class="hero-stat-lbl">Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PARTNERS
+════════════════════════════════════════════ -->
+<section id="partners">
+  <div class="container">
+    <p class="partners-label">Trusted by leading travel brands</p>
+    <div class="partners-row">
+      <span class="partner-logo">Airbnb</span>
+      <span class="partner-logo">Emirates</span>
+      <span class="partner-logo">Booking.com</span>
+      <span class="partner-logo">Expedia</span>
+      <span class="partner-logo">Marriott</span>
+      <span class="partner-logo">Tripadvisor</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════ -->
+<section id="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-label"><i class="fa-solid fa-shield-halved"></i> Why Choose Us</div>
+      <h2 class="section-title">Travel with Confidence,<br>Arrive with a Story</h2>
+      <p class="section-sub">Everything we do is designed to give you an effortless, memorable, and safe travel experience.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3 class="feature-title">24/7 Live Support</h3>
+        <p class="feature-desc">Our travel experts are always on standby   before, during, and after your trip. Real humans, real help.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
+        <h3 class="feature-title">Best Price Guarantee</h3>
+        <p class="feature-desc">Find it cheaper elsewhere? We'll match the price and give you a $50 travel credit. No questions asked.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <h3 class="feature-title">Curated Itineraries</h3>
+        <p class="feature-desc">Every route is hand-crafted by local experts who know the hidden gems and the perfect timings.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3 class="feature-title">Secure Booking</h3>
+        <p class="feature-desc">Your payments and personal data are fully encrypted with bank-grade SSL security protocols.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+        <h3 class="feature-title">Flexible Cancellation</h3>
+        <p class="feature-desc">Plans change. Enjoy free cancellation up to 48 hours before departure on most packages.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3 class="feature-title">Eco-Responsible Travel</h3>
+        <p class="feature-desc">We partner with eco-certified operators and offset carbon for every trip booked with us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     DESTINATIONS
+════════════════════════════════════════════ -->
+<section id="destinations">
+  <div class="container">
+    <div class="dest-header">
+      <div>
+        <div class="section-label"><i class="fa-solid fa-globe"></i> Top Destinations</div>
+        <h2 class="section-title">Places You'll Fall<br>in Love With</h2>
+      </div>
+      <a href="#" class="btn btn-outline">
+        All Destinations <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="dest-grid">
+
+      <!-- Featured Big Card -->
+      <div class="dest-card">
+        <span class="dest-badge">Featured</span>
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Bali, Indonesia"/>
+        <div class="dest-overlay">
+          <div class="dest-country"><i class="fa-solid fa-location-dot"></i> Indonesia</div>
+          <div class="dest-name">Bali</div>
+          <div class="dest-meta">
+            <div class="dest-price">From <strong>$899</strong> / person</div>
+            <div class="dest-rating"><i class="fa-solid fa-star"></i> 4.9 (2.1k)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smaller Cards -->
+      <div class="dest-card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris, France"/>
+        <div class="dest-overlay">
+          <div class="dest-country"><i class="fa-solid fa-location-dot"></i> France</div>
+          <div class="dest-name">Paris</div>
+          <div class="dest-meta">
+            <div class="dest-price">From <strong>$1,299</strong></div>
+            <div class="dest-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Swiss Alps"/>
+        <div class="dest-overlay">
+          <div class="dest-country"><i class="fa-solid fa-location-dot"></i> Switzerland</div>
+          <div class="dest-name">Swiss Alps</div>
+          <div class="dest-meta">
+            <div class="dest-price">From <strong>$1,599</strong></div>
+            <div class="dest-rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80" alt="Tokyo, Japan"/>
+        <div class="dest-overlay">
+          <div class="dest-country"><i class="fa-solid fa-location-dot"></i> Japan</div>
+          <div class="dest-name">Tokyo</div>
+          <div class="dest-meta">
+            <div class="dest-price">From <strong>$1,099</strong></div>
+            <div class="dest-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80" alt="Santorini, Greece"/>
+        <div class="dest-overlay">
+          <div class="dest-country"><i class="fa-solid fa-location-dot"></i> Greece</div>
+          <div class="dest-name">Santorini</div>
+          <div class="dest-meta">
+            <div class="dest-price">From <strong>$1,450</strong></div>
+            <div class="dest-rating"><i class="fa-solid fa-star"></i> 4.9</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PACKAGES
+════════════════════════════════════════════ -->
+<section id="packages">
+  <div class="container">
+    <div class="packages-header">
+      <div class="section-label"><i class="fa-solid fa-suitcase-rolling"></i> Tour Packages</div>
+      <h2 class="section-title">Handpicked Packages<br>for Every Traveler</h2>
+      <p class="section-sub">Whether you seek adventure, relaxation, or culture   we have the perfect package crafted just for you.</p>
+    </div>
+    <div class="packages-tabs">
+      <button class="tab-btn active">All</button>
+      <button class="tab-btn">Adventure</button>
+      <button class="tab-btn">Beach</button>
+      <button class="tab-btn">Cultural</button>
+      <button class="tab-btn">Honeymoon</button>
+      <button class="tab-btn">Family</button>
+    </div>
+    <div class="packages-grid">
+
+      <div class="package-card">
+        <div class="package-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Komodo Adventure"/>
+          <span class="pkg-tag popular">🔥 Popular</span>
+        </div>
+        <div class="package-body">
+          <div class="pkg-location"><i class="fa-solid fa-location-dot"></i> Komodo, Indonesia</div>
+          <h3 class="pkg-title">Komodo Dragon & Underwater Paradise</h3>
+          <div class="pkg-includes">
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> 7 Days</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Hotel</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Meals</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Guide</span>
+          </div>
+          <div class="pkg-footer">
+            <div class="pkg-price">
+              <span>Starting from</span>
+              <strong>$749</strong>
+            </div>
+            <a href="#" class="pkg-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <div class="package-img">
+          <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=600&q=80" alt="Maldives Escape"/>
+          <span class="pkg-tag">Luxury</span>
+        </div>
+        <div class="package-body">
+          <div class="pkg-location"><i class="fa-solid fa-location-dot"></i> Maldives</div>
+          <h3 class="pkg-title">Maldives Overwater Villa Honeymoon</h3>
+          <div class="pkg-includes">
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> 5 Days</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Resort</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> All-in</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Spa</span>
+          </div>
+          <div class="pkg-footer">
+            <div class="pkg-price">
+              <span>Starting from</span>
+              <strong>$2,299</strong>
+            </div>
+            <a href="#" class="pkg-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-card">
+        <div class="package-img">
+          <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=600&q=80" alt="Japan Cultural Tour"/>
+          <span class="pkg-tag">Cultural</span>
+        </div>
+        <div class="package-body">
+          <div class="pkg-location"><i class="fa-solid fa-location-dot"></i> Japan</div>
+          <h3 class="pkg-title">Japan Cherry Blossom & Culture Trail</h3>
+          <div class="pkg-includes">
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> 10 Days</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Hotel</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Rail Pass</span>
+            <span class="pkg-include-item"><i class="fa-solid fa-check"></i> Guide</span>
+          </div>
+          <div class="pkg-footer">
+            <div class="pkg-price">
+              <span>Starting from</span>
+              <strong>$1,499</strong>
+            </div>
+            <a href="#" class="pkg-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════ -->
+<section id="how">
+  <div class="container">
+    <div class="how-inner">
+      <div class="how-visual">
+        <div class="how-img">
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=80" alt="Planning your trip"/>
+        </div>
+        <div class="how-floating">
+          <div class="how-floating-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div class="how-floating-text">
+            <strong>Your trip is confirmed!</strong>
+            <span>Booking ID: WL-20241105</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label"><i class="fa-solid fa-route"></i> Simple Process</div>
+        <h2 class="section-title">Your Dream Trip<br>in 4 Easy Steps</h2>
+        <p class="section-sub">We've simplified the travel planning process so you spend more time dreaming and less time stressing.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4 class="step-title">Choose Your Destination</h4>
+              <p class="step-desc">Browse our curated collection of over 80 destinations worldwide. Use filters to find your perfect match.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4 class="step-title">Customize Your Package</h4>
+              <p class="step-desc">Select travel dates, add accommodation upgrades, excursions, and special requests tailored to you.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4 class="step-title">Secure Your Booking</h4>
+              <p class="step-desc">Pay securely online. We accept all major cards, PayPal, and installment payment options.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4 class="step-title">Pack & Go!</h4>
+              <p class="step-desc">Receive your full itinerary, e-tickets, and travel guide. Our team is with you every step of the way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+
+<!-- 
+				
+			

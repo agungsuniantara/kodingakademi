@@ -1,6 +1,6 @@
-Koding Akademi 2.0 adalah Pusat Belajar Coding dan Robotika 
+Koding Akademi adalah Pusat Belajar Coding dan Robotika 
 mulai anak usia 7 tahun sampai dengan dewasa. 
-Di Koding Akademi 2.0, kamu dapat belajar coding membuat Game, 
+Di Koding Akademi, kamu dapat belajar coding membuat Game, 
 Web Aplikasi, Android App, Robotika dengan NXT, EV3, 
 Arduino dan ESP.
-Belajar di Koding Akademi 2.0
+Belajar di Koding Akademi

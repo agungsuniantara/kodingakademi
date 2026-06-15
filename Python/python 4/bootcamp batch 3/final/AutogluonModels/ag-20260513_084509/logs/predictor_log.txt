@@ -1,0 +1,222 @@
+Beginning AutoGluon training... Time limit = 120s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260513_084509'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.27 GB / 8.00 GB (15.8%)
+Disk Space Avail:   12.13 GB / 228.27 GB (5.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'freq': 'MS',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 6,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Total Revenue',
+ 'time_limit': 120,
+ 'verbosity': 2}
+
+Provided train_data has 91 rows, 1 time series. Median time series length is 91 (min=91, max=91). 
+
+Provided data contains following columns:
+	target: 'Total Revenue'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-05-13 16:45:09
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 17.1s of the 120.0s of remaining time.
+	-4057369.5750 = Validation score (-MAE)
+	0.01    s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 20.0s of the 119.9s of remaining time.
+	-7151107.2433 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.64    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 23.8s of the 119.2s of remaining time.
+	-4263229.8222 = Validation score (-MAE)
+	0.87    s     = Training runtime
+	0.01    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 29.6s of the 118.3s of remaining time.
+	-3334454.2283 = Validation score (-MAE)
+	0.18    s     = Training runtime
+	0.01    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 39.4s of the 118.1s of remaining time.
+	-3352356.8973 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 59.0s of the 118.1s of remaining time.
+	-4283666.9183 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	1.59    s     = Validation (prediction) runtime
+Fitting 1 ensemble(s), in 1 layers.
+Training ensemble model WeightedEnsemble. Training for up to 116.5s.
+	Ensemble weights: {'DirectTabular': 0.01, 'ETS': 0.57, 'RecursiveTabular': 0.42}
+	-2279040.1501 = Validation score (-MAE)
+	0.06    s     = Training runtime
+	0.07    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 3.54 s
+Best model: WeightedEnsemble
+Best model score: -2279040.1501
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Beginning AutoGluon training... Time limit = 120s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260513_091848'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.19 GB / 8.00 GB (14.9%)
+Disk Space Avail:   12.04 GB / 228.27 GB (5.3%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'freq': 'MS',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Total Revenue',
+ 'time_limit': 120,
+ 'verbosity': 2}
+
+Provided train_data has 79 rows, 1 time series. Median time series length is 79 (min=79, max=79). 
+
+Provided data contains following columns:
+	target: 'Total Revenue'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-05-13 17:18:48
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 17.1s of the 119.9s of remaining time.
+	-6564181.8567 = Validation score (-MAE)
+	0.01    s     = Training runtime
+	0.79    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 19.8s of the 119.0s of remaining time.
+	-9463542.4417 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.42    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 23.7s of the 118.6s of remaining time.
+	-8752151.7073 = Validation score (-MAE)
+	1.32    s     = Training runtime
+	0.02    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 29.3s of the 117.3s of remaining time.
+	-7382804.1017 = Validation score (-MAE)
+	0.22    s     = Training runtime
+	0.02    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 39.0s of the 117.0s of remaining time.
+	-6425731.6288 = Validation score (-MAE)
+	0.01    s     = Training runtime
+	1.46    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 57.8s of the 115.5s of remaining time.
+	-6543644.5567 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	1.05    s     = Validation (prediction) runtime
+Fitting 1 ensemble(s), in 1 layers.
+Training ensemble model WeightedEnsemble. Training for up to 114.5s.
+	Ensemble weights: {'ETS': 0.62, 'Naive': 0.38}
+	-6117899.7600 = Validation score (-MAE)
+	0.06    s     = Training runtime
+	2.26    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 5.57 s
+Best model: WeightedEnsemble
+Best model score: -6117899.7600
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260513_092203'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.27 GB / 8.00 GB (15.9%)
+Disk Space Avail:   12.02 GB / 228.27 GB (5.3%)
+===================================================
+Setting presets to: high_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'freq': 'MS',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Total Revenue',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 79 rows, 1 time series. Median time series length is 79 (min=79, max=79). 
+
+Provided data contains following columns:
+	target: 'Total Revenue'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-05-13 17:22:03
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'DynamicOptimizedTheta', 'Chronos2', 'Chronos2SmallFineTuned', 'AutoETS', 'ChronosWithRegressor[bolt_small]', 'TemporalFusionTransformer', 'DeepAR']
+Training timeseries model SeasonalNaive. Training for up to 27.3s of the 300.0s of remaining time.
+	-9463542.4417 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	1.28    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 29.9s of the 298.6s of remaining time.
+	-8752151.7073 = Validation score (-MAE)
+	0.58    s     = Training runtime
+	0.02    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 33.1s of the 298.0s of remaining time.
+	-7382804.1017 = Validation score (-MAE)
+	0.25    s     = Training runtime
+	0.01    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. Training for up to 37.2s of the 297.8s of remaining time.
+	-6518910.7233 = Validation score (-MAE)
+	0.00    s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model Chronos2. Training for up to 42.5s of the 297.7s of remaining time.

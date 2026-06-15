@@ -47,3 +47,6 @@ DROP jabatan;
 DROP TABLE karyawan;
 DROP DATABASE toko_online;
 
+
+
+

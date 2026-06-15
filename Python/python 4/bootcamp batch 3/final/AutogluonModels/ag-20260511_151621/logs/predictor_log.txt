@@ -1,0 +1,113 @@
+Beginning AutoGluon training... Time limit = 120s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260511_151621'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.60 GB / 8.00 GB (19.9%)
+Disk Space Avail:   15.38 GB / 228.27 GB (6.7%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Total Revenue',
+ 'time_limit': 120,
+ 'verbosity': 2}
+
+Beginning AutoGluon training... Time limit = 120s
+AutoGluon will save models to '/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/bootcamp batch 3/final/AutogluonModels/ag-20260511_152315'
+=================== System Info ===================
+AutoGluon Version:  1.5.0
+Python Version:     3.12.7
+Operating System:   Darwin
+Platform Machine:   arm64
+Platform Version:   Darwin Kernel Version 25.2.0: Tue Nov 18 21:03:25 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T8122
+CPU Count:          8
+Pytorch Version:    2.9.1
+CUDA Version:       CUDA is not available
+GPU Count:          WARNING: Exception was raised when calculating GPU count (AssertionError)
+Memory Avail:       1.77 GB / 8.00 GB (22.1%)
+Disk Space Avail:   15.40 GB / 228.27 GB (6.7%)
+===================================================
+Setting presets to: fast_training
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': MAE,
+ 'freq': 'MS',
+ 'hyperparameters': 'very_light',
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 12,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'Total Revenue',
+ 'time_limit': 120,
+ 'verbosity': 2}
+
+Provided train_data has 4118 rows, 48 time series. Median time series length is 86 (min=76, max=91). 
+
+Provided data contains following columns:
+	target: 'Total Revenue'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-05-11 23:23:15
+Models that will be trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta']
+Training timeseries model Naive. Training for up to 16.4s of the 114.8s of remaining time.
+	-683742.2541  = Validation score (-MAE)
+	0.01    s     = Training runtime
+	3.56    s     = Validation (prediction) runtime
+Training timeseries model SeasonalNaive. Training for up to 18.5s of the 111.2s of remaining time.
+	-748805.9869  = Validation score (-MAE)
+	0.01    s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. Training for up to 22.2s of the 111.1s of remaining time.
+	-682676.7928  = Validation score (-MAE)
+	1.01    s     = Training runtime
+	0.02    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. Training for up to 27.5s of the 110.1s of remaining time.
+	-665050.3103  = Validation score (-MAE)
+	1.00    s     = Training runtime
+	0.02    s     = Validation (prediction) runtime
+Training timeseries model ETS. Training for up to 36.4s of the 109.1s of remaining time.
+	-700585.0345  = Validation score (-MAE)
+	0.01    s     = Training runtime
+	2.66    s     = Validation (prediction) runtime
+Training timeseries model Theta. Training for up to 53.2s of the 106.4s of remaining time.
+	-666432.9097  = Validation score (-MAE)
+	0.01    s     = Training runtime
+	0.05    s     = Validation (prediction) runtime
+Fitting 1 ensemble(s), in 1 layers.
+Training ensemble model WeightedEnsemble. Training for up to 106.3s.
+	Ensemble weights: {'DirectTabular': 0.36, 'Naive': 0.16, 'Theta': 0.48}
+	-647565.3350  = Validation score (-MAE)
+	0.10    s     = Training runtime
+	3.63    s     = Validation (prediction) runtime
+Training complete. Models trained: ['Naive', 'SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'ETS', 'Theta', 'WeightedEnsemble']
+Total runtime: 13.80 s
+Best model: WeightedEnsemble
+Best model score: -647565.3350
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble

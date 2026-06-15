@@ -1,0 +1,47 @@
+Tugas 1: Ganjil atau Genap?
+Buat program yang meminta user memasukkan sebuah bilangan bulat. 
+Program harus menentukan apakah bilangan tersebut Ganjil atau Genap.
+
+Hint: Gunakan operator modulus %. Jika angka dibagi 2 sisanya 0, maka itu genap.
+
+
+Tugas 2: Kasir Sederhana (Logic)
+Buat program hitung diskon:
+
+Input: Total Belanja (int).
+Aturan:
+Jika belanja > 100.000, diskon 10%.
+Jika belanja > 50.000 (tapi <= 100rb), diskon 5%.
+Di bawah 50.000, tidak ada diskon.
+Output: Tampilkan Total Belanja, Besar Diskon (Rupiah), dan Total yang Harus Dibayar.
+
+
+Tugas 3: Deret Kelipatan (For Loop)
+Buat program yang meminta user memasukkan angka N.
+Tampilkan deret kelipatan 3, mulai dari 3 sampai angka tersebut (atau kurang dari N).
+
+Contoh Input: 20
+Output: 3 6 9 12 15 18
+
+
+Tugas 4: Game Tebak Angka (Do-While)
+Buatlah sebuah game sederhana.
+
+Program menetapkan "Angka Rahasia" (misal: int rahasia = 7;).
+User diminta menebak angka.
+Jika tebakan salah, user diminta menebak lagi (Looping).
+Jika tebakan benar, loop berhenti dan tampilkan "Selamat! Anda menebak dengan benar."
+
+Tugas 5: Pola Segitiga Bintang (Tantangan Nested Loop)
+Gunakan loop di dalam loop (nested loop) untuk membuat pola berikut. Minta input Tinggi Segitiga.
+
+Input: 5
+Output:
+text
+
+*
+**
+***
+****
+*****
+

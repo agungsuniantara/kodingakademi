@@ -1,16 +1,10 @@
-import turtle 
-import random 
+variabel1 = 10
 
-turtle.Turtle()
+print("Type integer = ", variabel1)
 
-angle = 0
-
-while True:
-    angka = random.randint(0, 100)
-    if angka == 90:
-        angle = angka
-        break
-
-for i in range(4):
-    turtle.forward(100)
-    turtle.forward(angle)
+number1 = 10
+print(number1)
+print(type(number1))
+number1 = float(number1)
+print(number1)
+print(type(number1))

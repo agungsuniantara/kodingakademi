@@ -1,3 +1,0 @@
-makanan=Rendang adalah makanan khas Padang yang terkenal di seluruh dunia.
-minuman=Es teh adalah minuman favorit banyak orang Indonesia.
-hobi=Hobi adalah kegiatan yang dilakukan untuk mengisi waktu luang.

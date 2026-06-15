@@ -1,0 +1,24 @@
+# --- Backend Server ---
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+requests
+
+# --- Data Science & ML ---
+pandas
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+tabulate
+
+# --- AI & LLM Framework ---
+langchain
+langchain-experimental
+langchain-google-genai   # WAJIB: Untuk Google Gemini
+langchain-groq           # Opsi: Untuk Groq (Llama-3)
+langchain-openai         # Opsi: Untuk OpenAI
+
+# --- Frontend ---
+streamlit

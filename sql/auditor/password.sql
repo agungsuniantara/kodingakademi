@@ -1,0 +1,1 @@
+ALTER USER suniantara WITH PASSWORD 'testing1406';

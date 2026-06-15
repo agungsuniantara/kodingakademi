@@ -5,7 +5,7 @@
     $name = "wayan";
     $salary = 140000;
 
-    $sql = "UPDATE emp5 SET `name` = '$name', emp_salary = '$salary' WHERE id = 1";
+    $sql = "UPDATE emp5 SET `name` = '$name', emp_salary = '$salary' WHERE id = '$id'";
     $result = mysqli_query($koneksi, $sql);
 
     if ($result) {

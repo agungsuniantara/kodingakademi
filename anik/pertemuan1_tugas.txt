@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main() {
+    // Tugas 1: The Bio Maker
+    // Buatlah program yang menampilkan biodata Anda ke layar.
+    // Output yang diharapkan :
+    // === BIODATA DIRI ===
+    // Nama   : [Nama Anda]
+    // Umur   : [Umur Anda]
+    // Tinggi : [Tinggi Badan cm]
+    // Hobi   : [Hobi Anda]
+
+    // Tugas 2: Kalkulator Luas Persegi Panjang
+    // Buatlah program yang:
+    // Meminta user menginput Panjang (int).
+    // Meminta user menginput Lebar (int).
+    // Menghitung Luas (Panjang x Lebar).
+    // Menampilkan hasil perhitungan.
+    // Output yang diharapkan :
+    // Masukkan Panjang: 10
+    // Masukkan Lebar: 5
+    // Luas Persegi Panjang adalah: 50
+
+    // Tugas 3: Konversi Suhu sederhana
+    // Buat program konversi Celcius ke Fahrenheit.
+    // Rumus: Fahrenheit=(Celcius×1.8)+32
+
+    // Gunakan tipe data float untuk variabel suhu.
+    // Input: Suhu dalam Celcius.
+    // Output: Suhu dalam Fahrenheit (gunakan %.2f agar rapi).
+
+    // Tugas 4: Debugging (Perbaikan Kode)
+    // Di bawah ini ada kode yang ERROR. Temukan kesalahannya dan perbaiki agar bisa jalan!
+    // KODE RUSAK - SILAKAN DIPERBAIKI
+    // #include <stdio.h>
+
+    // int main() {
+    //     int alas = 10;
+    //     int tinggi = 5
+        
+    //     float luas;
+        
+    //     // Rumus segitiga: 0.5 * alas * tinggi
+    //     luas = 0.5 * alas * tinggi;
+        
+    //     printf("Luas segitiga adalah: %d", luas); // Petunjuk: Cek format specifier
+        
+    //     return 0;
+    // }
+    
+
+    // Biodata Diri
+    char nama[] = "John Doe";
+    int umur = 25;
+    float tinggi = 175.5; // dalam cm
+    char hobi[] = "Membaca Buku";
+
+    printf("=== BIODATA DIRI ===\n");
+    printf("Nama   : %s\n", nama);
+    printf("Umur   : %d\n", umur);
+    printf("Tinggi : %.1f cm\n", tinggi);
+    printf("Hobi   : %s\n", hobi);
+
+    // Kalkulator Luas Persegi Panjang
+    int panjang, lebar, luas;
+    printf("Masukkan Panjang: ");
+    scanf("%d", &panjang);
+    printf("Masukkan Lebar: ");
+    scanf("%d", &lebar);
+    luas = panjang * lebar;
+    printf("Luas Persegi Panjang adalah: %d\n", luas);
+
+
+    return 0;
+}

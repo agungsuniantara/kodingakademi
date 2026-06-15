@@ -1,4 +1,4 @@
-import tkinter as tk 
+import tkinter as tk
 
 root = tk.Tk()
 root.title("Grid GUI")

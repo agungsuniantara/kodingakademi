@@ -1,0 +1,2 @@
+Nama | Umur | Alamat
+agung | 20 | denpasar

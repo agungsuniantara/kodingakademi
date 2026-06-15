@@ -1,0 +1,14 @@
+{
+    "1": {
+        "amount": 90.0,
+        "category": "food",
+        "date": "08-09-2025",
+        "description": "da"
+    },
+    "2": {
+        "amount": 89.0,
+        "category": "food",
+        "date": "09-08-2025",
+        "description": "da"
+    }
+}
