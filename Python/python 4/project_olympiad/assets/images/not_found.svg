@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#e8f3e8"/>
+  <circle cx="400" cy="210" r="80" fill="#8fbc8f"/>
+  <path d="M400 290 C360 335 340 390 340 450 L460 450 C460 390 440 335 400 290" fill="#4f7f4f"/>
+  <text x="400" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#2f5d36">Florapedia</text>
+  <text x="400" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">Gambar belum tersedia</text>
+</svg>
