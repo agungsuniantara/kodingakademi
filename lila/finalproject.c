@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int selection_sort(int arr[], int n);
 int bubble_sort(int arr[], int n);

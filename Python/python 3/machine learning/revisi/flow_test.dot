@@ -1,0 +1,59 @@
+digraph G {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightyellow, fontname="Arial"];
+    edge [fontname="Arial"];
+
+    // Start
+    start [label="Start", shape=oval, fillcolor=lightgreen];
+
+    // Import
+    import [label="Import Libraries\n(pandas, numpy, sklearn)"];
+
+    // Dataset
+    dataset [label="Create Dataset\n- Luas_Tanah\n- Jml_Kamar\n- Kondisi\n- Harga_Juta"];
+
+    // Split
+    split [label="Split Data\nX = features\ny = Harga_Juta\ntrain_test_split(0.2)"];
+
+    // Preprocessing Numeric
+    num_pipe [label="Numeric Pipeline\n- SimpleImputer(median)\n- StandardScaler()"];
+
+    // Preprocessing Categorical
+    cat_pipe [label="Categorical Pipeline\n- SimpleImputer(most_frequent)\n- OneHotEncoder()"];
+
+    // ColumnTransformer
+    col_transform [label="ColumnTransformer\n- num: Luas_Tanah, Jml_Kamar\n- cat: Kondisi"];
+
+    // Model
+    model [label="TransformedTargetRegressor\n- Pipeline(preprocessor + LinearRegression)\n- StandardScaler()"];
+
+    // Training
+    training [label="Training\nmodel.fit(X_train, y_train)"];
+
+    // Prediction
+    prediction [label="Prediction\nmodel.predict(X_test)"];
+
+    // Evaluation
+    evaluation [label="Evaluation\n- Mean Absolute Error\n- R2 Score"];
+
+    // Output
+    output [label="Print Results\n- Aktual\n- Prediksi\n- MAE\n- R2 Score"];
+
+    // End
+    end [label="End", shape=oval, fillcolor=lightgreen];
+
+    // Flow
+    start -> import;
+    import -> dataset;
+    dataset -> split;
+    split -> num_pipe;
+    split -> cat_pipe;
+    num_pipe -> col_transform;
+    cat_pipe -> col_transform;
+    col_transform -> model;
+    model -> training;
+    training -> prediction;
+    prediction -> evaluation;
+    evaluation -> output;
+    output -> end;
+}

@@ -1,0 +1,37 @@
+digraph PipelineMachineLearning {
+    // Pengaturan grafik umum (Atas ke Bawah)
+    rankdir=TB; 
+    node [fontname="Arial, sans-serif", shape=box, style="rounded,filled", width=3.5];
+    edge [fontname="Arial, sans-serif", fontsize=10];
+
+    // Definisi Tahapan (Nodes)
+    Tahap1 [
+        label=<<B>1. Pengumpulan &amp; Pra-pemrosesan Data</B><BR/><BR/>• Bersihkan missing values<BR/>• Encoding data kategorikal<BR/>• Scaling fitur>, 
+        fillcolor="#e3f2fd", // Biru muda
+        color="#1e88e5"
+    ];
+
+    Tahap2 [
+        label=<<B>2. Split Data (Train &amp; Test)</B><BR/><BR/>• Membagi dataset menjadi dua bagian<BR/>• Rasio: 80% Latih / 20% Uji>, 
+        fillcolor="#e8f5e9", // Hijau muda
+        color="#43a047"
+    ];
+
+    Tahap3 [
+        label=<<B>3. Pelatihan (Training / Fitting)</B><BR/><BR/>• Beri data latih ke algoritma<BR/>• Proses mempelajari pola hubungan>, 
+        fillcolor="#fff8e1", // Kuning muda
+        color="#ffb300"
+    ];
+
+    Tahap4 [
+        label=<<B>4. Evaluasi (Testing / Predicting)</B><BR/><BR/>• Uji model dengan data uji<BR/>• Bandingkan hasil prediksi vs nilai aktual>, 
+        fillcolor="#ffebee", // Merah muda
+        color="#e53935"
+    ];
+
+    // Definisi Alur Hubungan (Edges)
+    Tahap1 -> Tahap2 [label=" Data siap pakai "];
+    Tahap2 -> Tahap3 [label=" 80% Data Latih "];
+    Tahap2 -> Tahap4 [label=" 20% Data Uji ", style=dashed];
+    Tahap3 -> Tahap4 [label=" Model Hasil Latihan "];
+}
