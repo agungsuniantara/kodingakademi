@@ -29,13 +29,12 @@ def proses_tambah(entries, tree):
         messagebox.showerror("Error", "Role harus salah satu dari: Admin, Kasir, Manager")
         return
 
-    semua = core_db.ambil_semua_karyawan()
-    for k in semua:
-        if k["id_karyawan"] == id_k:
-            messagebox.showerror("Error", "ID Karyawan sudah ada!")
-            return
+    try:
+        core_db.tambah_karyawan_baru(id_k, username, password, nama, role)
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal menambah karyawan: {e}")
+        return
 
-    core_db.tambah_karyawan_baru(id_k, username, password, nama, role)
     messagebox.showinfo("Sukses", "Karyawan berhasil ditambahkan!")
     for e in entries.values():
         e.delete(0, tk.END)
@@ -56,7 +55,12 @@ def proses_edit(entries, tree):
         messagebox.showerror("Error", "Role harus salah satu dari: Admin, Kasir, Manager")
         return
 
-    core_db.edit_karyawan(id_k, username, password, nama, role)
+    try:
+        core_db.edit_karyawan(id_k, username, password, nama, role)
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal mengupdate karyawan: {e}")
+        return
+
     messagebox.showinfo("Sukses", "Data karyawan berhasil diupdate!")
     for e in entries.values():
         e.delete(0, tk.END)
@@ -73,12 +77,19 @@ def proses_hapus(entries, tree):
         return
 
     konfirmasi = messagebox.askyesno("Konfirmasi", f"Hapus karyawan dengan ID {id_k}?")
-    if konfirmasi:
+    if not konfirmasi:
+        return
+
+    try:
         core_db.hapus_karyawan(id_k)
-        messagebox.showinfo("Sukses", "Karyawan berhasil dihapus!")
-        for e in entries.values():
-            e.delete(0, tk.END)
-        muat_data_tabel(tree)
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal menghapus karyawan: {e}")
+        return
+
+    messagebox.showinfo("Sukses", "Karyawan berhasil dihapus!")
+    for e in entries.values():
+        e.delete(0, tk.END)
+    muat_data_tabel(tree)
 
 def on_pilih_tabel(tree, entries):
     selected = tree.selection()
@@ -89,16 +100,10 @@ def on_pilih_tabel(tree, entries):
     entries['id'].insert(0, values[0])
     entries['username'].delete(0, tk.END)
     entries['username'].insert(0, values[1])
-    entries['password'].delete(0, tk.END)
     entries['nama'].delete(0, tk.END)
     entries['nama'].insert(0, values[2])
     entries['role'].set(values[3])
-
-    semua = core_db.ambil_semua_karyawan()
-    for k in semua:
-        if k["id_karyawan"] == values[0]:
-            entries['password'].insert(0, k["password"])
-            break
+    entries['password'].delete(0, tk.END)
 
 def tampilkan_halaman(window, fungsi_logout):
     bersihkan_window(window)

@@ -32,25 +32,26 @@ def proses_tambah_barang(entries, tree):
     nama = entries['nama'].get().strip()
     harga = entries['harga'].get().strip()
     stok = entries['stok'].get().strip()
-    
+
     if not id_barang or not nama or not harga or not stok:
         messagebox.showerror("Error", "Semua kolom form harus diisi!")
         return
-        
+
     if not harga.isdigit() or not stok.isdigit():
         messagebox.showerror("Error", "Harga dan Stok harus berupa angka yang valid!")
         return
-        
-    # Cek duplikat ID agar tidak ada dua barang dengan ID sama
-    semua = core_db.ambil_semua_barang()
-    for b in semua:
-        if b["id_barang"] == id_barang:
-            messagebox.showerror("Error", "ID Barang sudah ada!")
-            return
-        
-    core_db.tambah_barang_baru(id_barang, nama, int(harga), int(stok))
+
+    try:
+        core_db.tambah_barang_baru(id_barang, nama, int(harga), int(stok))
+    except ValueError as e:
+        messagebox.showerror("Error", str(e))
+        return
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal menambah barang: {e}")
+        return
+
     messagebox.showinfo("Sukses", "Data barang berhasil ditambahkan ke sistem!")
-    
+
     bersihkan_form(entries)
     muat_data_tabel(tree)
 
@@ -59,29 +60,23 @@ def proses_edit_barang(entries, tree):
     nama = entries['nama'].get().strip()
     harga = entries['harga'].get().strip()
     stok = entries['stok'].get().strip()
-    
+
     if not id_barang or not nama or not harga or not stok:
         messagebox.showerror("Error", "Semua kolom form harus diisi!")
         return
-        
+
     if not harga.isdigit() or not stok.isdigit():
         messagebox.showerror("Error", "Harga dan Stok harus berupa angka yang valid!")
         return
-        
-    # Pastikan ID yang diedit benar-benar ada di database
-    semua = core_db.ambil_semua_barang()
-    ada = False
-    for b in semua:
-        if b["id_barang"] == id_barang:
-            ada = True
-            break
-    if not ada:
-        messagebox.showerror("Error", f"Barang dengan ID {id_barang} tidak ditemukan!")
+
+    try:
+        core_db.edit_barang(id_barang, nama, int(harga), int(stok))
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal mengupdate barang: {e}")
         return
-        
-    core_db.edit_barang(id_barang, nama, int(harga), int(stok))
+
     messagebox.showinfo("Sukses", "Data barang berhasil diupdate!")
-    
+
     bersihkan_form(entries)
     muat_data_tabel(tree)
 
@@ -90,24 +85,20 @@ def proses_hapus_barang(entries, tree):
     if not id_barang:
         messagebox.showerror("Error", "Masukkan ID Barang yang akan dihapus!")
         return
-        
-    # Pastikan ID yang dihapus benar-benar ada di database
-    semua = core_db.ambil_semua_barang()
-    ada = False
-    for b in semua:
-        if b["id_barang"] == id_barang:
-            ada = True
-            break
-    if not ada:
-        messagebox.showerror("Error", f"Barang dengan ID {id_barang} tidak ditemukan!")
-        return
-        
+
     konfirmasi = messagebox.askyesno("Konfirmasi", f"Hapus barang dengan ID {id_barang}?")
-    if konfirmasi:
+    if not konfirmasi:
+        return
+
+    try:
         core_db.hapus_barang(id_barang)
-        messagebox.showinfo("Sukses", "Barang berhasil dihapus!")
-        bersihkan_form(entries)
-        muat_data_tabel(tree)
+    except Exception as e:
+        messagebox.showerror("Error", f"Gagal menghapus barang: {e}")
+        return
+
+    messagebox.showinfo("Sukses", "Barang berhasil dihapus!")
+    bersihkan_form(entries)
+    muat_data_tabel(tree)
 
 def on_pilih_tabel(tree, entries):
     selected = tree.selection()

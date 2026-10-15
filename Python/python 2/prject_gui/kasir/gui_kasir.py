@@ -73,70 +73,80 @@ def tambah_ke_keranjang(combobox, entry_qty, tree, label_total):
 
 def proses_pembayaran(entry_bayar, tree, label_total, combobox):
     global total_belanja, keranjang_belanja
-    
+
     if total_belanja == 0 or len(keranjang_belanja) == 0:
         messagebox.showwarning("Peringatan", "Keranjang belanja masih kosong!")
         return
-        
+
     uang_teks = entry_bayar.get().strip()
     if not uang_teks.isdigit():
         messagebox.showerror("Error", "Masukkan jumlah uang dengan format angka!")
         return
-        
+
     uang_bayar = int(uang_teks)
     if uang_bayar < total_belanja:
         messagebox.showerror("Error", "Uang bayar tidak mencukupi!")
         return
-        
+
     kembalian = uang_bayar - total_belanja
     waktu_sekarang = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    id_transaksi = "TRX" + datetime.now().strftime("%Y%m%d%H%M%S")
+    id_transaksi = core_db.buat_id_transaksi()
     id_karyawan = session.current_user['id']
     nama_kasir = session.current_user['nama']
-    
+
     detail_untuk_db = []
     for item in keranjang_belanja:
         detail_untuk_db.append([item[0], item[2], item[4]])
-        
-    core_db.simpan_transaksi_lengkap(id_transaksi, waktu_sekarang, id_karyawan, total_belanja, uang_bayar, detail_untuk_db)
-    
+
+    try:
+        core_db.simpan_transaksi_lengkap(id_transaksi, waktu_sekarang, id_karyawan, total_belanja, uang_bayar, detail_untuk_db)
+    except RuntimeError as e:
+        messagebox.showerror("Transaksi Gagal", str(e))
+        return
+    except Exception as e:
+        messagebox.showerror("Error", f"Terjadi kesalahan saat menyimpan transaksi: {e}")
+        return
+
     lebar_struk = 40
     nama_file_struk = f"struk_{id_transaksi}.txt"
-    
-    with open(nama_file_struk, "w") as struk:
-        struk.write("KOPERASI SEKOLAH UMA".center(lebar_struk) + "\n")
-        struk.write("=" * lebar_struk + "\n")
-        struk.write(f"No  : {id_transaksi}\n")
-        struk.write(f"Tgl : {waktu_sekarang}\n")
-        struk.write(f"Opr : {nama_kasir}\n")
-        struk.write("-" * lebar_struk + "\n")
-        
-        for item in keranjang_belanja:
-            nama, qty, harga, sub = item[1], item[2], item[3], item[4]
-            struk.write(f"{nama}\n")
-            detail = f"  {qty} x {harga}"
-            sub_str = f"Rp {sub}"
-            spasi = lebar_struk - len(detail) - len(sub_str)
-            struk.write(detail + (" " * spasi) + sub_str + "\n")
-            
-        struk.write("-" * lebar_struk + "\n")
-        struk.write("TOTAL".ljust(15) + f": Rp {total_belanja}".rjust(25) + "\n")
-        struk.write("BAYAR".ljust(15) + f": Rp {uang_bayar}".rjust(25) + "\n")
-        struk.write("KEMBALI".ljust(15) + f": Rp {kembalian}".rjust(25) + "\n")
-        struk.write("=" * lebar_struk + "\n")
-        struk.write("Terima Kasih".center(lebar_struk) + "\n")
+
+    try:
+        with open(nama_file_struk, "w") as struk:
+            struk.write("KOPERASI SEKOLAH UMA".center(lebar_struk) + "\n")
+            struk.write("=" * lebar_struk + "\n")
+            struk.write(f"No  : {id_transaksi}\n")
+            struk.write(f"Tgl : {waktu_sekarang}\n")
+            struk.write(f"Opr : {nama_kasir}\n")
+            struk.write("-" * lebar_struk + "\n")
+
+            for item in keranjang_belanja:
+                nama, qty, harga, sub = item[1], item[2], item[3], item[4]
+                struk.write(f"{nama}\n")
+                detail = f"  {qty} x {harga}"
+                sub_str = f"Rp {sub}"
+                spasi = lebar_struk - len(detail) - len(sub_str)
+                struk.write(detail + (" " * spasi) + sub_str + "\n")
+
+            struk.write("-" * lebar_struk + "\n")
+            struk.write("TOTAL".ljust(15) + f": Rp {total_belanja}".rjust(25) + "\n")
+            struk.write("BAYAR".ljust(15) + f": Rp {uang_bayar}".rjust(25) + "\n")
+            struk.write("KEMBALI".ljust(15) + f": Rp {kembalian}".rjust(25) + "\n")
+            struk.write("=" * lebar_struk + "\n")
+            struk.write("Terima Kasih".center(lebar_struk) + "\n")
+    except Exception as e:
+        messagebox.showerror("Error", f"Transaksi berhasil, tetapi gagal membuat struk: {e}")
 
     messagebox.showinfo("Sukses", f"Transaksi Berhasil!\nKembalian: Rp {kembalian}\nStruk disimpan: {nama_file_struk}")
-    
+
     keranjang_belanja.clear()
     total_belanja = 0
-    
+
     for item in tree.get_children():
         tree.delete(item)
-        
+
     label_total.config(text="Total: Rp 0")
     entry_bayar.delete(0, tk.END)
-    
+
     muat_data_combobox(combobox)
 
 def tampilkan_halaman(window, fungsi_logout):

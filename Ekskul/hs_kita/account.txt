@@ -1,5 +1,13 @@
+web : lmsv3.kodingakademi.com
+
 Email : 
-homeschooling.kita@kodingakademi.id
+homeschooling.kita@kodingakademi.com
 password : 
-coding=2024
+Kita123!@#
+
+wifi : Koding Akademi Center
+password : KodingAkademi26!
+
+
+
 

@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Applications/MAMP/htdocs/local/kodingakademi/C++/private/materi_week7'
+relocations:     []
+...
