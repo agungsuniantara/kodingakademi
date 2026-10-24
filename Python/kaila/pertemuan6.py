@@ -1,24 +1,26 @@
-data = {
-    "1" : "apel",
-    "2" : "mangga",
-    "3" : "anggur"
-}
+# function adalah blueprint yang dapat digunakan berulang kali
+# function (void, parameter, return, recursion)
 
-for i in data:
-    angka = int(i)
-    if angka % 2 != 0:
-        data[i] = "hewan"
+# function void = fungsi yang tidak mengembalikan nilai
+# function void bisa menggunakan parameter dan tanpa parameter
 
-print(data)
+def persegi_panjang(a, b): # -> function void
+    luas = a * b
+    print(f"luas persegi panjang = {luas}")
+    
+persegi_panjang(10, 5)
 
-user = input("tuliskan teks : ")
+total = 0 # variabel local
 
-a = 0
-i = 0
-u = 0
-e = 0
-o = 0
+def tambah():
+    global total # global = memberikan function akses untuk mengubah variabel local
+    total += 1
+    print(total)
+    
+tambah()
+    
 
-for i in user:
-    if i == "a":
-        a += 1
+
+
+
+
