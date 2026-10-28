@@ -2,5 +2,6 @@
   "python-envs.defaultEnvManager": "ms-python.python:system",
   "python-envs.pythonProjects": [],
   "python-envs.defaultPackageManager": "ms-python.python:pip",
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "cmake.sourceDirectory": "/Applications/MAMP/htdocs/local/kodingakademi/Python/python 4/cctv_bootcamp copy/dlib-mac"
 }
